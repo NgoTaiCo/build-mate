@@ -116,10 +116,9 @@ Four layers on an **OpenClaw** backbone:
 
 > Honesty note: only claim what the team actually integrates on build day. Below is the set that genuinely fits BuildMate — select these in the AABW dropdown.
 
-**Selected partners:** Apify · Qwen · Langfuse · Tencent Cloud · Notion
+**Selected partners:** Apify · Langfuse · Tencent Cloud · Notion
 
 - **Apify** — We use Apify to scrape the Phong Vu product catalog (CPUs, motherboards, RAM, GPUs, PSUs, cases, coolers) including specs, price, stock status, and promotions. Apify's anti-bot handling collects real product data that feeds the Catalog adapter, so the `search_components` tool returns real products instead of mock entries.
-- **Qwen** — We use Qwen as the LLM provider inside OpenClaw. Qwen handles the conversational layer: understanding the customer's PC-building need (Vietnamese), planning tool calls, reading compiler errors, and explaining repair plans. Qwen's strong Vietnamese + reasoning fits the retail context.
 - **Langfuse** — We use Langfuse to observe the agent: trace every LLM call, tool call (`compile_build`, `detect_errors`, `repair_build`, `search_components`), token usage, latency, and errors. This gives visibility into the reasoning chain and cost — critical for tuning the deterministic-vs-LLM boundary.
 - **Tencent Cloud** — We host the OpenClaw gateway on Tencent Cloud (free-tier always-on instance) so the agent is available 24/7 for the after-hours (1 AM) use case. Tencent's Zalo connection also aligns with the future agent-copilot-on-Zalo direction (P3).
 - **Notion** — We use the Notion API to export sales leads: when BuildMate produces a validated build + quote summary, the `create_sales_lead` tool pushes a row to a Notion database the human sales team monitors for follow-up — after-hours lead capture.
@@ -134,4 +133,4 @@ Four layers on an **OpenClaw** backbone:
 | Sales leads | Notion API (free) | lead database |
 | DB (if needed) | ClickHouse free / Supabase free | agent logs / sessions |
 
-> Other partners in the AABW list (ZenRows, Bright Data) are alternatives to Apify for catalog scraping; (BytePlus, AWS, Azure, Tencent Cloud) are alternatives for LLM/cloud; (Agora) could power a future voice channel; (Trae) is an AI IDE, not a project runtime. We did not use the remaining ones (Antitech, Featherless, Terminal 3, Tinyfish, Virtuals) — unclear fit, not claimed.
+> Other partners in the AABW list: (ZenRows, Bright Data) are alternatives to Apify for catalog scraping; (AWS, Azure, BytePlus) are alternatives to Tencent Cloud for hosting; (Qwen, BytePlus) are alternative LLM providers — we use MiMo Pro via opencode and do not claim a partner LLM; (Agora) could power a future voice channel; (Trae) is an AI IDE, not a project runtime. We did not use the remaining ones (Antitech, Featherless, Terminal 3, Tinyfish, Virtuals) — unclear fit, not claimed.
