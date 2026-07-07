@@ -96,7 +96,10 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 
 ## Active Technologies
 - TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node` (001-build-compiler-core)
+- TypeScript 5.x trên Node.js 22.17 LTS + OpenClaw tool plugin SDK (`openclaw/plugin-sdk`) + `@buildmate/compiler`, `@buildmate/catalog` (workspace/local), `@sinclair/typebox` (parameter schemas); dev-only: `typescript`, `tsx`, `@types/node` (003-wire-openclaw-plugins)
 - N/A — pure functions, không persist, không I/O (001-build-compiler-core)
+- N/A — plugin stateless, không persist, không I/O; OpenClaw owns session/memory (003-wire-openclaw-plugins)
 
 ## Recent Changes
 - 001-build-compiler-core: Added TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node`
+- 003-wire-openclaw-plugins: Added OpenClaw tool plugin package `@buildmate/openclaw-tools` wrapping `compile_build`, `detect_errors`, `repair_build`, `search_components`; install via `openclaw plugins install --link`; runtime verify via `openclaw plugins inspect buildmate-tools --runtime --json`
