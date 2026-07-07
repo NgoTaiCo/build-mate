@@ -27,19 +27,40 @@ AI **PC Build Compiler** cho Phong Vu retail: khách mô tả nhu cầu → buil
 4. **WebChat là channel primary**; Extension = stretch (xem `docs/extension-phongvu-integration.md`).
 5. **Ngôn ngữ docs**: văn phong tiếng Việt + thuật ngữ kỹ thuật giữ English.
 
-## Skills toolkit (đã cài toàn cục — invoke khi task khớp)
-Khi mở project, các skill dưới đây tự xuất hiện trong `available_skills`. Đọc description của từng skill và invoke khi task khớp:
+## Skills toolkit (invoke khi task khớp)
+Skills tải từ `.opencode/skills/` (project-local, đăng ký qua `opencode.json → skills.paths`) + global (`~/.agents/skills`, `~/.claude/skills`). Khi mở project, các skill tự xuất hiện trong `available_skills` — đọc description và invoke khi task khớp.
 
-| Skill | Dùng khi |
-|---|---|
-| `understand-anything` (family: understand/chat/dashboard/diff/explain/onboard) | onboarding, hiểu kiến trúc codebase, phân tích diff/PR |
-| `repomix` | đóng gói codebase thành 1 file text cho LLM (handoff/team, nạp context) |
-| `boundary-architect` | quyết định ranh giới module / tách kiến trúc |
-| `speckit` | viết spec/PRD (xem SKILL.md) |
-| `ponytail` | (xem SKILL.md) |
-| `rtk` | CLI toolchain wrapper (xem `~/.claude/RTK.md`) |
-| Built-in `customize-opencode` | sửa `.opencode/`, agents, skills, permission |
-| Built-in `find-skills` | tìm thêm skill khi cần capability mới |
+| Skill | Scope | Dùng khi |
+|---|---|---|
+| `boundary-architect` | project (`.opencode/skills/`) | quyết định ranh giới module / tách kiến trúc theo ADR-0001 (4 layer + 5 nguyên tắc). Custom skill của BuildMate. |
+| `speckit-*` (10 skill: constitution/specify/clarify/plan/tasks/implement/analyze/baseline/checklist/taskstoissues) | project (`.opencode/skills/`) | Spec-Driven Development — phân rã sản phẩm thành feature nhỏ có goal. Xem workflow bên dưới. |
+| `understand-anything` (family: understand/chat/dashboard/diff/explain/onboard) | global | onboarding, hiểu kiến trúc codebase, phân tích diff/PR |
+| `remotion-best-practices` | global | không liên quan BuildMate, bỏ qua |
+| `customize-opencode` | built-in | sửa `.opencode/`, agents, skills, permission |
+| `find-skills` | built-in | tìm thêm skill khi cần capability mới |
+| `repomix` / `ponytail` | CHƯA cài | nếu cần: `npm exec -y -- skills find repomix` rồi `skills add <owner/repo> --copy -y` |
+| `rtk` | CLI wrapper (xem `~/.claude/RTK.md`) | chỉ dùng trong Claude Code, KHÔNG dùng trong opencode bash (bị rewrite sai thành `npm`) |
+
+### Speckit SDD workflow (phân rã feature cho hackathon)
+speckit = Spec-Driven Development. Workflow chuẩn (`.specify/memory/constitution.md` đã pre-fill goal + 5 nguyên tắc BuildMate):
+
+1. **Constitution** → goal + nguyên tắc (ĐÃ pre-fill từ ADR-0001/0003 — skip `/speckit.constitution` trừ khi amend).
+2. `/speckit.specify <mô tả feature>` → tạo `specs/NNN-<tên>/spec.md` + branch `NNN-<tên>`.
+3. `/speckit.clarify` (optional) → resolve ambiguity.
+4. `/speckit.plan` → `plan.md` + `research.md` + `data-model.md` + `contracts/`.
+5. `/speckit.tasks` → `tasks.md` (dependency-ordered).
+6. `/speckit.implement` → execute tasks.
+7. `/speckit.analyze` (optional) → consistency check.
+
+Commands opencode (trong `.opencode/command/`): `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`, `/speckit.clarify`, `/speckit.analyze`, `/speckit.checklist`, `/speckit.constitution`, `/speckit.taskstoissues`.
+Commands BuildMate custom: `/boundary` (boundary review theo ADR-0001), `/hackathon` (decompose 1-day features có goal + time-box theo ADR-0003).
+
+### Lưu ý bash trên Windows
+speckit scripts nằm ở `.specify/scripts/bash/*.sh` (bash-only). Trên Windows, chạy qua **Git bash** (`C:\Program Files\Git\bin\bash.exe`, Windows paths):
+```powershell
+bash .specify/scripts/bash/create-new-feature.sh --json --short-name "user-auth" "Add user authentication"
+```
+KHÔNG dùng `C:\Windows\system32\bash.exe` (WSL — Linux paths `/mnt/d/...` sẽ làm hỏng path output JSON).
 
 ## Cài máy (AI PHẢI verify khi vào project — assume máy trống)
 Khi bắt đầu làm việc trong project này, AI kiểm tra từng prerequisite, **cài nếu thiếu**:

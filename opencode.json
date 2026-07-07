@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+  "references": {
+    "adr": {
+      "path": "docs/adr",
+      "description": "Architecture Decision Records — source of truth for the 4-layer boundary architecture (ADR-0001) and hackathon scope/MVP (ADR-0003). Read before any module boundary decision or feature decomposition."
+    },
+    "roadmap": {
+      "path": "docs/roadmap",
+      "description": "Long-term goals, future, expansion. Use to check whether a feature risks overshooting hackathon scope (ADR-0003)."
+    }
+  },
+  "permission": {
+    "bash": {
+      "git *": "allow",
+      "bash *": "allow",
+      "node *": "allow",
+      "npm *": "allow",
+      "npx *": "allow",
+      "*": "ask"
+    }
+  }
+}
