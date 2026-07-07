@@ -93,3 +93,10 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 - Compiler package phải là pure functions, unit-test độc lập (không phụ thuộc OpenClaw runtime).
 - Không emoji trong code/docs trừ khi yêu cầu.
 - Code thử nghiệm / POC (nếu có) để riêng, không trộn production code.
+
+## Active Technologies
+- TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node` (001-build-compiler-core)
+- N/A — pure functions, không persist, không I/O (001-build-compiler-core)
+
+## Recent Changes
+- 001-build-compiler-core: Added TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node`
