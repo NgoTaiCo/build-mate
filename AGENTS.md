@@ -100,10 +100,12 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 - TypeScript 5.x trên Node.js 22.17 LTS + OpenClaw tool plugin SDK + Playwright (server-side browser automation) + self-hosted mock build-PC page; dev-only: `typescript`, `tsx`, `@types/node` (004-dom-build-tools)
 - TypeScript 5.x trên Node.js 22.17 LTS + Remotion (`remotion`, `@remotion/cli`, `@remotion/media`) + React 18 + Playwright (capture scene assets từ WebChat); presenter-only, không ảnh hưởng core dependencies; dev-only: `typescript`, `tsx`, `@types/node` (006-demo-video-backup)
 - N/A — pure functions, không persist, không I/O (001-build-compiler-core)
+- TypeScript 5.x trên Node.js 22.17 LTS + `@buildmate/catalog` (workspace), `@buildmate/compiler` (workspace — type definitions), OpenClaw tool plugin SDK (`openclaw/plugin-sdk`), `@sinclair/typebox` (parameter schemas); deterministic comparison + best-fit scoring pure functions, LLM only for recommendation prose; dev-only: `typescript`, `tsx`, `@types/node` (007-compare-components)
 - N/A — plugin stateless, không persist, không I/O; OpenClaw owns session/memory (003-wire-openclaw-plugins)
 
 ## Recent Changes
 - 006-demo-video-backup: Planned presenter-only Remotion fallback video for S1→S3 WebChat journey with Playwright scene capture
 - 004-dom-build-tools: Added DOM execution tools `add_to_build` / `read_current_build` với Playwright + self-hosted mock build-PC fallback
 - 001-build-compiler-core: Added TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node`
+- 007-compare-components: Planned deterministic `compare_components` tool with `@buildmate/comparator` package (2-5 SKU side-by-side comparison, best-fit scoring for gaming/productivity/budget); LLM only for recommendation prose; S2 stretch, implement only after MVP
 - 003-wire-openclaw-plugins: Added OpenClaw tool plugin package `@buildmate/openclaw-tools` wrapping `compile_build`, `detect_errors`, `repair_build`, `search_components`; install via `openclaw plugins install --link`; runtime verify via `openclaw plugins inspect buildmate-tools --runtime --json`
