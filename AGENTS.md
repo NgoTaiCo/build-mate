@@ -101,9 +101,11 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 - TypeScript 5.x trên Node.js 22.17 LTS + Remotion (`remotion`, `@remotion/cli`, `@remotion/media`) + React 18 + Playwright (capture scene assets từ WebChat); presenter-only, không ảnh hưởng core dependencies; dev-only: `typescript`, `tsx`, `@types/node` (006-demo-video-backup)
 - N/A — pure functions, không persist, không I/O (001-build-compiler-core)
 - TypeScript 5.x trên Node.js 22.17 LTS + `@buildmate/catalog` (workspace), `@buildmate/compiler` (workspace — type definitions), OpenClaw tool plugin SDK (`openclaw/plugin-sdk`), `@sinclair/typebox` (parameter schemas); deterministic comparison + best-fit scoring pure functions, LLM only for recommendation prose; dev-only: `typescript`, `tsx`, `@types/node` (007-compare-components)
+- TypeScript 5.x trên Node.js 22.17 LTS + `openclaw/plugin-sdk`, `@buildmate/compiler` (workspace — Build type), `@buildmate/catalog` (workspace — Component lookup), `@sinclair/typebox` (parameter schemas); deterministic checkout summary + navigation guide, LLM only for prose rendering in agent layer; dev-only: `typescript`, `tsx`, `@types/node` (008-guide-checkout)
 - N/A — plugin stateless, không persist, không I/O; OpenClaw owns session/memory (003-wire-openclaw-plugins)
-
 ## Recent Changes
+
+- 008-guide-checkout: Planned `guide_checkout` OpenClaw tool for order summary + checkout navigation guide; deterministic data assembly, no payment/order/address handling
 - 006-demo-video-backup: Planned presenter-only Remotion fallback video for S1→S3 WebChat journey with Playwright scene capture
 - 004-dom-build-tools: Added DOM execution tools `add_to_build` / `read_current_build` với Playwright + self-hosted mock build-PC fallback
 - 001-build-compiler-core: Added TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node`
