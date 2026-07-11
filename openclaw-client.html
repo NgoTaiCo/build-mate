@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClaw WebSocket Client</title>
+    <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.3/nacl.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -441,18 +442,8 @@
             elements.messages.scrollTop = elements.messages.scrollHeight;
         }
 
-        async function generateDeviceKey() {
-            const keyPair = await crypto.subtle.generateKey(
-                {
-                    name: 'RSASSA-PKCS1-v1_5',
-                    modulusLength: 2048,
-                    publicExponent: new Uint8Array([1, 0, 1]),
-                    hash: 'SHA-256',
-                },
-                true,
-                ['sign', 'verify']
-            );
-            return keyPair;
+        function generateDeviceKey() {
+            return nacl.sign.keyPair();
         }
 
         function bufferToHex(buffer) {
@@ -460,28 +451,32 @@
             return Array.from(view).map(b => b.toString(16).padStart(2, '0')).join('');
         }
 
-        async function getPublicKeyPem(publicKey) {
-            const exported = await crypto.subtle.exportKey('spki', publicKey);
-            const exportedAsString = String.fromCharCode.apply(null, new Uint8Array(exported));
-            const exportedAsBase64 = btoa(exportedAsString);
-            return `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
+        function base64urlEncode(buffer) {
+            const bytes = new Uint8Array(buffer);
+            const binary = String.fromCharCode(...bytes);
+            return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
         }
 
-        async function getPublicKeyDer(publicKey) {
-            const exported = await crypto.subtle.exportKey('spki', publicKey);
-            return new Uint8Array(exported);
+        async function getPublicKeyPem(publicKey) {
+            const pubKeyStr = String.fromCharCode(...publicKey);
+            const pubKeyBase64 = btoa(pubKeyStr);
+            return `-----BEGIN PUBLIC KEY-----\n${pubKeyBase64}\n-----END PUBLIC KEY-----`;
         }
 
         async function getPublicKeyFingerprint(publicKey) {
-            const derKey = await getPublicKeyDer(publicKey);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', derKey);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', publicKey);
             return bufferToHex(hashBuffer);
         }
 
-        async function signNonce(privateKey, nonce, timestamp) {
-            const signData = new TextEncoder().encode(`${nonce}${timestamp}`);
-            const signature = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', privateKey, signData);
-            return bufferToHex(signature);
+        function createSignaturePayload(deviceId, clientId, clientMode, role, scopes, timestamp, token, nonce) {
+            const scopesStr = scopes.join(',');
+            return `v2|${deviceId}|${clientId}|${clientMode}|${role}|${scopesStr}|${timestamp}|${token}|${nonce}`;
+        }
+
+        function signPayload(privateKey, payload) {
+            const messageBytes = new TextEncoder().encode(payload);
+            const signature = nacl.sign.detached(messageBytes, privateKey);
+            return base64urlEncode(signature);
         }
 
         async function connect() {
@@ -505,10 +500,12 @@
             try {
                 // Generate device keypair
                 addMessage('Generating device keypair...', 'system');
-                const keyPair = await generateDeviceKey();
-                state.privateKey = keyPair.privateKey;
+                const keyPair = generateDeviceKey();
+                state.privateKey = keyPair.secretKey;
+                state.publicKey = keyPair.publicKey;
                 const publicKeyPem = await getPublicKeyPem(keyPair.publicKey);
                 const deviceId = await getPublicKeyFingerprint(keyPair.publicKey);
+                state.deviceId = deviceId;
 
                 state.ws = new WebSocket(wsUrl);
 
@@ -525,7 +522,23 @@
                             const { nonce, ts } = data.payload;
                             addMessage('Received authentication challenge...', 'system');
 
-                            const signature = await signNonce(state.privateKey, nonce, ts);
+                            const clientId = 'webchat-ui';
+                            const clientMode = 'webchat';
+                            const role = 'operator';
+                            const scopes = ['operator.read', 'operator.write'];
+
+                            const payloadStr = createSignaturePayload(
+                                state.deviceId,
+                                clientId,
+                                clientMode,
+                                role,
+                                scopes,
+                                ts,
+                                token,
+                                nonce
+                            );
+
+                            const signature = signPayload(state.privateKey, payloadStr);
 
                             const connectReq = {
                                 type: 'req',
@@ -535,16 +548,16 @@
                                     minProtocol: 4,
                                     maxProtocol: 4,
                                     client: {
-                                        id: 'webchat-ui',
+                                        id: clientId,
                                         version: '1.0.0',
                                         platform: 'web',
-                                        mode: 'webchat'
+                                        mode: clientMode
                                     },
-                                    role: 'operator',
-                                    scopes: ['operator.read', 'operator.write'],
+                                    role,
+                                    scopes,
                                     auth: { token },
                                     device: {
-                                        id: deviceId,
+                                        id: state.deviceId,
                                         publicKey: publicKeyPem,
                                         signature,
                                         signedAt: ts,
