@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw WebSocket Client</title>
+    <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.3/nacl.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.connected {
+            background-color: #4ade80;
+            animation: pulse-green 2s infinite;
+        }
+
+        .status-dot.disconnected {
+            background-color: #ef4444;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes pulse-green {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .config-panel {
+            flex: 0 0 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-right: 20px;
+            border-right: 1px solid #e5e7eb;
+            overflow-y: auto;
+        }
+
+        .config-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .config-group label {
+            font-weight: 600;
+            font-size: 13px;
+            color: #374151;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .config-group input,
+        .config-group select {
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            transition: border-color 0.2s;
+        }
+
+        .config-group input:focus,
+        .config-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .config-group input[type="password"] {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+
+        .btn-connect {
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-connect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-connect:active {
+            transform: translateY(0);
+        }
+
+        .btn-connect:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .chat-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow: hidden;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-right: 8px;
+        }
+
+        .messages::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .messages::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+
+        .messages::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .messages::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .message {
+            padding: 12px 16px;
+            border-radius: 8px;
+            max-width: 85%;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 16px 16px 4px 16px;
+        }
+
+        .message.assistant {
+            align-self: flex-start;
+            background: #f3f4f6;
+            color: #1f2937;
+            border-radius: 16px 16px 16px 4px;
+        }
+
+        .message.system {
+            align-self: center;
+            background: #fef3c7;
+            color: #92400e;
+            border-radius: 8px;
+            font-size: 13px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .message.error {
+            align-self: flex-start;
+            background: #fee2e2;
+            color: #991b1b;
+            border-radius: 16px 16px 16px 4px;
+            border-left: 3px solid #dc2626;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 12px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .input-area input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-area input:disabled {
+            background-color: #f3f4f6;
+            cursor: not-allowed;
+        }
+
+        .btn-send {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-self: flex-end;
+        }
+
+        .btn-send:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-send:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .btn-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #9ca3af;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                opacity: 0.3;
+                transform: translateY(0);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+        }
+
+        .timestamp {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 OpenClaw WebSocket Client</h1>
+            <div class="status-indicator">
+                <div class="status-dot disconnected" id="statusDot"></div>
+                <span id="statusText">Disconnected</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="config-panel">
+                <div class="config-group">
+                    <label>Host</label>
+                    <input type="text" id="host" value="localhost" placeholder="localhost">
+                </div>
+
+                <div class="config-group">
+                    <label>Port</label>
+                    <input type="number" id="port" value="18790" placeholder="18790">
+                </div>
+
+                <div class="config-group">
+                    <label>Token</label>
+                    <input type="password" id="token" placeholder="Paste your token" value="4129e3440d35bbd04d3e72b9144cc96fda776f7919c2df60">
+                </div>
+
+                <div class="config-group">
+                    <label>Model</label>
+                    <select id="model">
+                        <option value="xiaomi-token-plan/mimo-v2.5-pro">Xiaomi MiMo V2.5 Pro</option>
+                        <option value="xiaomi/mimo-v2-pro">Xiaomi MiMo V2 Pro</option>
+                        <option value="xiaomi/mimo-v2-flash">Xiaomi MiMo V2 Flash</option>
+                    </select>
+                </div>
+
+                <div class="config-group">
+                    <label>
+                        <input type="checkbox" id="skipDeviceAuth">
+                        Skip Device Auth
+                    </label>
+                </div>
+
+                <button class="btn-connect" id="connectBtn">Connect</button>
+            </div>
+
+            <div class="chat-panel">
+                <div class="messages" id="messages"></div>
+
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Type your message..."
+                        disabled
+                    >
+                    <button class="btn-send" id="sendBtn" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const state = {
+            ws: null,
+            connected: false,
+            conversationHistory: []
+        };
+
+        const elements = {
+            host: document.getElementById('host'),
+            port: document.getElementById('port'),
+            token: document.getElementById('token'),
+            model: document.getElementById('model'),
+            skipDeviceAuth: document.getElementById('skipDeviceAuth'),
+            connectBtn: document.getElementById('connectBtn'),
+            messageInput: document.getElementById('messageInput'),
+            sendBtn: document.getElementById('sendBtn'),
+            messages: document.getElementById('messages'),
+            statusDot: document.getElementById('statusDot'),
+            statusText: document.getElementById('statusText')
+        };
+
+        function updateStatus(connected) {
+            state.connected = connected;
+            elements.statusDot.className = `status-dot ${connected ? 'connected' : 'disconnected'}`;
+            elements.statusText.textContent = connected ? 'Connected' : 'Disconnected';
+            elements.connectBtn.textContent = connected ? 'Disconnect' : 'Connect';
+            elements.messageInput.disabled = !connected;
+            elements.sendBtn.disabled = !connected;
+        }
+
+        function addMessage(content, role = 'assistant', isError = false) {
+            const messageEl = document.createElement('div');
+            messageEl.className = `message ${isError ? 'error' : role}`;
+
+            const time = new Date().toLocaleTimeString();
+            messageEl.innerHTML = `
+                ${content}
+                <div class="timestamp">${time}</div>
+            `;
+
+            elements.messages.appendChild(messageEl);
+            elements.messages.scrollTop = elements.messages.scrollHeight;
+        }
+
+        function generateDeviceKey() {
+            // Try to load persisted keypair from localStorage
+            const stored = localStorage.getItem('openclaw_device_key');
+            if (stored) {
+                try {
+                    const { secretKey } = JSON.parse(stored);
+                    const secretKeyBytes = Uint8Array.from(atob(secretKey), c => c.charCodeAt(0));
+                    return nacl.sign.keyPair.fromSecretKey(secretKeyBytes);
+                } catch (e) {
+                    // Fall through to generate new
+                }
+            }
+            // Generate new keypair and persist it
+            const keyPair = nacl.sign.keyPair();
+            const secretKeyBase64 = btoa(String.fromCharCode(...keyPair.secretKey));
+            localStorage.setItem('openclaw_device_key', JSON.stringify({ secretKey: secretKeyBase64 }));
+            return keyPair;
+        }
+
+        function bufferToHex(buffer) {
+            const view = new Uint8Array(buffer);
+            return Array.from(view).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function base64urlEncode(buffer) {
+            const bytes = new Uint8Array(buffer);
+            const binary = String.fromCharCode(...bytes);
+            return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+        }
+
+        async function getPublicKeyBase64url(publicKey) {
+            return base64urlEncode(publicKey);
+        }
+
+        async function getPublicKeyFingerprint(publicKey) {
+            const hashBuffer = await crypto.subtle.digest('SHA-256', publicKey);
+            return bufferToHex(hashBuffer);
+        }
+
+        function createSignaturePayload(deviceId, clientId, clientMode, role, scopes, timestamp, token, nonce) {
+            const scopesStr = scopes.join(',');
+            const platform = 'web'.toLowerCase();
+            const deviceFamily = 'web'.toLowerCase();
+            return `v3|${deviceId}|${clientId}|${clientMode}|${role}|${scopesStr}|${timestamp}|${token}|${nonce}|${platform}|${deviceFamily}`;
+        }
+
+        function signPayload(privateKey, payload) {
+            const messageBytes = new TextEncoder().encode(payload);
+            const signature = nacl.sign.detached(messageBytes, privateKey);
+            return base64urlEncode(signature);
+        }
+
+        function extractChatText(message) {
+            if (!message) return '';
+            if (typeof message.content === 'string') return message.content;
+            if (Array.isArray(message.content)) {
+                return message.content
+                    .filter(part => part.type === 'text' && part.text)
+                    .map(part => part.text)
+                    .join('\n');
+            }
+            return '';
+        }
+
+        async function connect() {
+            if (state.connected) {
+                disconnect();
+                return;
+            }
+
+            const host = elements.host.value || 'localhost';
+            const port = elements.port.value || '18790';
+            const token = elements.token.value.trim();
+
+            if (!token) {
+                addMessage('Error: Token is required', 'system', true);
+                return;
+            }
+
+            if (token.startsWith('{') || token.includes('"type"')) {
+                addMessage('Error: Token looks like JSON — paste only the token string', 'system', true);
+                return;
+            }
+
+            const wsUrl = `ws://${host}:${port}`;
+            addMessage(`Connecting to ${wsUrl}...`, 'system');
+
+            try {
+                // Generate device keypair
+                addMessage('Generating device keypair...', 'system');
+                const keyPair = generateDeviceKey();
+                state.privateKey = keyPair.secretKey;
+                state.publicKey = keyPair.publicKey;
+                const publicKeyBase64url = await getPublicKeyBase64url(keyPair.publicKey);
+                const deviceId = await getPublicKeyFingerprint(keyPair.publicKey);
+                state.deviceId = deviceId;
+
+                state.ws = new WebSocket(wsUrl);
+
+                state.ws.onopen = () => {
+                    addMessage('✓ WebSocket connected', 'system');
+                };
+
+                state.ws.onmessage = async (event) => {
+                    try {
+                        const data = JSON.parse(event.data);
+
+                        // Handle challenge
+                        if (data.type === 'event' && data.event === 'connect.challenge') {
+                            const { nonce, ts } = data.payload;
+                            addMessage('Received authentication challenge...', 'system');
+
+                            const clientId = 'webchat-ui';
+                            const clientMode = 'webchat';
+                            const role = 'operator';
+                            const scopes = ['operator.read', 'operator.write'];
+
+                            // Only add device auth if not skipped
+                            if (!elements.skipDeviceAuth.checked) {
+                                const payloadStr = createSignaturePayload(
+                                    state.deviceId,
+                                    clientId,
+                                    clientMode,
+                                    role,
+                                    scopes,
+                                    ts,
+                                    token,
+                                    nonce
+                                );
+
+                                const signature = signPayload(state.privateKey, payloadStr);
+
+                                const connectReq = {
+                                    type: 'req',
+                                    id: `req_${Date.now()}`,
+                                    method: 'connect',
+                                    params: {
+                                        minProtocol: 4,
+                                        maxProtocol: 4,
+                                        client: {
+                                            id: clientId,
+                                            mode: clientMode,
+                                            version: '1.0.0',
+                                            platform: 'web',
+                                            deviceFamily: 'web'
+                                        },
+                                        role,
+                                        scopes,
+                                        auth: { token },
+                                        device: {
+                                            id: state.deviceId,
+                                            publicKey: publicKeyBase64url,
+                                            signature,
+                                            signedAt: ts,
+                                            nonce
+                                        }
+                                    }
+                                };
+                                state.ws.send(JSON.stringify(connectReq));
+                            } else {
+                                // Simple auth without device (local mode)
+                                const connectReq = {
+                                    type: 'req',
+                                    id: 'req_simple',
+                                    method: 'connect',
+                                    params: {
+                                        minProtocol: 4,
+                                        maxProtocol: 4,
+                                        client: {
+                                            id: clientId,
+                                            version: '1.0.0',
+                                            platform: 'web',
+                                            mode: 'local'
+                                        },
+                                        role,
+                                        scopes,
+                                        auth: { token }
+                                    }
+                                };
+                                state.ws.send(JSON.stringify(connectReq));
+                            }
+                        }
+                        // Handle response messages (top-level ok / payload)
+                        else if (data.type === 'res') {
+                            // Connection handshake success
+                            if (data.ok && data.payload?.type === 'hello-ok') {
+                                updateStatus(true);
+                                state.deviceToken = data.payload.auth?.deviceToken;
+                                state.connId = data.payload.server?.connId;
+                                addMessage('✓ Authenticated successfully', 'system');
+                            }
+                            // Chat/agent send acknowledged
+                            else if (data.ok) {
+                                if (data.payload?.content) {
+                                    addMessage(data.payload.content, 'assistant');
+                                }
+                            }
+                            // Error response
+                            else if (data.error) {
+                                addMessage(`✗ ${data.error.code}: ${data.error.message}`, 'system', true);
+                            }
+                        }
+                        // Handle streamed chat events
+                        else if (data.type === 'event' && data.event === 'chat') {
+                            const p = data.payload || {};
+                            console.log('[chat event]', JSON.stringify(p, null, 2));
+                            const text = extractChatText(p.message);
+                            if (text && p.state !== 'partial' && p.state !== 'delta') {
+                                addMessage(text, 'assistant', p.state === 'error');
+                                state.conversationHistory.push({ role: 'assistant', content: text });
+                            }
+                        }
+                        // Ignore noisy events (tick, heartbeat, presence, health)
+                        else if (data.type === 'event' && !['tick', 'heartbeat', 'presence', 'health'].includes(data.event)) {
+                            // Uncomment to debug other events:
+                            // addMessage(`[${data.event}] ${JSON.stringify(data.payload)}`, 'system');
+                        }
+                    } catch (e) {
+                        addMessage(`Error parsing message: ${e.message}`, 'system', true);
+                    }
+                };
+
+                state.ws.onerror = (error) => {
+                    updateStatus(false);
+                    addMessage(`✗ WebSocket error`, 'system', true);
+                };
+
+                state.ws.onclose = () => {
+                    updateStatus(false);
+                    addMessage('✗ Disconnected from OpenClaw', 'system');
+                };
+            } catch (error) {
+                updateStatus(false);
+                addMessage(`✗ Failed to connect: ${error.message}`, 'system', true);
+            }
+        }
+
+        function disconnect() {
+            if (state.ws) {
+                state.ws.close();
+                state.ws = null;
+            }
+            updateStatus(false);
+        }
+
+        function sendMessage() {
+            const content = elements.messageInput.value.trim();
+            if (!content || !state.connected) return;
+
+            // Add user message to history
+            addMessage(content, 'user');
+            state.conversationHistory.push({ role: 'user', content });
+            elements.messageInput.value = '';
+
+            // Send message via OpenClaw chat.send method
+            const message = {
+                type: 'req',
+                id: `req_${Date.now()}`,
+                method: 'chat.send',
+                params: {
+                    sessionKey: state.sessionKey || 'agent:main:main',
+                    agentId: 'main',
+                    message: content,
+                    idempotencyKey: crypto.randomUUID()
+                }
+            };
+
+            try {
+                state.ws.send(JSON.stringify(message));
+            } catch (error) {
+                addMessage(`✗ Failed to send message: ${error.message}`, 'system', true);
+            }
+        }
+
+        // Event listeners
+        elements.connectBtn.addEventListener('click', connect);
+        elements.sendBtn.addEventListener('click', sendMessage);
+
+        elements.messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Initialize
+        updateStatus(false);
+        addMessage('Welcome to OpenClaw WebSocket Client. Enter your credentials and connect to get started.', 'system');
+    </script>
+</body>
+</html>

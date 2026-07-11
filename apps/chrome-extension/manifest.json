@@ -3,17 +3,21 @@
   "name": "BuildMate UI Demo",
   "version": "0.1.0",
   "description": "BuildMate local UI demo on Phong Vu Build PC pages.",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": ["http://127.0.0.1:8781/*"],
   "action": {
     "default_title": "BuildMate"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://phongvu.vn/buildpc"
+        "https://phongvu.vn/buildpc*",
+        "https://www.phongvu.vn/buildpc*",
+        "http://127.0.0.1:8781/mock-buildpc"
       ],
       "js": [
         "shared/i18n.js",
@@ -23,7 +27,8 @@
         "shared/action-state.js",
         "shared/command-policy.js",
         "shared/snapshot.js",
-        "page-actions.js",
+        "dom-adapter.js",
+        "dom-probe.js",
         "build-tracker.js",
         "bridge-adapter.js",
         "panel.js",
@@ -37,7 +42,8 @@
       "resources": ["panel.css"],
       "matches": [
         "https://phongvu.vn/*",
-        "https://www.phongvu.vn/*"
+        "https://www.phongvu.vn/*",
+        "http://127.0.0.1:8781/*"
       ]
     }
   ]

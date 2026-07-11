@@ -8,6 +8,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error("buildmate-mcp-server fatal error:", error);
+  console.error("buildmate-buildpc-mcp-server fatal error:", error);
   process.exit(1);
 });

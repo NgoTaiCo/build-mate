@@ -2,6 +2,9 @@
 
 > Tham chiếu kỹ thuật cho việc xây extension Chrome thao tác trên trang `phongvu.vn/buildpc` (đọc cấu hình build, tự thêm linh kiện). Mục đích: rút ngắn công việc khi team build extension trong tương lai.
 
+Bridge production giữa MCP, BE và extension được mô tả tại
+[`docs/dom-executor-bridge-contract.md`](./dom-executor-bridge-contract.md).
+
 ## 1. Kiến trúc MV3 (recap)
 
 | Thành phần | Vai trò |
