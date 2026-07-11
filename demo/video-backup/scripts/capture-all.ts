@@ -22,11 +22,15 @@ import { chromium, type Page } from "playwright";
 import path from "node:path";
 import fs from "node:fs";
 import { execSync, spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { WEBCHAT_CAPTURE_STEPS } from "../src/capture-steps";
 
 // ── Config ──────────────────────────────────────────────────────────────────
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const WEBCHAT_URL = process.env["WEBCHAT_URL"] ?? "http://127.0.0.1:18789/";
-const SCENES_DIR = path.resolve(import.meta.dirname, "../public/scenes");
+const SCENES_DIR = path.resolve(__dirname, "../public/scenes");
 const FPS = 10; // screenshots per second — enough for a smooth demo video
 const SKIP = new Set(
   (process.env["SKIP_SCENES"] ?? "").split(",").filter(Boolean)
