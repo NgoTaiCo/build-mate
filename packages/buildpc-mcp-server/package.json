@@ -1,12 +1,12 @@
 {
-  "name": "@buildmate/mcp-server",
+  "name": "@buildmate/buildpc-mcp-server",
   "version": "0.1.0",
-  "description": "Standalone MCP server exposing @buildmate/compiler as compile_build, detect_errors, repair_build tools",
+  "description": "Standalone BuildPC MCP server exposing compiler and DOM execution tools",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "buildmate-mcp-server": "dist/index.js"
+    "buildmate-buildpc-mcp-server": "dist/index.js"
   },
   "scripts": {
     "test": "node --import tsx --test tests/*.test.ts",
