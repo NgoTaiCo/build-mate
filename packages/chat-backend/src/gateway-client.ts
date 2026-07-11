@@ -91,8 +91,13 @@ export function extractChatText(message: unknown): string {
   return '';
 }
 
-const defaultSocketFactory: SocketFactory = (url) =>
-  new WebSocket(url) as unknown as GatewaySocket;
+const defaultSocketFactory: SocketFactory = (url) => {
+  // The gateway's Control-UI guard requires an `Origin` header. Browsers send
+  // one automatically; the Node `ws` client does not, so derive it from the
+  // gateway URL (ws:// -> http://) to satisfy `gateway.controlUi.allowedOrigins`.
+  const origin = url.replace(/^ws/, 'http');
+  return new WebSocket(url, { origin }) as unknown as GatewaySocket;
+};
 
 export class GatewayClient {
   private readonly config: BackendConfig;

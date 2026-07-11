@@ -90,10 +90,10 @@ New npm-workspace package at `packages/chat-backend/` (mirrors `packages/mcp-ser
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
-- [ ] T021 [P] Write `packages/chat-backend/README.md` — env vars, one-time seed generation, approve-once flow, `POST /chat` + `GET /healthz` (Vietnamese prose, English technical terms, no emoji — Principle V)
-- [ ] T022 [P] Audit logging in `packages/chat-backend/src/*.ts` — assert gateway token and device private key never appear in any log line or response (FR-012)
-- [ ] T023 Run `packages/chat-backend` through [quickstart.md](./quickstart.md) end-to-end (Steps 1–8) against the live gateway
-- [ ] T024 [P] Confirm `npm test -w @buildmate/chat-backend` and `npm run -w @buildmate/chat-backend typecheck` are green (Quality Gate before demo)
+- [X] T021 [P] Write `packages/chat-backend/README.md` — env vars, one-time seed generation, approve-once flow, `POST /chat` + `GET /healthz` (Vietnamese prose, English technical terms, no emoji — Principle V)
+- [X] T022 [P] Audit logging in `packages/chat-backend/src/*.ts` — assert gateway token and device private key never appear in any log line or response (FR-012)
+- [X] T023 Run `packages/chat-backend` through [quickstart.md](./quickstart.md) end-to-end (Steps 1–8) against the live gateway
+- [X] T024 [P] Confirm `npm test -w @buildmate/chat-backend` and `npm run -w @buildmate/chat-backend typecheck` are green (Quality Gate before demo)
 
 ---
 
