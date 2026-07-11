@@ -17,7 +17,7 @@ const STATUS_BY_CODE: Record<ErrorCode, number> = {
   gateway_unavailable: 502,
   auth_failed: 502,
   gateway_error: 502,
-  timeout: 504,
+  timeout: 500,
 };
 
 const CORS_HEADERS: Record<string, string> = {
