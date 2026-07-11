@@ -9,21 +9,24 @@
  *   bridge push -> { type: "dom.command", command_id, command }
  *   execute via content script, then reply { type: "dom.result", command_id, ... }
  *
- * The bridge URL defaults to the local chat-backend and can be overridden via
+ * The bridge URL defaults to the cloudflare tunnel and can be overridden via
  * chrome.storage.local `bridgeUrl` (see README). If you change the host, add it
  * to manifest `host_permissions`.
  */
-const DEFAULT_BRIDGE_URL = "ws://127.0.0.1:8790/dom-bridge";
+
+// Use cloudflare URL for testing
+const DEFAULT_BRIDGE_URL = "wss://administrators-carlo-received-nascar.trycloudflare.com/dom-bridge";
+const DEFAULT_CHAT_URL = "https://administrators-carlo-received-nascar.trycloudflare.com/chat";
 
 /** context_id -> { contextId, pageUrl, tabId, url, ws, closed, reconnectTimer } */
 const contexts = new Map();
 
-async function resolveBridgeUrl() {
+async function resolveUrl(key, defaultUrl) {
   try {
-    const { bridgeUrl } = await chrome.storage.local.get("bridgeUrl");
-    return typeof bridgeUrl === "string" && bridgeUrl.trim() ? bridgeUrl.trim() : DEFAULT_BRIDGE_URL;
+    const data = await chrome.storage.local.get(key);
+    return typeof data[key] === "string" && data[key].trim() ? data[key].trim() : defaultUrl;
   } catch {
-    return DEFAULT_BRIDGE_URL;
+    return defaultUrl;
   }
 }
 
@@ -97,7 +100,7 @@ async function registerContext({ contextId, pageUrl, tabId }) {
     contextId,
     pageUrl,
     tabId,
-    url: await resolveBridgeUrl(),
+    url: await resolveUrl("bridgeUrl", DEFAULT_BRIDGE_URL),
     ws: null,
     closed: false,
     reconnectTimer: null,
@@ -165,18 +168,21 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     // Append context_id and snapshot as a system instruction so the LLM knows it and can call MCP tools or answer directly
     const snapshotStr = message.snapshot ? JSON.stringify(message.snapshot) : "None";
     const payloadMessage = `${message.text}\n\n[System: User is on BuildPC page. Your context_id for MCP tools is "${message.sessionId}". Current build state: ${snapshotStr}]`;
-    fetch("https://administrators-carlo-received-nascar.trycloudflare.com/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: payloadMessage, sessionId: message.sessionId, currentBuild: message.snapshot })
-    })
-    .then(r => r.json())
-    .then(data => sendResponse({ ok: true, reply: data.reply }))
-    .catch(err => sendResponse({ ok: false, error: err.message }));
+    resolveUrl("chatUrl", DEFAULT_CHAT_URL).then(chatUrl => {
+      fetch(chatUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: payloadMessage, sessionId: message.sessionId, currentBuild: message.snapshot })
+      })
+      .then(r => r.json())
+      .then(data => sendResponse({ ok: true, reply: data.reply }))
+      .catch(err => sendResponse({ ok: false, error: err.message }));
+    });
     return true; // Keep message channel open for async response
   }
 
   if (message?.type !== "BUILDMATE_USER_INTENT") return undefined;
+
   // Production forwards this envelope to BE over its authenticated bridge; it
   // must never invoke a DOM command or MCP client directly from the page.
   sendResponse({ ok: false, error: "BACKEND_NOT_CONNECTED" });
