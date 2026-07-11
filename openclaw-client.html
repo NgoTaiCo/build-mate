@@ -400,9 +400,9 @@
 
     <script>
         const state = {
-            ws: null,
             connected: false,
-            conversationHistory: []
+            conversationHistory: [],
+            isLoading: false
         };
 
         const elements = {
@@ -424,7 +424,7 @@
             elements.statusText.textContent = connected ? 'Connected' : 'Disconnected';
             elements.connectBtn.textContent = connected ? 'Disconnect' : 'Connect';
             elements.messageInput.disabled = !connected;
-            elements.sendBtn.disabled = !connected;
+            elements.sendBtn.disabled = !connected || state.isLoading;
         }
 
         function addMessage(content, role = 'assistant', isError = false) {
@@ -441,7 +441,30 @@
             elements.messages.scrollTop = elements.messages.scrollHeight;
         }
 
-        function connect() {
+        async function testConnection(host, port, token) {
+            try {
+                const httpPort = parseInt(port) - 1; // 18790 -> 18789
+                const url = `http://${host}:${httpPort}/api/v1/gateway/status`;
+
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    return { success: true, data };
+                } else {
+                    return { success: false, error: `HTTP ${response.status}` };
+                }
+            } catch (error) {
+                return { success: false, error: error.message };
+            }
+        }
+
+        async function connect() {
             if (state.connected) {
                 disconnect();
                 return;
@@ -456,92 +479,77 @@
                 return;
             }
 
-            const wsUrl = `ws://${host}:${port}`;
-            addMessage(`Connecting to ${wsUrl}...`, 'system');
+            addMessage(`Testing connection to ${host}:${port}...`, 'system');
+            elements.connectBtn.disabled = true;
 
-            try {
-                state.ws = new WebSocket(wsUrl);
+            const result = await testConnection(host, port, token);
 
-                state.ws.onopen = () => {
-                    updateStatus(true);
-                    addMessage('✓ Connected to OpenClaw', 'system');
-
-                    // Send initial authentication
-                    const authMessage = {
-                        type: 'auth',
-                        token: token
-                    };
-                    state.ws.send(JSON.stringify(authMessage));
-                };
-
-                state.ws.onmessage = (event) => {
-                    try {
-                        const data = JSON.parse(event.data);
-
-                        if (data.type === 'auth_response') {
-                            if (data.success) {
-                                addMessage('✓ Authenticated successfully', 'system');
-                            } else {
-                                addMessage(`✗ Authentication failed: ${data.message}`, 'system', true);
-                            }
-                        } else if (data.type === 'message') {
-                            addMessage(data.content, 'assistant');
-                        } else if (data.type === 'error') {
-                            addMessage(`Error: ${data.message}`, 'system', true);
-                        } else {
-                            // Display raw response
-                            addMessage(JSON.stringify(data, null, 2), 'assistant');
-                        }
-                    } catch (e) {
-                        addMessage(event.data, 'assistant');
-                    }
-                };
-
-                state.ws.onerror = (error) => {
-                    updateStatus(false);
-                    addMessage(`✗ WebSocket error: ${error.message || 'Unknown error'}`, 'system', true);
-                };
-
-                state.ws.onclose = () => {
-                    updateStatus(false);
-                    addMessage('✗ Disconnected from OpenClaw', 'system');
-                };
-            } catch (error) {
-                updateStatus(false);
-                addMessage(`✗ Failed to connect: ${error.message}`, 'system', true);
+            if (result.success) {
+                state.connected = true;
+                state.host = host;
+                state.httpPort = parseInt(port) - 1;
+                state.token = token;
+                updateStatus(true);
+                addMessage('✓ Connected to OpenClaw', 'system');
+            } else {
+                addMessage(`✗ Connection failed: ${result.error}`, 'system', true);
+                elements.connectBtn.disabled = false;
             }
         }
 
         function disconnect() {
-            if (state.ws) {
-                state.ws.close();
-                state.ws = null;
-            }
+            state.connected = false;
+            state.conversationHistory = [];
             updateStatus(false);
+            addMessage('✗ Disconnected from OpenClaw', 'system');
         }
 
-        function sendMessage() {
+        async function sendMessage() {
             const content = elements.messageInput.value.trim();
-            if (!content || !state.connected) return;
+            if (!content || !state.connected || state.isLoading) return;
 
-            // Add user message to history
+            // Add user message to UI and history
             addMessage(content, 'user');
             state.conversationHistory.push({ role: 'user', content });
-
-            // Send message
-            const message = {
-                type: 'message',
-                model: elements.model.value,
-                messages: state.conversationHistory,
-                temperature: 0.7,
-                max_tokens: 2048
-            };
+            elements.messageInput.value = '';
+            state.isLoading = true;
+            updateStatus(state.connected);
 
             try {
-                state.ws.send(JSON.stringify(message));
-                elements.messageInput.value = '';
+                const url = `http://${state.host}:${state.httpPort}/v1/chat/completions`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${state.token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: elements.model.value,
+                        messages: state.conversationHistory,
+                        temperature: 0.7,
+                        max_tokens: 2048
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+
+                if (data.choices && data.choices[0] && data.choices[0].message) {
+                    const assistantMessage = data.choices[0].message.content;
+                    addMessage(assistantMessage, 'assistant');
+                    state.conversationHistory.push({ role: 'assistant', content: assistantMessage });
+                } else {
+                    addMessage('Unexpected response format', 'system', true);
+                }
             } catch (error) {
-                addMessage(`✗ Failed to send message: ${error.message}`, 'system', true);
+                addMessage(`✗ Error: ${error.message}`, 'system', true);
+            } finally {
+                state.isLoading = false;
+                updateStatus(state.connected);
             }
         }
 
@@ -550,7 +558,7 @@
         elements.sendBtn.addEventListener('click', sendMessage);
 
         elements.messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
+            if (e.key === 'Enter' && !e.shiftKey && state.connected && !state.isLoading) {
                 e.preventDefault();
                 sendMessage();
             }
@@ -558,7 +566,7 @@
 
         // Initialize
         updateStatus(false);
-        addMessage('Welcome to OpenClaw WebSocket Client. Enter your credentials and connect to get started.', 'system');
+        addMessage('Welcome to OpenClaw Client. Enter your credentials and connect to get started.', 'system');
     </script>
 </body>
 </html>
