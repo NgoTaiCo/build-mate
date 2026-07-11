@@ -34,6 +34,10 @@ out/
 logs/
 *.log
 
+# Docker / OpenClaw
+docker/.env
+docker/openclaw.json
+
 # OpenClaw per-machine state (lives in home, not repo — ignore just in case)
 .openclaw-state/
 
