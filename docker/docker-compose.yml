@@ -44,6 +44,24 @@ services:
     env_file:
       - .env
 
+  mcp-server:
+    build:
+      context: ..
+      dockerfile: packages/mcp-server/Dockerfile
+    image: buildmate/mcp-server:latest
+    container_name: buildmate-mcp-server
+    restart: unless-stopped
+    ports:
+      - "${MCP_SERVER_PORT:-8791}:8791"
+    environment:
+      - PORT=8791
+      - MCP_PATH=/mcp
+      # Optional: set APIFY_API_KEY to enable live catalog; otherwise mock data.
+      - APIFY_API_KEY=${APIFY_API_KEY:-}
+      - APIFY_ACTOR_ID=${APIFY_ACTOR_ID:-}
+    env_file:
+      - .env
+
 volumes:
   openclaw-config:
     name: ${PROJECT_NAME:-buildmate}_openclaw_config
