@@ -1,34 +1,23 @@
 /**
- * DOM executor bridge (see docs/dom-executor-bridge-contract.md).
+ * DOM executor bridge (see docs/dom-executor-bridge-contract.md §3–4).
  *
- * Relays semantic DOM commands between the MCP server and the BuildPC Chrome
- * extension. The extension speaks HTTP long-poll (matching apps/chrome-extension
- * and tools/dom-bridge-simulator.mjs):
+ * Two sides:
+ *   - Extension  <-> bridge over an outbound **WebSocket** (`/dom-bridge`):
+ *       extension  -> { type: "dom.register", context_id, page_url }
+ *       bridge     -> { type: "dom.command", command_id, command }
+ *       extension  -> { type: "dom.result", command_id, ok, snapshot?, ... }
+ *   - MCP server -> bridge over HTTP `POST /dom-commands` (unchanged interface;
+ *       DomBridgeClient in the MCP server keeps posting the same body).
  *
- *   extension  POST /contexts                 register {context_id, page_url}
- *   extension  GET  /commands?context_id=...  long-poll next command
- *   extension  POST /commands/:id/result      deliver the command result
- *   MCP server POST /dom-commands             {action, context_id, component?}
- *
- * The bridge owns no OpenClaw session/memory state (Constitution I): it only
- * maps context_id -> tab connection and correlates command_id -> reply.
+ * The socket is the live link to one BuildPC tab: `context_id -> socket`. When
+ * the socket closes (tab/extension gone) the mapping is dropped immediately, so
+ * a command to a dead tab fails fast with CONTEXT_OFFLINE instead of hanging.
+ * The bridge owns no OpenClaw session/memory state (Constitution I).
  */
+import { WebSocketServer, WebSocket } from 'ws';
 import { randomUUID } from 'node:crypto';
-import type { IncomingMessage, ServerResponse } from 'node:http';
-
-interface QueuedCommand {
-  command_id: string;
-  action: 'read_build' | 'add_component';
-  component?: unknown;
-}
-
-interface DomContext {
-  pageUrl: string;
-  queue: QueuedCommand[];
-  waiting: ((command: QueuedCommand | null) => void) | null;
-  registeredAt: string;
-  lastSeenAt: string | null;
-}
+import type { IncomingMessage, Server, ServerResponse } from 'node:http';
+import type { Duplex } from 'node:stream';
 
 interface DomCommandResult {
   command_id: string;
@@ -37,157 +26,136 @@ interface DomCommandResult {
   modal_closed?: boolean;
   snapshot?: unknown;
   added?: unknown;
+  removed?: unknown;
 }
 
-export interface DomBridgeOptions {
-  /** How long POST /dom-commands waits for the extension's result. */
-  commandTtlMs?: number;
-  /** How long GET /commands holds a long-poll open before returning null. */
-  longPollMs?: number;
-  /** Clock injectable for tests; defaults to Date-based ISO strings. */
-  now?: () => string;
-}
-
+const VALID_ACTIONS = new Set(['read_build', 'add_component', 'remove_component']);
 const MAX_BODY_BYTES = 1_000_000;
 
+export interface DomBridgeOptions {
+  /** WebSocket upgrade path the extension connects to. */
+  path?: string;
+  /** How long POST /dom-commands waits for the extension's dom.result. */
+  commandTtlMs?: number;
+}
+
 export class DomBridge {
-  private readonly contexts = new Map<string, DomContext>();
+  private readonly wss: WebSocketServer;
+  private readonly sockets = new Map<string, WebSocket>(); // context_id -> socket
   private readonly pending = new Map<
     string,
     { resolve: (r: DomCommandResult) => void; timer: NodeJS.Timeout }
   >();
+  private readonly path: string;
   private readonly commandTtlMs: number;
-  private readonly longPollMs: number;
-  private readonly now: () => string;
 
   constructor(opts: DomBridgeOptions = {}) {
+    this.path = opts.path ?? '/dom-bridge';
     this.commandTtlMs = opts.commandTtlMs ?? 15_000;
-    this.longPollMs = opts.longPollMs ?? 25_000;
-    this.now = opts.now ?? (() => new Date().toISOString());
+    this.wss = new WebSocketServer({ noServer: true });
   }
 
-  /** Number of currently-registered tab contexts (for /healthz). */
+  /** Registered (live) tab contexts, for /healthz. */
   get contextCount(): number {
-    return this.contexts.size;
+    return this.sockets.size;
   }
 
-  /**
-   * Handle a bridge route. Returns true if the request belonged to the bridge
-   * (and a response was/will be sent), false to let the caller keep routing.
-   */
-  tryHandle(req: IncomingMessage, res: ServerResponse, url: URL): boolean {
-    const { method } = req;
-    const path = url.pathname;
+  /** Route the WebSocket upgrade for our path onto the shared http server. */
+  attach(server: Server): void {
+    server.on('upgrade', (req: IncomingMessage, socket: Duplex, head: Buffer) => {
+      let pathname: string;
+      try {
+        pathname = new URL(req.url ?? '/', 'http://localhost').pathname;
+      } catch {
+        socket.destroy();
+        return;
+      }
+      if (pathname !== this.path) return; // not a bridge socket; leave for others
+      this.wss.handleUpgrade(req, socket, head, (ws) => this.onConnection(ws));
+    });
+  }
 
-    if (method === 'POST' && path === '/contexts') {
-      this.readJson(req, res, (body) => this.registerContext(res, body));
-      return true;
-    }
-    if (method === 'GET' && path === '/commands') {
-      void this.pollCommand(res, url.searchParams.get('context_id') ?? '');
-      return true;
-    }
-    const resultMatch = path.match(/^\/commands\/([^/]+)\/result$/);
-    if (method === 'POST' && resultMatch) {
-      this.readJson(req, res, (body) =>
-        this.deliverResult(res, resultMatch[1], body),
-      );
-      return true;
-    }
-    if (method === 'POST' && path === '/dom-commands') {
-      this.readJson(req, res, (body) => void this.dispatchCommand(res, body));
+  private onConnection(ws: WebSocket): void {
+    let contextId: string | null = null;
+
+    ws.on('message', (data) => {
+      let msg: Record<string, unknown>;
+      try {
+        msg = JSON.parse(data.toString());
+      } catch {
+        return;
+      }
+
+      if (msg.type === 'dom.register' && typeof msg.context_id === 'string') {
+        contextId = msg.context_id;
+        // Last registration wins: drop any stale socket for the same tab.
+        const prev = this.sockets.get(contextId);
+        if (prev && prev !== ws) prev.close();
+        this.sockets.set(contextId, ws);
+        ws.send(JSON.stringify({ type: 'dom.registered', context_id: contextId }));
+        return;
+      }
+
+      if (msg.type === 'dom.result' && typeof msg.command_id === 'string') {
+        const p = this.pending.get(msg.command_id);
+        if (p) {
+          clearTimeout(p.timer);
+          this.pending.delete(msg.command_id);
+          p.resolve({
+            command_id: msg.command_id,
+            ok: msg.ok === true,
+            error: msg.error as string | undefined,
+            modal_closed: msg.modal_closed as boolean | undefined,
+            snapshot: msg.snapshot,
+            added: msg.added,
+            removed: msg.removed,
+          });
+        }
+        return;
+      }
+
+      if (msg.type === 'dom.ping') {
+        ws.send(JSON.stringify({ type: 'dom.pong' }));
+      }
+    });
+
+    ws.on('close', () => {
+      if (contextId && this.sockets.get(contextId) === ws) {
+        this.sockets.delete(contextId);
+      }
+    });
+    ws.on('error', () => {
+      /* handled by close */
+    });
+  }
+
+  /** MCP-facing HTTP route. Returns true if it owns the request. */
+  tryHandle(req: IncomingMessage, res: ServerResponse, url: URL): boolean {
+    if (req.method === 'POST' && url.pathname === '/dom-commands') {
+      this.readJson(req, res, (body) => this.dispatch(res, body));
       return true;
     }
     return false;
   }
 
-  // --- extension side ---
-
-  private registerContext(res: ServerResponse, body: Record<string, unknown>): void {
-    if (typeof body.context_id !== 'string' || typeof body.page_url !== 'string') {
-      json(res, 400, { error: 'context_id and page_url are required' });
-      return;
-    }
-    const existing = this.contexts.get(body.context_id);
-    const ctx: DomContext = existing ?? {
-      pageUrl: body.page_url,
-      queue: [],
-      waiting: null,
-      registeredAt: this.now(),
-      lastSeenAt: null,
-    };
-    ctx.pageUrl = body.page_url;
-    this.contexts.set(body.context_id, ctx);
-    json(res, 200, { ok: true, context_id: body.context_id });
-  }
-
-  private async pollCommand(res: ServerResponse, contextId: string): Promise<void> {
-    const ctx = this.contexts.get(contextId);
-    if (!ctx) {
-      json(res, 404, { error: 'CONTEXT_NOT_CONNECTED' });
-      return;
-    }
-    ctx.lastSeenAt = this.now();
-    const command = await this.nextCommand(ctx);
-    json(res, 200, { command });
-  }
-
-  private nextCommand(ctx: DomContext): Promise<QueuedCommand | null> {
-    const queued = ctx.queue.shift();
-    if (queued) return Promise.resolve(queued);
-    return new Promise((resolve) => {
-      const timer = setTimeout(() => {
-        if (ctx.waiting === deliver) ctx.waiting = null;
-        resolve(null);
-      }, this.longPollMs);
-      const deliver = (command: QueuedCommand | null) => {
-        clearTimeout(timer);
-        resolve(command);
-      };
-      ctx.waiting = deliver;
-    });
-  }
-
-  private deliverResult(
-    res: ServerResponse,
-    commandId: string,
-    body: Record<string, unknown>,
-  ): void {
-    const pending = this.pending.get(commandId);
-    if (!pending) {
-      json(res, 404, { error: 'UNKNOWN_COMMAND' });
-      return;
-    }
-    pending.resolve({ command_id: commandId, ok: false, ...body } as DomCommandResult);
-    json(res, 200, { ok: true });
-  }
-
-  // --- MCP side ---
-
-  private dispatchCommand(res: ServerResponse, body: Record<string, unknown>): void {
+  private dispatch(res: ServerResponse, body: Record<string, unknown>): void {
     const action = body.action;
     const contextId = body.context_id;
     if (typeof contextId !== 'string') {
       json(res, 400, { command_id: null, ok: false, error: 'context_id is required' });
       return;
     }
-    if (action !== 'read_build' && action !== 'add_component') {
+    if (typeof action !== 'string' || !VALID_ACTIONS.has(action)) {
       json(res, 400, { command_id: null, ok: false, error: 'INVALID_ACTION' });
       return;
     }
-    const ctx = this.contexts.get(contextId);
-    if (!ctx) {
+    const ws = this.sockets.get(contextId);
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
       json(res, 200, { command_id: null, ok: false, error: 'CONTEXT_OFFLINE' });
       return;
     }
 
     const commandId = randomUUID();
-    const command: QueuedCommand = {
-      command_id: commandId,
-      action,
-      component: body.component,
-    };
-
     const result = new Promise<DomCommandResult>((resolve) => {
       const timer = setTimeout(() => {
         this.pending.delete(commandId);
@@ -203,23 +171,28 @@ export class DomBridge {
       });
     });
 
-    // Hand the command to a waiting long-poll, or queue it for the next poll.
-    if (ctx.waiting) {
-      const deliver = ctx.waiting;
-      ctx.waiting = null;
-      deliver(command);
-    } else {
-      ctx.queue.push(command);
-    }
+    ws.send(
+      JSON.stringify({
+        type: 'dom.command',
+        command_id: commandId,
+        command: {
+          action,
+          component: body.component,
+          expected_revision: body.expected_revision,
+        },
+      }),
+    );
 
     result.then((r) => json(res, 200, r));
   }
 
-  /** Clear timers so the process can exit cleanly. */
+  /** Close all sockets and clear timers so the process can exit cleanly. */
   close(): void {
     for (const { timer } of this.pending.values()) clearTimeout(timer);
     this.pending.clear();
-    this.contexts.clear();
+    for (const ws of this.sockets.values()) ws.close();
+    this.sockets.clear();
+    this.wss.close();
   }
 
   private readJson(
