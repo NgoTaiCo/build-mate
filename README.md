@@ -112,6 +112,12 @@ Four layers on an **OpenClaw** backbone:
 - **TypeScript** — tool plugin SDK
 - **Build Compiler** — deterministic pure-function compatibility engine (the IP)
 
+## Current Chrome Extension demo
+
+Chrome Extension hiện chạy đúng tại `https://phongvu.vn/buildpc`: panel BuildMate theo dõi build theo kiểu read-only và có flow **Thêm VGA demo**. User phải xác nhận trong panel trước khi extension mở chooser VGA và chọn product đầu tiên; extension không đi tới checkout, payment, navigation hoặc multi-tab.
+
+Để cài demo, chạy `npm test`, mở `chrome://extensions`, bật Developer mode và **Load unpacked** thư mục `apps/chrome-extension`. Sau khi cài, mở đúng URL canonical, refresh tab rồi bấm launcher BuildMate. OpenClaw bridge hiện chỉ có mock command adapter; Gateway node pairing là phase integration riêng.
+
 ## AABW technology partners
 
 > Honesty note: only claim what the team actually integrates on build day. Below is the set that genuinely fits BuildMate — select these in the AABW dropdown.

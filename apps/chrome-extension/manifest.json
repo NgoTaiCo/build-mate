@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "BuildMate UI Demo",
+  "version": "0.1.0",
+  "description": "BuildMate local UI demo on Phong Vu Build PC pages.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_title": "BuildMate",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://phongvu.vn/buildpc"
+      ],
+      "js": [
+        "shared/demo-data.js",
+        "shared/eligibility.js",
+        "shared/panel-state.js",
+        "shared/action-state.js",
+        "shared/command-policy.js",
+        "shared/snapshot.js",
+        "page-actions.js",
+        "build-tracker.js",
+        "bridge-adapter.js",
+        "panel.js",
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["panel.css"],
+      "matches": [
+        "https://phongvu.vn/*",
+        "https://www.phongvu.vn/*"
+      ]
+    }
+  ]
+}
