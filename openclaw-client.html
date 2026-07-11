@@ -468,7 +468,9 @@
 
         function createSignaturePayload(deviceId, clientId, clientMode, role, scopes, timestamp, token, nonce) {
             const scopesStr = scopes.join(',');
-            return `v2|${deviceId}|${clientId}|${clientMode}|${role}|${scopesStr}|${timestamp}|${token}|${nonce}`;
+            const platform = 'web'.toLowerCase();
+            const deviceFamily = 'web'.toLowerCase();
+            return `v3|${deviceId}|${clientId}|${clientMode}|${role}|${scopesStr}|${timestamp}|${token}|${nonce}|${platform}|${deviceFamily}`;
         }
 
         function signPayload(privateKey, payload) {
@@ -543,13 +545,14 @@
                                 id: `req_${Date.now()}`,
                                 method: 'connect',
                                 params: {
-                                    minProtocol: 4,
-                                    maxProtocol: 4,
+                                    minProtocol: 3,
+                                    maxProtocol: 3,
                                     client: {
                                         id: clientId,
+                                        mode: clientMode,
                                         version: '1.0.0',
                                         platform: 'web',
-                                        mode: clientMode
+                                        deviceFamily: 'web'
                                     },
                                     role,
                                     scopes,
