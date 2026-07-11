@@ -4,61 +4,11 @@ This guide explains how to fetch real product data from PhongVu via the Teko Dis
 
 ## Prerequisites
 
-1. **Teko Discovery API Credentials**: You need a valid API key for the Teko Discovery API
-2. **One of these credential sources**:
-   - Environment variable `TEKO_API_KEY`
-   - OpenClaw config at `~/.openclaw/openclaw.json`
-   - Project credentials file `.teko-credentials`
+**NONE!** The Teko Discovery API endpoint is public and requires no authentication.
 
-## Setup (Choose One Method)
+## Setup
 
-### Method 1: Environment Variable (Recommended for CI/CD)
-
-```bash
-export TEKO_API_KEY="your-api-key-here"
-npm run fetch:phongvu
-```
-
-**Best for:**
-- CI/CD pipelines (GitHub Actions, GitLab CI, etc.)
-- Docker containers
-- Server environments
-- Temporary testing
-
-### Method 2: OpenClaw Configuration (Recommended for OpenClaw users)
-
-Create `~/.openclaw/openclaw.json`:
-
-```bash
-mkdir -p ~/.openclaw
-
-cat > ~/.openclaw/openclaw.json << 'EOF'
-{
-  "teko_api_key": "your-api-key-here"
-}
-EOF
-
-chmod 600 ~/.openclaw/openclaw.json
-```
-
-**Best for:**
-- Users of OpenClaw gateway
-- Machine-specific configuration
-- Multiple API keys for different providers
-
-### Method 3: Project Credentials File (Recommended for local development)
-
-```bash
-echo "your-api-key-here" > .teko-credentials
-# .teko-credentials is in .gitignore, safe for local development
-```
-
-**Best for:**
-- Local development
-- Easy key rotation per project
-- Keeping keys out of env vars
-
-### 4. Run the Fetch Script
+Simply run the fetch script - no configuration needed:
 
 ```bash
 cd packages/catalog

@@ -47,52 +47,8 @@ const TYPE_SLUGS: Record<ComponentType, string[]> = {
 const API_ENDPOINT = "https://discovery.tekoapis.com/api/v2/search-skus-v2";
 const PAGE_SIZE = 50;
 
-async function getApiToken(): Promise<string> {
-  // Priority 1: Environment variable (most flexible)
-  if (process.env.TEKO_API_KEY) {
-    console.log("ℹ Using TEKO_API_KEY from environment");
-    return process.env.TEKO_API_KEY;
-  }
-
-  // Priority 2: OpenClaw config (machine-specific)
-  const openclaw_path = resolve(process.env.HOME || "", ".openclaw/openclaw.json");
-  try {
-    const config = JSON.parse(
-      require("fs").readFileSync(openclaw_path, "utf-8") as string
-    );
-    if (config.teko_api_key) {
-      console.log("ℹ Using teko_api_key from ~/.openclaw/openclaw.json");
-      return config.teko_api_key;
-    }
-  } catch (error) {
-    // Fall through to next option
-  }
-
-  // Priority 3: .teko-credentials file (project-specific, gitignored)
-  const creds_path = resolve(process.cwd(), ".teko-credentials");
-  try {
-    const key = require("fs").readFileSync(creds_path, "utf-8").trim();
-    if (key) {
-      console.log("ℹ Using API key from .teko-credentials");
-      return key;
-    }
-  } catch (error) {
-    // Fall through
-  }
-
-  // No token found
-  console.error("❌ Error: Teko API key not found");
-  console.error("");
-  console.error("Set one of:");
-  console.error("  1. Environment variable: export TEKO_API_KEY=your-key");
-  console.error("  2. OpenClaw config: ~/.openclaw/openclaw.json with { \"teko_api_key\": \"...\" }");
-  console.error("  3. Project file: Create .teko-credentials (gitignored)");
-  console.error("");
-  throw new Error("Teko API key not configured");
-}
 
 async function fetchPhongVuPage(
-  token: string,
   slug: string,
   page: number
 ): Promise<PhongVuProduct[]> {
@@ -117,7 +73,6 @@ async function fetchPhongVuPage(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
   });
@@ -137,7 +92,6 @@ async function fetchPhongVuPage(
 }
 
 async function fetchAllPages(
-  token: string,
   slug: string
 ): Promise<PhongVuProduct[]> {
   const allProducts: PhongVuProduct[] = [];
@@ -147,7 +101,7 @@ async function fetchAllPages(
   while (hasMore) {
     try {
       console.log(`  Fetching ${slug} page ${page}...`);
-      const products = await fetchPhongVuPage(token, slug, page);
+      const products = await fetchPhongVuPage(slug, page);
 
       if (products.length === 0 || products.length < PAGE_SIZE) {
         hasMore = false;
@@ -176,7 +130,6 @@ async function ensureDataDir(): Promise<string> {
 }
 
 async function fetchAndSaveType(
-  token: string,
   type: ComponentType,
   dataDir: string
 ): Promise<void> {
@@ -186,7 +139,7 @@ async function fetchAndSaveType(
   let allProducts: PhongVuProduct[] = [];
 
   for (const slug of slugs) {
-    const products = await fetchAllPages(token, slug);
+    const products = await fetchAllPages(slug);
     allProducts.push(...products);
   }
 
@@ -198,8 +151,8 @@ async function fetchAndSaveType(
 async function main(): Promise<void> {
   try {
     console.log("Fetching PhongVu catalog data...\n");
+    console.log(`API Endpoint: ${API_ENDPOINT}\n`);
 
-    const token = await getApiToken();
     const dataDir = await ensureDataDir();
 
     const types: ComponentType[] = [
@@ -214,7 +167,7 @@ async function main(): Promise<void> {
     ];
 
     for (const type of types) {
-      await fetchAndSaveType(token, type, dataDir);
+      await fetchAndSaveType(type, dataDir);
     }
 
     console.log("\n✅ All catalog data fetched successfully!");
