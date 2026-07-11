@@ -74,11 +74,18 @@ Validation (FR-007): reject with `400` if `message` or `sessionId` is missing/em
 | `resolve` / `reject` | callback | Settles the awaiting HTTP handler. |
 | `timer` | timeout handle | Fires `timeout` error after `replyTimeoutMs`, then evicts the entry. |
 
-## Session key mapping (function, not stored)
+## Session key mapping (pure function, NOT a stored map)
 
 `sessionId → sessionKey`:
 - If `sessionId` contains `:` → treat as a full session key, forward verbatim.
 - Else → `agent:${agentId}:${sessionId}` (default `agent:main:<sessionId>`).
+- (Passing the raw `sessionId` also works — the gateway canonicalizes plain keys to `agent:main:<sessionId>` itself. The backend prefixes explicitly for clarity.)
+
+**Conversation continuity (no map, no state):**
+- Same `sessionId` on a later request → same canonical key → OpenClaw reloads the same persisted history → the conversation **continues** with full context.
+- Different/new `sessionId` → a **new** conversation.
+- First request for a key auto-creates the OpenClaw session (load-then-persist); no `sessions.create` call is required.
+- The backend stores **nothing** about this mapping. OpenClaw is the single source of truth for session history (Constitution Principle I). Keeping a stable `sessionId` per conversation is the frontend's responsibility.
 
 ## State transitions
 
