@@ -451,7 +451,22 @@
         }
 
         function generateDeviceKey() {
-            return nacl.sign.keyPair();
+            // Try to load persisted keypair from localStorage
+            const stored = localStorage.getItem('openclaw_device_key');
+            if (stored) {
+                try {
+                    const { secretKey } = JSON.parse(stored);
+                    const secretKeyBytes = Uint8Array.from(atob(secretKey), c => c.charCodeAt(0));
+                    return nacl.sign.keyPair.fromSecretKey(secretKeyBytes);
+                } catch (e) {
+                    // Fall through to generate new
+                }
+            }
+            // Generate new keypair and persist it
+            const keyPair = nacl.sign.keyPair();
+            const secretKeyBase64 = btoa(String.fromCharCode(...keyPair.secretKey));
+            localStorage.setItem('openclaw_device_key', JSON.stringify({ secretKey: secretKeyBase64 }));
+            return keyPair;
         }
 
         function bufferToHex(buffer) {
