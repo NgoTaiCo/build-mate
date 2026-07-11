@@ -31,8 +31,10 @@ function main(): void {
   gateway.connect();
 
   // DOM executor bridge: relays semantic commands MCP <-> BuildPC extension.
+  // Extension connects over WebSocket (/dom-bridge); MCP posts /dom-commands.
   const domBridge = new DomBridge();
   const server = createHttpServer(gateway, config.defaultAgentId, domBridge);
+  domBridge.attach(server);
   server.listen(config.httpPort, () => {
     console.log(
       `[chat-backend] listening on :${config.httpPort} | deviceId=${keyPair.deviceId} | gateway=${config.gatewayUrl}`,

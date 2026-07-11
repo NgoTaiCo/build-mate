@@ -4,11 +4,11 @@
 > hiện tại là simulator để kiểm chứng; production thay bằng BE bridge này.
 >
 > **Transport đang ship:** BE bridge (`packages/chat-backend/src/dom-bridge.ts`)
-> và extension hiện dùng **HTTP long-poll** (không phải WebSocket): extension
-> `POST /contexts` để register, `GET /commands?context_id=` long-poll, và
-> `POST /commands/:command_id/result` để trả kết quả; MCP gọi `POST /dom-commands`.
-> Phần §3–4 mô tả bản WebSocket là hướng tương lai — semantic (ID, action,
-> guard, result envelope) giữ nguyên.
+> và extension (`apps/chrome-extension/background.js`) dùng **WebSocket** đúng như
+> §3–4: extension mở WS `/dom-bridge`, gửi `dom.register`, nhận `dom.command`, trả
+> `dom.result`; MCP gọi `POST /dom-commands` (HTTP) không đổi. Socket đóng ⇒ BE
+> xóa `context_id` ngay. (`tools/dom-bridge-simulator.mjs` vẫn là bản HTTP
+> long-poll cũ, chỉ để serve trang mock khi test không cần phongvu thật.)
 
 ## 1. Ranh giới trách nhiệm
 
