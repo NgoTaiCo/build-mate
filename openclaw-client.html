@@ -578,7 +578,7 @@
                                 };
                                 state.ws.send(JSON.stringify(connectReq));
                             } else {
-                                // Simple auth without device
+                                // Simple auth without device (local mode)
                                 const connectReq = {
                                     type: 'req',
                                     id: 'req_simple',
@@ -590,7 +590,7 @@
                                             id: clientId,
                                             version: '1.0.0',
                                             platform: 'web',
-                                            mode: clientMode
+                                            mode: 'local'
                                         },
                                         role,
                                         scopes,
