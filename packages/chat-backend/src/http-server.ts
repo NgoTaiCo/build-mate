@@ -95,7 +95,8 @@ function handleChat(
     let parsed: unknown;
     try {
       parsed = JSON.parse(Buffer.concat(chunks).toString('utf8') || '{}');
-    } catch {
+    } catch (err) {
+      console.error('[http] invalid JSON request body:', err);
       sendError(res, 'validation_error', 'Body must be valid JSON');
       return;
     }
@@ -118,9 +119,11 @@ function handleChat(
       })
       .catch((err: unknown) => {
         if (err instanceof GatewayError) {
+          console.error('[http] gateway error while relaying chat:', err.code, err.message);
           sendError(res, err.code, err.message);
         } else {
-          // Never surface internal detail (FR-012).
+          // Never surface internal detail to the client (FR-012), but still log it.
+          console.error('[http] unexpected error while relaying chat:', err);
           sendError(res, 'gateway_error', 'Lỗi không xác định khi relay tin nhắn.');
         }
       });

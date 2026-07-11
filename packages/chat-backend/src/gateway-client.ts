@@ -197,7 +197,13 @@ export class GatewayClient {
     let msg: Record<string, unknown>;
     try {
       msg = JSON.parse(this.toText(data)) as Record<string, unknown>;
-    } catch {
+    } catch (err) {
+      console.error(
+        '[gateway] non-JSON message from gateway:',
+        err,
+        'raw:',
+        this.toText(data).slice(0, 500),
+      );
       return; // ignore non-JSON noise
     }
 
