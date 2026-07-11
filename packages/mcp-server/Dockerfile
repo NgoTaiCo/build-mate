@@ -39,6 +39,9 @@ COPY --from=builder /app/packages/compiler/package.json ./packages/compiler/pack
 COPY --from=builder /app/packages/compiler/dist ./packages/compiler/dist
 COPY --from=builder /app/packages/catalog/package.json ./packages/catalog/package.json
 COPY --from=builder /app/packages/catalog/dist ./packages/catalog/dist
+# PhongVu catalog JSON — data-loader reads ../data relative to dist at runtime.
+# Without this, search_components silently falls back to the tiny MOCK_CATALOG.
+COPY --from=builder /app/packages/catalog/data ./packages/catalog/data
 COPY --from=builder /app/packages/mcp-server/package.json ./packages/mcp-server/package.json
 COPY --from=builder /app/packages/mcp-server/dist ./packages/mcp-server/dist
 
