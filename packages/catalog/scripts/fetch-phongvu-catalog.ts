@@ -48,21 +48,47 @@ const API_ENDPOINT = "https://discovery.tekoapis.com/api/v2/search-skus-v2";
 const PAGE_SIZE = 50;
 
 async function getApiToken(): Promise<string> {
-  const configPath = resolve(process.env.HOME || "", ".openclaw/openclaw.json");
+  // Priority 1: Environment variable (most flexible)
+  if (process.env.TEKO_API_KEY) {
+    console.log("ℹ Using TEKO_API_KEY from environment");
+    return process.env.TEKO_API_KEY;
+  }
 
+  // Priority 2: OpenClaw config (machine-specific)
+  const openclaw_path = resolve(process.env.HOME || "", ".openclaw/openclaw.json");
   try {
     const config = JSON.parse(
-      require("fs").readFileSync(configPath, "utf-8") as string
+      require("fs").readFileSync(openclaw_path, "utf-8") as string
     );
     if (config.teko_api_key) {
+      console.log("ℹ Using teko_api_key from ~/.openclaw/openclaw.json");
       return config.teko_api_key;
     }
-    throw new Error("teko_api_key not found in config");
   } catch (error) {
-    console.error("Failed to read API token from ~/.openclaw/openclaw.json");
-    console.error("Make sure the file exists and contains teko_api_key");
-    throw error;
+    // Fall through to next option
   }
+
+  // Priority 3: .teko-credentials file (project-specific, gitignored)
+  const creds_path = resolve(process.cwd(), ".teko-credentials");
+  try {
+    const key = require("fs").readFileSync(creds_path, "utf-8").trim();
+    if (key) {
+      console.log("ℹ Using API key from .teko-credentials");
+      return key;
+    }
+  } catch (error) {
+    // Fall through
+  }
+
+  // No token found
+  console.error("❌ Error: Teko API key not found");
+  console.error("");
+  console.error("Set one of:");
+  console.error("  1. Environment variable: export TEKO_API_KEY=your-key");
+  console.error("  2. OpenClaw config: ~/.openclaw/openclaw.json with { \"teko_api_key\": \"...\" }");
+  console.error("  3. Project file: Create .teko-credentials (gitignored)");
+  console.error("");
+  throw new Error("Teko API key not configured");
 }
 
 async function fetchPhongVuPage(
