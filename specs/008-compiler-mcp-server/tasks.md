@@ -27,10 +27,10 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 **Purpose**: Introduce root npm workspaces and scaffold the new `@buildmate/mcp-server` package (neither exists yet — this is the first feature to create a root `package.json`, per research.md §3).
 
-- [ ] T001 Create root `package.json` at repo root with `"workspaces": ["packages/*"]`, `"private": true`, and a root `test`/`typecheck` script that delegates to `npm test --workspaces --if-present` / `npm run typecheck --workspaces --if-present` (does not modify `packages/compiler/package.json`)
-- [ ] T002 [P] Create `packages/mcp-server/package.json`: `name: "@buildmate/mcp-server"`, `type: "module"`, `bin: { "buildmate-mcp-server": "dist/index.js" }`, dependencies `@modelcontextprotocol/sdk` (^1.29.0), `zod` (^3.x), `@buildmate/compiler` (`*`, resolved via workspace per research.md §3), devDependencies `typescript` (^5.7.0), `tsx` (^4.19.0), `@types/node` (^22.10.0), scripts `test` (`node --import tsx --test tests/*.test.ts`, matching `packages/compiler`'s convention), `typecheck` (`tsc --noEmit`), `build` (`tsc`)
-- [ ] T003 [P] Create `packages/mcp-server/tsconfig.json` matching `packages/compiler/tsconfig.json` (target ES2023, module/moduleResolution NodeNext, strict, declaration, outDir dist, rootDir src)
-- [ ] T004 Run `npm install` at repo root to link the new workspaces (`packages/compiler`, `packages/mcp-server`) and install `@modelcontextprotocol/sdk`/`zod` (depends on T001, T002, T003)
+- [X] T001 Create root `package.json` at repo root with `"workspaces": ["packages/*"]`, `"private": true`, and a root `test`/`typecheck` script that delegates to `npm test --workspaces --if-present` / `npm run typecheck --workspaces --if-present` (does not modify `packages/compiler/package.json`)
+- [X] T002 [P] Create `packages/mcp-server/package.json`: `name: "@buildmate/mcp-server"`, `type: "module"`, `bin: { "buildmate-mcp-server": "dist/index.js" }`, dependencies `@modelcontextprotocol/sdk` (^1.29.0), `zod` (^3.x), `@buildmate/compiler` (`*`, resolved via workspace per research.md §3), devDependencies `typescript` (^5.7.0), `tsx` (^4.19.0), `@types/node` (^22.10.0), scripts `test` (`node --import tsx --test tests/*.test.ts`, matching `packages/compiler`'s convention), `typecheck` (`tsc --noEmit`), `build` (`tsc`)
+- [X] T003 [P] Create `packages/mcp-server/tsconfig.json` matching `packages/compiler/tsconfig.json` (target ES2023, module/moduleResolution NodeNext, strict, declaration, outDir dist, rootDir src)
+- [X] T004 Run `npm install` at repo root to link the new workspaces (`packages/compiler`, `packages/mcp-server`) and install `@modelcontextprotocol/sdk`/`zod` (depends on T001, T002, T003)
 
 **Checkpoint**: Workspaces resolve; `packages/mcp-server` can `import` from `@buildmate/compiler`.
 
@@ -42,9 +42,9 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T005 [P] Create zod input schemas in `packages/mcp-server/src/schemas.ts`: `BuildSchema` (mirrors `Build`/`Component` from `@buildmate/compiler`'s `types.ts` — `components: array of objects with at least `type: string`, `id: string`, plus known optional attrs per component type) and `CompilerErrorSchema` (mirrors `CompilerError`: `code`, `severity`, `name`, `message`, `component_refs`, optional `details`) — shapes only, no re-validation of Compiler's own domain rules
-- [ ] T006 Create server factory in `packages/mcp-server/src/server.ts`: `export function createServer()` builds and returns an `McpServer` instance (`name: "buildmate-compiler"`) with no tools registered yet — tool registration is added by each user story below (depends on T005)
-- [ ] T007 Create CLI entry point in `packages/mcp-server/src/index.ts`: imports `createServer` from `./server.js`, connects the returned server to a `StdioServerTransport` (from `@modelcontextprotocol/sdk/server/stdio.js`), and keeps the process alive on stdin per research.md §9 (depends on T006)
+- [X] T005 [P] Create zod input schemas in `packages/mcp-server/src/schemas.ts`: `BuildSchema` (mirrors `Build`/`Component` from `@buildmate/compiler`'s `types.ts` — `components: array of objects with at least `type: string`, `id: string`, plus known optional attrs per component type) and `CompilerErrorSchema` (mirrors `CompilerError`: `code`, `severity`, `name`, `message`, `component_refs`, optional `details`) — shapes only, no re-validation of Compiler's own domain rules
+- [X] T006 Create server factory in `packages/mcp-server/src/server.ts`: `export function createServer()` builds and returns an `McpServer` instance (`name: "buildmate-compiler"`) with no tools registered yet — tool registration is added by each user story below (depends on T005)
+- [X] T007 Create CLI entry point in `packages/mcp-server/src/index.ts`: imports `createServer` from `./server.js`, connects the returned server to a `StdioServerTransport` (from `@modelcontextprotocol/sdk/server/stdio.js`), and keeps the process alive on stdin per research.md §9 (depends on T006)
 
 **Checkpoint**: Foundation ready — `createServer()` is importable by tests without needing stdio, and `index.ts` provides the process entry point. User story implementation can now begin.
 
@@ -58,12 +58,12 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 ### Tests for User Story 1
 
-- [ ] T008 [P] [US1] Dispatch-level test in `packages/mcp-server/tests/compile-build-tool.test.ts`: import the `compile_build` handler directly and assert its `CallToolResult` JSON content is byte-identical (`JSON.stringify` equal) to calling `compileBuild(build)` directly, for (a) a socket-mismatch build (`E001`, `is_valid: false`), (b) a fully compatible build (zero errors, `is_valid: true`), (c) a build with multiple issues (all errors present, not just the first)
+- [X] T008 [P] [US1] Dispatch-level test in `packages/mcp-server/tests/compile-build-tool.test.ts`: import the `compile_build` handler directly and assert its `CallToolResult` JSON content is byte-identical (`JSON.stringify` equal) to calling `compileBuild(build)` directly, for (a) a socket-mismatch build (`E001`, `is_valid: false`), (b) a fully compatible build (zero errors, `is_valid: true`), (c) a build with multiple issues (all errors present, not just the first)
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Implement `packages/mcp-server/src/tools/compile-build.ts`: export a function that registers `compile_build` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema }`, handler parses input, calls `compileBuild(build)` from `@buildmate/compiler`, serializes the result as `{ content: [{ type: "text", text: JSON.stringify(result) }], isError: false }`; on structurally invalid `build` (not an object / `components` not an array), catches and returns `{ isError: true, content: [{ type: "text", text: <message> }] }` instead of throwing (per research.md §7)
-- [ ] T010 [US1] Register the `compile_build` tool onto the server in `packages/mcp-server/src/server.ts` by calling the registration function from `tools/compile-build.ts` inside `createServer()` (depends on T009)
+- [X] T009 [US1] Implement `packages/mcp-server/src/tools/compile-build.ts`: export a function that registers `compile_build` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema }`, handler parses input, calls `compileBuild(build)` from `@buildmate/compiler`, serializes the result as `{ content: [{ type: "text", text: JSON.stringify(result) }], isError: false }`; on structurally invalid `build` (not an object / `components` not an array), catches and returns `{ isError: true, content: [{ type: "text", text: <message> }] }` instead of throwing (per research.md §7)
+- [X] T010 [US1] Register the `compile_build` tool onto the server in `packages/mcp-server/src/server.ts` by calling the registration function from `tools/compile-build.ts` inside `createServer()` (depends on T009)
 
 **Checkpoint**: User Story 1 is fully functional and testable independently — `compile_build` is callable and dispatch-verified.
 
@@ -77,14 +77,14 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 ### Tests for User Story 2
 
-- [ ] T011 [P] [US2] Dispatch-level test in `packages/mcp-server/tests/detect-errors-tool.test.ts`: import the `detect_errors` handler directly and assert its `CallToolResult` JSON content is byte-identical to calling `detectErrors(build)` directly, including the empty-array case for a fully compatible build
-- [ ] T012 [P] [US2] Dispatch-level test in `packages/mcp-server/tests/repair-build-tool.test.ts`: import the `repair_build` handler directly and assert (a) its JSON content is byte-identical to calling `repairBuild(build, errors)` directly, (b) `repair_plan.length === errors.length` for a multi-error build, (c) applying a returned fix and re-running `detectErrors` no longer surfaces the original error, (d) an empty `errors` array returns `[]`
+- [X] T011 [P] [US2] Dispatch-level test in `packages/mcp-server/tests/detect-errors-tool.test.ts`: import the `detect_errors` handler directly and assert its `CallToolResult` JSON content is byte-identical to calling `detectErrors(build)` directly, including the empty-array case for a fully compatible build
+- [X] T012 [P] [US2] Dispatch-level test in `packages/mcp-server/tests/repair-build-tool.test.ts`: import the `repair_build` handler directly and assert (a) its JSON content is byte-identical to calling `repairBuild(build, errors)` directly, (b) `repair_plan.length === errors.length` for a multi-error build, (c) applying a returned fix and re-running `detectErrors` no longer surfaces the original error, (d) an empty `errors` array returns `[]`
 
 ### Implementation for User Story 2
 
-- [ ] T013 [P] [US2] Implement `packages/mcp-server/src/tools/detect-errors.ts`: export a function that registers `detect_errors` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema }`, handler calls `detectErrors(build)` from `@buildmate/compiler` and serializes the `CompilerError[]` result unchanged; same structural-invalid-input → `isError: true` handling as compile_build
-- [ ] T014 [P] [US2] Implement `packages/mcp-server/src/tools/repair-build.ts`: export a function that registers `repair_build` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema, errors: array of CompilerErrorSchema }`, handler calls `repairBuild(build, errors)` from `@buildmate/compiler` and serializes the `RepairPlan[]` result unchanged; catches structurally invalid `build`/`errors` (including an errors list referencing a component not present in the build) and returns `isError: true` with a descriptive message rather than guessing or fabricating a fix
-- [ ] T015 [US2] Register the `detect_errors` and `repair_build` tools onto the server in `packages/mcp-server/src/server.ts` by calling the registration functions from `tools/detect-errors.ts` and `tools/repair-build.ts` inside `createServer()` (depends on T013, T014)
+- [X] T013 [P] [US2] Implement `packages/mcp-server/src/tools/detect-errors.ts`: export a function that registers `detect_errors` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema }`, handler calls `detectErrors(build)` from `@buildmate/compiler` and serializes the `CompilerError[]` result unchanged; same structural-invalid-input → `isError: true` handling as compile_build
+- [X] T014 [P] [US2] Implement `packages/mcp-server/src/tools/repair-build.ts`: export a function that registers `repair_build` on a given `McpServer` via `registerTool` — input `{ build: BuildSchema, errors: array of CompilerErrorSchema }`, handler calls `repairBuild(build, errors)` from `@buildmate/compiler` and serializes the `RepairPlan[]` result unchanged; catches structurally invalid `build`/`errors` (including an errors list referencing a component not present in the build) and returns `isError: true` with a descriptive message rather than guessing or fabricating a fix
+- [X] T015 [US2] Register the `detect_errors` and `repair_build` tools onto the server in `packages/mcp-server/src/server.ts` by calling the registration functions from `tools/detect-errors.ts` and `tools/repair-build.ts` inside `createServer()` (depends on T013, T014)
 
 **Checkpoint**: User Stories 1 and 2 both work independently — the full detect → repair pipeline is callable over MCP.
 
@@ -98,7 +98,7 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 ### Tests for User Story 3
 
-- [ ] T016 [US3] Protocol round-trip test in `packages/mcp-server/tests/protocol-roundtrip.test.ts`: use `InMemoryTransport` (from `@modelcontextprotocol/sdk/dist/esm/inMemory.js`) to create a linked transport pair, connect a real SDK `Client` to a real `McpServer` returned by `createServer()` in the same process, and assert (a) `client.listTools()` returns exactly `compile_build`, `detect_errors`, `repair_build` each with a non-empty `inputSchema`, (b) `client.callTool()` succeeds for each of the three tools with input matching its advertised schema, (c) a second server instance from a fresh `createServer()` call lists the same three tools (restart-equivalence, per spec Edge Cases) (depends on T010, T015 — requires all 3 tools registered)
+- [X] T016 [US3] Protocol round-trip test in `packages/mcp-server/tests/protocol-roundtrip.test.ts`: use `InMemoryTransport` (from `@modelcontextprotocol/sdk/dist/esm/inMemory.js`) to create a linked transport pair, connect a real SDK `Client` to a real `McpServer` returned by `createServer()` in the same process, and assert (a) `client.listTools()` returns exactly `compile_build`, `detect_errors`, `repair_build` each with a non-empty `inputSchema`, (b) `client.callTool()` succeeds for each of the three tools with input matching its advertised schema, (c) a second server instance from a fresh `createServer()` call lists the same three tools (restart-equivalence, per spec Edge Cases) (depends on T010, T015 — requires all 3 tools registered)
 
 **Checkpoint**: All user stories are independently functional — the server is genuinely MCP-compliant, not just internally dispatch-correct.
 
@@ -108,9 +108,9 @@ Single package project. All new files live under `packages/mcp-server/`, plus on
 
 **Purpose**: Cross-tool guarantees (FR-007 determinism, FR-009 crash-safety) that don't belong to a single user story, plus final validation.
 
-- [ ] T017 [P] Malformed-input / crash-safety test in `packages/mcp-server/tests/error-handling.test.ts` (FR-009, spec Edge Cases): for each of `compile_build`, `detect_errors`, `repair_build`, assert that a non-object `build`, a `build` whose `components` is not an array, and (for `repair_build`) an `errors` list referencing a component absent from the `build` all produce `{ isError: true }` with a descriptive message — and that the server process/handler does not throw
-- [ ] T018 [P] Create `packages/mcp-server/README.md` documenting install (`npm install` at repo root), running the server (`npx tsx src/index.ts`), and the MCP client config snippet from quickstart.md
-- [ ] T019 Run full `quickstart.md` validation: `cd packages/mcp-server && npm test && npm run typecheck`, then manually connect via the documented `mcpServers` config and verify the three quickstart scenarios (socket-mismatch `compile_build`, detect→repair pipeline, malformed-input smoke test) plus the determinism check (two identical `compile_build` calls produce `JSON.stringify`-equal responses, FR-007/SC-003)
+- [X] T017 [P] Malformed-input / crash-safety test in `packages/mcp-server/tests/error-handling.test.ts` (FR-009, spec Edge Cases): for each of `compile_build`, `detect_errors`, `repair_build`, assert that a non-object `build`, a `build` whose `components` is not an array, and (for `repair_build`) an `errors` list referencing a component absent from the `build` all produce `{ isError: true }` with a descriptive message — and that the server process/handler does not throw
+- [X] T018 [P] Create `packages/mcp-server/README.md` documenting install (`npm install` at repo root), running the server (`npx tsx src/index.ts`), and the MCP client config snippet from quickstart.md
+- [X] T019 Run full `quickstart.md` validation: `cd packages/mcp-server && npm test && npm run typecheck`, then manually connect via the documented `mcpServers` config and verify the three quickstart scenarios (socket-mismatch `compile_build`, detect→repair pipeline, malformed-input smoke test) plus the determinism check (two identical `compile_build` calls produce `JSON.stringify`-equal responses, FR-007/SC-003)
 
 ---
 
