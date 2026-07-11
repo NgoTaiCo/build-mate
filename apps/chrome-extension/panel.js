@@ -21,8 +21,8 @@
       </aside>`;
 
     document.documentElement.appendChild(host);
-    const launcher = shadow.querySelector(".bm-launcher"), panel = shadow.querySelector(".bm-panel"), notice = shadow.querySelector(".bm-notice"), view = shadow.querySelector(".bm-view"), title = shadow.querySelector(".bm-title");
-    let state = { ...globalThis.BuildMatePanelState.initialPanelState }, actionState = { ...globalThis.BuildMateActionState.initialActionState }, snapshot = { status: "unavailable", components: [], total: null }, pendingAdd = false, isTyping = false, handlers = {};
+    const launcher = shadow.querySelector(".bm-launcher"), panel = shadow.querySelector(".bm-panel"), notice = shadow.querySelector(".bm-notice"), view = shadow.querySelector(".bm-view"), title = shadow.querySelector(".bm-title"), statusBar = shadow.querySelector("#bm-status-bar"), statusText = shadow.querySelector("#bm-status-text");
+    let state = { ...globalThis.BuildMatePanelState.initialPanelState }, actionState = { ...globalThis.BuildMateActionState.initialActionState }, snapshot = { status: "unavailable", components: [], total: null }, bridgeConnected = false, pendingAdd = false, isTyping = false, handlers = {};
     
     function snapshotMarkup() {
       const count = snapshot.components.length;
@@ -45,7 +45,10 @@
       let localizedMsg = i('action_' + actionState.status);
       if (actionState.errorCode) localizedMsg = i('error_' + actionState.errorCode);
       if (localizedMsg === ('action_' + actionState.status) || localizedMsg === ('error_' + actionState.errorCode)) localizedMsg = actionState.message; // fallback
-      return `<div class="bm-action-status ${busy ? "bm-action-status--busy" : ""}" role="status" aria-live="polite"><strong>${escapeHtml(localizedMsg)}</strong>${actionState.errorCode ? `<span>${escapeHtml(actionState.errorCode)}</span>` : ""}${busy ? `<button class="bm-back" type="button" data-action="cancel-running">${i('cancelRunningBtn')}</button>` : `<button class="bm-back" type="button" data-action="reset-action">${i('revertBtn')}</button>`}</div>`;
+      const actionButton = actionState.status === "success" && actionState.component
+        ? `<button class="bm-back" type="button" data-action="request-revert">${i('revertBtn')}</button>`
+        : `<button class="bm-back" type="button" data-action="reset-action">${i('revertBtn')}</button>`;
+      return `<div class="bm-action-status ${busy ? "bm-action-status--busy" : ""}" role="status" aria-live="polite"><strong>${escapeHtml(localizedMsg)}</strong>${actionState.errorCode ? `<span>${escapeHtml(actionState.errorCode)}</span>` : ""}${busy ? "" : actionButton}</div>`;
     }
     
     function applyI18n() {
@@ -54,7 +57,7 @@
       launcher.setAttribute('aria-label', t('openAssistant'));
       panel.setAttribute('aria-label', t('panelTitle'));
       shadow.querySelector('#bm-panel-title').textContent = t('panelTitle');
-      shadow.querySelector('#bm-status-text').textContent = t(snapshot.status === "ready" ? 'statusOnline' : 'statusOffline');
+      statusText.textContent = t(bridgeConnected ? 'statusOnline' : 'statusOffline');
       shadow.querySelector('#bm-lang-toggle').innerHTML = globalThis.BuildMateI18n.getLang() === 'vi' ? 'EN' : 'VI';
       shadow.querySelector('#bm-clear-btn').setAttribute('aria-label', t('clearChat'));
       shadow.querySelector('.bm-close').setAttribute('aria-label', t('closePanel'));
@@ -219,7 +222,7 @@
       if (button.dataset.action === "prepare-add") { pendingAdd = true; render(); } 
       if (button.dataset.action === "cancel-add") { pendingAdd = false; render(); } 
       if (button.dataset.action === "confirm-add") { pendingAdd = false; handlers.onRequestAdd?.(); render(); } 
-      if (button.dataset.action === "cancel-running") handlers.onCancelAction?.(); 
+      if (button.dataset.action === "request-revert") { handlers.onRequestRevert?.(actionState.component, actionState.revision); }
       if (button.dataset.action === "reset-action") { actionState = { ...globalThis.BuildMateActionState.initialActionState }; render(); } 
       if (button.dataset.mockAction === "add-product" || button.dataset.mockAction === "apply-build") { 
         state = { ...state, messages: state.messages.map(m => m.id === button.dataset.messageId ? { ...m, added: true } : m) };
@@ -287,7 +290,8 @@
       toggle: () => transition({ type: "TOGGLE" }), 
       setHandlers: (next) => { handlers = next; }, 
       setAction: (event) => { actionState = globalThis.BuildMateActionState.reduceActionState(actionState, event); render(); }, 
-      setSnapshot: (next) => { snapshot = next; render(); }, 
+      setSnapshot: (next) => { snapshot = globalThis.BuildMateSnapshot.normalizeSnapshot(next); render(); },
+      setConnected: (connected) => { bridgeConnected = Boolean(connected); statusBar.dataset.connected = String(bridgeConnected); applyI18n(); },
       applyBridgeCommand: (command) => { 
         if (command.type === "buildmate.ui.suggest") {
           transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'assistant', type: 'text', content: command.payload.message } });

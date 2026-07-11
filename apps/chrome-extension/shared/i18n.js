@@ -9,7 +9,7 @@
 
       // Status bar
       statusOffline: "Demo local — Gateway chưa kết nối",
-      statusOnline: "Đã kết nối Gateway",
+      statusOnline: "Đã kết nối DOM bridge demo",
 
       // Welcome
       welcome: "Chatbot đang theo dõi Build PC read-only. Chọn mục tiêu mẫu hoặc nhập yêu cầu của bạn dưới đây.",
@@ -37,6 +37,8 @@
       action_waiting_products: "Đang chờ sản phẩm tải…",
       action_selecting_product: "Đang chọn VGA demo…",
       action_verifying: "Đang xác nhận thay đổi build…",
+      action_reverting: "Đang hoàn tác linh kiện…",
+      action_reverted: "Đã hoàn tác linh kiện.",
       action_success: "Đã chọn VGA demo vào Build PC.",
       action_unverified: "Đã click chọn nhưng chưa xác minh được build.",
       action_failed: "Lỗi thêm VGA.",
@@ -49,6 +51,10 @@
       error_PAGE_CHANGED: "Trang đã thay đổi, vui lòng thử lại.",
       error_VGA_ROW_NOT_FOUND: "Không tìm thấy category VGA trên trang.",
       error_CATEGORY_BUTTON_NOT_FOUND: "Không tìm thấy nút Chọn/Sửa VGA.",
+      error_REVERT_CONFLICT: "Build đã thay đổi, không thể hoàn tác an toàn.",
+      error_REMOVE_BUTTON_NOT_FOUND: "Không tìm thấy nút Xóa linh kiện.",
+      error_COMPONENT_NOT_SELECTED: "Linh kiện không còn trong cấu hình.",
+      error_REMOVE_VERIFY_TIMEOUT: "Không xác minh được thao tác hoàn tác.",
 
       confirmTitle: "Xác nhận thêm VGA demo?",
       confirmBody: "Extension mở category VGA và chọn product đầu tiên hiển thị. Không checkout.",
@@ -102,7 +108,7 @@
 
       // Status bar
       statusOffline: "Local demo — Gateway not connected",
-      statusOnline: "Gateway connected",
+      statusOnline: "Demo DOM bridge connected",
 
       // Welcome
       welcome: "BuildMate is monitoring your Build PC (read-only). Pick a goal below or type your requirements.",
@@ -130,6 +136,8 @@
       action_waiting_products: "Waiting for products to load…",
       action_selecting_product: "Selecting demo VGA…",
       action_verifying: "Verifying build update…",
+      action_reverting: "Reverting component…",
+      action_reverted: "Component reverted.",
       action_success: "VGA demo added to Build PC.",
       action_unverified: "Clicked but could not verify build update.",
       action_failed: "Failed to add VGA.",
@@ -142,6 +150,10 @@
       error_PAGE_CHANGED: "Page changed, please try again.",
       error_VGA_ROW_NOT_FOUND: "VGA category not found on page.",
       error_CATEGORY_BUTTON_NOT_FOUND: "Select/Edit button not found.",
+      error_REVERT_CONFLICT: "Build changed, so the component cannot be safely reverted.",
+      error_REMOVE_BUTTON_NOT_FOUND: "Remove component button not found.",
+      error_COMPONENT_NOT_SELECTED: "The component is no longer in the build.",
+      error_REMOVE_VERIFY_TIMEOUT: "Could not verify the revert action.",
 
       confirmTitle: "Confirm add VGA demo?",
       confirmBody: "Extension opens the VGA category and selects the first displayed product. No checkout.",

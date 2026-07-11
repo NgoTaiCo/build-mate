@@ -7,6 +7,7 @@ import {
 } from "../src/dom/bridge-client.js";
 import { addToBuildHandler } from "../src/tools/add-to-build.js";
 import { readCurrentBuildHandler } from "../src/tools/read-current-build.js";
+import { revertComponentHandler } from "../src/tools/revert-component.js";
 
 function textOf(result: { content: Array<{ type: string; text?: string }> }): string {
   const first = result.content[0];
@@ -73,4 +74,28 @@ test("DOM tool rejects malformed component input before contacting the bridge", 
 
   assert.equal(result.isError, true);
   assert.equal(commands.length, 0);
+});
+
+test("revert_component removes only the exact component at the expected revision", async () => {
+  const component = {
+    sku: "GPU-001",
+    vendor_product_id: "PV-12345",
+    name: "Demo GPU",
+    category: "gpu" as const,
+  };
+  const { client, commands } = fakeBridge({ command_id: "cmd-revert", ok: true, removed: component });
+
+  const result = await revertComponentHandler({
+    context_id: "tab-demo",
+    component,
+    expected_revision: "[\"PV-12345\"]",
+  }, client);
+
+  assert.equal(result.isError, false);
+  assert.deepEqual(commands, [{
+    action: "remove_component",
+    context_id: "tab-demo",
+    component,
+    expected_revision: "[\"PV-12345\"]",
+  }]);
 });

@@ -8,6 +8,9 @@
   }
 
   function readSnapshot(doc = document) {
+    if (globalThis.BuildMateDomAdapter?.readBuild) {
+      return globalThis.BuildMateDomAdapter.readBuild();
+    }
     const root = findBuildRoot(doc);
     if (!root) return { status: "unavailable", components: [], total: null };
     const components = [];

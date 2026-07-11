@@ -53,6 +53,11 @@
       [...(row?.querySelectorAll("button") ?? [])].find((button) => /^(Chọn|Select|Sửa|Edit)$/i.test(text(button))) || null;
   }
 
+  function removeAction(row) {
+    return row?.querySelector('[data-build-action="remove-component"]') ||
+      [...(row?.querySelectorAll("button") ?? [])].find((button) => /^(Xóa|Remove)$/i.test(text(button))) || null;
+  }
+
   function categoryRow(slot) {
     // Priority 1: Mock page với data-attributes
     const mock = document.querySelector(`[data-build-category="${slot}"]`);
@@ -450,6 +455,36 @@
     return { ok: true, added: component, snapshot: readBuild() };
   }
 
+  async function removeComponent(component, expectedRevision) {
+    if (!component || (!SLOT_CATEGORY[component.category] && component.category !== "storage") || !component.vendor_product_id) {
+      return { ok: false, error: "INVALID_COMPONENT" };
+    }
+    const slot = component.category === "storage" ? component.buildpc_slot : component.category;
+    if (!SLOT_CATEGORY[slot]) return { ok: false, error: "STORAGE_SLOT_REQUIRED" };
+
+    const before = readBuild();
+    if (expectedRevision && before.revision !== expectedRevision) {
+      return { ok: false, error: "REVERT_CONFLICT", snapshot: before };
+    }
+
+    const row = categoryRow(slot);
+    const current = componentFromRow(row, slot);
+    if (!current) return { ok: false, error: "COMPONENT_NOT_SELECTED", snapshot: before };
+    if (current.vendor_product_id !== component.vendor_product_id) {
+      return { ok: false, error: "REVERT_CONFLICT", current, snapshot: before };
+    }
+
+    const remove = removeAction(row);
+    if (!remove) return { ok: false, error: "REMOVE_BUTTON_NOT_FOUND", current };
+    click(remove);
+
+    const verified = await waitFor(() => !readBuild().components.some((item) =>
+      item.vendor_product_id === component.vendor_product_id || item.sku === component.sku
+    ), 4000);
+    if (!verified) return { ok: false, error: "REMOVE_VERIFY_TIMEOUT", current };
+    return { ok: true, removed: current, snapshot: readBuild() };
+  }
+
   function inspectCategory(slot) {
     const row = categoryRow(slot);
     if (!row) return { slot, category: SLOT_CATEGORY[slot] ?? null, ok: false, error: "CATEGORY_NOT_FOUND" };
@@ -465,5 +500,5 @@
     };
   }
 
-  globalThis.BuildMateDomAdapter = { addComponent, inspectCategory, inspectTotal, openCategory, readBuild };
+  globalThis.BuildMateDomAdapter = { addComponent, inspectCategory, inspectTotal, openCategory, readBuild, removeComponent };
 })();

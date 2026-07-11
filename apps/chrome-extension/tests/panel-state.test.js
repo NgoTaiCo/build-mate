@@ -19,6 +19,7 @@ test("only recognises the exact canonical Phong Vu Build PC URL", () => {
 test("keeps demo add actions explicit and typed", () => {
   const started = reduceActionState(initialActionState, { type: "START" });
   assert.equal(started.status, "locating_category");
+  assert.equal(reduceActionState(initialActionState, { type: "REQUESTED" }).status, "requested");
   assert.equal(reduceActionState(started, { type: "FAILED", code: "MODAL_TIMEOUT", message: "Không mở được." }).errorCode, "MODAL_TIMEOUT");
   assert.equal(reduceActionState(started, { type: "CANCEL" }).status, "cancelled");
 });
@@ -40,13 +41,17 @@ test("normalizes snapshots before deciding they changed", () => {
 
 test("opens and closes the panel without persistent state", () => {
   const opened = reducePanelState(initialPanelState, { type: "OPEN" });
-  assert.deepEqual(opened, { open: true, activeView: "welcome", selectedGoalId: null });
+  assert.equal(opened.open, true);
+  assert.equal(opened.activeView, "chat");
+  assert.equal(opened.messages.length, 1);
   assert.equal(reducePanelState(opened, { type: "CLOSE" }).open, false);
 });
 
 test("selects a local goal and enters review", () => {
   const goal = reducePanelState(initialPanelState, { type: "SELECT_GOAL", goalId: "gaming-25m" });
-  assert.deepEqual(goal, { open: true, activeView: "goal", selectedGoalId: "gaming-25m" });
+  assert.equal(goal.open, true);
+  assert.equal(goal.activeView, "chat");
+  assert.equal(goal.selectedGoalId, "gaming-25m");
   assert.equal(reducePanelState(goal, { type: "OPEN_REVIEW" }).activeView, "review");
 });
 
@@ -54,15 +59,22 @@ test("keeps the MV3 UI surface local-only", () => {
   const extensionRoot = path.resolve(__dirname, "..");
   const manifest = JSON.parse(fs.readFileSync(path.join(extensionRoot, "manifest.json"), "utf8"));
   const contentScript = fs.readFileSync(path.join(extensionRoot, "content-script.js"), "utf8");
+  const background = fs.readFileSync(path.join(extensionRoot, "background.js"), "utf8");
 
-  assert.deepEqual(manifest.permissions, ["activeTab"]);
-  assert.equal(manifest.host_permissions, undefined);
-  assert.equal(manifest.background, undefined);
-  assert.deepEqual(manifest.content_scripts[0].matches, ["https://phongvu.vn/buildpc"]);
+  assert.deepEqual(manifest.permissions, ["activeTab", "storage", "tabs"]);
+  assert.deepEqual(manifest.host_permissions, ["http://127.0.0.1:8781/*"]);
+  assert.equal(manifest.background.service_worker, "background.js");
+  assert.deepEqual(manifest.content_scripts[0].matches, ["https://phongvu.vn/buildpc*", "https://www.phongvu.vn/buildpc*", "http://127.0.0.1:8781/mock-buildpc"]);
   assert.deepEqual(manifest.web_accessible_resources, [{
     resources: ["panel.css"],
-    matches: ["https://phongvu.vn/*", "https://www.phongvu.vn/*"]
+    matches: ["https://phongvu.vn/*", "https://www.phongvu.vn/*", "http://127.0.0.1:8781/*"]
   }]);
   assert.equal(contentScript.includes("fetch("), false);
   assert.equal(contentScript.includes("WebSocket"), false);
+  assert.equal(contentScript.includes("BuildMateDemoData.demoComponent"), false);
+  assert.equal(contentScript.includes("BUILDMATE_USER_INTENT"), true);
+  assert.equal(background.includes("BUILDMATE_USER_INTENT"), true);
+  assert.equal(background.includes("buildmate-dom-bridge"), true);
+  assert.equal(background.includes("BUILDMATE_DOM_COMMAND"), true);
+  assert.equal(contentScript.includes('command?.action === "remove_component"'), true);
 });

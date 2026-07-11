@@ -2,12 +2,80 @@
   if (!globalThis.BuildMateEligibility.isExactBuildPcUrl(location.href)) return;
   const panel = globalThis.BuildMatePanel.ensureMounted();
   const trackerStop = globalThis.BuildMateTracker.startBuildTracker({ doc: document, onSnapshot: (snapshot) => panel.setSnapshot(snapshot) });
+  const contextId = crypto.randomUUID();
   const bridge = globalThis.BuildMateBridgeAdapter.createBridgeAdapter({ onCommand: (command) => panel.applyBridgeCommand(command) });
+  let actionInFlight = false;
 
-  let actionController = null;
+  async function executeAdd(component) {
+    if (actionInFlight) return { ok: false, error: "ACTION_IN_PROGRESS" };
+    actionInFlight = true;
+    panel.setAction({ type: "START" });
+    try {
+      const result = await globalThis.BuildMateDomAdapter.addComponent(component);
+      if (result.ok) {
+        panel.setSnapshot(result.snapshot);
+        panel.setAction({ type: "SUCCESS", message: `Đã thêm ${component.sku} thành công.`, component, revision: result.snapshot?.revision ?? null });
+      } else {
+        panel.setAction({ type: "FAILED", code: result.error, message: `Lỗi: ${result.error}` });
+      }
+      return result;
+    } catch (error) {
+      panel.setAction({ type: "FAILED", code: "EXCEPTION", message: String(error) });
+      return { ok: false, error: String(error) };
+    } finally {
+      actionInFlight = false;
+    }
+  }
+
+  async function executeRemove(component, expectedRevision) {
+    if (actionInFlight) return { ok: false, error: "ACTION_IN_PROGRESS" };
+    actionInFlight = true;
+    panel.setAction({ type: "REVERT_START" });
+    try {
+      const result = await globalThis.BuildMateDomAdapter.removeComponent(component, expectedRevision);
+      if (result.ok) {
+        panel.setSnapshot(result.snapshot);
+        panel.setAction({ type: "REVERT_SUCCESS", message: `Đã hoàn tác ${component.sku}.` });
+      } else {
+        panel.setAction({ type: "FAILED", code: result.error, message: `Không thể hoàn tác: ${result.error}` });
+      }
+      return result;
+    } catch (error) {
+      panel.setAction({ type: "FAILED", code: "EXCEPTION", message: String(error) });
+      return { ok: false, error: String(error) };
+    } finally {
+      actionInFlight = false;
+    }
+  }
+
+  async function sendUserIntent(intent) {
+    const response = await chrome.runtime.sendMessage({
+      type: "BUILDMATE_USER_INTENT",
+      context_id: contextId,
+      page: { origin: location.origin, path: location.pathname },
+      intent,
+    });
+    if (!response?.ok) throw new Error(response?.error ?? "BACKEND_NOT_CONNECTED");
+  }
 
   panel.setHandlers({
-    onCancelAction: () => actionController?.abort(),
+    onRequestAdd: async () => {
+      panel.setAction({ type: "REQUESTED" });
+      try {
+        await sendUserIntent({ type: "request_add", category: "gpu", user_confirmed: true });
+      } catch (error) {
+        panel.setAction({ type: "FAILED", code: "BACKEND_NOT_CONNECTED", message: String(error) });
+      }
+    },
+    onRequestRevert: async (component, expectedRevision) => {
+      if (!component) return;
+      panel.setAction({ type: "REQUESTED", message: "Đã gửi yêu cầu hoàn tác tới OpenClaw." });
+      try {
+        await sendUserIntent({ type: "request_revert", component, expected_revision: expectedRevision ?? undefined, user_confirmed: true });
+      } catch (error) {
+        panel.setAction({ type: "FAILED", code: "BACKEND_NOT_CONNECTED", message: String(error) });
+      }
+    },
     onMockCommand: () => bridge.receive({
       v: 1, id: `mock-${Date.now()}`, type: "buildmate.ui.suggest",
       tab: { origin: "https://phongvu.vn", path: "/buildpc" },
@@ -16,7 +84,6 @@
     })
   });
 
-  const contextId = crypto.randomUUID();
   let bridgePort;
   let heartbeatTimer;
 
@@ -29,21 +96,24 @@
   }
 
   function connectBridge() {
-    if (!runtimeIsAvailable()) return;
+    if (!runtimeIsAvailable()) { panel.setConnected(false); return; }
     try {
       bridgePort = chrome.runtime.connect({ name: "buildmate-dom-bridge" });
     } catch (error) {
+      panel.setConnected(false);
       if (!isInvalidatedContext(error)) console.warn("[BuildMate] DOM bridge connection failed", error);
       return;
     }
     bridgePort.onMessage.addListener((message) => {
       if (message?.type === "REGISTERED") {
+        panel.setConnected(Boolean(message.ok));
         if (!message.ok) console.warn("[BuildMate] DOM bridge registration failed", message.error);
         else console.info("[BuildMate] DOM bridge connected", { contextId });
       }
     });
     bridgePort.onDisconnect.addListener(() => {
       clearInterval(heartbeatTimer);
+      panel.setConnected(false);
       if (runtimeIsAvailable()) setTimeout(connectBridge, 1000);
     });
     try {
@@ -87,23 +157,10 @@
           return { ok: true, snapshot: globalThis.BuildMateDomAdapter.readBuild() };
         }
         if (command?.action === "add_component") {
-          actionController = new AbortController();
-          panel.setAction({ type: "START" });
-          
-          try {
-            const result = await globalThis.BuildMateDomAdapter.addComponent(command.component);
-            actionController = null;
-            if (result.ok) {
-              panel.setAction({ type: "SUCCESS", message: `Đã thêm ${command.component.sku} thành công.` });
-            } else {
-              panel.setAction({ type: "FAILED", code: result.error, message: `Lỗi: ${result.error}` });
-            }
-            return result;
-          } catch (error) {
-            actionController = null;
-            panel.setAction({ type: "FAILED", code: "EXCEPTION", message: String(error) });
-            return { ok: false, error: String(error) };
-          }
+          return executeAdd(command.component);
+        }
+        if (command?.action === "remove_component") {
+          return executeRemove(command.component, command.expected_revision);
         }
         return { ok: false, error: "INVALID_ACTION" };
       })().then(sendResponse, (error) => sendResponse({ ok: false, error: error instanceof Error ? error.message : String(error) }));
@@ -114,7 +171,6 @@
   });
 
   addEventListener("pagehide", () => {
-    actionController?.abort();
     trackerStop();
     clearInterval(heartbeatTimer);
     bridgePort?.disconnect();
