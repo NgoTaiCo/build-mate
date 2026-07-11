@@ -1,262 +1,263 @@
 # Data Model: Catalog Adapter
 
-**Branch**: `002-mock-catalog-adapter` | **Date**: 2026-07-07
-**Source**: spec.md Key Entities + research.md §1 (field mapping)
-**Implementation note**: types duoi day = TypeScript type definitions. Khong co persistence — mock data in-memory static array; live data fetched per-request.
+**Phase 1 Output** | **Date**: 2026-07-11
 
-## Entities Overview
+## Entity: Component
 
-```text
-SearchCriteria ──→ search_components() ──→ CatalogComponent[]
-                            │
-                            ├── Apify live data (primary, per-type)
-                            └── Mock data (fallback, per-type)
-```
+A single PC hardware part in the catalog. All components have shared fields; type-specific fields are present only when relevant.
 
----
+### Shared Fields
 
-## 1. CatalogComponent (output — Compiler-compatible format)
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `sku` | string | Yes | Stock Keeping Unit from PhongVu (unique identifier, e.g., "211208131") |
+| `name` | string | Yes | Human-readable name (e.g., "CPU Intel Core i5-12400") |
+| `type` | enum | Yes | Component type: "CPU" \| "mainboard" \| "RAM" \| "PSU" \| "cooler" \| "case" \| "storage" \| "GPU" |
+| `price` | number | Yes | Price in VND (Vietnamese Dong), integer, ≥0 |
+| `stock_status` | enum | Yes | "in_stock" \| "out_of_stock" |
+| `promo` | string \| null | No | Promotional text if available, otherwise null |
 
-CatalogComponent = output type cua `search_components`. Matches `@buildmate/compiler` Component union + extra catalog-specific fields. Research §1 mapping applied.
+### Type-Specific Fields
 
-### 1.1 Shared fields (all types)
+#### CPU
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `socket` | string | Yes | Socket standard (e.g., "AM5", "LGA1700") |
+| `tdp` | number | Yes | Thermal Design Power in watts, integer |
 
-Field | Type | Required | Description
----|---|---|---
-`id` | `string` | yes | Unique identifier (mock: `"cpu-001"`, live: PhongVu SKU)
-`name` | `string` | yes | Human-readable product name
-`type` | `ComponentType` | yes | Discriminator — one of 8 types
-`price` | `number` | yes | Price in VND (integer)
-`stock_status` | `"in_stock" \| "out_of_stock"` | yes | Availability
-`promo` | `string \| null` | yes | Promotion text or null
+#### Mainboard
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `socket` | string | Yes | Socket standard (e.g., "AM5", "LGA1700") |
+| `ram_gen` | enum | Yes | "DDR4" \| "DDR5" |
+| `form_factor` | enum | Yes | "ATX" \| "mATX" \| "ITX" |
 
-### 1.2 Type-specific fields
+#### RAM
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `ram_gen` | enum | Yes | "DDR4" \| "DDR5" |
 
-#### CPU (`type: "cpu"`)
+#### PSU
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `wattage` | number | Yes | Power capacity in watts, integer |
+| `form_factor` | enum | Yes | "ATX" \| "SFX" |
 
-Field | Type | Required | Compiler use
----|---|---|---
-`socket` | `string` | yes (E001) | e.g. `"AM5"`, `"LGA1700"`
-`tdp` | `number` | yes (W001) | Watts
-`ram_gen_supported` | `string[]` | yes (E002) | e.g. `["DDR5"]`, `["DDR4", "DDR5"]`
+#### Cooler
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `socket` | string[] | Yes | Array of compatible sockets (e.g., `["AM5", "AM4", "LGA1700"]`) |
+| `tdp` | number | Yes | Max TDP support in watts, integer |
 
-#### Mainboard (`type: "mainboard"`)
+#### Case
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `form_factor` | enum | Yes | "ATX" \| "mATX" \| "ITX" |
+| `clearance_mm` | number | Yes | GPU clearance in millimeters, integer |
 
-Field | Type | Required | Compiler use
----|---|---|---
-`socket` | `string` | yes (E001) | e.g. `"AM5"`
-`ram_gen_supported` | `string[]` | yes (E002) | e.g. `["DDR5"]`
-`form_factor` | `string` | yes (E005) | `"ATX"` \| `"mATX"` \| `"ITX"`
+#### Storage
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| (none beyond shared) | — | — | Type-specific fields N/A for storage |
 
-> Research §1: catalog `ram_gen: "DDR5"` → wrap to `ram_gen_supported: ["DDR5"]`.
+#### GPU
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `tdp` | number | Yes | Power consumption in watts, integer |
+| `clearance_mm` | number | Yes | Card length in millimeters, integer |
 
-#### RAM (`type: "ram"`)
+### Example Component Instances
 
-Field | Type | Required | Compiler use
----|---|---|---
-`generation` | `string` | yes (E002) | `"DDR4"` \| `"DDR5"` (Compiler field name: `generation`)
-`tdp` | `number` | no (W001 optional) | DDR5 ~3W, DDR4 ~2W
-
-> Research §1: catalog `ram_gen` → Compiler `generation`.
-
-#### PSU (`type: "psu"`)
-
-Field | Type | Required | Compiler use
----|---|---|---
-`wattage` | `number` | yes (W001) | e.g. `650`, `850`
-`form_factor` | `string` | yes (E005) | `"ATX"` \| `"SFX"`
-
-> PSU does NOT have `tdp` field (Constitution Principle II + Compiler data model rule — PSU is source, not load).
-
-#### Case (`type: "case"`)
-
-Field | Type | Required | Compiler use
----|---|---|---
-`max_cooler_height` | `number` | yes (E004) | Cooler height limit (mm). Mock: ATX ~165, mATX ~160, ITX ~80.
-`supported_mb_form_factors` | `string[]` | yes (E005) | e.g. `["ATX", "mATX", "ITX"]`
-`supported_psu_form_factors` | `string[]` | yes (E005) | e.g. `["ATX", "SFX"]`
-
-> Research §1: derived from catalog `form_factor` (single) via hierarchy. `"ATX"` → fits ATX/mATX/ITX. ITX case → `["ITX"]` only. PSU: ATX-sized case → fits ATX + SFX; ITX → SFX only.
-
-**Catalog-only extra fields** (pass-through, Compiler ignores):
-
-Field | Type | Description
----|---|---
-`clearance_mm` | `number` | GPU length clearance (for future Compiler use / display)
-`form_factor` | `string` | Original catalog form_factor (kept for display)
-
-#### Cooler (`type: "cooler"`)
-
-Field | Type | Required | Compiler use
----|---|---|---
-`height` | `number` | yes (E004) | Cooler height in mm. Tower ~155-165, low-profile ~60-70.
-
-**Catalog-only extra fields** (pass-through):
-
-Field | Type | Description
----|---|---
-`socket` | `string[]` | Compatible socket list (clarification Q5), e.g. `["AM5", "AM4", "LGA1700"]`
-`tdp` | `number` | Max TDP support (for future CPU-cooler TDP matching)
-
-> Research §1: Compiler 001 uses `height` for E004. Catalog `socket` (array) and `tdp` (max) are pass-through — not consumed by current Compiler rules.
-
-#### Storage (`type: "storage"`)
-
-Field | Type | Required | Compiler use
----|---|---|---
-_(shared only)_ | — | — | E003 required-set (boot-completeness). No compatibility fields.
-
-> Storage has no type-specific fields beyond shared. Compiler only checks existence for E003.
-
-#### GPU (`type: "gpu"`)
-
-Field | Type | Required | Compiler use
----|---|---|---
-`tdp` | `number` | yes (W001) | GPU power draw (e.g. `220`, `450`)
-
-**Catalog-only extra fields** (pass-through):
-
-Field | Type | Description
----|---|---
-`clearance_mm` | `number` | GPU length in mm (for future case clearance check)
-
-> GPU is NOT in E003 required-set (optional component). But `tdp` must be present for W001 when GPU exists.
-
-### 1.3 ComponentType (discriminator)
-
+**CPU (Intel Core i5-12400)**
 ```typescript
-type ComponentType = "cpu" | "mainboard" | "ram" | "psu" | "cooler" | "case" | "storage" | "gpu";
-```
-
----
-
-## 2. SearchCriteria (input)
-
-Field | Type | Required | Description
----|---|---|---
-`type` | `ComponentType` | no | Filter by component type. Omit = all 8 types.
-`socket` | `string` | no | Socket filter. Exact match for CPU/mainboard; `array.includes()` for cooler.
-`ram_gen` | `string` | no | RAM generation filter (`"DDR4"` \| `"DDR5"`). Matches mainboard `ram_gen_supported` and RAM `generation`.
-`form_factor` | `string` | no | Form factor filter. Hierarchical `>=` for case; exact `===` for mainboard (FR-008).
-`price_min` | `number` | no | Minimum price (VND), inclusive (FR-007).
-`price_max` | `number` | no | Maximum price (VND), inclusive (FR-007).
-`stock_status` | `"in_stock" \| "out_of_stock"` | no | Stock status filter. Omit = both in-stock and out-of-stock returned.
-`clearance_mm` | `number` | no | Min GPU clearance for case filter (FR-008 inclusive).
-`tdp_min` | `number` | no | Min TDP filter (applies to CPU, GPU, cooler — types that have `tdp`).
-`tdp_max` | `number` | no | Max TDP filter.
-`wattage_min` | `number` | no | Min PSU wattage filter.
-`wattage_max` | `number` | no | Max PSU wattage filter.
-
-**Validation rules**:
-- All fields optional. Empty `{}` = return all components unfiltered.
-- `price_min > price_max` → returns empty array (no component satisfies).
-- Unknown field values → returns empty array for that filter.
-- Fields not present in criteria → ignored (no filter applied, FR-006).
-
----
-
-## 3. CatalogResult (search output)
-
-```typescript
-interface CatalogResult {
-  components: CatalogComponent[];   // filtered + sorted results
-  source: DataSource;                // "live" | "mock" | "mixed" (per-category fallback)
-  errors: DataSourceError[];         // per-type Apify errors (for logging/diagnostics)
+{
+  sku: "211208131",
+  name: "CPU Intel Core i5-12400 (6 nhân 12 luồng - Boost tối đa 4.4 GHz - 18MB - 1700)",
+  type: "CPU",
+  price: 5590000,
+  stock_status: "in_stock",
+  promo: "20% discount",
+  socket: "1700",
+  tdp: 65
 }
 ```
 
-### 3.1 DataSource
-
+**Mainboard (ASUS ROG STRIX X870-E)**
 ```typescript
-type DataSource = "live" | "mock" | "mixed";
-// "live" = all types from Apify
-// "mock" = all types from mock fallback  
-// "mixed" = some live, some mock (per-category fallback)
+{
+  sku: "311450256",
+  name: "ASUS ROG STRIX X870-E",
+  type: "mainboard",
+  price: 8500000,
+  stock_status: "in_stock",
+  promo: null,
+  socket: "AM5",
+  ram_gen: "DDR5",
+  form_factor: "ATX"
+}
 ```
 
-### 3.2 DataSourceError
-
-Field | Type | Description
----|---|---
-`type` | `ComponentType` | Which type's Apify call failed
-`source` | `"apify"` | Source type
-`message` | `string` | Error message for logging
-
-**Note**: `DataSourceError` chỉ báo cáo — không fail `search_components`. Fallback = transparent to caller.
-
----
-
-## 4. ApifyScrapedProduct (internal — pre-map)
-
-Raw data từ Apify Actor trước khi `mapper.ts` transforms:
-
-Field | Type | Description
----|---|---
-`name` | `string` | Product title
-`price` | `number \| null` | Price in VND (nullable — promo price có thể missing)
-`stock_status` | `string \| null` | Raw stock text (e.g. "Con hang", "Het hang")
-`promo` | `string \| null` | Promotion text
-`specs` | `string` | Raw HTML/text specification table từ PhongVu product page
-`category` | `string \| null` | PhongVu category (e.g. "CPU", "Mainboard") — used to infer `type`
-
----
-
-## 5. Form Factor Hierarchy Constants
-
+**Cooler (Noctua NH-D15)**
 ```typescript
-const FORM_FACTOR_RANK: Record<string, number> = {
-  "ITX": 1,
-  "mATX": 2,
-  "ATX": 3,
-};
-
-const FORM_FACTOR_COMPAT: Record<string, string[]> = {
-  "ATX": ["ATX", "mATX", "ITX"],
-  "mATX": ["mATX", "ITX"],
-  "ITX": ["ITX"],
-};
+{
+  sku: "401280150",
+  name: "Noctua NH-D15 (Socket: AM5, AM4, LGA1700 / TDP: 220W)",
+  type: "cooler",
+  price: 2500000,
+  stock_status: "in_stock",
+  promo: null,
+  socket: ["AM5", "AM4", "LGA1700"],
+  tdp: 220
+}
 ```
 
-Used by: case filter predicate (hierarchical), mock data derivation (`supported_mb_form_factors`).
+**Case (Lian Li Lancool 215)**
+```typescript
+{
+  sku: "300950180",
+  name: "Lian Li Lancool 215 (mATX, GPU Clearance 310mm)",
+  type: "case",
+  price: 1200000,
+  stock_status: "out_of_stock",
+  promo: null,
+  form_factor: "mATX",
+  clearance_mm: 310
+}
+```
 
----
+## Entity: SearchCriteria
 
-## 6. Search Execution Order
+Represents filter parameters passed to `search_components(criteria)`. All fields are optional.
 
-1. **Data fetch** (per-type, parallelizable):
-   - Determine target types from `criteria.type` (or ALL_TYPES)
-   - For each type: try Apify → on fail, use mock for that type
-   - Record `DataSourceError[]` for diagnostics
-2. **Filter** (AND logic across active criteria):
-   - Type check (redundant if single-type fetch, needed for multi-type)
-   - Socket (exact for CPU/mb, includes for cooler)
-   - RAM generation (exact)
-   - Form factor (hierarchical for case, exact for mb, skip for others)
-   - Stock status (exact)
-   - Price range (inclusive)
-   - Clearance (inclusive min — only cases have clearance)
-   - TDP range (inclusive — only CPU/GPU/cooler have tdp)
-   - Wattage range (inclusive — only PSU has wattage)
-3. **Sort**: price ascending
-4. **Return**: `CatalogResult`
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | string | No | Component type filter (e.g., "CPU") |
+| `socket` | string | No | Socket filter (e.g., "AM5") |
+| `ram_gen` | enum | No | "DDR4" \| "DDR5" |
+| `form_factor` | enum | No | "ATX" \| "mATX" \| "ITX" \| "SFX" |
+| `price_min` | number | No | Minimum price in VND (inclusive) |
+| `price_max` | number | No | Maximum price in VND (inclusive) |
+| `stock_status` | enum | No | "in_stock" \| "out_of_stock" |
+| `clearance_mm` | number | No | Minimum GPU/case clearance in mm (inclusive) |
+| `tdp_min` | number | No | Minimum TDP in watts (inclusive) |
+| `tdp_max` | number | No | Maximum TDP in watts (inclusive) |
+| `wattage_min` | number | No | Minimum PSU wattage in watts (inclusive) |
+| `wattage_max` | number | No | Maximum PSU wattage in watts (inclusive) |
 
----
+### Example Criteria
 
-## 7. Invariants
+**Search for AM5 CPUs under 8M VND, in stock**
+```typescript
+{
+  type: "CPU",
+  socket: "AM5",
+  price_max: 8000000,
+  stock_status: "in_stock"
+}
+```
 
-- **Mock deterministic**: same criteria → same `CatalogComponent[]` order byte-for-byte (FR-011)
-- **Live non-deterministic**: Apify results vary by time; sort ensures stable ordering within a single call
-- **Empty result**: `components: []`, NOT null/undefined (FR-004)
-- **Type safety**: Component union discriminated by `type`, TypeScript exhaustiveness check
-- **No state**: pure functions for mock path; Apify path has network I/O but no mutable state
-- **Extra fields OK**: catalog fields not consumed by Compiler are pass-through — Compiler ignores unknown fields
+**Search for DDR5 mainboards under 5M, AM5 socket**
+```typescript
+{
+  type: "mainboard",
+  socket: "AM5",
+  ram_gen: "DDR5",
+  price_max: 5000000
+}
+```
 
-## 8. Out-of-scope data
+**Search for ATX or larger cases with 300mm+ clearance**
+```typescript
+{
+  type: "case",
+  form_factor: "ATX",
+  clearance_mm: 300
+}
+```
 
-- `compare_components` function (separate feature)
-- Pagination/cursor (catalog small enough — ~50 mock, live Apify returns manageable set)
-- Caching layer (research §9)
-- Multi-vendor (only PhongVu via Apify)
-- Image URLs, reviews, detailed descriptions
-- Real-time stock updates (stock_status from Apify = snapshot at call time)
+## Filtering Rules
 
+### AND Logic
+All provided criteria are applied simultaneously (AND logic). A component must satisfy ALL specified conditions to be included in results.
+
+### Optional Fields
+Fields not provided (omitted, null, or undefined) impose no filter — they are skipped.
+
+### Form Factor Hierarchy (Cases Only)
+For case filtering, `form_factor` uses hierarchical matching:
+- Filtering for `"ATX"` returns: ATX + mATX + ITX cases (all sizes)
+- Filtering for `"mATX"` returns: mATX + ITX cases
+- Filtering for `"ITX"` returns: ITX cases only
+
+Mainboard `form_factor` uses exact match (no hierarchy).
+
+### Socket Matching (Coolers)
+For coolers, `socket` criteria matches if the requested socket is in the cooler's socket array:
+```typescript
+// Cooler: socket = ["AM5", "AM4", "LGA1700"]
+// Criteria: socket = "AM5"
+// Result: MATCH (AM5 is in array)
+```
+
+### Price Range (Inclusive)
+Price filtering is inclusive on both bounds:
+- `price_min` ≤ component.price ≤ `price_max`
+
+### Clearance & TDP Ranges (Inclusive)
+All range filters (clearance_mm, tdp_min/max, wattage_min/max) are inclusive:
+- `clearance_mm`: component.clearance_mm ≥ criteria.clearance_mm
+- `tdp_min` ≤ component.tdp ≤ `tdp_max`
+- `wattage_min` ≤ component.wattage ≤ `wattage_max`
+
+## SearchResult
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `components` | Component[] | Array of matching components |
+
+### Example Result
+
+```typescript
+{
+  components: [
+    {
+      id: "cpu-amd-5700x3d",
+      name: "AMD Ryzen 7 5700X3D",
+      type: "CPU",
+      price: 11500000,
+      stock_status: "in_stock",
+      promo: "Giảm 500k",
+      socket: "AM5",
+      tdp: 105
+    },
+    {
+      id: "cpu-amd-7700x",
+      name: "AMD Ryzen 7 7700X",
+      type: "CPU",
+      price: 9800000,
+      stock_status: "in_stock",
+      promo: null,
+      socket: "AM5",
+      tdp: 105
+    }
+  ]
+}
+```
+
+If no components match, `components` is an empty array `[]` (never null/undefined).
+
+## Data Sources
+
+### Live Data (Apify)
+- Fetched from PhongVu.vn via Apify SDK
+- Cached per session
+- Sorted by price ascending
+- Timeout: 5s per component type
+- Per-category fallback on timeout
+
+### Mock Data
+- Pre-defined JSON structure (~50 components)
+- Deterministic ordering (same input → same output)
+- Used as fallback when live fetch fails or times out
+- At least 5 entries per type
+- At least 1 in-stock and 1 out-of-stock per type

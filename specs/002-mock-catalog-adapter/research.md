@@ -1,193 +1,249 @@
-# Research: Catalog Adapter
+# Research Phase: Catalog Adapter Architecture
 
-**Branch**: `002-mock-catalog-adapter` | **Date**: 2026-07-07
-**Source**: spec.md FR-001–FR-012 + Constitution Principle II
+**Phase 0 Output** | **Date**: 2026-07-11
 
-## 1. Component Field Mapping: Catalog → Compiler
+## Research Summary
 
-**Decision**: Catalog adapter emits components trong format tương thích với `@buildmate/compiler` Component type (định nghĩa tại `specs/001-build-compiler-core/data-model.md` §2). Catalog spec's field names là logical descriptors; implementation translates sang Compiler field names.
+All major architectural decisions were clarified in Session 2026-07-07 and are documented in the feature specification. This research consolidates those findings and confirms the approach.
 
-**Rationale**: FR-012 requires "Each returned component MUST include all fields relevant to its type, sufficient for the Build Compiler to perform compatibility validation". Compiler không biết về catalog field names — catalog phải emit đúng contract.
+## Key Decisions
 
-**Alternatives considered**:
-- Trả về raw catalog field names + để Compiler tự map → rejected: vi phạm FR-012, Compiler cần import catalog types.
-- Catalog định nghĩa interface riêng + provide adapter function → rejected: thêm layer không cần thiết cho hackathon time-box.
+### 1. Two-Tier Data Architecture (UPDATED)
 
-**Mapping table** (catalog logical field → Compiler field):
+**Decision**: Pre-fetched real PhongVu data (via Teko Discovery API) cached as JSON files + optional live API fallback.
 
-| Component | Catalog field | Compiler field | Notes |
-|---|---|---|---|
-| CPU | `socket` | `socket` | Same |
-| CPU | `tdp` | `tdp` | Same |
-| CPU | — | `ram_gen_supported: string[]` | Derived from CPU model known specs. Mock data hardcodes (e.g., 7800X3D → `["DDR5"]`). Apify scraped → parse from product spec text. |
-| Mainboard | `socket` | `socket` | Same |
-| Mainboard | `ram_gen` (single) | `ram_gen_supported: string[]` | Wrap single value: `"DDR5"` → `["DDR5"]`. Mainboard hỗ trợ 1 generation (99% case). Chấp nhận single-value in mock; Apify có thể parse multi nếu Z790 DDR4+DDR5. |
-| Mainboard | `form_factor` (single) | `form_factor` (single) | Same string (e.g., `"ATX"`, `"mATX"`, `"ITX"`). |
-| RAM | `ram_gen` (single) | `generation` (single) | Rename. Compiler dùng `generation`, catalog dùng `ram_gen`. |
-| RAM | — | `tdp` (optional) | Derived: DDR5 ~3W/stick, DDR4 ~2W/stick. Mock data include optional `tdp`. |
-| PSU | `wattage` | `wattage` | Same |
-| PSU | `form_factor` | `form_factor` | Same (`"ATX"`, `"SFX"`). |
-| Case | `form_factor` (single) | `supported_mb_form_factors: string[]` | Derive từ hierarchy. `"ATX"` → `["ATX", "mATX", "ITX"]`; `"mATX"` → `["mATX", "ITX"]`; `"ITX"` → `["ITX"]`. |
-| Case | — | `supported_psu_form_factors: string[]` | Derived. ATX/mATX cases → `["ATX", "SFX"]` (both supported); ITX cases → `["SFX"]` typically. Mock data hardcodes. |
-| Case | — | `max_cooler_height` (number) | Derived từ product spec. Mock data hardcodes realistic values (ATX ~165-175mm, mATX ~160mm, ITX ~70-85mm). Not directly in catalog spec — added during implementation. |
-| Case | `clearance_mm` | (pass-through) | GPU length clearance. Compiler 001 không check GPU clearance — pass-through cho future use / display. |
-| Cooler | `socket` (array) | (pass-through) | Compiler 001 không check cooler socket compatibility — pass-through. |
-| Cooler | `tdp` (max TDP) | (pass-through) | Compiler 001 không check TDP matching — pass-through cho future / display. |
-| Cooler | — | `height` (number) | DERIVED: catalog must include height for Compiler E004. Mock data hardcodes (tower ~155-165mm, low-profile ~60-70mm). Apify scraped from spec text. |
-| GPU | `tdp` | `tdp` | Same |
-| GPU | `clearance_mm` | (pass-through) | GPU length. Compiler 001 không check. |
+**Rationale**: 
+- PhongVu.vn is the authoritative retail catalog; Teko Discovery API provides direct access to real product data.
+- Pre-fetching at build time and caching as JSON ensures: fast startup, no runtime API calls, deterministic behavior, offline capability.
+- Per-category fallback (if live API call fails at runtime, reverts to cached JSON) ensures robustness without complexity.
+- Matches hackathon time-box (16h): pre-fetch 8 component types once, cache permanently, no runtime scraping needed.
 
-**Key insight**: Catalog có nhiều field hơn Compiler cần (cookie socket, clearance_mm cho GPU, TDP cho cooler). Catalog keep all fields — Compiler consume subset; extra fields không gây lỗi (Compiler type union `tdp? optional`). FR-012 satisfied: all required Compiler fields populated.
+**API Details**:
+- Endpoint: `https://discovery.tekoapis.com/api/v2/search-skus-v2`
+- Method: POST with bearer token (provided via `~/.openclaw/openclaw.json`)
+- Request body: component type slug (e.g., `/c/cpu`), price range, page size
+- Response: `data.products[]` array with real PhongVu product listings
 
-## 2. Apify Integration Pattern
+**Data Flow**:
+1. **Build time**: Crawl PhongVu API for each component type, extract canonical fields, save to `src/data/phongvu-catalog-<type>.json`
+2. **Runtime**: Load pre-fetched JSON files (deterministic, fast)
+3. **Fallback**: If live API available, optionally update cached data; if unavailable, use cached version
 
-**Decision**: Sử dụng `apify-client` npm package làm dependency runtime duy nhất. Apify Actor đã được pre-built để scrape PhongVu.vn (Actor ID cần được cấu hình). API key từ env var `APIFY_API_KEY`.
+**Alternatives Considered**:
+- Pure hardcoded mock (no real data): Less realistic; rejected to use real PhongVu products.
+- Real-time API calls only (no cache): Adds latency, requires token, breaks offline; rejected for hackathon.
+- Database: Out of scope for 16h time-box; rejected.
 
-**Rationale**: User specified Apify as partner. Official SDK handles auth, retry, timeout natively. Actor-based architecture = Apify manages scraping infrastructure, ta chỉ gọi API.
+### 2. Search Criteria & Filtering Logic
 
-**Alternatives considered**:
-- Tự build scraper với Puppeteer/Playwright → rejected: tốn thời gian, cần maintain infrastructure, không phù hợp hackathon.
-- Dùng raw HTTP fetch → rejected: Apify authentication phức tạp, SDK xử lý sẵn.
+**Decision**: Multi-criteria AND logic with optional fields. Support: `type`, `socket`, `ram_gen`, `form_factor`, `price_min`, `price_max`, `stock_status`, `clearance_mm`, `tdp_min`, `tdp_max`, `wattage_min`, `wattage_max`.
 
-**Apify flow**:
-```
-CatalogClient.search_components(criteria)
-  → for each type in criteria (or all 8 types):
-    → call Apify Actor.run({ type, ... })  (parallel if multiple types)
-    → on success: map scraped data → CatalogComponent[]
-    → on failure: fallback to mock data for that type
-  → merge all types → apply filter predicates → sort → return
-```
+**Rationale**: 
+- Build Compiler calls search once per component type with combined criteria (socket + RAM gen + stock + price).
+- AND logic prevents false positives (no incompatible components returned).
+- Optional fields (omitted = ignore) simplifies API and supports partial searches.
 
-**Timeout & retry**: Apify Actor call timeout = 10s (hackathon constraint — không chờ lâu). Retry = 0 (per-category fallback handles failure). Actor warm-up time có thể chậm lần đầu → accept first-call latency.
+**Alternatives Considered**:
+- Complex query language (GraphQL, SQL): Overkill; simple object API sufficient.
+- Pagination: Catalog is ~50 mock + hundreds live; full return acceptable for Compiler use case.
 
-**Actor output contract**: Apify Actor trả về JSON array of product objects với các field: `name`, `price`, `stock_status`, `specs` (raw text). `mapper.ts` chịu trách nhiệm parse `specs` text → structured fields (socket, ram_gen, tdp, form_factor, clearance, wattage). Regex-based parsing, fallback to null nếu không parse được.
+### 3. Case Form Factor Matching
 
-## 3. Mock Dataset Design
+**Decision**: Hierarchical matching for case `form_factor` (ATX ≥ mATX ≥ ITX); exact match for mainboard.
 
-**Decision**: ~50 components hardcoded trong `src/mock-data.ts` dạng static array `CatalogComponent[]`. Mỗi type ≥5 entry, ≥1 in-stock + ≥1 out-of-stock. Giá realistic VND. Brand/spec theo sản phẩm thực tế (không invented) để Compiler test có ý nghĩa.
+**Rationale**: 
+- ATX cases physically fit smaller builds (mATX/ITX mainboards); mATX cases fit ITX.
+- Mainboard form factor is deterministic (immutable in spec); no hierarchy needed.
+- Compiler needs to match physical constraints: if customer picks ITX mainboard, only ITX cases qualify; if ATX mainboard, ATX + anything larger.
 
-**Rationale**: SC-002 và SC-004 yêu cầu ≥5 per type + in-stock/out-of-stock mix. Hardcoded = deterministic (FR-011 mock path). Không cần JSON file riêng — compile-time check integrity.
+**Alternatives Considered**:
+- All exact match: Overly restrictive; ATX cases are wasted if mainboard is mATX.
+- Always return all sizes: Allows physical incompatibilities (ITX mainboard in ATX case = waste).
 
-**Distribution**:
+### 4. Live Search Ordering
 
-| Type | Count | Notes |
+**Decision**: Price ascending (cheapest first) for live Apify results; deterministic (stable sort) for mock.
+
+**Rationale**: 
+- Retail users prioritize budget; lowest price per component maximizes build accessibility.
+- Mock data ordering is fixed by pre-defined dataset; same criteria always produce same result.
+- Live data changes; sorting ensures consistent UX across sessions.
+
+**Alternatives Considered**:
+- Relevance/rating-based: Not available from Apify scrape; too expensive to add.
+- No sort: Apify results vary unpredictably; confusing for users.
+
+### 5. Cooler Multi-Socket Support
+
+**Decision**: `socket` field is array of strings (e.g., `["AM5", "AM4", "LGA1700"]`).
+
+**Rationale**: 
+- Real coolers support multiple sockets (e.g., Noctua NH-D15 supports AM4, AM5, LGA1700+).
+- Array representation matches reality; filtering checks if `criteria.socket in cooler.socket[]`.
+- Simpler than alternative (separate compatibility table).
+
+**Alternatives Considered**:
+- Compatibility matrix table: More complex; array is sufficient.
+- String with delimiters: Less type-safe; array is clearer.
+
+## Technical Approach Confirmation
+
+**Data Fetching & Caching**:
+- Use Teko Discovery API (`https://discovery.tekoapis.com/api/v2/search-skus-v2`) to fetch real PhongVu product listings per component type (8 types).
+- Pre-fetch at build time using bash script: `scripts/fetch-phongvu-catalog.sh` (iterates each type, calls API, transforms response).
+- Extract relevant fields from API response: `sku`, `name`, `latestPrice`, `totalAvailable`, `shortDescription`, `highlight` → canonical Component schema.
+- Save pre-fetched data to `src/data/phongvu-catalog-<type>.json` (one file per type).
+- At runtime, load JSON files (no API call needed; fully deterministic).
+
+**Field Mapping from PhongVu API**:
+- `sku` → `id` (unique identifier)
+- `name` → `name`
+- `latestPrice` (string, VND) → `price` (number)
+- `totalAvailable` → stock_status (`in_stock` if totalAvailable > 0, else `out_of_stock`)
+- `shortDescription` / `highlight` → extract type-specific fields (socket, TDP, RAM gen, etc.) via regex/parsing
+- `discountPercent` → optional `promo` field (e.g., "20% discount")
+
+**Component Type Slugs for API**:
+- CPU: `/c/cpu`
+- Mainboard: `/c/mainboard` (or similar per Phong Vu categories)
+- RAM: `/c/ram`
+- PSU: `/c/psu`
+- Cooler: `/c/cooler`
+- Case: `/c/case`
+- Storage: `/c/storage`
+- GPU: `/c/gpu`
+
+**Pre-fetched Data**:
+- Real PhongVu products (~50-200 per type depending on catalog size).
+- Stored as JSON array in `src/data/phongvu-catalog-<type>.json`.
+- Covers realistic brands, specs, price ranges, stock status.
+- Deterministic (same set every session until manually re-fetched).
+
+**Filtering Logic**:
+- Pure functions (no side effects), unit-testable.
+- Apply all provided criteria with AND logic.
+- Omitted/null/undefined fields are skipped (no filter).
+- Price range inclusive on both ends (price_min ≤ price ≤ price_max).
+- Support TDP/wattage/clearance range filtering.
+
+**Determinism**:
+- Mock search results: same input → same output (verified by 100 iterations in SC-005).
+- Live search results: sorted by price ascending (deterministic order).
+- No randomization or external state in filtering.
+
+## Dependencies & Risks
+
+**Dependencies**:
+- Teko Discovery API token: Bearer token in `~/.openclaw/openclaw.json` (provided by user).
+- Build script: `scripts/fetch-phongvu-catalog.sh` to crawl API at build time.
+- Regex/parsing logic: Extract socket, TDP, RAM gen from `shortDescription` and `highlight` HTML/text.
+- TypeScript types: Use interfaces for Component, SearchCriteria, SearchResult.
+- Jest: For unit testing filtering logic and API transformer.
+
+**Risks & Mitigations**:
+- **API token expiry**: Pre-fetching happens at build time (controlled); cached data is valid for hackathon duration. If token expires, re-run build script.
+- **Field parsing complexity**: PhongVu API response is HTML-rich (shortDescription contains HTML, highlight has SVG icons). Parsing may need regex tuning per component type. Mitigation: Start with highlight (structured HTML attributes), fall back to shortDescription if needed.
+- **Missing or inconsistent fields**: PhongVu API may have null values or missing fields (e.g., totalAvailable=null). Use defaults: `null totalAvailable` → `out_of_stock`; missing socket → log warning + skip component.
+- **API response size**: Pre-fetching 8 types × 50-200 products = 400-1600 products. JSON cache will be ~5-10MB (manageable). At runtime, entire dataset loaded to memory (acceptable for 16h hackathon).
+
+## API Component Type Slugs
+
+Map each component type to its Teko Discovery API slug for pre-fetching (confirmed 2026-07-11):
+
+| Component Type | API Slug | Notes |
 |---|---|---|
-| CPU | 6 | 3 AM5 (Ryzen 7000/9000), 3 LGA1700 (Intel 12th/13th/14th gen) |
-| Mainboard | 6 | 3 AM5 (B650/X670), 3 LGA1700 (B760/Z790); mix ATX/mATX |
-| RAM | 6 | 3 DDR5 (16/32GB kits), 3 DDR4 (16/32GB kits) |
-| PSU | 6 | Mix 550W–1000W, ATX + 2 SFX |
-| Cooler | 6 | 2 air tower, 2 AIO 240/360mm, 2 low-profile |
-| Case | 6 | 2 ATX, 2 mATX, 2 ITX; mix GPU clearance 250–400mm |
-| Storage | 6 | 3 NVMe SSD, 2 SATA SSD, 1 HDD |
-| GPU | 8 | Mix NVIDIA RTX 30/40 series + AMD RX 6000/7000; mix TDP 150–450W |
+| CPU | `/c/cpu` | Single slug |
+| Mainboard | `/c/mainboard-bo-mach-chu` | Single slug |
+| RAM | `/c/ram-pc` | Single slug |
+| PSU | `/c/psu-nguon-may-tinh` | Single slug |
+| Cooler | `/c/tan-nhiet` | Single slug |
+| Case | `/c/case` | Single slug |
+| Storage | `/c/o-cung-hdd` + `/c/o-cung-ssd` | **TWO slugs** — fetch both, merge results into single catalog file |
+| GPU | `/c/vga-card-man-hinh` | Single slug |
 
-## 4. form_factor Hierarchy Implementation
+**Storage Special Case**: Storage has 2 separate API endpoints (HDD vs SSD). Pre-fetch script should:
+1. Call `/c/o-cung-hdd` → get HDD products
+2. Call `/c/o-cung-ssd` → get SSD products
+3. Merge both results into `src/data/phongvu-catalog-storage.json` with all products together
 
-**Decision**: Define hierarchy constant: `FF_RANK = { ITX: 1, mATX: 2, ATX: 3 }`. Filter predicate: `FF_RANK[component.form_factor] >= FF_RANK[criteria.form_factor]` cho case; `===` cho mainboard (FR-008).
+## Build Process
 
-**Rationale**: FR-008 from clarification Q3: hierarchical matching for cases, exact for mainboards. Rank-based comparison đơn giản, dễ test, deterministic.
+**Pre-fetch Script** (`scripts/fetch-phongvu-catalog.sh`):
 
-**Case → Compiler field derivation**:
-```
-input: case.form_factor = "ATX"
-output: case.supported_mb_form_factors = ["ATX", "mATX", "ITX"]  (all <= ATX)
-        case.supported_psu_form_factors = ["ATX", "SFX"]          (ATX cases fit both)
-```
+Confirmed slugs (2026-07-11):
+```bash
+#!/bin/bash
+# Pre-fetch real PhongVu data and generate catalog JSON files
 
-**Mock data rule**: `supported_mb_form_factors` pre-computed khi định nghĩa mock data (không compute runtime) — performance + determinism. Apify path: derive từ scraped form_factor sau khi parse.
+TOKEN=$(cat ~/.openclaw/openclaw.json | jq -r '.tekoDiscoveryToken')
+ENDPOINT="https://discovery.tekoapis.com/api/v2/search-skus-v2"
 
-## 5. Search Filter Implementation Pattern
+# Define type → slug mapping
+declare -A SLUGS=(
+  [cpu]="/c/cpu"
+  [mainboard]="/c/mainboard-bo-mach-chu"
+  [ram]="/c/ram-pc"
+  [psu]="/c/psu-nguon-may-tinh"
+  [cooler]="/c/tan-nhiet"
+  [case]="/c/case"
+  [gpu]="/c/vga-card-man-hinh"
+)
 
-**Decision**: Each criteria field → standalone predicate function. `search_components` compose tất cả active predicate với AND logic. Filter order: type → socket → ram_gen → form_factor → stock_status → price → clearance → tdp → wattage. Sort: price ascending (live) or stable-order (mock).
-
-**Rationale**: FR-005 AND logic, FR-006 ignore missing fields. Standalone predicate dễ unit test từng filter. Filter order optimized: type discriminant first (narrow most), then cheap equality checks, then range checks.
-
-**Predicate signatures**:
-```typescript
-type Predicate = (component: CatalogComponent) => boolean;
-
-function makeTypePredicate(type: string): Predicate;
-function makeSocketPredicate(socket: string): Predicate;  // exact for CPU/mb, array.includes for cooler
-function makeRamGenPredicate(ram_gen: string): Predicate; // exact match on generation field
-function makeFormFactorPredicate(form_factor: string, isCase: boolean): Predicate; // hierarchical or exact
-function makeStockPredicate(stock_status: string): Predicate;
-function makePricePredicate(min?: number, max?: number): Predicate; // inclusive
-function makeClearancePredicate(min?: number): Predicate; // component.clearance_mm >= min
-function makeTdpPredicate(min?: number, max?: number): Predicate;
-function makeWattagePredicate(min?: number, max?: number): Predicate;
-```
-
-**Cooler socket special case**: Cooler có `socket: string[]`. Filter `search_components({ type: "cooler", socket: "AM5" })` → predicate = `c.socket.includes("AM5")`. Deterministic, no fuzzy matching.
-
-## 6. Per-Category Fallback Architecture
-
-**Decision**: `search_components` orchestrates data fetching per type. Mỗi type fetched independently: Apify call → success (use live) / failure (use mock). Merge results rồi apply filter predicates.
-
-**Rationale**: FR-010 yêu cầu per-category (clarification Q2). Architecture cho phép partial success: nếu Apify succeed CPU + GPU nhưng fail Storage → CPU/GPU live data, Storage mock data. Không atomic requirement — accepted tradeoff cho hackathon.
-
-**Implementation sketch**:
-```typescript
-async function search_components(criteria: SearchCriteria): Promise<CatalogComponent[]> {
-  const types = criteria.type ? [criteria.type] : ALL_TYPES;
-  const results: CatalogComponent[] = [];
+# Fetch for each type
+for TYPE in cpu mainboard ram psu cooler case gpu; do
+  SLUG=${SLUGS[$TYPE]}
+  echo "Fetching $TYPE ($SLUG)..."
   
-  for (const type of types) {
-    try {
-      const live = await fetchFromApify(type, criteria);
-      results.push(...live);
-    } catch {
-      const mock = getMockData(type);
-      results.push(...mock);
-    }
-  }
+  # Paginate through all products
+  page=1
+  all_products="[]"
+  while true; do
+    response=$(curl -s -X POST "$ENDPOINT" \
+      -H "Authorization: Bearer $TOKEN" \
+      -H "Content-Type: application/json" \
+      -d "{\"slug\":\"$SLUG\",\"pageSize\":50,\"page\":$page,...}")
+    
+    products=$(echo $response | jq '.data.products')
+    if [ $(echo $products | jq 'length') -eq 0 ]; then
+      break
+    fi
+    all_products=$(echo "[$all_products, $products]" | jq 'add')
+    page=$((page+1))
+  done
   
-  return applyFilters(results, criteria).sort(byPriceAscending);
-}
+  # Transform and save
+  npx ts-node scripts/phongvu-transformer.ts "$all_products" "src/data/phongvu-catalog-$TYPE.json"
+done
+
+# Storage: Special case (2 slugs: HDD + SSD)
+echo "Fetching storage (HDD + SSD)..."
+storage_products="[]"
+for SLUG in "/c/o-cung-hdd" "/c/o-cung-ssd"; do
+  page=1
+  while true; do
+    response=$(curl -s -X POST "$ENDPOINT" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d "{\"slug\":\"$SLUG\",\"pageSize\":50,\"page\":$page,...}")
+    products=$(echo $response | jq '.data.products')
+    if [ $(echo $products | jq 'length') -eq 0 ]; then break; fi
+    storage_products=$(echo "[$storage_products, $products]" | jq 'add')
+    page=$((page+1))
+  done
+done
+npx ts-node scripts/phongvu-transformer.ts "$storage_products" "src/data/phongvu-catalog-storage.json"
+
+echo "✅ Pre-fetch complete. Commit phongvu-catalog-*.json to git."
 ```
 
-**Mock data segregation**: `getMockData(type)` trả về mock components for that type only. Keeps mock data organized by type.
+## Next Steps
 
-## 7. TypeScript Module Structure
-
-**Decision**: Same pattern as `@buildmate/compiler` (001): strict tsconfig, ES2023 target, NodeNext module. Testing via `node:test`. Package name: `@buildmate/catalog`.
-
-**Rationale**: Convention consistency với 001. `node:test` = zero external test dependency (Constitution Quality Gate).
-
-**Module separation**:
-- `src/index.ts` — public API: `search_components`
-- `src/types.ts` — type definitions
-- `src/mock-data.ts` — static mock dataset
-- `src/search.ts` — orchestrator: fetch + filter + sort + merge
-- `src/filter.ts` — predicate factories
-- `src/form-factor.ts` — hierarchy constants
-- `src/apify/client.ts` — Apify SDK wrapper (dependency isolated)
-- `src/apify/mapper.ts` — scraped data → CatalogComponent
-
-**Mock path purity**: `search.ts`, `filter.ts`, `form-factor.ts`, `mock-data.ts` không import `src/apify/` — pure functions, deterministic. Chỉ `search_components` (entry point) mới import Apify module. Cho phép unit test mock data path không cần Apify API key.
-
-## 8. Apify Actor Specs Parsing Strategy
-
-**Decision**: Regex-based parsing từ `specs` text field (raw HTML scraped from PhongVu product page). Mỗi component type có parser riêng. Fallback: nếu không parse được → omit field (nullable, Compiler skip non-critical).
-
-**Rationale**: PhongVu.vn không có structured API — specs nằm trong HTML table với key-value pairs. Regex approach pragmatic cho hackathon (không cần NLP/LLM cho parsing). Field parse được = type-specific regex patterns.
-
-**Parse patterns** (examples):
-
-| Field | Regex pattern | Example match |
-|---|---|---|
-| CPU socket | `/Socket:\s*(AM\d\|LGA\d+)/i` | "Socket: AM5" |
-| CPU TDP | `/TDP:\s*(\d+)\s*W/i` | "TDP: 65W" |
-| RAM gen | `/DDR(\d)/i` | "DDR5" |
-| PSU wattage | `/(\d+)\s*W/i` | "650W" |
-| Form factor | `/(ATX\|mATX\|Mini-ITX\|ITX)/i` | "ATX" |
-| Clearance | `/GPU\s*.*?(\d+)\s*mm/i` | "GPU max 320mm" |
-
-**Unparseable fields**: Set to `null`/`undefined` — Compiler handles missing attributes via E006 if field is required for compatibility.
-
-## 9. No Caching Strategy
-
-**Decision**: Không cache Apify results. Mỗi `search_components` call = fresh Apify call.
-
-**Rationale**: Hackathon time-box — caching adds complexity (TTL, invalidation, stale data handling) không worth it. Live data freshness prioritized. Accept latency tradeoff. Mock data = instant (no network).
-
+- **Phase 1 (Complete)**:
+  - ✅ Confirm API slugs for all 8 component types (done 2026-07-11)
+  - ✅ Finalize API field mapping and transformation rules
+  - ✅ Data model (Component entity, SearchCriteria), contracts (search API, API transformer), quickstart guide
+  
+- **Phase 2**: Implementation
+  - Implement Teko API HTTP client (with token from `~/.openclaw/openclaw.json`)
+  - Implement PhongVu transformer (parse API response → Component schema)
+  - Implement pre-fetch build script (`npm run fetch:phongvu`)
+  - Implement search filters (socket, price, stock, form factor, etc.)
+  - Add unit tests (regex parsing, filter logic, determinism)
+  - Run pre-fetch, commit `phongvu-catalog-*.json` files to repo
