@@ -105,7 +105,7 @@ DAY 2: demo (dùng video nếu mạng yếu).
 
 ### Open questions (verify trước build)
 1. OpenClaw browser automation: drive được trang React có login (phongvu.vn/buildpc)? → Probe §3 trả lời.
-2. Deploy OpenClaw: local laptop demo hay VPS?
+2. ~~Deploy OpenClaw: local laptop demo hay VPS?~~ → **Chốt: self-host local** (team laptop / on-prem), không dùng cloud. Demo expose qua Cloudflare Tunnel nếu cần.
 3. mimo pro provider ref chính xác? (setup đơn giản, xem `docs/setup.md`)
 
 ---
