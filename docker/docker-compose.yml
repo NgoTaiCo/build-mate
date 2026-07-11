@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  openclaw-gateway:
+    image: openclaw/openclaw:latest
+    container_name: openclaw-gateway
+    restart: unless-stopped
+    ports:
+      - "${OPENCLAW_PORT:-18789}:18789"
+    volumes:
+      - openclaw-config:/root/.openclaw
+      - openclaw-workspace:/workspace
+      - ./openclaw.json:/root/.openclaw/openclaw.json:ro
+      - ${PWD}/packages:/root/.openclaw/packages
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - OPENCLAW_CONFIG_PATH=/root/.openclaw/openclaw.json
+      - OPENCLAW_STATE_DIR=/root/.openclaw
+    env_file:
+      - .env
+    shm_size: 1gb
+    cap_add:
+      - SYS_ADMIN
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18789/api/v1/gateway/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  openclaw-config:
+    name: ${PROJECT_NAME:-buildmate}_openclaw_config
+  openclaw-workspace:
+    name: ${PROJECT_NAME:-buildmate}_openclaw_workspace

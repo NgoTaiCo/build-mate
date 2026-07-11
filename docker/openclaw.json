@@ -1,0 +1,31 @@
+{
+  "session": {
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 60
+    }
+  },
+  "memory": {
+    "backend": "qmd"
+  },
+  "agents": {
+    "defaults": {
+      "model": "mimo/mimo-pro",
+      "workspace": "/workspace"
+    }
+  },
+  "channels": {
+    "webchat": {
+      "blockStreaming": false
+    }
+  },
+  "plugins": {
+    "enabled": true,
+    "entries": {
+      "buildmate-tools": {
+        "enabled": false
+      }
+    }
+  }
+}
