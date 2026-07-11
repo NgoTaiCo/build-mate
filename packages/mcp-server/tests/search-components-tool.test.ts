@@ -17,7 +17,7 @@ test("search_components: cpu query dispatches to searchComponents(), output matc
 
   const parsed = JSON.parse(textOf(result));
   assert.ok(Array.isArray(parsed.components));
-  assert.ok(["live", "mock", "mixed"].includes(parsed.source));
+  assert.ok(["live", "phongvu", "mock", "mixed"].includes(parsed.source));
   assert.ok(parsed.components.every((c: { type: string }) => c.type === "cpu"));
 });
 

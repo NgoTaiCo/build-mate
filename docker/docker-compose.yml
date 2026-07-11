@@ -56,7 +56,9 @@ services:
     environment:
       - PORT=8791
       - MCP_PATH=/mcp
-      # Optional: set APIFY_API_KEY to enable live catalog; otherwise mock data.
+      # Catalog data source: phongvu (cached JSON, default) | mock | live.
+      - CATALOG_DATA_SOURCE=${CATALOG_DATA_SOURCE:-phongvu}
+      # Only used when CATALOG_DATA_SOURCE=live; otherwise ignored.
       - APIFY_API_KEY=${APIFY_API_KEY:-}
       - APIFY_ACTOR_ID=${APIFY_ACTOR_ID:-}
     env_file:

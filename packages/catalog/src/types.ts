@@ -8,7 +8,7 @@ export type ComponentType =
   | "storage"
   | "gpu";
 
-export type DataSource = "live" | "mock" | "mixed";
+export type DataSource = "live" | "phongvu" | "mock" | "mixed";
 
 export interface DataSourceError {
   type: ComponentType;

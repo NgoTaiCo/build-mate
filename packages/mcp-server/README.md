@@ -53,9 +53,22 @@ curl localhost:${MCP_SERVER_PORT:-8791}/health
 ```
 
 The image multi-stage builds `@buildmate/compiler` → `@buildmate/catalog` →
-`@buildmate/mcp-server` and runs `node dist/http.js`. Set `APIFY_API_KEY` in
-`docker/.env` to enable live catalog data; without it, `search_components`
-serves cached/mock data (`source: "mock"`).
+`@buildmate/mcp-server` and runs `node dist/http.js`. The PhongVu catalog JSON
+(`packages/catalog/data/`) is shipped in the image.
+
+### Catalog data source (`CATALOG_DATA_SOURCE`)
+
+`search_components` data is selectable via the `CATALOG_DATA_SOURCE` env var,
+reflected back in the result's `source` field:
+
+| Value | Behavior | `source` |
+|---|---|---|
+| `phongvu` (default) | Cached PhongVu JSON snapshots | `"phongvu"` |
+| `mock` | Small bundled fixture, no file/network I/O | `"mock"` |
+| `live` | Apify per type (needs `APIFY_API_KEY`), falls back to PhongVu then mock | `"live"` / `"mixed"` / `"phongvu"` / `"mock"` |
+
+Override in compose via `docker/.env` (`CATALOG_DATA_SOURCE=live`). `APIFY_API_KEY`
+/ `APIFY_ACTOR_ID` are only consulted when `CATALOG_DATA_SOURCE=live`.
 
 ## Test / typecheck
 

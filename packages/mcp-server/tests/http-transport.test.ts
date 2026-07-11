@@ -83,6 +83,6 @@ test("http: search_components is callable and returns catalog data", async () =>
     })) as { result: { content: Array<{ text: string }> } };
     const payload = JSON.parse(call.result.content[0].text);
     assert.ok(Array.isArray(payload.components));
-    assert.ok(["live", "mock", "mixed"].includes(payload.source));
+    assert.ok(["live", "phongvu", "mock", "mixed"].includes(payload.source));
   });
 });

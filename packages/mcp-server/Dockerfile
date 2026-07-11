@@ -32,6 +32,8 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=8791
 ENV MCP_PATH=/mcp
+# Catalog data source: phongvu (cached JSON, default) | mock | live (Apify).
+ENV CATALOG_DATA_SOURCE=phongvu
 
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/node_modules ./node_modules
