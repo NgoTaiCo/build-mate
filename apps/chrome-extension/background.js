@@ -21,6 +21,7 @@ async function poll(contextId) {
       if (!response.ok) throw new Error(`Relay returned HTTP ${response.status}`);
       const { command } = await response.json();
       if (!command) continue;
+
       let result;
       try {
         result = await chrome.tabs.sendMessage(context.tabId, { type: "BUILDMATE_DOM_COMMAND", command });
@@ -54,6 +55,14 @@ async function registerContext({ contextId, pageUrl, tabId }) {
   }
 }
 
+chrome.action.onClicked.addListener((tab) => {
+  if (tab.id) {
+    chrome.tabs.sendMessage(tab.id, { type: "BUILDMATE_TOGGLE_PANEL" }).catch(() => {
+      // Ignore errors if the content script is not loaded
+    });
+  }
+});
+
 chrome.runtime.onConnect.addListener((port) => {
   if (port.name !== "buildmate-dom-bridge" || !port.sender?.tab?.id) return;
   let contextId = null;
@@ -77,4 +86,13 @@ chrome.runtime.onConnect.addListener((port) => {
   port.onDisconnect.addListener(() => {
     if (contextId) contexts.delete(contextId);
   });
+});
+
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.type !== "BUILDMATE_USER_INTENT") return undefined;
+
+  // The production worker forwards this envelope to BE over its authenticated
+  // bridge. It must never invoke a local DOM command or MCP client directly.
+  sendResponse({ ok: false, error: "BACKEND_NOT_CONNECTED" });
+  return undefined;
 });

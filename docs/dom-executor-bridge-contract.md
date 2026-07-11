@@ -51,6 +51,10 @@ OpenClaw -> MCP tool -> BE HTTP command API -> BE WebSocket -> extension worker
 
 Extension chỉ cần outbound WebSocket; không cần expose port từ Chrome về internet.
 
+UI confirmation không gọi MCP hoặc DOM adapter trực tiếp. Nó gửi semantic user
+intent tới BE; OpenClaw mới quyết định gọi `add_to_build` sau khi reasoning và
+compiler validation hoàn tất.
+
 ## 4. Wire messages
 
 ### Extension đăng ký
@@ -83,8 +87,9 @@ Extension chỉ cần outbound WebSocket; không cần expose port từ Chrome v
 }
 ```
 
-`action` chỉ nhận `read_build` hoặc `add_component`. `component` chỉ có ở
-`add_component`.
+`action` chỉ nhận `read_build`, `add_component` hoặc `remove_component`.
+`remove_component` phải kèm `component` exact và nên kèm `expected_revision`
+từ snapshot ngay sau lần add để tránh xóa nhầm thay đổi mới của người dùng.
 
 `filter_labels` là optional exact text của facet đã biết từ Catalog/storefront,
 chỉ để thu hẹp danh sách trước khi tìm exact SKU. Đây không phải CSS selector;
@@ -138,6 +143,10 @@ Failure response dùng cùng envelope, với `ok: false` và `error`, ví dụ:
 Với failure sau khi extension đã mở product modal, response có thêm
 `modal_closed: true` sau khi dọn UI thành công.
 
+`remove_component` có thêm các guard `REVERT_CONFLICT`,
+`COMPONENT_NOT_SELECTED`, `REMOVE_BUTTON_NOT_FOUND` và
+`REMOVE_VERIFY_TIMEOUT`.
+
 ## 5. Guard bắt buộc
 
 - BE chỉ chấp nhận extension connection đã authenticated; kiểm tra origin và
@@ -146,6 +155,8 @@ Với failure sau khi extension đã mở product modal, response có thêm
   extension. DOM adapter là nơi duy nhất sở hữu selector.
 - `replace_existing: true` chỉ được gửi sau khi agent nhận explicit user
   confirmation. Mặc định là guard `COMPONENT_ALREADY_SELECTED`.
+- UI "Hoàn tác" chỉ gửi user intent tới BE. OpenClaw gọi `revert_component`
+  sau khi xác nhận component/revision; UI không tự click Xóa.
 - Catalog dùng để chọn exact SKU; trạng thái `Liên hệ` đọc từ DOM là kiểm tra
   tồn kho cuối cùng vì catalog có thể stale.
 - BE đặt TTL cho pending command, ví dụ 15 giây, và reject context offline.

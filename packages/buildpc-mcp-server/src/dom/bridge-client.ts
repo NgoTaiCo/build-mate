@@ -28,7 +28,8 @@ export interface BuildSnapshot {
 
 export type DomCommand =
   | { action: "read_build"; context_id: string }
-  | { action: "add_component"; context_id: string; component: DomComponent };
+  | { action: "add_component"; context_id: string; component: DomComponent }
+  | { action: "remove_component"; context_id: string; component: DomComponent; expected_revision?: string };
 
 export interface DomCommandResult {
   command_id: string;
@@ -37,6 +38,7 @@ export interface DomCommandResult {
   modal_closed?: boolean;
   snapshot?: BuildSnapshot;
   added?: DomComponent;
+  removed?: DomComponent;
 }
 
 export interface DomBridgeClient {

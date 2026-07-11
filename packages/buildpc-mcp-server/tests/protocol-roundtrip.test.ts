@@ -9,6 +9,7 @@ const EXPECTED_TOOLS = [
   "compile_build",
   "detect_errors",
   "read_current_build",
+  "revert_component",
   "repair_build",
   "search_components",
 ];

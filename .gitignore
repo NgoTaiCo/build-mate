@@ -17,9 +17,7 @@ ehthumbs.db
 *.swo
 
 # Env / secrets
-.env
-.env.local
-.env.*.local
+.env*
 *.secret
 *.pem
 *.key
@@ -33,6 +31,7 @@ out/
 # Logs
 logs/
 *.log
+coverage/
 
 # Docker / OpenClaw
 docker/.env

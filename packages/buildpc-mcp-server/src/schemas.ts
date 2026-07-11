@@ -60,3 +60,9 @@ export const AddToBuildInputSchema = z.object({
   context_id: DomContextIdSchema,
   component: DomComponentSchema,
 });
+
+export const RevertComponentInputSchema = z.object({
+  context_id: DomContextIdSchema,
+  component: DomComponentSchema,
+  expected_revision: z.string().min(2).max(10_000).optional(),
+});

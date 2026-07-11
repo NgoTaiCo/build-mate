@@ -65,13 +65,13 @@ const mockBuildPc = `<!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><title>BuildMate mock BuildPC</title>
 <style>body{font-family:system-ui;margin:2rem;max-width:720px}section{border:1px solid #ccc;padding:1rem;margin:.7rem 0}dialog{border:1px solid #333;padding:1rem}.product{border-top:1px solid #ddd;padding:.8rem 0}button{padding:.45rem .75rem}</style>
 </head><body><h1>Mock Phong Vu BuildPC</h1><p id="build-total">Tổng: 0 VND</p>
-<section data-build-category="cpu"><strong>CPU</strong><span data-selected-name>Chưa chọn</span><button data-build-action="open-category">Chọn</button></section>
-<section data-build-category="gpu"><strong>VGA</strong><span data-selected-name>Chưa chọn</span><button data-build-action="open-category">Chọn</button></section>
+<section data-build-category="cpu"><strong>CPU</strong><span data-selected-name>Chưa chọn</span><button data-build-action="open-category">Chọn</button><button data-build-action="remove-component">Xóa</button></section>
+<section data-build-category="gpu"><strong>VGA</strong><span data-selected-name>Chưa chọn</span><button data-build-action="open-category">Chọn</button><button data-build-action="remove-component">Xóa</button></section>
 <dialog data-product-modal><h2 id="modal-title">Chọn linh kiện</h2><div id="products"></div><button data-build-action="close-modal">Đóng</button></dialog>
 <script>
 const catalog={cpu:[{id:'PV-CPU-001',sku:'CPU-001',name:'AMD Ryzen 5 7600',price:4990000}],gpu:[{id:'PV-GPU-001',sku:'GPU-001',name:'Demo Radeon RX 7800 XT',price:12990000},{id:'PV-GPU-002',sku:'GPU-002',name:'Demo GeForce RTX 4070',price:13990000}]};
 let currentCategory=null; const modal=document.querySelector('[data-product-modal]');
-document.addEventListener('click',(event)=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.buildAction==='open-category'){const row=button.closest('[data-build-category]');currentCategory=row.dataset.buildCategory;document.querySelector('#modal-title').textContent='Chọn '+currentCategory;document.querySelector('#products').innerHTML=catalog[currentCategory].map(p=>'<article class="product" data-vendor-product-id="'+p.id+'" data-sku="'+p.sku+'"><strong>'+p.name+'</strong><button data-build-action="select-product">Chọn</button></article>').join('');modal.showModal();}if(button.dataset.buildAction==='close-modal')modal.close();if(button.dataset.buildAction==='select-product'){const card=button.closest('[data-vendor-product-id]');const item=catalog[currentCategory].find(p=>p.id===card.dataset.vendorProductId);const row=document.querySelector('[data-build-category="'+currentCategory+'"]');row.dataset.vendorProductId=item.id;row.dataset.sku=item.sku;row.dataset.selectedName=item.name;row.dataset.price=item.price;row.querySelector('[data-selected-name]').textContent=item.name;const total=[...document.querySelectorAll('[data-build-category]')].reduce((sum,r)=>sum+Number(r.dataset.price||0),0);document.querySelector('#build-total').textContent='Tổng: '+total+' VND';modal.close();}});
+document.addEventListener('click',(event)=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.buildAction==='open-category'){const row=button.closest('[data-build-category]');currentCategory=row.dataset.buildCategory;document.querySelector('#modal-title').textContent='Chọn '+currentCategory;document.querySelector('#products').innerHTML=catalog[currentCategory].map(p=>'<article class="product" data-vendor-product-id="'+p.id+'" data-sku="'+p.sku+'"><strong>'+p.name+'</strong><button data-build-action="select-product">Chọn</button></article>').join('');modal.showModal();}if(button.dataset.buildAction==='close-modal')modal.close();if(button.dataset.buildAction==='select-product'){const card=button.closest('[data-vendor-product-id]');const item=catalog[currentCategory].find(p=>p.id===card.dataset.vendorProductId);const row=document.querySelector('[data-build-category="'+currentCategory+'"]');row.dataset.vendorProductId=item.id;row.dataset.sku=item.sku;row.dataset.selectedName=item.name;row.dataset.price=item.price;row.querySelector('[data-selected-name]').textContent=item.name;const total=[...document.querySelectorAll('[data-build-category]')].reduce((sum,r)=>sum+Number(r.dataset.price||0),0);document.querySelector('#build-total').textContent='Tổng: '+total+' VND';modal.close();}if(button.dataset.buildAction==='remove-component'){const row=button.closest('[data-build-category]');delete row.dataset.vendorProductId;delete row.dataset.sku;delete row.dataset.selectedName;delete row.dataset.price;row.querySelector('[data-selected-name]').textContent='Chưa chọn';const total=[...document.querySelectorAll('[data-build-category]')].reduce((sum,r)=>sum+Number(r.dataset.price||0),0);document.querySelector('#build-total').textContent='Tổng: '+total+' VND';}});
 </script></body></html>`;
 
 const server = createServer(async (request, response) => {
@@ -126,11 +126,16 @@ const server = createServer(async (request, response) => {
       const payload = await readJson(request);
       const context = getContext(payload.context_id);
       if (!context) return json(response, 404, { command_id: null, ok: false, error: "CONTEXT_NOT_CONNECTED" });
-      if (!["read_build", "add_component"].includes(payload.action)) {
+      if (!["read_build", "add_component", "remove_component"].includes(payload.action)) {
         return json(response, 400, { command_id: null, ok: false, error: "INVALID_ACTION" });
       }
       const commandId = randomUUID();
-      enqueue(context, { command_id: commandId, action: payload.action, component: payload.component });
+      enqueue(context, {
+        command_id: commandId,
+        action: payload.action,
+        component: payload.component,
+        expected_revision: payload.expected_revision,
+      });
       return json(response, 200, await waitForResult(commandId));
     }
 

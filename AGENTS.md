@@ -95,6 +95,7 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 - Code thử nghiệm / POC (nếu có) để riêng, không trộn production code.
 
 ## Active Technologies
+- JavaScript ES2022 trên Chrome Manifest V3 + Chrome Extensions APIs (`activeTab`, `runtime`, `tabs`); zero runtime dependency, exact `/buildpc` UI trong Shadow DOM, user-confirmed semantic VGA demo, read-only tracker và mock Gateway-node command adapter; `node:test` cho pure helpers (008-chrome-extension-ui)
 - TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node` (001-build-compiler-core)
 - TypeScript 5.x trên Node.js 22.17 LTS + OpenClaw tool plugin SDK (`openclaw/plugin-sdk`) + `@buildmate/compiler`, `@buildmate/catalog` (workspace/local), `@sinclair/typebox` (parameter schemas); dev-only: `typescript`, `tsx`, `@types/node` (003-wire-openclaw-plugins)
 - TypeScript 5.x trên Node.js 22.17 LTS + OpenClaw tool plugin SDK + Playwright (server-side browser automation) + self-hosted mock build-PC page; dev-only: `typescript`, `tsx`, `@types/node` (004-dom-build-tools)
@@ -104,8 +105,15 @@ Hackathon: **P1, 1 ngày build + 1 ngày demo**. MVP = **S1** (find+compile) + *
 - N/A — plugin stateless, không persist, không I/O; OpenClaw owns session/memory (003-wire-openclaw-plugins)
 
 ## Recent Changes
+- 008-chrome-extension-ui: Added an exact-page MV3 Chrome Extension with local chatbot panel, read-only build tracker, user-confirmed semantic VGA demo and mocked OpenClaw node command adapter; live Gateway pairing deferred
 - 006-demo-video-backup: Planned presenter-only Remotion fallback video for S1→S3 WebChat journey with Playwright scene capture
 - 004-dom-build-tools: Added DOM execution tools `add_to_build` / `read_current_build` với Playwright + self-hosted mock build-PC fallback
 - 001-build-compiler-core: Added TypeScript 5.x trên Node.js 22.17 LTS (LTS đã cài, Constitution Quality Gate = `npm test`) + zero runtime dependency (pure functions); dev-only: `typescript`, `tsx` (chạy TS test), `@types/node`
 - 007-compare-components: Planned deterministic `compare_components` tool with `@buildmate/comparator` package (2-5 SKU side-by-side comparison, best-fit scoring for gaming/productivity/budget); LLM only for recommendation prose; S2 stretch, implement only after MVP
 - 003-wire-openclaw-plugins: Added OpenClaw tool plugin package `@buildmate/openclaw-tools` wrapping `compile_build`, `detect_errors`, `repair_build`, `search_components`; install via `openclaw plugins install --link`; runtime verify via `openclaw plugins inspect buildmate-tools --runtime --json`
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+at specs/008-chrome-extension-ui/plan.md
+<!-- SPECKIT END -->

@@ -1,36 +1,89 @@
 (function () {
-  const supported = () => {
-    const url = new URL(location.href);
-    return (url.protocol === "https:" && ["phongvu.vn", "www.phongvu.vn"].includes(url.hostname) && url.pathname === "/buildpc") ||
-      (url.protocol === "http:" && url.hostname === "127.0.0.1" && url.port === "8781" && url.pathname === "/mock-buildpc");
-  };
-  if (!supported()) return;
-
+  if (!globalThis.BuildMateEligibility.isExactBuildPcUrl(location.href)) return;
+  const panel = globalThis.BuildMatePanel.ensureMounted();
+  const trackerStop = globalThis.BuildMateTracker.startBuildTracker({ doc: document, onSnapshot: (snapshot) => panel.setSnapshot(snapshot) });
   const contextId = crypto.randomUUID();
-  const panel = globalThis.BuildMateDevPanel.mount();
-  panel?.onRead(() => {
-    const snapshot = globalThis.BuildMateDomAdapter.readBuild();
-    panel.setStatus(`Đọc ${snapshot.components.length} linh kiện, tổng ${snapshot.total ?? 0} VND.`);
+  const bridge = globalThis.BuildMateBridgeAdapter.createBridgeAdapter({ onCommand: (command) => panel.applyBridgeCommand(command) });
+  let actionInFlight = false;
+
+  async function executeAdd(component) {
+    if (actionInFlight) return { ok: false, error: "ACTION_IN_PROGRESS" };
+    actionInFlight = true;
+    panel.setAction({ type: "START" });
+    try {
+      const result = await globalThis.BuildMateDomAdapter.addComponent(component);
+      if (result.ok) {
+        panel.setSnapshot(result.snapshot);
+        panel.setAction({ type: "SUCCESS", message: `Đã thêm ${component.sku} thành công.`, component, revision: result.snapshot?.revision ?? null });
+      } else {
+        panel.setAction({ type: "FAILED", code: result.error, message: `Lỗi: ${result.error}` });
+      }
+      return result;
+    } catch (error) {
+      panel.setAction({ type: "FAILED", code: "EXCEPTION", message: String(error) });
+      return { ok: false, error: String(error) };
+    } finally {
+      actionInFlight = false;
+    }
+  }
+
+  async function executeRemove(component, expectedRevision) {
+    if (actionInFlight) return { ok: false, error: "ACTION_IN_PROGRESS" };
+    actionInFlight = true;
+    panel.setAction({ type: "REVERT_START" });
+    try {
+      const result = await globalThis.BuildMateDomAdapter.removeComponent(component, expectedRevision);
+      if (result.ok) {
+        panel.setSnapshot(result.snapshot);
+        panel.setAction({ type: "REVERT_SUCCESS", message: `Đã hoàn tác ${component.sku}.` });
+      } else {
+        panel.setAction({ type: "FAILED", code: result.error, message: `Không thể hoàn tác: ${result.error}` });
+      }
+      return result;
+    } catch (error) {
+      panel.setAction({ type: "FAILED", code: "EXCEPTION", message: String(error) });
+      return { ok: false, error: String(error) };
+    } finally {
+      actionInFlight = false;
+    }
+  }
+
+  async function sendUserIntent(intent) {
+    const response = await chrome.runtime.sendMessage({
+      type: "BUILDMATE_USER_INTENT",
+      context_id: contextId,
+      page: { origin: location.origin, path: location.pathname },
+      intent,
+    });
+    if (!response?.ok) throw new Error(response?.error ?? "BACKEND_NOT_CONNECTED");
+  }
+
+  panel.setHandlers({
+    onRequestAdd: async () => {
+      panel.setAction({ type: "REQUESTED" });
+      try {
+        await sendUserIntent({ type: "request_add", category: "gpu", user_confirmed: true });
+      } catch (error) {
+        panel.setAction({ type: "FAILED", code: "BACKEND_NOT_CONNECTED", message: String(error) });
+      }
+    },
+    onRequestRevert: async (component, expectedRevision) => {
+      if (!component) return;
+      panel.setAction({ type: "REQUESTED", message: "Đã gửi yêu cầu hoàn tác tới OpenClaw." });
+      try {
+        await sendUserIntent({ type: "request_revert", component, expected_revision: expectedRevision ?? undefined, user_confirmed: true });
+      } catch (error) {
+        panel.setAction({ type: "FAILED", code: "BACKEND_NOT_CONNECTED", message: String(error) });
+      }
+    },
+    onMockCommand: () => bridge.receive({
+      v: 1, id: `mock-${Date.now()}`, type: "buildmate.ui.suggest",
+      tab: { origin: "https://phongvu.vn", path: "/buildpc" },
+      issuedAt: Date.now(), expiresAt: Date.now() + 30000,
+      payload: { message: "OpenClaw mock: hãy xác nhận trước khi thêm VGA demo.", category: "VGA" }
+    })
   });
-  panel?.onVga(async () => {
-    panel.setStatus("Đang mở danh sách VGA...");
-    const result = await globalThis.BuildMateDomAdapter.openCategory("gpu");
-    panel.setStatus(result.ok ? "Đã mở danh sách VGA." : `Không thể mở VGA: ${result.error}`);
-  });
-  panel?.onProbe(async () => {
-    panel.setStatus("Đang kiểm tra DOM contract...");
-    const report = globalThis.BuildMateDomProbe.pageReport();
-    panel.setReport(report);
-    const found = report.checks.category_actions_found;
-    panel.setStatus(`DOM probe xong: ${found}. Mở VGA thủ công rồi bấm Probe modal.`);
-    console.info("[BuildMate] DOM contract report", report);
-  });
-  panel?.onModal(() => {
-    const report = globalThis.BuildMateDomProbe.modalReport();
-    panel.setReport(report);
-    panel.setStatus(report.modal_contract.visible ? "Modal semantic đã xác minh." : "Modal semantic chưa xác minh; xem diagnostic candidates.");
-    console.info("[BuildMate] DOM modal report", report);
-  });
+
   let bridgePort;
   let heartbeatTimer;
 
@@ -43,34 +96,29 @@
   }
 
   function connectBridge() {
-    // Reloading an unpacked extension invalidates the old content-script
-    // context before Chrome replaces it on a reloaded page.
-    if (!runtimeIsAvailable()) {
-      panel?.setConnected(false);
-      return;
-    }
+    if (!runtimeIsAvailable()) { panel.setConnected(false); return; }
     try {
       bridgePort = chrome.runtime.connect({ name: "buildmate-dom-bridge" });
     } catch (error) {
-      panel?.setConnected(false);
+      panel.setConnected(false);
       if (!isInvalidatedContext(error)) console.warn("[BuildMate] DOM bridge connection failed", error);
       return;
     }
     bridgePort.onMessage.addListener((message) => {
-      if (message?.type !== "REGISTERED") return;
-      panel?.setConnected(Boolean(message.ok));
-      if (!message.ok) console.warn("[BuildMate] DOM bridge registration failed", message.error);
-      else console.info("[BuildMate] DOM bridge connected", { contextId });
+      if (message?.type === "REGISTERED") {
+        panel.setConnected(Boolean(message.ok));
+        if (!message.ok) console.warn("[BuildMate] DOM bridge registration failed", message.error);
+        else console.info("[BuildMate] DOM bridge connected", { contextId });
+      }
     });
     bridgePort.onDisconnect.addListener(() => {
       clearInterval(heartbeatTimer);
-      panel?.setConnected(false);
+      panel.setConnected(false);
       if (runtimeIsAvailable()) setTimeout(connectBridge, 1000);
     });
     try {
       bridgePort.postMessage({ type: "REGISTER", context_id: contextId, page_url: location.href });
     } catch (error) {
-      panel?.setConnected(false);
       if (!isInvalidatedContext(error)) console.warn("[BuildMate] DOM bridge registration failed", error);
       return;
     }
@@ -83,7 +131,6 @@
         bridgePort?.postMessage({ type: "HEARTBEAT" });
       } catch (error) {
         clearInterval(heartbeatTimer);
-        panel?.setConnected(false);
         if (!isInvalidatedContext(error)) console.warn("[BuildMate] DOM bridge heartbeat failed", error);
       }
     }, 15000);
@@ -91,16 +138,40 @@
   connectBridge();
 
   chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-    if (message?.type !== "BUILDMATE_DOM_COMMAND") return undefined;
-    const command = message.command;
-    (async () => {
-      if (command?.action === "read_build") return { ok: true, snapshot: globalThis.BuildMateDomAdapter.readBuild() };
-      if (command?.action === "add_component") return globalThis.BuildMateDomAdapter.addComponent(command.component);
-      return { ok: false, error: "INVALID_ACTION" };
-    })().then(sendResponse, (error) => sendResponse({ ok: false, error: error instanceof Error ? error.message : String(error) }));
-    return true;
+    if (!globalThis.BuildMateEligibility.isExactBuildPcUrl(location.href)) return undefined;
+    
+    if (message?.type === "BUILDMATE_TOGGLE_PANEL") {
+      sendResponse({ ok: true, open: panel.toggle().open });
+      return undefined;
+    }
+    
+    if (message?.type === "BUILDMATE_MOCK_NODE_COMMAND") {
+      sendResponse(bridge.receive(message.command));
+      return undefined;
+    }
+
+    if (message?.type === "BUILDMATE_DOM_COMMAND") {
+      const command = message.command;
+      (async () => {
+        if (command?.action === "read_build") {
+          return { ok: true, snapshot: globalThis.BuildMateDomAdapter.readBuild() };
+        }
+        if (command?.action === "add_component") {
+          return executeAdd(command.component);
+        }
+        if (command?.action === "remove_component") {
+          return executeRemove(command.component, command.expected_revision);
+        }
+        return { ok: false, error: "INVALID_ACTION" };
+      })().then(sendResponse, (error) => sendResponse({ ok: false, error: error instanceof Error ? error.message : String(error) }));
+      return true;
+    }
+    
+    return undefined;
   });
+
   addEventListener("pagehide", () => {
+    trackerStop();
     clearInterval(heartbeatTimer);
     bridgePort?.disconnect();
   }, { once: true });
