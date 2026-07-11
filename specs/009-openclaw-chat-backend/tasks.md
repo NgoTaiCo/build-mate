@@ -49,11 +49,11 @@ New npm-workspace package at `packages/chat-backend/` (mirrors `packages/mcp-ser
 
 **Independent Test**: With the device already approved, `curl` a single `POST /chat` and receive a coherent reply (quickstart Step 4); two different `sessionId`s stay isolated (Step 6).
 
-- [ ] T009 [US1] Add pure `sessionKeyFor(sessionId, agentId)` in `packages/chat-backend/src/gateway-client.ts` — if `sessionId` contains `:` forward verbatim, else `agent:${agentId}:${sessionId}` (see [data-model.md](./data-model.md) mapping)
-- [ ] T010 [US1] Implement `sendChat({sessionKey, agentId, message})` + reply correlation in `packages/chat-backend/src/gateway-client.ts` — send `chat.send` with `idempotencyKey`; keep a `pending` Map keyed by returned `runId`; on `chat` event with `state === 'final'` matching `runId` (fallback `sessionKey`) resolve with `extractChatText(payload.message)` (join `content[].text`); ignore `partial`/`delta` and noise events (`tick`,`heartbeat`,`presence`,`health`)
-- [ ] T011 [P] [US1] Unit test `packages/chat-backend/tests/gateway-client.test.ts` — drive correlation logic against a mock socket: `chat.send` ack `runId` → matching `chat` final event resolves the correct pending promise; `extractChatText` handles string and `content[]` array; unrelated `runId` does not resolve (Quality Gate, SC-005)
-- [ ] T012 [US1] Implement `packages/chat-backend/src/http-server.ts` — `node:http` server; `POST /chat`: read JSON body, validate via `ChatRequest` schema (400 `validation_error` on failure, no gateway call — FR-007), map session, `await gateway.sendChat(...)`, return 200 `{ sessionId, reply, runId }`
-- [ ] T013 [US1] Wire `packages/chat-backend/src/index.ts` — load config, construct device identity, start gateway connection, start HTTP server; log bound port and `deviceId`
+- [X] T009 [US1] Add pure `sessionKeyFor(sessionId, agentId)` in `packages/chat-backend/src/gateway-client.ts` — if `sessionId` contains `:` forward verbatim, else `agent:${agentId}:${sessionId}` (see [data-model.md](./data-model.md) mapping)
+- [X] T010 [US1] Implement `sendChat({sessionKey, agentId, message})` + reply correlation in `packages/chat-backend/src/gateway-client.ts` — send `chat.send` with `idempotencyKey`; keep a `pending` Map keyed by returned `runId`; on `chat` event with `state === 'final'` matching `runId` (fallback `sessionKey`) resolve with `extractChatText(payload.message)` (join `content[].text`); ignore `partial`/`delta` and noise events (`tick`,`heartbeat`,`presence`,`health`)
+- [X] T011 [P] [US1] Unit test `packages/chat-backend/tests/gateway-client.test.ts` — drive correlation logic against a mock socket: `chat.send` ack `runId` → matching `chat` final event resolves the correct pending promise; `extractChatText` handles string and `content[]` array; unrelated `runId` does not resolve (Quality Gate, SC-005)
+- [X] T012 [US1] Implement `packages/chat-backend/src/http-server.ts` — `node:http` server; `POST /chat`: read JSON body, validate via `ChatRequest` schema (400 `validation_error` on failure, no gateway call — FR-007), map session, `await gateway.sendChat(...)`, return 200 `{ sessionId, reply, runId }`
+- [X] T013 [US1] Wire `packages/chat-backend/src/index.ts` — load config, construct device identity, start gateway connection, start HTTP server; log bound port and `deviceId`
 
 **Checkpoint**: `POST /chat` returns an assistant reply; distinct sessionIds don't cross (US1 fully functional).
 
@@ -65,9 +65,9 @@ New npm-workspace package at `packages/chat-backend/` (mirrors `packages/mcp-ser
 
 **Independent Test**: Approve once, restart the backend ≥5 times, confirm no new pairing request and chat keeps working (quickstart Steps 3 & 5, SC-002).
 
-- [ ] T014 [US2] Guarantee identity comes ONLY from the fixed config seed — in `packages/chat-backend/src/index.ts`/`config.ts` confirm no random generation and no filesystem/`localStorage` persistence path; the same `OPENCLAW_DEVICE_SEED` always yields the same `deviceId` (FR-004, FR-005)
-- [ ] T015 [US2] Handle first-boot pairing in `packages/chat-backend/src/gateway-client.ts` — detect `PAIRING_REQUIRED` in the connect `res`, log the `deviceId` and remediation hint, set state accordingly, and keep the connection retrying so that after operator approval it reaches `ready` without a manual restart
-- [ ] T016 [US2] Implement `GET /healthz` in `packages/chat-backend/src/http-server.ts` — return `{ ok, gateway: <state>, deviceId }` (deviceId is public; used by operators to run `openclaw devices approve`)
+- [X] T014 [US2] Guarantee identity comes ONLY from the fixed config seed — in `packages/chat-backend/src/index.ts`/`config.ts` confirm no random generation and no filesystem/`localStorage` persistence path; the same `OPENCLAW_DEVICE_SEED` always yields the same `deviceId` (FR-004, FR-005)
+- [X] T015 [US2] Handle first-boot pairing in `packages/chat-backend/src/gateway-client.ts` — detect `PAIRING_REQUIRED` in the connect `res`, log the `deviceId` and remediation hint, set state accordingly, and keep the connection retrying so that after operator approval it reaches `ready` without a manual restart
+- [X] T016 [US2] Implement `GET /healthz` in `packages/chat-backend/src/http-server.ts` — return `{ ok, gateway: <state>, deviceId }` (deviceId is public; used by operators to run `openclaw devices approve`)
 
 **Checkpoint**: After one approval, repeated restarts reach `ready` with zero new pairing requests.
 
@@ -79,10 +79,10 @@ New npm-workspace package at `packages/chat-backend/` (mirrors `packages/mcp-ser
 
 **Independent Test**: Gateway down → `gateway_unavailable` within 10s; unapproved → `pairing_required`; `REPLY_TIMEOUT_MS=1` → `timeout` (quickstart Step 7, SC-004).
 
-- [ ] T017 [US3] Implement error taxonomy mapping across `packages/chat-backend/src/gateway-client.ts` and `src/http-server.ts` — `validation_error`→400, `pairing_required`→425, `gateway_unavailable`→502, `auth_failed`→502, `gateway_error`→502 (from `chat` `state:'error'`), `timeout`→504; messages FE-safe, secrets stripped (FR-008, FR-012)
-- [ ] T018 [US3] Add per-request reply timeout + pending eviction in `packages/chat-backend/src/gateway-client.ts` — arm `replyTimeoutMs` timer per pending entry; on expiry reject with `timeout` and remove the entry (FR-010)
-- [ ] T019 [US3] Add reconnect + in-flight rejection in `packages/chat-backend/src/gateway-client.ts` — on socket close reject all pending with `gateway_unavailable`, clear timers, transition to `connecting`, auto-reconnect and re-handshake (transport only, no session replay — FR-013)
-- [ ] T020 [US3] Add permissive CORS and malformed-JSON handling in `packages/chat-backend/src/http-server.ts` — respond to preflight, reject non-JSON bodies with `validation_error`
+- [X] T017 [US3] Implement error taxonomy mapping across `packages/chat-backend/src/gateway-client.ts` and `src/http-server.ts` — `validation_error`→400, `pairing_required`→425, `gateway_unavailable`→502, `auth_failed`→502, `gateway_error`→502 (from `chat` `state:'error'`), `timeout`→504; messages FE-safe, secrets stripped (FR-008, FR-012)
+- [X] T018 [US3] Add per-request reply timeout + pending eviction in `packages/chat-backend/src/gateway-client.ts` — arm `replyTimeoutMs` timer per pending entry; on expiry reject with `timeout` and remove the entry (FR-010)
+- [X] T019 [US3] Add reconnect + in-flight rejection in `packages/chat-backend/src/gateway-client.ts` — on socket close reject all pending with `gateway_unavailable`, clear timers, transition to `connecting`, auto-reconnect and re-handshake (transport only, no session replay — FR-013)
+- [X] T020 [US3] Add permissive CORS and malformed-JSON handling in `packages/chat-backend/src/http-server.ts` — respond to preflight, reject non-JSON bodies with `validation_error`
 
 **Checkpoint**: All error paths return correct codes within 10s; no hangs.
 
