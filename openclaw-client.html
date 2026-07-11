@@ -535,26 +535,6 @@
                             const role = 'operator';
                             const scopes = ['operator.read', 'operator.write'];
 
-                            const connectReq = {
-                                type: 'req',
-                                id: `req_${Date.now()}`,
-                                method: 'connect',
-                                params: {
-                                    minProtocol: 4,
-                                    maxProtocol: 4,
-                                    client: {
-                                        id: clientId,
-                                        mode: clientMode,
-                                        version: '1.0.0',
-                                        platform: 'web',
-                                        deviceFamily: 'web'
-                                    },
-                                    role,
-                                    scopes,
-                                    auth: { token }
-                                }
-                            };
-
                             // Only add device auth if not skipped
                             if (!elements.skipDeviceAuth.checked) {
                                 const payloadStr = createSignaturePayload(
@@ -570,16 +550,55 @@
 
                                 const signature = signPayload(state.privateKey, payloadStr);
 
-                                connectReq.params.device = {
-                                    id: state.deviceId,
-                                    publicKey: publicKeyBase64url,
-                                    signature,
-                                    signedAt: ts,
-                                    nonce
+                                const connectReq = {
+                                    type: 'req',
+                                    id: `req_${Date.now()}`,
+                                    method: 'connect',
+                                    params: {
+                                        minProtocol: 4,
+                                        maxProtocol: 4,
+                                        client: {
+                                            id: clientId,
+                                            mode: clientMode,
+                                            version: '1.0.0',
+                                            platform: 'web',
+                                            deviceFamily: 'web'
+                                        },
+                                        role,
+                                        scopes,
+                                        auth: { token },
+                                        device: {
+                                            id: state.deviceId,
+                                            publicKey: publicKeyBase64url,
+                                            signature,
+                                            signedAt: ts,
+                                            nonce
+                                        }
+                                    }
                                 };
+                                state.ws.send(JSON.stringify(connectReq));
+                            } else {
+                                // Simple auth without device
+                                const connectReq = {
+                                    type: 'req',
+                                    id: 'req_simple',
+                                    method: 'connect',
+                                    params: {
+                                        minProtocol: 4,
+                                        maxProtocol: 4,
+                                        client: {
+                                            id: clientId,
+                                            version: '1.0.0',
+                                            platform: 'web',
+                                            mode: clientMode
+                                        },
+                                        role,
+                                        scopes,
+                                        auth: { token }
+                                    }
+                                };
+                                state.ws.send(JSON.stringify(connectReq));
                             }
-
-                            state.ws.send(JSON.stringify(connectReq));
                         }
                         // Handle connection response
                         else if (data.type === 'res') {
