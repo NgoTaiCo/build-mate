@@ -3,71 +3,96 @@
     "sku": "211208130",
     "name": "CPU Intel Core i5-12400F (6 nhân 12 luồng - Boost tối đa 4.4 GHz - 18MB - 1700)",
     "price": 4490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "211208131",
     "name": "CPU Intel Core i5-12400 (6 nhân 12 luồng - Boost tối đa 4.4 GHz - 18MB - 1700)",
     "price": 5590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231002128",
     "name": "CPU Intel Core i9-14900K (24 nhân 32 luồng - Boost to 6.0 GHz - 36MB - 1700)",
     "price": 16490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "28% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "241003863",
     "name": "CPU Intel Core Ultra 9-285K (24 nhân 24 luồng - Turbo boost to 5.7 GHz - 36MB - LGA 1851)",
     "price": 16990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "41% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "220800030",
     "name": "CPU AMD RYZEN™ 5 3400G (4 Core/8 Threads - 3.7GHz Boost to 4.2GHz - 4MB Cache - AM4)",
     "price": 2190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "54% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211108636",
     "name": "CPU Intel Core i5-12600K (10 nhân 16 luồng - Boost tối đa 4.9 GHz - 20MB - 1700)",
     "price": 5790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "43% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "241003867",
     "name": "CPU Intel Core Ultra 5-245K (14 nhân 14 luồng - Turbo boost to 5.2GHz - 24MB - LGA 1851)",
     "price": 6190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "41% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250116202",
@@ -77,7 +102,10 @@
     "promo": "40% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "241003862",
@@ -87,27 +115,24 @@
     "promo": "38% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
-  },
-  {
-    "sku": "250116201",
-    "name": "CPU Intel Core Ultra 5-225 (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
-    "price": 5090000,
-    "stock_status": "in_stock",
-    "promo": "36% discount",
-    "type": "cpu",
-    "socket": "1851",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231002129",
     "name": "CPU Intel Core i9-14900KF (24 nhân 32 luồng - Boost to 6.0 GHz - 36MB - 1700)",
     "price": 15390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "30% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "251014345",
@@ -117,17 +142,24 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "251204779",
     "name": "Bộ vi xử lý/ CPU Intel Core i7-12700 (12C-20T | Upto 4.90GHz | 25MB | UHD Graphics 770 |  LGA-1700)",
     "price": 9190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "29% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "1700971",
@@ -137,57 +169,76 @@
     "promo": "29% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "19070059",
     "name": "CPU AMD RYZEN™ 3 3200G (4 Core/4 Threads - 3.6 GHz up to 4GHz - 4MB Cache - AM4)",
     "price": 1790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "25% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "250808056",
     "name": "Bộ vi xử lý/ CPU AMD Ryzen 5 7500F",
     "price": 4290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250116203",
     "name": "CPU Intel Core Ultra 7-265 (20 nhân 20 luồng - Boost tối đa 5.3 GHz - 30MB - 1851)",
     "price": 9990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "211208127",
     "name": "CPU Intel Core i3 12100F (4 nhân 8 luồng - Boost tối đa 4.3 GHz - 12MB - 1700)",
     "price": 2749000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 58,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "260305656",
     "name": "Bộ vi xử lý/ CPU Intel Core Ultra 7 270K Plus (24C - 24T | Upto 5.5 GHz | 40MB | Intel Graphics | LGA1851)",
     "price": 9590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 250,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "241100295",
@@ -197,27 +248,36 @@
     "promo": "20% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "220800024",
     "name": "CPU AMD RYZEN™ 5 5500 (6 Core/12 Threads - 3.6 GHz Boost to 4.2 GHz - 16MB Cache - AM4)",
     "price": 2649000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "19% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "240103593",
     "name": "CPU AMD Ryzen 5 8500G (6 nhân 12 luồng - Boost to 5.0 GHz - 22MB - AM5)",
     "price": 4150000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231204445",
@@ -227,7 +287,11 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "1805133",
@@ -237,7 +301,10 @@
     "promo": "13% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211208132",
@@ -247,37 +314,51 @@
     "promo": "12% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231204443",
     "name": "CPU Intel Core i7-14700 (20 nhân 28 luồng - Boost to 5.4 GHz - 33MB - 1700)",
     "price": 11490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "12% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "240103594",
     "name": "CPU AMD RYZEN™ 5 5600GT (6 Core/12 Threads - 3.6 GHz Boost to 4.6 GHz - 19MB Cache - AM4)",
     "price": 4190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "260106711",
     "name": "Bộ vi xử lý/ CPU AMD Ryzen 7 5700X  (3.4 GHz up to 4.6GHz/ 36MB/ 8 cores 16 threads/ 65W/ socket AM4) (100-100000926WOF)",
     "price": 5290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "220919570",
@@ -287,47 +368,65 @@
     "promo": "8% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231204440",
     "name": "CPU Intel Core i5-14400 (10 nhân 16 luồng - Boost to 4.7 GHz - 20MB - 1700)",
     "price": 7390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "8% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "240602358",
     "name": "CPU AMD RYZEN™ 5 5500GT (6 Core/12 Threads - 3.6GHz Boost to 4.4Ghz - 16MB Cache - AM4)",
     "price": 3890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "231204441",
     "name": "CPU Intel Core i5-14400F (10 nhân 16 luồng - Boost to 4.7 GHz - 20MB - 1700)",
     "price": 6490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "251204778",
     "name": "Bộ vi xử lý/ CPU Intel Core i3-14100 (4C - 8T | 12MB | Up to 4.7 GHz | UHD Graphics 730 | LGA1700)",
     "price": 4290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "250301292",
@@ -337,7 +436,10 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "19070062",
@@ -347,7 +449,10 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "260304019",
@@ -357,7 +462,10 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 200,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "1805132",
@@ -367,17 +475,24 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "231002131",
     "name": "CPU Intel Core i7-14700KF (20 nhân 28 luồng - Boost to 5.6 GHz - 33MB - 1700)",
     "price": 11490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "2% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "200302000",
@@ -387,7 +502,10 @@
     "promo": "1% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "1805453",
@@ -397,7 +515,11 @@
     "promo": null,
     "type": "cpu",
     "socket": "TR4",
-    "tdp": 65
+    "tdp": 180,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "200500556",
@@ -407,17 +529,24 @@
     "promo": null,
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "260501434",
     "name": "Bộ vi xử lý/ CPU Intel Core i7-14700F (20C - 28T | Up to 5.4 GHz | 33MB | No iGPU | LGA-1700)",
     "price": 10790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": null,
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "241003865",
@@ -427,7 +556,10 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "211208138",
@@ -437,7 +569,11 @@
     "promo": "40% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "211208137",
@@ -447,7 +583,11 @@
     "promo": "39% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "210300864",
@@ -457,7 +597,10 @@
     "promo": "39% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "220800022",
@@ -467,7 +610,23 @@
     "promo": "38% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
+  },
+  {
+    "sku": "250116201",
+    "name": "CPU Intel Core Ultra 5-225 (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
+    "price": 5090000,
+    "stock_status": "out_of_stock",
+    "promo": "36% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "211007831",
@@ -477,7 +636,10 @@
     "promo": "34% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "201100011",
@@ -487,7 +649,10 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211012373",
@@ -497,7 +662,11 @@
     "promo": "27% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "211208135",
@@ -507,7 +676,11 @@
     "promo": "27% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "230603084",
@@ -517,7 +690,10 @@
     "promo": "26% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "200500953",
@@ -527,7 +703,10 @@
     "promo": "25% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "240603291",
@@ -536,8 +715,12 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "cpu",
-    "socket": "FCLGA1700",
-    "tdp": 65
+    "socket": "FC1700",
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231101852",
@@ -547,7 +730,11 @@
     "promo": "24% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231002130",
@@ -557,7 +744,11 @@
     "promo": "22% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "241003868",
@@ -567,7 +758,10 @@
     "promo": "20% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "220800021",
@@ -577,7 +771,10 @@
     "promo": "19% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 10,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "201100012",
@@ -587,7 +784,10 @@
     "promo": "18% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211208128",
@@ -597,7 +797,11 @@
     "promo": "16% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "211012372",
@@ -607,7 +811,11 @@
     "promo": "15% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "221000496",
@@ -617,7 +825,11 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231204439",
@@ -627,7 +839,11 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 58,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "201100013",
@@ -637,7 +853,10 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "220800023",
@@ -647,7 +866,10 @@
     "promo": "13% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "230603083",
@@ -657,7 +879,10 @@
     "promo": "12% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "220919568",
@@ -667,7 +892,10 @@
     "promo": "12% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "221000501",
@@ -677,7 +905,11 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "221000499",
@@ -687,7 +919,11 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "221000498",
@@ -697,7 +933,11 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "221000500",
@@ -707,7 +947,11 @@
     "promo": "10% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "250301293",
@@ -717,7 +961,10 @@
     "promo": "10% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "230603085",
@@ -727,7 +974,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "230100132",
@@ -737,7 +987,11 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "230100137",
@@ -747,7 +1001,11 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "220919567",
@@ -757,7 +1015,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240103590",
@@ -767,7 +1028,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "231103713",
@@ -776,8 +1040,11 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "230603290",
@@ -787,7 +1054,11 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "210300857",
@@ -797,7 +1068,10 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 58,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211012371",
@@ -807,7 +1081,11 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231103712",
@@ -816,8 +1094,11 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "210800165",
@@ -827,7 +1108,10 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "210800164",
@@ -837,7 +1121,10 @@
     "promo": "6% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "211208126",
@@ -847,7 +1134,11 @@
     "promo": "6% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 46,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "260106723",
@@ -857,7 +1148,10 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231204442",
@@ -867,7 +1161,11 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "230104440",
@@ -877,7 +1175,10 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "260203202",
@@ -887,7 +1188,11 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "230100131",
@@ -897,7 +1202,11 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "230100133",
@@ -907,7 +1216,11 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "240803309",
@@ -917,7 +1230,10 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240803311",
@@ -927,7 +1243,10 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240803312",
@@ -937,7 +1256,10 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "200500549",
@@ -947,7 +1269,10 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "231003449",
@@ -957,7 +1282,11 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "220800019",
@@ -967,7 +1296,10 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "220802537",
@@ -976,8 +1308,12 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "220919569",
@@ -987,7 +1323,10 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 105,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240103589",
@@ -997,7 +1336,10 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240103592",
@@ -1007,7 +1349,10 @@
     "promo": "1% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "230100136",
@@ -1017,7 +1362,11 @@
     "promo": "1% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "220801965",
@@ -1026,8 +1375,12 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "220801966",
@@ -1036,8 +1389,12 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "250714657",
@@ -1046,8 +1403,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "260503497",
@@ -1057,7 +1417,11 @@
     "promo": null,
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "250116206",
@@ -1067,7 +1431,10 @@
     "promo": "10% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250116205",
@@ -1077,7 +1444,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240602365",
@@ -1087,7 +1457,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250116204",
@@ -1097,7 +1470,10 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240300696",
@@ -1106,8 +1482,12 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cpu",
-    "socket": "FCLGA1700",
-    "tdp": 65
+    "socket": "FC1700",
+    "tdp": 150,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "231103714",
@@ -1116,8 +1496,11 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231103715",
@@ -1126,8 +1509,11 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "230603082",
@@ -1136,8 +1522,12 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "240803310",
@@ -1147,7 +1537,10 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250116207",
@@ -1157,7 +1550,10 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231204446",
@@ -1167,7 +1563,11 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4",
+      "DDR5"
+    ]
   },
   {
     "sku": "260202513",
@@ -1177,7 +1577,10 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231103711",
@@ -1186,8 +1589,11 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231103710",
@@ -1196,8 +1602,11 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "231103637",
@@ -1206,8 +1615,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "240103591",
@@ -1217,7 +1629,10 @@
     "promo": null,
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR4"
+    ]
   },
   {
     "sku": "240602379",
@@ -1227,7 +1642,10 @@
     "promo": null,
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 65,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803167",
@@ -1236,8 +1654,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803172",
@@ -1246,8 +1667,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803180",
@@ -1256,8 +1680,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803186",
@@ -1266,8 +1693,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803193",
@@ -1276,8 +1706,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803199",
@@ -1286,8 +1719,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "250803213",
@@ -1296,8 +1732,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "260305644",
@@ -1307,7 +1746,10 @@
     "promo": null,
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 159,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   },
   {
     "sku": "260305652",
@@ -1317,6 +1759,9 @@
     "promo": null,
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 159,
+    "ram_gen_supported": [
+      "DDR5"
+    ]
   }
 ]

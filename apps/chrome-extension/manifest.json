@@ -4,7 +4,13 @@
   "version": "0.1.0",
   "description": "BuildMate local UI demo on Phong Vu Build PC pages.",
   "permissions": ["activeTab", "storage", "tabs"],
-  "host_permissions": ["http://127.0.0.1:8781/*", "*://*.trycloudflare.com/*", "<all_urls>"],
+  "host_permissions": [
+    "http://127.0.0.1:8790/*",
+    "http://localhost:8790/*",
+    "ws://127.0.0.1:8790/*",
+    "ws://localhost:8790/*",
+    "http://127.0.0.1:8781/*"
+  ],
   "action": {
     "default_title": "BuildMate"
   },

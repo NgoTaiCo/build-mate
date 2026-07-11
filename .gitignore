@@ -35,7 +35,7 @@ coverage/
 
 # Docker / OpenClaw
 docker/.env
-docker/openclaw.json
+docker/state/
 
 # OpenClaw per-machine state (lives in home, not repo — ignore just in case)
 .openclaw-state/

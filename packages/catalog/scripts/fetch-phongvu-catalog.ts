@@ -2,6 +2,7 @@ import { writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { transformPhongVuProduct } from "../src/phongvu-transformer.js";
+import { transformPhongVuDetail, toAttrMap } from "../src/phongvu-detail.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -46,7 +47,42 @@ const TYPE_SLUGS: Record<ComponentType, string[]> = {
 };
 
 const API_ENDPOINT = "https://discovery.tekoapis.com/api/v2/search-skus-v2";
+const DETAIL_ENDPOINT = "https://discovery.tekoapis.com/api/v1/product";
 const PAGE_SIZE = 50;
+const DETAIL_CONCURRENCY = 8;
+
+async function fetchProductDetailAttrs(sku: string): Promise<any[] | null> {
+  try {
+    const res = await fetch(
+      `${DETAIL_ENDPOINT}?sku=${encodeURIComponent(sku)}&location=&terminalCode=phongvu`,
+    );
+    if (!res.ok) return null;
+    const data = (await res.json()) as any;
+    return data?.result?.product?.productDetail?.attributes ?? null;
+  } catch {
+    return null;
+  }
+}
+
+// Run an async worker over items with a fixed concurrency cap.
+async function mapWithConcurrency<T, R>(
+  items: T[],
+  limit: number,
+  worker: (item: T, index: number) => Promise<R>,
+): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let next = 0;
+  async function run(): Promise<void> {
+    while (next < items.length) {
+      const i = next++;
+      results[i] = await worker(items[i], i);
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, () => run()),
+  );
+  return results;
+}
 
 
 async function fetchPhongVuPage(
@@ -141,19 +177,46 @@ async function fetchAndSaveType(
     allProducts.push(...products);
   }
 
-  // Transform raw API data to CatalogComponent schema
-  const transformed = allProducts
-    .map((product) => transformPhongVuProduct(product, type))
-    .filter((component) => component !== null);
+  // Enrich each product with the structured detail API, then map. Fall back to
+  // the list-based (regex) transform if a detail request fails.
+  console.log(`  Fetching detail for ${allProducts.length} products...`);
+  let detailHits = 0;
+  const transformed = (
+    await mapWithConcurrency(allProducts, DETAIL_CONCURRENCY, async (product) => {
+      const attributes = await fetchProductDetailAttrs(product.sku);
+      if (attributes) {
+        const fromDetail = transformPhongVuDetail(
+          product,
+          type,
+          toAttrMap(attributes),
+        );
+        if (fromDetail) {
+          detailHits++;
+          return fromDetail;
+        }
+      }
+      return transformPhongVuProduct(product, type);
+    })
+  ).filter((component) => component !== null);
+  console.log(`  Mapped ${detailHits} via detail API, rest via list fallback`);
 
   const filePath = resolve(dataDir, `phongvu-catalog-${type}.json`);
   writeFileSync(filePath, JSON.stringify(transformed, null, 2));
   console.log(
     `  ✓ Saved ${transformed.length} transformed products to ${filePath}`
   );
-  if (transformed.length < allProducts.length) {
+
+  const dropped = allProducts.length - transformed.length;
+  if (dropped > 0) {
+    // Distinguish the two drop reasons so the count isn't misread as a bug:
+    // unpriced items (latestPrice "0") are intentionally skipped, whereas
+    // priced-but-unparseable items point at a transformer gap worth fixing.
+    const noPrice = allProducts.filter(
+      (p) => !p.latestPrice || parseInt(String(p.latestPrice).replace(/[^0-9]/g, ""), 10) <= 0
+    ).length;
+    const noSpecs = dropped - noPrice;
     console.log(
-      `  ⚠️  Filtered out ${allProducts.length - transformed.length} products (missing required fields)`
+      `  ⚠️  Filtered out ${dropped} products (${noPrice} without a price, ${noSpecs} with unparseable specs)`
     );
   }
 }

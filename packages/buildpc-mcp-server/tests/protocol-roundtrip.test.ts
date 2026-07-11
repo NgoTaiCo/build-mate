@@ -11,6 +11,7 @@ const EXPECTED_TOOLS = [
   "read_current_build",
   "revert_component",
   "repair_build",
+  "search_components",
 ];
 
 async function connectedClient() {

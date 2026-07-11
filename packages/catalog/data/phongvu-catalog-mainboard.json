@@ -3,154 +3,196 @@
     "sku": "240100848",
     "name": "Mainboard Asus PRIME H610M-K D4-CSM",
     "price": 1890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230900017",
     "name": "Mainboard ASUS PRIME B760M-A D4-CSM (DDR4)",
     "price": 2790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "39% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250713727",
     "name": "Mainboard Asus B760M-AYW WIFI DDR5",
     "price": 2790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "30% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "221003671",
     "name": "Mainboard Asus PRIME Z790-P WIFI-CSM DDR5",
     "price": 4690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "45% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "241004036",
     "name": "Mainboard ASUS Prime PRIME Z890-P-CSM | DDR5 - Wifi 7",
     "price": 6390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "33% discount",
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "221201959",
     "name": "Mainboard MSI PRO H610M-E DDR4",
     "price": 1790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "28% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240900459",
     "name": "Mainboard Gigabyte B760M GAMING PLUS WIFI DDR4",
     "price": 2990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240703192",
     "name": "Mainboard Gigabyte H610M H V3 DDR4",
     "price": 1790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240400198",
     "name": "Mainboard ASUS PRIME A520M-K (DDR4)",
     "price": 1590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241105117",
     "name": "Mainboard Msi B760M Gaming Plus WIFI DDR4",
     "price": 3490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240901769",
     "name": "Mainboard Asus TUF GAMING B760M-PLUS WIFI II DDR5",
     "price": 3890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "23% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230200077",
     "name": "Mainboard Msi PRO B760M-P DDR4",
     "price": 2790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230100294",
     "name": "Mainboard Gigabyte B760M DS3H DDR4",
     "price": 2849000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "29% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240403785",
     "name": "Mainboard MSI Z790 GAMING PLUS WF DDR5",
     "price": 5990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "31% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -162,29 +204,38 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250711003",
     "name": "Mainboard Msi B760M Gaming WF DDR5",
     "price": 3090000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250809210",
     "name": "Mainboard Asus B840M MAX GAMING AX-CSM DDR5",
     "price": 3490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "39% discount",
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230502470",
@@ -195,18 +246,24 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240300647",
     "name": "Mainboard MSI B760M GAMING PLUS WIFI DDR5",
     "price": 3790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241000497",
@@ -217,6 +274,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -228,17 +288,23 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "221003592",
     "name": "Mainboard Gigabyte Z790 UD AX DDR5",
     "price": 5590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -250,18 +316,24 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "251019397",
     "name": "Mainboard Msi PRO B840M-P WIFI6E",
     "price": 3390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "37% discount",
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230200076",
@@ -272,17 +344,23 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250633621",
     "name": "Mainboard Msi PRO Z790-P WIFI DDR5",
     "price": 4990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -294,18 +372,24 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "230802063",
     "name": "Mainboard ASUS PRIME A620M-A DDR5 (90MB1F10-M0UAY0)",
     "price": 3290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "28% discount",
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230803461",
@@ -316,7 +400,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241002922",
@@ -327,6 +414,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -338,6 +428,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -349,6 +442,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -360,40 +456,52 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "250800163",
     "name": "Mainboard Asus PRIME B760M-F WIFI DDR5",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "28% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250800170",
     "name": "Mainboard Msi PRO H610M-E DDR5",
     "price": 1890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "27% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250909710",
     "name": "Mainboard Asus H610M-K",
     "price": 1890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "251209501",
@@ -404,51 +512,66 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "260105686",
     "name": "Mainboard Msi A520M-A PRO DDR4",
     "price": 1490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "260305630",
     "name": "Mainboard Asus PRIME B550M-A WIFI II-CSM",
     "price": 2490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "260402024",
     "name": "Mainboard Msi PRO Z890-S WIFI 6E",
     "price": 6190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "2% discount",
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
     "sku": "260507864",
     "name": "Mainboard Gigabyte A520M K V2 DDR4",
     "price": 1590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116586",
@@ -459,7 +582,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241003310",
@@ -470,6 +596,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -481,6 +610,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -492,6 +624,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -503,6 +638,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -514,7 +652,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230200074",
@@ -525,6 +666,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -536,7 +680,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230802064",
@@ -547,6 +694,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -558,7 +708,10 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "231103631",
@@ -569,7 +722,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240101195",
@@ -580,6 +736,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -591,7 +750,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240403783",
@@ -602,6 +764,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -613,7 +778,10 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "240902071",
@@ -624,6 +792,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -635,6 +806,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -646,6 +820,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -657,6 +834,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -668,6 +848,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -679,6 +862,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -690,6 +876,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -701,6 +890,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -712,6 +904,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -723,6 +918,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -734,6 +932,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -745,6 +946,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -756,6 +960,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -767,7 +974,10 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241105125",
@@ -778,6 +988,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -789,6 +1002,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -800,6 +1016,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -811,6 +1030,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -822,6 +1044,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -833,6 +1058,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -844,7 +1072,10 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116698",
@@ -855,6 +1086,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -866,7 +1100,10 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250520311",
@@ -877,6 +1114,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -888,7 +1128,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250636936",
@@ -899,7 +1142,10 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "251101070",
@@ -910,6 +1156,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -921,6 +1170,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -932,6 +1184,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -943,6 +1198,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -954,6 +1212,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -965,6 +1226,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -976,6 +1240,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -987,6 +1254,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -998,7 +1268,10 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "230603097",
@@ -1009,7 +1282,10 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241000498",
@@ -1020,6 +1296,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1031,6 +1310,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1042,6 +1324,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1053,6 +1338,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1064,6 +1352,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1075,6 +1366,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1086,6 +1380,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1097,6 +1394,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1108,6 +1408,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1119,6 +1422,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1130,6 +1436,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1141,7 +1450,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "241004043",
@@ -1152,6 +1464,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1163,6 +1478,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1174,6 +1492,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1185,6 +1506,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1196,6 +1520,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1207,6 +1534,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -1218,7 +1548,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116696",
@@ -1229,7 +1562,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116697",
@@ -1240,7 +1576,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116699",
@@ -1251,7 +1590,10 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250116700",
@@ -1262,7 +1604,10 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR5"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "250633622",
@@ -1273,6 +1618,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1284,6 +1632,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1295,6 +1646,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1306,7 +1660,10 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
-    "form_factor": "ATX"
+    "ram_gen_supported": [
+      "DDR4"
+    ],
+    "form_factor": "mATX"
   },
   {
     "sku": "260304439",
@@ -1317,6 +1674,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   }
 ]

@@ -1,1 +1,5484 @@
-[]
+[
+  {
+    "sku": "250906237",
+    "name": "Tản nhiệt nước/ COOLER ASUS PRIME LC 240 ARGB (90RC0111-B0UAY0)",
+    "price": 1790000,
+    "stock_status": "in_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "241201698",
+    "name": "Tản nhiệt nước Corsair NAUTILUS 360 ARGB White/CW-9060095-WW",
+    "price": 2490000,
+    "stock_status": "in_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250508025",
+    "name": "Tản nhiệt nước AIO Deepcool LE240 V2",
+    "price": 1390000,
+    "stock_status": "in_stock",
+    "promo": "18% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1851",
+      "1200",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250405297",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A610 ARGB",
+    "price": 849000,
+    "stock_status": "in_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 155,
+    "socket": [
+      "20XX",
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250508028",
+    "name": "Tản nhiệt nước AIO Deepcool LE360 V2",
+    "price": 1890000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1851",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "251012780",
+    "name": "Tản nhiệt khí/ COOLER CPU ID-COOLING FROZN A410 TD",
+    "price": 690000,
+    "stock_status": "in_stock",
+    "promo": "22% discount",
+    "type": "cooler",
+    "height": 152,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250906285",
+    "name": "Tản nhiệt nước/ Cooler AIO Jonsbo TH-360 Black",
+    "price": 1590000,
+    "stock_status": "in_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 300,
+    "socket": [
+      "1200",
+      "115X",
+      "17XX",
+      "1851",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250906253",
+    "name": "Quạt tản nhiệt/ Fan Case Jonsbo ZA-120B",
+    "price": 249000,
+    "stock_status": "in_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "250800362",
+    "name": "Quạt tản nhiệt/ FAN Xigmatek Infinity Pro 3 - EN47756 - Đen",
+    "price": 129000,
+    "stock_status": "in_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "250405296",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A410 GDL (Limited Edition)",
+    "price": 690000,
+    "stock_status": "in_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 152,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250405292",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A720 BLACK",
+    "price": 1390000,
+    "stock_status": "in_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 163,
+    "socket": [
+      "20XX",
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250800364",
+    "name": "Quạt tản nhiệt/ FAN Xigmatek Infinity Pro 3 Arctic - EN47763 - Trắng",
+    "price": 129000,
+    "stock_status": "in_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "250906277",
+    "name": "Quạt tản nhiệt/ Fan Case Jonsbo ZA-360BR",
+    "price": 869000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 42
+  },
+  {
+    "sku": "220304008",
+    "name": "Tản Nhiệt Khí CPU ID-Cooling ARGB White (SE-214-XT)",
+    "price": 369000,
+    "stock_status": "in_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 72,
+    "socket": [
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230900024",
+    "name": "Tản nhiệt khí Xigmatek Starlink Arctic (Pack x 3) (EN41310)",
+    "price": 619000,
+    "stock_status": "in_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "230302824",
+    "name": "Bộ 3 Quạt Tản Nhiệt ASUS TUF GAMING TF120 ARGB",
+    "price": 890000,
+    "stock_status": "in_stock",
+    "promo": "47% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "240702625",
+    "name": "Quạt case Xigmatek Infinity Arctic 120mm Fan - EN44571 (Trắng)",
+    "price": 99000,
+    "stock_status": "in_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "241203148",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING FX240 INF ARGB",
+    "price": 1390000,
+    "stock_status": "in_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 140,
+    "socket": [
+      "1851",
+      "1151-v2",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "251012782",
+    "name": "Tản nhiệt nước/ COOLER ID-COOLING FX240 ARGB LCD",
+    "price": 1690000,
+    "stock_status": "in_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "19040683",
+    "name": "Tản khí Cooler Master MasterAir MA621P TR4 Edition",
+    "price": 1190000,
+    "stock_status": "in_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 165,
+    "socket": [
+      "TR4"
+    ]
+  },
+  {
+    "sku": "230900026",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra Arctic (Pack x 3) (EN40856)",
+    "price": 990000,
+    "stock_status": "in_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "241004272",
+    "name": "Bộ 3 quạt máy tính Corsair RS120 ARGB Black",
+    "price": 949000,
+    "stock_status": "in_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 83
+  },
+  {
+    "sku": "250641955",
+    "name": "Bộ tản nhiệt nước/ Cooler AIO NZXT Kraken Plus 360 RGB V2 Black (RL-KR360-B2)",
+    "price": 5290000,
+    "stock_status": "in_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "1810061",
+    "name": "Quạt Sama Halo Dual Ring Rainbow RGB",
+    "price": 199000,
+    "stock_status": "in_stock",
+    "promo": "33% discount",
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "210404614",
+    "name": "Quạt CPU CM Hyper 212 Spectrum V2",
+    "price": 649000,
+    "stock_status": "in_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 157,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200"
+    ]
+  },
+  {
+    "sku": "211105353",
+    "name": "Tản nhiệt nước/ AIO Corsair H100 RGB (CW-9060053-WW)",
+    "price": 2390000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1152",
+      "1200"
+    ]
+  },
+  {
+    "sku": "230302825",
+    "name": "Bộ 2 Quạt Tản Nhiệt NZXT F140RGB 140mm Twin White",
+    "price": 1589000,
+    "stock_status": "in_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 52
+  },
+  {
+    "sku": "230500345",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 240 RGB WHITE (RL-KR240-W1)",
+    "price": 4279000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230702531",
+    "name": "Tản nhiệt nước Corsair iCUE LINK H100i RGB (CW-9061001-WW)",
+    "price": 5090000,
+    "stock_status": "in_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "1700",
+      "AM4",
+      "1200"
+    ]
+  },
+  {
+    "sku": "241004180",
+    "name": "Tản nhiệt nước Deepcool LT360 WH ARGB - Trắng",
+    "price": 3390000,
+    "stock_status": "in_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 10,
+    "socket": [
+      "AM5",
+      "AM4",
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155"
+    ]
+  },
+  {
+    "sku": "241201701",
+    "name": "Bộ 3 Quạt case Corsair RS120 ARGB Triple Pack White (CO-9050185-WW)",
+    "price": 999000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "241205218",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID I240",
+    "price": 2690000,
+    "stock_status": "in_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241205224",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID I240 WHITE",
+    "price": 2790000,
+    "stock_status": "in_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250302286",
+    "name": "Tản nhiệt nước Corsair iCUE LINK TITAN 240 RX RGB White/ CW-9061020-WW",
+    "price": 3990000,
+    "stock_status": "in_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250646010",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN PLUS 360 RGB V2 WHITE - 360MM (RL-KR360-W2)",
+    "price": 5290000,
+    "stock_status": "in_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 139,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "AM5",
+      "1700",
+      "1851",
+      "1200"
+    ]
+  },
+  {
+    "sku": "251113479",
+    "name": "Quạt tản nhiệt/ Fan Case MAGIC FC-04 ARGB BLACK",
+    "price": 129000,
+    "stock_status": "in_stock",
+    "promo": "24% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "251113493",
+    "name": "Quạt tản nhiệt/ Fan Case MAGIC FC-04 ARGB BLACK (Ngược)",
+    "price": 129000,
+    "stock_status": "in_stock",
+    "promo": "24% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "251113503",
+    "name": "Tản nhiệt nước/ COOLER MSI MAG CORELIQUID A13 240 Đen",
+    "price": 1690000,
+    "stock_status": "in_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "251113507",
+    "name": "Tản nhiệt nước/ COOLER MSI MAG CORELIQUID A13 360 Đen",
+    "price": 1890000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "251202905",
+    "name": "Tản nhiệt khi/ COOLER AIGO ICE200 PRO RGB - Đen",
+    "price": 199000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 132,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "775",
+      "1700",
+      "AM5",
+      "AM2",
+      "AM2+",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "260105678",
+    "name": "Tản nhiệt nước Cooler Master MasterLiquid 360 Core II ARGB",
+    "price": 1790000,
+    "stock_status": "in_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1156",
+      "AM4",
+      "1851",
+      "AM5",
+      "1700",
+      "1200",
+      "1155"
+    ]
+  },
+  {
+    "sku": "260107665",
+    "name": "Tản nhiệt khí JONSBO CB40 BLACK ARGB",
+    "price": 439000,
+    "stock_status": "in_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200",
+      "1700",
+      "1851",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "260301629",
+    "name": "Quạt thùng máy/ Fan case DARKFLASH DM8 SE - Đen",
+    "price": 169000,
+    "stock_status": "in_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 28
+  },
+  {
+    "sku": "260301639",
+    "name": "Quạt thùng máy/ Fan case DARKFLASH DM8 SE Reverse - Đen",
+    "price": 169000,
+    "stock_status": "in_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 28
+  },
+  {
+    "sku": "260301645",
+    "name": "Quạt thùng máy/ Fan case DARKFLASH DM18 - Đen",
+    "price": 189000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 28
+  },
+  {
+    "sku": "260301652",
+    "name": "Quạt thùng máy/ Fan case DARKFLASH DM18 Reverse - Đen",
+    "price": 189000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 28
+  },
+  {
+    "sku": "260301658",
+    "name": "Tản nhiệt khí JONSBO HP-600 - Đen",
+    "price": 790000,
+    "stock_status": "in_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 66,
+    "socket": [
+      "115X",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "260400552",
+    "name": "Tản nhiệt nước AIO DARKFLASH UV360 - Đen",
+    "price": 5290000,
+    "stock_status": "in_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1155",
+      "1156",
+      "1150",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "260400560",
+    "name": "Tản nhiệt nước AIO DARKFLASH DV360S MAX - Đen",
+    "price": 1990000,
+    "stock_status": "in_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "260507118",
+    "name": "Tản nhiệt khí Jonsbo CR-1200E (Đen)",
+    "price": 249000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 128,
+    "socket": [
+      "115X",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "260507124",
+    "name": "Tản nhiệt khí Jonsbo CR-1000E (Đen)",
+    "price": 319000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "1700",
+      "1200",
+      "115X"
+    ]
+  },
+  {
+    "sku": "260601698",
+    "name": "Tản Nhiệt Khí CPU ID-COOLING SE-214-XT - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "62% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601701",
+    "name": "Quạt/ Fan case Xigmatek Starlink (Pack x 3) (EN41303) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "58% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601705",
+    "name": "Tản Nhiệt Khí CPU ID-Cooling ARGB White (SE-214-XT) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 72
+  },
+  {
+    "sku": "260601706",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra Arctic (Pack x 3) (EN40856) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601709",
+    "name": "Tản nhiệt nước AIO Deepcool LE520 A-RGB (R-LE520-BKAMMN-G-1) - Demo",
+    "price": 590000,
+    "stock_status": "in_stock",
+    "promo": "70% discount",
+    "type": "cooler",
+    "height": 27
+  },
+  {
+    "sku": "260601717",
+    "name": "Tản nhiệt khí CPU Deepcool AG400 ARGB (R-AG400-BKANMC-G-1) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "81% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601720",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra (Pack x 3) (EN40412) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601721",
+    "name": "Tản Nhiệt Khí CPU ID-Cooling SE-214-XT ARGB (LGA1700) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601722",
+    "name": "Quạt case MSI RGB 12cm Fan (OE3-7G20001-809) - Demo",
+    "price": 39000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "260601732",
+    "name": "Tản Nhiệt Khí CPU ID-COOLING SE-214-XT - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "62% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601743",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A410 GDL (Limited Edition) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "49% discount",
+    "type": "cooler",
+    "height": 152
+  },
+  {
+    "sku": "260601745",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING SE-234-ARGB V2 - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 154
+  },
+  {
+    "sku": "260601746",
+    "name": "Quạt case ID-COOLING DF-12025-ARGB TRIO (3 fan) - Demo",
+    "price": 240000,
+    "stock_status": "in_stock",
+    "promo": "70% discount",
+    "type": "cooler",
+    "height": 93
+  },
+  {
+    "sku": "260601747",
+    "name": "Quạt case MSI RGB 12cm Fan (OE3-7G20001-809) - Demo",
+    "price": 39000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "260601750",
+    "name": "Quạt/ Fan case Xigmatek Starlink (Pack x 3) (EN41303) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "58% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601751",
+    "name": "Quạt/ Fan case Xigmatek Starlink Arctic (Pack x 3) (EN41310) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "58% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601752",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra (Pack x 3) (EN40412) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601753",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra Arctic (Pack x 3) (EN40856) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601754",
+    "name": "Tản nhiệt khí CPU Deepcool AG400 ARGB (R-AG400-BKANMC-G-1) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "81% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601755",
+    "name": "Tản Nhiệt Khí CPU ID-COOLING SE-214-XT - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "62% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601756",
+    "name": "Tản Nhiệt Khí CPU ID-Cooling SE-214-XT ARGB (LGA1700) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601776",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A410 GDL (Limited Edition) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "49% discount",
+    "type": "cooler",
+    "height": 152
+  },
+  {
+    "sku": "260601778",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING SE-234-ARGB V2 - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 154
+  },
+  {
+    "sku": "260601787",
+    "name": "Quạt case ID-COOLING DF-12025-ARGB TRIO (3 fan) - Demo",
+    "price": 240000,
+    "stock_status": "in_stock",
+    "promo": "70% discount",
+    "type": "cooler",
+    "height": 93
+  },
+  {
+    "sku": "260601788",
+    "name": "Quạt case MSI RGB 12cm Fan (OE3-7G20001-809) - Demo",
+    "price": 39000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "260601791",
+    "name": "Quạt/ Fan case Xigmatek Starlink (Pack x 3) (EN41303) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "58% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601792",
+    "name": "Quạt/ Fan case Xigmatek Starlink Arctic (Pack x 3) (EN41310) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "58% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601793",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra (Pack x 3) (EN40412) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601794",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra Arctic (Pack x 3) (EN40856) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "260601795",
+    "name": "Tản nhiệt khí CPU Deepcool AG400 ARGB (R-AG400-BKANMC-G-1) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "81% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601796",
+    "name": "Tản Nhiệt Khí CPU ID-COOLING SE-214-XT - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "62% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601797",
+    "name": "Tản Nhiệt Khí CPU ID-Cooling SE-214-XT ARGB (LGA1700) - Demo",
+    "price": 150000,
+    "stock_status": "in_stock",
+    "promo": "66% discount",
+    "type": "cooler",
+    "height": 150
+  },
+  {
+    "sku": "260601798",
+    "name": "Tản nhiệt nước AIO Deepcool LE520 A-RGB (R-LE520-BKAMMN-G-1) - Demo",
+    "price": 590000,
+    "stock_status": "in_stock",
+    "promo": "70% discount",
+    "type": "cooler",
+    "height": 27
+  },
+  {
+    "sku": "250633630",
+    "name": "Tản nhiệt nước/ Cooler ASUS ROG RYUO IV SLC 360 ARGB",
+    "price": 8990000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "AM5",
+      "AM4",
+      "1851",
+      "1700"
+    ]
+  },
+  {
+    "sku": "250405294",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A620 PRO SE",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 157,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240702621",
+    "name": "Quạt case Quạt Xigmatek Infinity Arctic Reverse 120mm Fan - EN44595 (Trắng)",
+    "price": 99000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "230400168",
+    "name": "Tản nhiệt khí SEGOTEP Lumos G4-150W ARGB (Only Intel LGA) (SC365N300500)",
+    "price": 349000,
+    "stock_status": "out_of_stock",
+    "promo": "30% discount",
+    "type": "cooler",
+    "height": 158
+  },
+  {
+    "sku": "1806092",
+    "name": "Quạt CORSAIR ML120 RGB",
+    "price": 2489000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "191100063",
+    "name": "Quạt CPU Noctua NH-D15S",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "25% discount",
+    "type": "cooler",
+    "height": 135,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "191100064",
+    "name": "Quạt CPU Noctua NH-L9i",
+    "price": 1180000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 37,
+    "socket": [
+      "1151",
+      "1150",
+      "1156"
+    ]
+  },
+  {
+    "sku": "191100066",
+    "name": "Quạt CPU Noctua NH-U12A",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 120,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "2011",
+      "2066",
+      "AM4",
+      "AM3+",
+      "AM2+",
+      "FM1"
+    ]
+  },
+  {
+    "sku": "191100067",
+    "name": "Quạt CPU Noctua NH-U12DX i4",
+    "price": 1900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 120,
+    "socket": [
+      "2066",
+      "2011",
+      "2011-3",
+      "1356",
+      "1366"
+    ]
+  },
+  {
+    "sku": "200200450",
+    "name": "Quạt CPU Gigabyte Aorus ATC800",
+    "price": 2249000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "1151",
+      "1150",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "200302068",
+    "name": "Quạt CPU Noctua NH-D15 CH.BK",
+    "price": 3190000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "200302069",
+    "name": "Quạt CPU Noctua NH-L9I CH.BK (Đen)",
+    "price": 1430000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 40,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156"
+    ]
+  },
+  {
+    "sku": "200400710",
+    "name": "Quạt CPU ID-COOLING SE-224-XT ARGB",
+    "price": 699000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 730,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "200500780",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC 360 RGB (Trắng)",
+    "price": 7490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4"
+    ]
+  },
+  {
+    "sku": "200500781",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC 240 RGB (Trắng)",
+    "price": 4790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4"
+    ]
+  },
+  {
+    "sku": "200601279",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID 360R",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "200601327",
+    "name": "Quạt Case Corsair LL120 White RGB 120mm (3 Fan + Node PRO) CO-9050092-WW",
+    "price": 2969000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "200700090",
+    "name": "Quạt Case Xigmatek GALAXY III ESSENTIAL BX120 (3 Fan + controller)",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "200700556",
+    "name": "Tản nước AIO Cooler Master MasterLiquid ML240L ARGB V2",
+    "price": 1899000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "FM1",
+      "1200"
+    ]
+  },
+  {
+    "sku": "200700557",
+    "name": "Tản nước AIO Cooler Master MasterLiquid ML360L ARGB V2",
+    "price": 2499000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "FM1",
+      "1200"
+    ]
+  },
+  {
+    "sku": "200700558",
+    "name": "Quạt case Cooler Master SickleFlow 120 BLUE",
+    "price": 250000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "200700559",
+    "name": "Quạt case Cooler Master SickleFlow 120 RED",
+    "price": 250000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "200801056",
+    "name": "Quạt case Xigmatek X20C (RGB CIRCLE)",
+    "price": 149000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "201000505",
+    "name": "Quạt case ID-COOLING DF-12025-ARGB TRIO Snow (3 Fan)",
+    "price": 599000,
+    "stock_status": "out_of_stock",
+    "promo": "30% discount",
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "201000508",
+    "name": "Quạt case ID-COOLING ZF-12025 (Xanh)",
+    "price": 239000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "201000514",
+    "name": "Quạt CPU ID-COOLING SE-224-XT Trắng",
+    "price": 689000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200"
+    ]
+  },
+  {
+    "sku": "201000781",
+    "name": "Tản nhiệt nước Corsair H100i ELITE CAPELLIX (CW-9060046-WW)",
+    "price": 3979000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "201000782",
+    "name": "Tản nhiệt nước  Corsair H115i ELITE CAPELLIX (CW-9060047-WW)",
+    "price": 4519000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "201000783",
+    "name": "Tản nhiệt nước Corsair H150i ELITE CAPELLIX (CW-9060048-WW)",
+    "price": 4759000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "201100830",
+    "name": "Tản Nhiệt Nước AIO ASUS ROG STRIX LC 360 ARGB (90RC0071-M0UAY0)",
+    "price": 7000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "201100831",
+    "name": "Tản nhiệt nước Corsair H100i RGB PRO XT (CW-9060043-WW)",
+    "price": 3200000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "201200476",
+    "name": "Quạt case Xigmatek Galaxy III Royal BR120 (PACK x3 + CONTROLLER) (EN46119)",
+    "price": 849000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "210101766",
+    "name": "Quạt CPU Deepcool Gammaxx GTE V2 Black",
+    "price": 850000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 158,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2",
+      "AM2+",
+      "FM1"
+    ]
+  },
+  {
+    "sku": "210102394",
+    "name": "Quạt case Cooler Master SickleFlow 120RGB 3IN1 + Controller",
+    "price": 999000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "210300182",
+    "name": "Tản nhiệt khí CM MasterAir MA612 Stealth (MAP-T6PS-218PK-R1) (LGA 1700)",
+    "price": 1789000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 245,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "210300183",
+    "name": "Tản nhiệt khí CM MasterAir MA612 Stealth ARGB (MAP-T6PS-218PA-R1)",
+    "price": 2079000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 158,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1200",
+      "1366",
+      "1156",
+      "1155",
+      "1151",
+      "1150",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "210300184",
+    "name": "Tản nhiệt khí CM MasterAir MA624 Stealth (MAM-D6PS-314PK-R1) (LGA 1700)",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "210400735",
+    "name": "Quạt CPU Deepcool Gammaxx 400 XT (DP-MCH4-GMX400-XT)",
+    "price": 730000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 155,
+    "socket": [
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "210404613",
+    "name": "Quạt CPU CM Hyper 212 ARGB",
+    "price": 699000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 10,
+    "socket": [
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "210404615",
+    "name": "Tản nước AIO Cooler Master ML240L V2 ARGB White (LGA 1700)",
+    "price": 1690000,
+    "stock_status": "out_of_stock",
+    "promo": "25% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "2066",
+      "1156",
+      "1155",
+      "1150",
+      "1151-v2",
+      "2011",
+      "2011-3",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "210404616",
+    "name": "Tản nước AIO Cooler Master ML360L V2 ARGB White (LGA 1700)",
+    "price": 2950000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "2066",
+      "2011-3",
+      "2011",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "210600384",
+    "name": "Tản nhiệt nước AIO GIGABYTE AORUS WATERFORCE X 240",
+    "price": 5990000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 26,
+    "socket": [
+      "2066",
+      "2011",
+      "1366",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "TR4"
+    ]
+  },
+  {
+    "sku": "210600385",
+    "name": "Tản nhiệt nước AIO GIGABYTE AORUS WATERFORCE X 360",
+    "price": 7190000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 26,
+    "socket": [
+      "2066",
+      "2011",
+      "1366",
+      "TR4",
+      "AM4",
+      "sTRX4",
+      "1200",
+      "1700",
+      "1151",
+      "1150"
+    ]
+  },
+  {
+    "sku": "210602933",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING Zoomflow 240-XT ARGB",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 147,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "210602934",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING Zoomflow 360-XT ARGB",
+    "price": 1690000,
+    "stock_status": "out_of_stock",
+    "promo": "35% discount",
+    "type": "cooler",
+    "height": 148,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "211011691",
+    "name": "Quạt/ Fan case Xigmatek STARZ X20A Arctic (White ARGB x3)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "211105352",
+    "name": "Tản nhiệt nước/AIO Corsair H150 RGB (CW-9060054-WW)",
+    "price": 3190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1152",
+      "1200"
+    ]
+  },
+  {
+    "sku": "211105354",
+    "name": "Tản nhiệt nước/ AIO Corsair H55 RGB (CW-9060052-WW)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1152",
+      "1200"
+    ]
+  },
+  {
+    "sku": "211106230",
+    "name": "Quạt CPU Cooler Master HYPER 212 ARGB TURBO",
+    "price": 989000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 155,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "775",
+      "1366",
+      "2011-3",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "211208728",
+    "name": "Tản nhiệt nước AIO ASUS TUF LC 240 ARGB (Đen)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": "53% discount",
+    "type": "cooler",
+    "height": 90,
+    "socket": [
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220101417",
+    "name": "Quạt CPU Deepcool NEPTWIN RGB V3",
+    "price": 1090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 50,
+    "socket": [
+      "1151-v2",
+      "2011-3",
+      "1200",
+      "2066",
+      "2011",
+      "1700",
+      "1366",
+      "1151",
+      "1150",
+      "1155"
+    ]
+  },
+  {
+    "sku": "220101419",
+    "name": "Tản nhiệt nước CPU AIO Deepcool Gammaxx L240 A-RGB",
+    "price": 1799000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "2011-3",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220101420",
+    "name": "Tản nhiệt nước CPU AIO Deepcool CASTLE 240EX A-RGB WH",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220101421",
+    "name": "Tản nhiệt nước CPU AIO Deepcool CASTLE 240EX A-RGB",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220101422",
+    "name": "Tản nhiệt nước CPU AIO Deepcool CASTLE 360EX A-RGB WH",
+    "price": 3990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220101423",
+    "name": "Quạt/ Fan case Deepcool RF120 3 IN 1 RGB",
+    "price": 950000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "220102321",
+    "name": "Tản nước CPU AIO Cooler Master ML240 ILLUSION ARGB Gen2 (LGA 1700)",
+    "price": 2649000,
+    "stock_status": "out_of_stock",
+    "promo": "26% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "220102322",
+    "name": "Tản nước CPU AIO Cooler Master ML360 ILLUSION ARGB Gen2 (LGA 1700)",
+    "price": 3159000,
+    "stock_status": "out_of_stock",
+    "promo": "29% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "AM4",
+      "AM3+",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220103050",
+    "name": "Quạt case Xigmatek X22F (120mm Fixed RGB) - EN48441",
+    "price": 89000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "220304001",
+    "name": "Tản Nhiệt Nước Id-Cooling Pinkflow 240 Diamond Purple",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "220304002",
+    "name": "Tản Nhiệt Nước Id-Cooling Zoomflow 240-Xt Snow",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "220304006",
+    "name": "Tản Nhiệt Khí CPU ID-COOLING SE-214-XT",
+    "price": 369000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 150,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "220600171",
+    "name": "Tản nhiệt nước Xigmatek LIQUID-KILLER X Artic 240 (EN47963)",
+    "price": 1949000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "1200",
+      "1700",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609496",
+    "name": "Tản nhiệt CPU CM Masterliquid Flux240 (MLY-D24M-A23PZ-R1)",
+    "price": 3949000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220609497",
+    "name": "Tản nhiệt CPU CM Masterliquid Flux360 (MLY-D36M-A23PZ-R1)",
+    "price": 4599000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "220609663",
+    "name": "Bộ tản nhiệt nước NZXT Kraken X53 RGB - 240mm ( RL-KRX53-R1 )",
+    "price": 3999000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "2066",
+      "2011",
+      "1366",
+      "2011-3",
+      "AM4",
+      "1200",
+      "1700",
+      "115X"
+    ]
+  },
+  {
+    "sku": "220609665",
+    "name": "Bộ tản nhiệt nước NZXT Kraken X63 RGB (WHITE) - 280mm ( RL-KRX63-RW )",
+    "price": 4399000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609667",
+    "name": "Bộ tản nhiệt nước NZXT Kraken X73 RGB (WHITE) - 360mm ( RL-KRX73-RW )",
+    "price": 5590000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609668",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z53 RGB - 240mm ( RL-KRZ53-R1 )",
+    "price": 6199000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609669",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z53 RGB (WHITE)- 240mm ( RL-KRZ53-RW )",
+    "price": 6199000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609670",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z63 RGB - 280mm ( RL-KRZ63-R1 )",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609671",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z63 RGB (WHITE)- 280mm ( RL-KRZ63-RW )",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609672",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z73 RGB - 360mm ( RL-KRZ73-R1 )",
+    "price": 7899000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220609673",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Z73 RGB (WHITE)- 360mm ( RL-KRZ73-RW )",
+    "price": 9190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "1366",
+      "2011",
+      "2011-3",
+      "2066",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "220610018",
+    "name": "Tản nhiệt nước AIO ASUS ROG RYUJIN II 360 ARGB (SP005849)",
+    "price": 9780000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610019",
+    "name": "Tản nhiệt nước AIO ASUS ROG RYUJIN 240 (SP000154)",
+    "price": 6140000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610020",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC II 360 ARGB White (SP005758)",
+    "price": 7670000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610021",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC II 360 ARGB (SP005548)",
+    "price": 7210000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610022",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC 360 ARGB (SP005330)",
+    "price": 7030000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610023",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC II 240 ARGB (SP005549)",
+    "price": 4900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610029",
+    "name": "Tản nhiệt nước AIO ASUS ROG STRIX LC 240 RGB",
+    "price": 4700000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1150",
+      "1151",
+      "1152",
+      "1155",
+      "1156",
+      "1200",
+      "1366",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "220610407",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID 240R V2 WHITE (306-7ZW1B50-813)",
+    "price": 3300000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "220802515",
+    "name": "Tản nhiệt nước SEGOTEP BE ICED 360RGB",
+    "price": 2600000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "2066",
+      "2011",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "221100897",
+    "name": "Tản Nhiệt nước Thermaltake TH360 ARGB Sync AIO Liquid Cooler (CL-W300-PL12SW-A)",
+    "price": 3090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1700",
+      "1366",
+      "1200",
+      "1156",
+      "1155",
+      "1151-v2",
+      "1150"
+    ]
+  },
+  {
+    "sku": "221201188",
+    "name": "Tản nhiệt nước Thermaltake TH240 ARGB Black",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 140,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1700",
+      "1366",
+      "1200",
+      "1156",
+      "1155",
+      "1151-v2",
+      "1150"
+    ]
+  },
+  {
+    "sku": "230300521",
+    "name": "Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT (CW-9060070-WW)",
+    "price": 5190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "2011",
+      "2066",
+      "sTRX4",
+      "sTR4"
+    ]
+  },
+  {
+    "sku": "230300527",
+    "name": "Tản nhiệt nước Corsair H170i ELITE LCD XT (CW-9060076-WW)",
+    "price": 8590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230300528",
+    "name": "Tản nhiệt nước Corsair H150i ELITE LCD XT WHITE (CW-9060077-WW)",
+    "price": 8290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302821",
+    "name": "Bộ 3 quạt máy tính 120mm Corsair SP120 RGB ELITE kèm Node Core (CO-9050109-WW)",
+    "price": 1650000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 75
+  },
+  {
+    "sku": "230304337",
+    "name": "Tản nhiệt nước CPU Deepcool LS520 SE White (R-LS520-WHAMMM-G-1)",
+    "price": 1999000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230304339",
+    "name": "Tản nhiệt nước CPU Deepcool LS720 SE (R-LS720-BKAMMM-G-1)",
+    "price": 2599000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230304340",
+    "name": "Tản nhiệt nước CPU Deepcool LS720 SE White (R-LS720-WHAMMM-G-1)",
+    "price": 2599000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230500084",
+    "name": "Tản nhiệt CPU Cooler Hyper 620S (RR-D6NA-17PA-R1)",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 155,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200",
+      "1700",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "230500086",
+    "name": "Tản nhiệt CPU CM-ML 360L Core ARGB (MLW-D36M-A18PZ-R1)",
+    "price": 2740000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2011",
+      "2066",
+      "1156",
+      "1155",
+      "1151-v2",
+      "1150",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230500341",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 360 (RL-KN360-B1)",
+    "price": 5090000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500343",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 280 RGB BLACK (RL-KR280-B1)",
+    "price": 4799000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500344",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 360 RGB BLACK (RL-KR360-B1)",
+    "price": 5999000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500346",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 280 RGB WHITE (RL-KR280-W1)",
+    "price": 4190000,
+    "stock_status": "out_of_stock",
+    "promo": "29% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500347",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 360 RGB WHITE (RL-KR360-W1)",
+    "price": 5999000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500352",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 280 RGB BLACK (RL-KR28E-B1)",
+    "price": 7599000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500353",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 360 RGB BLACK (RL-KR36E-B1)",
+    "price": 8399000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500355",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 280 RGB WHITE (RL-KR28E-W1)",
+    "price": 7599000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500356",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 360 RGB WHITE (RL-KR36E-W1)",
+    "price": 8399000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230702765",
+    "name": "Tản nhiệt nước MSI MEG CORELIQUID S360",
+    "price": 7590000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 394,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "TR4",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "230703429",
+    "name": "Tản nhiệt khí CPU Deepcool AG400 ARGB (R-AG400-BKANMC-G-1)",
+    "price": 409000,
+    "stock_status": "out_of_stock",
+    "promo": "48% discount",
+    "type": "cooler",
+    "height": 150,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230900019",
+    "name": "Tản nhiệt nước Xigmatek FROZR-O II 240 (EN40429)",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 45,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "230900023",
+    "name": "Quạt/ Fan case Xigmatek Starlink (Pack x 3) (EN41303)",
+    "price": 619000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "230900025",
+    "name": "Quạt/ Fan case Xigmatek Starlink Ultra (Pack x 3) (EN40412)",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 160
+  },
+  {
+    "sku": "231000856",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING SPACE SL240 ARGB (Đen)",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231000860",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING DASHFLOW 360-XT ARGB (Đen)",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231000861",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING DASHFLOW 360-XT LITE (Đen)",
+    "price": 2149000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231000911",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING ZOOMFLOW 240-XT ELITE SNOW (Trắng)",
+    "price": 1749000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231000913",
+    "name": "Tản nhiệt khí CPU ID-COOLING SE-207-XT ARGB (Đen)",
+    "price": 1199000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231002068",
+    "name": "Quạt/ Fan case ASUS TUF GAMING TF120 White ARGB 3in1 (90DA0033-B00030)",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": "44% discount",
+    "type": "cooler",
+    "height": 10
+  },
+  {
+    "sku": "231203193",
+    "name": "Tản nhiệt nước ASUS ROG RYUJIN III 360 ARGB",
+    "price": 9990000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 3,
+    "socket": [
+      "AM5",
+      "AM4",
+      "1700",
+      "1200",
+      "115X"
+    ]
+  },
+  {
+    "sku": "231203194",
+    "name": "Tản nhiệt nước ASUS ROG RYUJIN III 360 ARGB WHITE / Trắng",
+    "price": 9190000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 3,
+    "socket": [
+      "AM5",
+      "AM4",
+      "1700",
+      "1200",
+      "115X"
+    ]
+  },
+  {
+    "sku": "240101328",
+    "name": "Tản nhiệt khí Deepcool AK400 DIGITAL (R-AK400-BKADMN-G)",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 97,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240103560",
+    "name": "Tản nhiệt khí Noctua NH-U12A CH.BK Black CPU Cooler",
+    "price": 3490000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "cooler",
+    "height": 158,
+    "socket": [
+      "1851",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "240200138",
+    "name": "Tản nhiệt Xigmatek EPIX 1264 (EN41570)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 156,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "1700",
+      "1200",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "240401331",
+    "name": "Tản nhiệt nước AiO MSI MAG CORELIQUID M360",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "AM5",
+      "TR4",
+      "AM4",
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "2011"
+    ]
+  },
+  {
+    "sku": "240403787",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING SPACE SL360 XE ARGB",
+    "price": 2790000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "240403788",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING SPACE SL360 XE WHITE",
+    "price": 2790000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "240603349",
+    "name": "Bộ tản nhiệt nước ID-COOLING ZOOMFLOW 360-XT ARGB V2",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156"
+    ]
+  },
+  {
+    "sku": "240702618",
+    "name": "Quạt case Xigmatek Infinity 120mm Fan - EN44564 (Đen)",
+    "price": 99000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "240702623",
+    "name": "Quạt case Xigmatek Infinity Reverse 120mm Fan -EN44588 (Đen)",
+    "price": 99000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "240703614",
+    "name": "Tản nhiệt nước AIO Deepcool MYSTIQUE 360 (R-LX750-BKDSNMP-G-1)",
+    "price": 3990000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155"
+    ]
+  },
+  {
+    "sku": "240704402",
+    "name": "Tản nhiệt CPU Deepcool ASSASSIN IV (R-ASN4-BKNNMT-G)",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "2066",
+      "2011-v3",
+      "2011",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240901739",
+    "name": "Tản nước CPU CoolerMaster Masterliquid 360 Atmos (WTCCM-MLX-D36M-A25PZ-R1)",
+    "price": 3390000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "cooler",
+    "height": 110,
+    "socket": [
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241000196",
+    "name": "Tản nhiệt nước Master Liquid 360 CORE SI Black (MLW_D36M_A18PA_MK)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 20,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241003381",
+    "name": "Tản nhiệt CPU THERMALTAKE TH280 V2 Ultra snow (LCD)",
+    "price": 4090000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1851",
+      "1700",
+      "1200",
+      "1156",
+      "1155",
+      "1151",
+      "1150"
+    ]
+  },
+  {
+    "sku": "241003382",
+    "name": "Quạt tản nhiệt THERMALTAKE SWAFAN EX14 ARGB White (3pc)",
+    "price": 2090000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 130
+  },
+  {
+    "sku": "241004129",
+    "name": "Tản nhiệt nước Deepcool MYSTIQUE 360 WH",
+    "price": 3990000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 52,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241004273",
+    "name": "Tản nhiệt nước Corsair iCUE LINK TITAN 360 RX RGB Black",
+    "price": 4990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 132,
+    "socket": [
+      "AM4",
+      "AM5",
+      "1851",
+      "1700"
+    ]
+  },
+  {
+    "sku": "241004803",
+    "name": "Tản nhiệt nước AIO ASUS TUF GAMING LC II 240 ARGB (90RC00U1-M0UAY0)",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": "64% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241105134",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Elite 360 RGB (Black) V2",
+    "price": 8490000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200",
+      "1700",
+      "AM5",
+      "1851"
+    ]
+  },
+  {
+    "sku": "241203150",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING FX360 INF ARGB",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 150,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241203151",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING FX240 INF WHITE",
+    "price": 1390000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 140,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241205231",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID I360",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241205235",
+    "name": "Tản nhiệt nước MSI MAG CORELIQUID I360 WHITE",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250115699",
+    "name": "Bộ tản nhiệt cho CPU của máy vi tính Deepcool AK400 ZERO DARK (R-AK400-BKNNMN-G-2)",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 90,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250204698",
+    "name": "TẢN NHIỆT CPU ASUS ROG Ryujin III 360 ARGB Extreme",
+    "price": 10490000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1150",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250302287",
+    "name": "Bộ 3 quạt máy tính Corsair iCUE LINK RX120 RGB MAX Black",
+    "price": 3315000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "250302306",
+    "name": "Tản nhiệt nước Corsair iCUE LINK TITAN 360 RX RGB LCD Black",
+    "price": 5690000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250405295",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A620 GDL (Limited Edition)",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 157,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250646002",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 420 RGB - V2 - BLACK - 420MM (RL-KR42E-B2)",
+    "price": 9590000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cooler",
+    "height": 26,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1155",
+      "1156",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250800201",
+    "name": "Tản nhiệt khí/ Cooler Noctua NH-D9L (AIRNT-NH-D9L)",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 90,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1156",
+      "1155",
+      "1151",
+      "1150",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "251101068",
+    "name": "Tản nhiệt nước/ Cooler Asus ROG Ryuo IV 360 ARGB - Hatsune Miku Edition",
+    "price": 11290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 32,
+    "socket": [
+      "AM4",
+      "AM5",
+      "1851",
+      "1700"
+    ]
+  },
+  {
+    "sku": "230105861",
+    "name": "Quạt CPU Deepcool Captain 120 EX - Demo",
+    "price": 49000,
+    "stock_status": "out_of_stock",
+    "promo": "97% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "1501307",
+    "name": "Tản khí Cooler Master Hyper D92",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 97,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "775",
+      "1366",
+      "2011-3",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "1800791",
+    "name": "Tản nhiệt CPU AIO CM Masterliquid Maker 92",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 168,
+    "socket": [
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3"
+    ]
+  },
+  {
+    "sku": "230105863",
+    "name": "Quạt case Xigmatek X9 Red Led - Demo",
+    "price": 79000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "230105864",
+    "name": "Quạt Case Erosi RGB 1 - Demo",
+    "price": 149000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "230105879",
+    "name": "Quạt Case Erosi RGB 1 - Demo",
+    "price": 149000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "230400522",
+    "name": "Quạt case Xigmatek X20F (RGB FIXED) - Demo",
+    "price": 99000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "240300967",
+    "name": "Quạt case Xigmatek STARZ X22A ( BLACK ARGB x3) (EN48403) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "240301029",
+    "name": "Quạt case Xigmatek STARZ X22A ( BLACK ARGB x3) (EN48403) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "240901257",
+    "name": "Quạt/ Fan AMD (Stock Buffer) - Demo",
+    "price": 199000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "240901258",
+    "name": "Quạt/ Fan AMD (Stock Buffer) - Demo",
+    "price": 199000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "250520250",
+    "name": "Tản nhiệt nước Corsair Hydro Series H100i RGB Platinum SE - Demo",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "72% discount",
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "191100073",
+    "name": "Quạt CPU Noctua NH-U14S TR4-SP3",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 150,
+    "socket": [
+      "TR4",
+      "SP3"
+    ]
+  },
+  {
+    "sku": "200300392",
+    "name": "Tản nhiệt nước Gigabye AORUS LIQUID COOLER 360",
+    "price": 7690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "1366",
+      "2011-3",
+      "TR4",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "200601297",
+    "name": "Tản nhiệt Nước CPU AIO Corsair Hydro Series H100i RGB PLATINUM",
+    "price": 3660000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "2066",
+      "1366",
+      "2011",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "230300519",
+    "name": "Tản nhiệt nước Corsair H100i ELITE CAPELLIX XT (CW-9060068-WW)",
+    "price": 4190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "2011",
+      "2066",
+      "AM4",
+      "sTRX4",
+      "sTR4"
+    ]
+  },
+  {
+    "sku": "230300520",
+    "name": "Tản nhiệt nước Corsair H115i ELITE CAPELLIX XT (CW-9060069-WW)",
+    "price": 4690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "1200",
+      "1700",
+      "sTR4"
+    ]
+  },
+  {
+    "sku": "230300522",
+    "name": "Tản nhiệt nước Corsair H170i ELITE CAPELLIX XT (CW-9060071-WW)",
+    "price": 5890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "2011",
+      "2066",
+      "sTRX4",
+      "sTR4"
+    ]
+  },
+  {
+    "sku": "230300525",
+    "name": "Tản nhiệt nước Corsair H100i ELITE LCD XT (CW-9060074-WW)",
+    "price": 7190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302803",
+    "name": "Tản nhiệt nước Corsair H100i RGB Elite (CW-9060058-WW)",
+    "price": 3599000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302805",
+    "name": "Tản nhiệt nước Corsair H150i RGB Elite (CW-9060060-WW)",
+    "price": 4599000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302807",
+    "name": "Tản nhiệt nước Corsair H170i RGB ELITE CAPELLIX (CW-9060055-WW)",
+    "price": 5699000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302808",
+    "name": "Tản nhiệt nước Corsair H100i RGB ELITE CAPELLIX LCD (CW-9060061-WW)",
+    "price": 6999000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1366",
+      "2011",
+      "2066",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230302811",
+    "name": "Tản nhiệt nước CPU ASUS Rog RYUJIN II 240 ARGB",
+    "price": 8190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 54,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "sTRX4",
+      "1200"
+    ]
+  },
+  {
+    "sku": "230302812",
+    "name": "Quạt case Corsair AF120 ELITE, 120mm Fluid Dynamic Fan with AirGuide (CO-9050140-WW)",
+    "price": 639000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "230302816",
+    "name": "Bộ 2 quạt máy tính 140mm Corsair ML140 RGB ELITE LED kèm Node Core (CO-9050115-WW)",
+    "price": 2499000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 50
+  },
+  {
+    "sku": "230302818",
+    "name": "Bộ 3 quạt máy tính 120mm Corsair QL120 RGB kèm Node Core (CO-9050098-WW)",
+    "price": 3289000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "cooler",
+    "height": 75
+  },
+  {
+    "sku": "230302819",
+    "name": "Bộ 2 quạt máy tính 140mm Corsair QL140 RGB kèm Node Core (CO-9050100-WW)",
+    "price": 2279000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cooler",
+    "height": 50
+  },
+  {
+    "sku": "230302822",
+    "name": "Bộ 2 quạt máy tính 140mm Corsair SP140 RGB ELITE LED kèm Node Core (CO-9050111-WW)",
+    "price": 1339000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 50
+  },
+  {
+    "sku": "230302823",
+    "name": "Quạt Tản Nhiệt ASUS ROG STRIX XF120 (XF120A1)",
+    "price": 790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "230400849",
+    "name": "Tản nhiệt CPU CM Masterliquid Flux240 White (MLY-D24M-A23PZ-RW)",
+    "price": 4243000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4",
+      "2066",
+      "2011",
+      "2011-v3"
+    ]
+  },
+  {
+    "sku": "230400850",
+    "name": "Tản nhiệt CPU CM Masterliquid Flux360 White (MLY-D36M-A23PZ-RW)",
+    "price": 4899000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4",
+      "2066",
+      "2011",
+      "2011-v3"
+    ]
+  },
+  {
+    "sku": "230400851",
+    "name": "Tản nhiệt khí Cooler Master Hyper 212 Spectrum V3 (RR-S4NA-17PA-R1)",
+    "price": 700000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 10,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1700",
+      "1200",
+      "AM5",
+      "AM4",
+      "1156"
+    ]
+  },
+  {
+    "sku": "230500085",
+    "name": "Tản nhiệt CPU CM-ML 240L Core ARGB (MLW-D24M-A18PZ-R1)",
+    "price": 2150000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "AM3+",
+      "AM3",
+      "AM2"
+    ]
+  },
+  {
+    "sku": "230500339",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 240 (RL-KN240-B1)",
+    "price": 3699000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500340",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN 280 (RL-KN280-B1)",
+    "price": 4099000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500348",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 240 (RL-KN24E-B1)",
+    "price": 6419000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500349",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 280 (RL-KN28E-B1)",
+    "price": 7029000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500350",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 360 (RL-KN36E-B1)",
+    "price": 7969000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500351",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 240 RGB BLACK (RL-KR24E-B1)",
+    "price": 6799000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500354",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN ELITE 240 RGB WHITE (RL-KR24E-W1)",
+    "price": 6799000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "cooler",
+    "height": 30,
+    "socket": [
+      "1150",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "sTRX4"
+    ]
+  },
+  {
+    "sku": "230500428",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING SE-226-XT ARGB SNOW",
+    "price": 1169000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "2066",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "2011"
+    ]
+  },
+  {
+    "sku": "230500430",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING SE-214-XT BLACK",
+    "price": 439000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 151,
+    "socket": [
+      "2066",
+      "1151-v2",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "TR4",
+      "AM4",
+      "AM5",
+      "2011"
+    ]
+  },
+  {
+    "sku": "230702532",
+    "name": "Tản nhiệt nước Corsair iCUE LINK H115i RGB (CW-9061002-WW)",
+    "price": 5680000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "1200",
+      "1700",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "230702534",
+    "name": "Tản nhiệt nước Corsair iCUE LINK H170i RGB (CW-9061004-WW)",
+    "price": 6940000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "230702536",
+    "name": "Tản nhiệt nước Corsair iCUE LINK H150i RGB - WHITE (CW-9061006-WW)",
+    "price": 6600000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "230900020",
+    "name": "Tản nhiệt nước Xigmatek FROZR-O II Arctic 240 (EN40436)",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 45,
+    "socket": [
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM5",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "230900022",
+    "name": "Tản nhiệt nước Xigmatek FROZR-O II Arctic 360 (EN40450)",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 45,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1366",
+      "AM4",
+      "AM3",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231000854",
+    "name": "Quạt/ Fan case ID-COOLING TF-12025-ARGB REVERSE (Fan đảo chiều) (Đen)",
+    "price": 239000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "231000855",
+    "name": "Quạt/ Fan case ID-COOLING TF-12025-ARGB SNOW REVERSE (Fan đảo chiều) (Trắng)",
+    "price": 249000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 20
+  },
+  {
+    "sku": "231000912",
+    "name": "Bộ Tản Nhiệt Nước ID-COOLING DASHFLOW 360 BASIC WHITE (Trắng)",
+    "price": 2159000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "231103616",
+    "name": "Quạt máy tính/ Fan case Xigmatek Starz / Đen (3PCS S20A Fans) (EN41853)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "231103617",
+    "name": "Quạt máy tính/ Fan case Xigmatek Starz Arctic / Trắng (3PCS S20A Arctic Fans) (EN41860)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "231103618",
+    "name": "Quạt máy tính/ Fan case Xigmatek Starz Pro / Đen (3PCS M20A Fans) (EN41808)",
+    "price": 590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "231103619",
+    "name": "Quạt máy tính/ Fan case Xigmatek Starz Pro Arctic / Trắng (3PCS M20A Arctic Fans) (EN41815)",
+    "price": 590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 100
+  },
+  {
+    "sku": "240200139",
+    "name": "Tản nhiệt Xigmatek EPIX 1264 Arctic (EN41587)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 156,
+    "socket": [
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240302577",
+    "name": "Tản nhiệt nước THERMALTAKE TH240 V2 Black/ Đen (CL-W361-PL12SW-A)",
+    "price": 2090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1155",
+      "1151-v2",
+      "1156",
+      "1150",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2+"
+    ]
+  },
+  {
+    "sku": "240302578",
+    "name": "Tản nhiệt nước THERMALTAKE TH240 V2 Snow/ Trắng (CL-W364-PL12SW-A)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "1200",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240302579",
+    "name": "Tản nhiệt nước THERMALTAKE TH360 V2 Black/ Đen (CL-W362-PL12SW-A)",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1700",
+      "1200",
+      "1156",
+      "1155",
+      "1151-v2",
+      "1150",
+      "AM4",
+      "AM3"
+    ]
+  },
+  {
+    "sku": "240302580",
+    "name": "Tản nhiệt nước THERMALTAKE TH360 V2 Snow/ Trắng (CL-W365-PL12SW-A)",
+    "price": 2790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "AM4",
+      "AM3",
+      "AM3+",
+      "AM2+"
+    ]
+  },
+  {
+    "sku": "240302581",
+    "name": "Tản nhiệt nước THERMALTAKE TH240 V2 Ultra Black/ Đen (LCD) (CL-W383-PL12SW-A)",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011-3",
+      "2011",
+      "1156",
+      "1155",
+      "1151",
+      "1151-v2",
+      "1150",
+      "1700",
+      "1200"
+    ]
+  },
+  {
+    "sku": "240302582",
+    "name": "Tản nhiệt nước THERMALTAKE TH240 V2 Ultra Snow/ Trắng (LCD) (CL-W404-PL12SW-A)",
+    "price": 3790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "240302583",
+    "name": "Tản nhiệt nước THERMALTAKE TH360 v2 Ultra Black/ Đen (LCD) (CL-W384-PL12SW-A)",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27
+  },
+  {
+    "sku": "240302584",
+    "name": "Tản nhiệt nước THERMALTAKE TH360 V2 Ultra Snow/ Trắng (LCD) (CL-W405-PL12SW-A)",
+    "price": 4490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "240302585",
+    "name": "Tản nhiệt nước THERMALTAKE Toughliquid Ultra 240 (LCD) (CL-W322-PL12GM-A)",
+    "price": 4990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "2066",
+      "2011",
+      "1156",
+      "1155",
+      "1150",
+      "1151-v2",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "240302586",
+    "name": "Tản nhiệt nước THERMALTAKE Toughliquid Ultra 360 (LCD) (CL-W323-PL12GM-A)",
+    "price": 6090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "AM3",
+      "AM3+"
+    ]
+  },
+  {
+    "sku": "240704387",
+    "name": "Tản nhiệt CPU Deepcool ASSASSIN IV WH (R-ASN4-WHNNMT-G)",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "2066",
+      "2011-v3",
+      "2011",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "240704392",
+    "name": "Tản nhiệt CPU Deepcool AK400 WH DIGITAL (R-AK400-WHADMN-G)",
+    "price": 849000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cooler",
+    "height": 100,
+    "socket": [
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241000197",
+    "name": "Tản nhiệt nước Master Liquid 360 CORE SI White (MLW_D36M_A18PA_WK)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cooler",
+    "height": 20,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241105106",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Elite 240 (Black) V2",
+    "price": 6390000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241105113",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Elite 360 (Black) V2",
+    "price": 7990000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "AM5",
+      "1851",
+      "1700",
+      "1200"
+    ]
+  },
+  {
+    "sku": "241105120",
+    "name": "Bộ tản nhiệt nước NZXT Kraken Elite 240 RGB (Black) V2",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "AM5",
+      "1200",
+      "1700",
+      "1152",
+      "AM4",
+      "1155",
+      "1156",
+      "1150",
+      "1151-v2"
+    ]
+  },
+  {
+    "sku": "241106179",
+    "name": "Quạt thùng máy/ Fan case NZXT F140P 140mm Static Pressure Fan - Single Pack (Black)",
+    "price": 350000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 140
+  },
+  {
+    "sku": "241106180",
+    "name": "Quạt thùng máy/ Fan case NZXT F120Q 120mm Quiet Airflow Fan - Single Pack (White)",
+    "price": 299000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "cooler",
+    "height": 120
+  },
+  {
+    "sku": "241106181",
+    "name": "Quạt thùng máy/ Fan case NZXT F280RGB Core Fan (Single Frame) - Black",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 280
+  },
+  {
+    "sku": "241106185",
+    "name": "Quạt thùng máy/ Fan case NZXT F140P 140mm Static Pressure Fan - Single Pack (White)",
+    "price": 350000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 140
+  },
+  {
+    "sku": "241106186",
+    "name": "Quạt thùng máy/ Fan case NZXT F280RGB Core Fan (Single Frame) - White",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 280
+  },
+  {
+    "sku": "241106190",
+    "name": "Quạt thùng máy/ Fan case NZXT F140Q 140mm Quiet Airflow Fan - Single Pack (Black)",
+    "price": 350000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 140
+  },
+  {
+    "sku": "241106193",
+    "name": "Quạt thùng máy/ Fan case NZXT F360RGB Core Fan (Single Frame) - Black",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 360
+  },
+  {
+    "sku": "241106196",
+    "name": "Quạt thùng máy/ Fan case NZXT F140Q 140mm Quiet Airflow Fan - Single Pack (White)",
+    "price": 350000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cooler",
+    "height": 140
+  },
+  {
+    "sku": "241106200",
+    "name": "Quạt thùng máy/ Fan case NZXT F360RGB Core Fan (Single Frame) - White",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 360
+  },
+  {
+    "sku": "241106202",
+    "name": "Quạt thùng máy/ Fan case NZXT F240RGB Core Fan (Single Frame) - Black",
+    "price": 1049000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cooler",
+    "height": 240
+  },
+  {
+    "sku": "241106203",
+    "name": "Quạt thùng máy/ Fan case NZXT F120P 120mm Static Pressure Fan - Single Pack (Black)",
+    "price": 299000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "cooler",
+    "height": 120
+  },
+  {
+    "sku": "241106207",
+    "name": "Quạt thùng máy/ Fan case NZXT F240RGB Core Fan (Single Frame) - White",
+    "price": 1090000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 240
+  },
+  {
+    "sku": "241106208",
+    "name": "Quạt thùng máy/ Fan case NZXT F120P 120mm Static Pressure Fan - Single Pack (White)",
+    "price": 299000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "cooler",
+    "height": 120
+  },
+  {
+    "sku": "241106209",
+    "name": "Quạt thùng máy/ Fan case NZXT F120Q 120mm Quiet Airflow Fan - Single Pack (Black)",
+    "price": 299000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "cooler",
+    "height": 120
+  },
+  {
+    "sku": "241201704",
+    "name": "Tản nhiệt nước AIO MSI MAG CORELIQUID E240 - Màu Đen (306- 7ZW5E17- C24)",
+    "price": 2390000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241201708",
+    "name": "Tản nhiệt nước AIO MSI MAG CORELIQUID E240 - Màu Trắng (306- 7ZW5E27- C24)",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "241201710",
+    "name": "Tản nhiệt nước AIO MSI MAG CORELIQUID E360 - Màu Trắng (306- 7ZW6E27- C24)",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1150",
+      "1151",
+      "1155",
+      "1156",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4",
+      "TR4"
+    ]
+  },
+  {
+    "sku": "241203153",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING FX360 INF WHITE",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cooler",
+    "height": 150,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250302273",
+    "name": "Tản nhiệt nước Corsair iCUE LINK TITAN 240 RX RGB LCD Black / CW-9061022-WW",
+    "price": 4990000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250302300",
+    "name": "Bộ 2 quạt máy tính Corsair iCUE LINK RX140 RGB MAX Black",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cooler",
+    "height": 30
+  },
+  {
+    "sku": "250405291",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A410 DK (2 fan FDB)",
+    "price": 679000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 152,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250405293",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A410 ARGB",
+    "price": 779000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cooler",
+    "height": 152,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151",
+      "1150",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250405298",
+    "name": "BỘ TẢN NHIỆT KHÍ CPU ID-COOLING FROZN A620 PRO SE ARGB",
+    "price": 869000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 157,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250508023",
+    "name": "Tản nhiệt nước AIO Deepcool LE240 WH V2",
+    "price": 1490000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1200",
+      "1700",
+      "1851",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "250508024",
+    "name": "Tản nhiệt nước AIO Deepcool MYSTIQUE 360 ARGB",
+    "price": 4390000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250508026",
+    "name": "Tản nhiệt nước AIO Deepcool LE360 WH V2",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1200",
+      "1700",
+      "1851",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250508027",
+    "name": "Tản nhiệt khí AIO Deepcool AG620 ARGB",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cooler",
+    "height": 157,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "2011-3",
+      "2066",
+      "1200",
+      "1700",
+      "1851",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250646003",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN PLUS 240 RGB V2 WHITE - 240MM (RL-KR240-W2)",
+    "price": 4590000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cooler",
+    "height": 26,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250646009",
+    "name": "Tản nhiệt nước/ Cooler Xigmatek FENIX II 240 (EN46599)",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "2066",
+      "2011",
+      "2011-3",
+      "AM4",
+      "1200",
+      "1700"
+    ]
+  },
+  {
+    "sku": "250646017",
+    "name": "Tản nhiệt nước/ Cooler Deepcool LT360 ARGB - Đen (R-LT360-BKAMNC-G-1)",
+    "price": 3390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 10,
+    "socket": [
+      "1151-v2",
+      "1151",
+      "1150",
+      "1155",
+      "AM4",
+      "AM5",
+      "1851",
+      "1200"
+    ]
+  },
+  {
+    "sku": "250646018",
+    "name": "BỘ TẢN NHIỆT NƯỚC NZXT KRAKEN PLUS 240 V2 BLACK - 240MM (RL-KN240-B2)",
+    "price": 3990000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cooler",
+    "height": 25,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1150",
+      "1155",
+      "1156",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "250800363",
+    "name": "Quạt tản nhiệt/ FAN Xigmatek Infinity Pro 3 Reverse - EN47770 - Đen",
+    "price": 129000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "250800365",
+    "name": "Quạt tản nhiệt/ FAN Xigmatek Infinity Pro 3 Arctic Reverse - EN47787 - Trắng",
+    "price": 129000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "250906236",
+    "name": "Tản nhiệt nước/ COOLER ASUS PRIME LC 360 ARGB (90RC0101-B0UAY0)",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "115X",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "251211489",
+    "name": "BỘ TẢN NHIỆT NƯỚC ID-COOLING FX360 ARGB LCD - Đen",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "1851",
+      "1700",
+      "1200",
+      "1151-v2",
+      "1155",
+      "1156",
+      "AM5",
+      "AM4"
+    ]
+  },
+  {
+    "sku": "260302464",
+    "name": "Bộ 3 Fan Corsair iCUE LINK LX120 RGB Black (CO-9051026-WW)",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 25
+  },
+  {
+    "sku": "260303845",
+    "name": "Tản nhiệt nước MSI MPG CORELIQUID P13 360",
+    "price": 5590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 27,
+    "socket": [
+      "AM4",
+      "AM5",
+      "1700",
+      "1851"
+    ]
+  },
+  {
+    "sku": "260508558",
+    "name": "Tản nhiệt khí Jonsbo CR-1000 EVO (Đen)",
+    "price": 359000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "260508573",
+    "name": "Tản nhiệt khí Jonsbo CR-1000 EVO ARGB (Đen)",
+    "price": 369000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 154,
+    "socket": [
+      "1700",
+      "1200",
+      "115X",
+      "AM4",
+      "AM5"
+    ]
+  },
+  {
+    "sku": "260508585",
+    "name": "Tản nhiệt khí Jonsbo CR-3000E ARGB (Đen)",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cooler",
+    "height": 160,
+    "socket": [
+      "115X",
+      "1200",
+      "1700",
+      "1851",
+      "AM4",
+      "AM5"
+    ]
+  }
+]

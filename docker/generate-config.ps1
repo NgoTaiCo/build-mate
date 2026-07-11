@@ -22,6 +22,7 @@ $API_KEY = $env_vars["API_KEY"] -or ""
 $SESSION_IDLE_MINUTES = $env_vars["SESSION_IDLE_MINUTES"] -or "60"
 $MEMORY_BACKEND = $env_vars["MEMORY_BACKEND"] -or "qmd"
 $GATEWAY_PORT = $env_vars["OPENCLAW_PORT"] -or "18789"
+$NOTION_API_KEY = $env_vars["NOTION_API_KEY"]
 
 # Generate random token if not set
 if (-not $env_vars["GATEWAY_TOKEN"]) {
@@ -36,6 +37,19 @@ if (-not $API_KEY) {
     Write-Host "Warning: API_KEY not set in .env" -ForegroundColor Yellow
 }
 
+# Optional Notion MCP server, only added when NOTION_API_KEY is set
+if ($NOTION_API_KEY) {
+    $MCP_SERVERS_EXTRA = @"
+,
+      "notion": {
+        "command": "npx",
+        "args": ["-y", "@notionhq/notion-mcp-server", "--api-key", "$NOTION_API_KEY"]
+      }
+"@
+} else {
+    $MCP_SERVERS_EXTRA = ""
+}
+
 $config = @"
 {
   "agents": {
@@ -47,7 +61,7 @@ $config = @"
         "xiaomi-token-plan/mimo-v2.5-pro": { "alias": "Xiaomi MiMo V2.5 Pro" }
       },
       "model": {
-        "primary": "$MODEL_PROVIDER"
+        "primary": "MODEL_PROVIDER_PLACEHOLDER"
       }
     }
   },
@@ -55,16 +69,17 @@ $config = @"
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "$GATEWAY_TOKEN"
+      "token": "GATEWAY_TOKEN_PLACEHOLDER"
     },
-    "port": $GATEWAY_PORT,
-    "bind": "loopback",
+    "port": GATEWAY_PORT_PLACEHOLDER,
+    "bind": "auto",
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
     },
     "controlUi": {
-      "allowInsecureAuth": true
+      "allowInsecureAuth": true,
+      "allowedOrigins": ["*"]
     },
     "nodes": {
       "denyCommands": [
@@ -83,7 +98,7 @@ $config = @"
     "dmScope": "per-channel-peer",
     "reset": {
       "mode": "idle",
-      "idleMinutes": $SESSION_IDLE_MINUTES
+      "idleMinutes": SESSION_IDLE_MINUTES_PLACEHOLDER
     }
   },
   "tools": {
@@ -97,8 +112,16 @@ $config = @"
       }
     }
   },
+  "mcp": {
+    "servers": {
+      "buildmate": {
+        "url": "http://mcp-server:8791/mcp",
+        "transport": "streamable-http"
+      }$MCP_SERVERS_EXTRA
+    }
+  },
   "memory": {
-    "backend": "$MEMORY_BACKEND"
+    "backend": "MEMORY_BACKEND_PLACEHOLDER"
   },
   "models": {
     "mode": "merge",
@@ -195,9 +218,10 @@ $config = @"
 }
 "@
 
-Set-Content -Path "openclaw.json" -Value $config -Encoding UTF8
+New-Item -ItemType Directory -Force -Path "state" | Out-Null
+Set-Content -Path "state/openclaw.json" -Value $config -Encoding UTF8
 
-Write-Host "✓ openclaw.json generated" -ForegroundColor Green
+Write-Host "✓ state/openclaw.json generated" -ForegroundColor Green
 Write-Host "  Model: $MODEL_PROVIDER"
 Write-Host "  Gateway token: $($GATEWAY_TOKEN.Substring(0, 16))..."
 Write-Host "  Session idle: ${SESSION_IDLE_MINUTES}m"

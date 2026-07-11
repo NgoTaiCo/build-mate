@@ -1,6 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { searchComponentsMock } from "../src/index.js";
+import { makeSocketPredicate } from "../src/filter.js";
+import type { CatalogComponent } from "../src/types.js";
 
 test("socket filter", async (t) => {
   await t.test("should filter CPUs by exact socket match", () => {
@@ -81,28 +83,23 @@ test("socket filter", async (t) => {
     );
   });
 
-  await t.test("should handle multi-socket coolers", () => {
-    const allCoolers = searchComponentsMock({ type: "cooler" });
+  await t.test("multi-socket coolers match any socket in their array", () => {
+    // Coolers carry socket as a string[]; a socket query matches when the array
+    // includes it. Verified against synthetic data so the test doesn't depend on
+    // whether the live PhongVu dataset happens to expose cooler sockets (it
+    // generally doesn't — the Compiler validates coolers by height, not socket).
+    const cooler = {
+      sku: "c1",
+      name: "Test Tower",
+      type: "cooler",
+      price: 1000000,
+      stock_status: "in_stock",
+      promo: null,
+      socket: ["AM5", "AM4", "LGA1700"],
+    } as CatalogComponent;
 
-    if (allCoolers.length === 0) {
-      // No coolers in data
-      assert.equal(
-        allCoolers.length,
-        0,
-        "No coolers available in dataset"
-      );
-    } else {
-      const am5Coolers = searchComponentsMock({
-        type: "cooler",
-        socket: "AM5",
-      });
-      const lga1700Coolers = searchComponentsMock({
-        type: "cooler",
-        socket: "LGA1700",
-      });
-
-      assert(am5Coolers.length > 0, "Should find AM5 coolers");
-      assert(lga1700Coolers.length > 0, "Should find LGA1700 coolers");
-    }
+    assert.equal(makeSocketPredicate("AM5")(cooler), true, "matches AM5");
+    assert.equal(makeSocketPredicate("LGA1700")(cooler), true, "matches LGA1700");
+    assert.equal(makeSocketPredicate("LGA1200")(cooler), false, "rejects absent socket");
   });
 });

@@ -1,0 +1,27 @@
+{
+  "name": "@buildmate/chat-backend",
+  "version": "0.1.0",
+  "description": "Stateless HTTP relay backend: POST /chat -> OpenClaw gateway (WS, protocol 4, V3 Ed25519 device auth) -> assistant reply",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "buildmate-chat-backend": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "node --import tsx src/index.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
