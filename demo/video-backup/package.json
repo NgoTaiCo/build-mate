@@ -1,0 +1,35 @@
+{
+  "name": "@buildmate/demo-video-backup",
+  "version": "1.0.0",
+  "description": "Presenter-only Remotion fallback video for BuildMate S1–S3 demo",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "render": "remotion render src/index.ts BuildMateS1S3Demo out/buildmate-s1-s3-demo.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "still": "remotion still src/index.ts BuildMateS1S3Demo out/still.png --scale=0.25 --frame=30 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "compositions": "remotion compositions src/index.ts --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "capture": "tsx scripts/capture-all.ts",
+    "capture:scene": "tsx scripts/capture-scene.ts",
+    "durations": "tsx scripts/update-durations.ts"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.290",
+    "@remotion/media-utils": "4.0.290",
+    "@types/node": "22.15.29",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "18.3.7",
+    "playwright": "1.52.0",
+    "remotion": "4.0.290",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "allowScripts": {
+    "esbuild@0.25.0": true,
+    "fsevents@2.3.2": true,
+    "fsevents@2.3.3": true
+  }
+}
