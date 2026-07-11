@@ -49,13 +49,14 @@ cat > openclaw.json << 'CONFIGEOF'
       "token": "GATEWAY_TOKEN_PLACEHOLDER"
     },
     "port": GATEWAY_PORT_PLACEHOLDER,
-    "bind": "loopback",
+    "bind": "auto",
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
     },
     "controlUi": {
-      "allowInsecureAuth": true
+      "allowInsecureAuth": true,
+      "allowedOrigins": ["*"]
     },
     "nodes": {
       "denyCommands": [
