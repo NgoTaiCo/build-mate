@@ -7,9 +7,8 @@ services:
     ports:
       - "${OPENCLAW_PORT}:18790"
     volumes:
-      - openclaw-config:/root/.openclaw
+      - ./state:/root/.openclaw
       - openclaw-workspace:/workspace
-      - ./openclaw.json:/root/.openclaw/openclaw.json:ro
       - ${PWD}/packages:/root/.openclaw/packages
     environment:
       - NODE_ENV=${NODE_ENV:-development}
@@ -69,7 +68,5 @@ services:
       - .env
 
 volumes:
-  openclaw-config:
-    name: ${PROJECT_NAME:-buildmate}_openclaw_config
   openclaw-workspace:
     name: ${PROJECT_NAME:-buildmate}_openclaw_workspace

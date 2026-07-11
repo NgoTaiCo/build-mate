@@ -39,7 +39,12 @@ else
 fi
 
 # Generate full config JSON
-cat > openclaw.json << CONFIGEOF
+# Written into state/ (bind-mounted whole dir into the container) rather than
+# bind-mounting this single file — a single-file bind mount nested under
+# another mount point makes openclaw's atomic save (write temp + rename) fail
+# with EBUSY, since the kernel refuses rename() onto an active mount point.
+mkdir -p state
+cat > state/openclaw.json << CONFIGEOF
 {
   "agents": {
     "defaults": {
@@ -214,11 +219,11 @@ sed -i.bak \
   -e "s|GATEWAY_PORT_PLACEHOLDER|$GATEWAY_PORT|g" \
   -e "s|SESSION_IDLE_MINUTES_PLACEHOLDER|$SESSION_IDLE_MINUTES|g" \
   -e "s|MEMORY_BACKEND_PLACEHOLDER|$MEMORY_BACKEND|g" \
-  openclaw.json
+  state/openclaw.json
 
-rm -f openclaw.json.bak
+rm -f state/openclaw.json.bak
 
-echo "✓ openclaw.json generated"
+echo "✓ state/openclaw.json generated"
 echo "  Model: $MODEL_PROVIDER"
 echo "  Gateway token: ${GATEWAY_TOKEN:0:16}..."
 echo "  Session idle: ${SESSION_IDLE_MINUTES}m"

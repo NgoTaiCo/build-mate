@@ -218,9 +218,10 @@ $config = @"
 }
 "@
 
-Set-Content -Path "openclaw.json" -Value $config -Encoding UTF8
+New-Item -ItemType Directory -Force -Path "state" | Out-Null
+Set-Content -Path "state/openclaw.json" -Value $config -Encoding UTF8
 
-Write-Host "✓ openclaw.json generated" -ForegroundColor Green
+Write-Host "✓ state/openclaw.json generated" -ForegroundColor Green
 Write-Host "  Model: $MODEL_PROVIDER"
 Write-Host "  Gateway token: $($GATEWAY_TOKEN.Substring(0, 16))..."
 Write-Host "  Session idle: ${SESSION_IDLE_MINUTES}m"
