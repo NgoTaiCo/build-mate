@@ -368,7 +368,7 @@
 
                 <div class="config-group">
                     <label>Token</label>
-                    <input type="password" id="token" placeholder="Paste your token">
+                    <input type="password" id="token" placeholder="Paste your token" value="4129e3440d35bbd04d3e72b9144cc96fda776f7919c2df60">
                 </div>
 
                 <div class="config-group">
@@ -510,10 +510,15 @@
 
             const host = elements.host.value || 'localhost';
             const port = elements.port.value || '18790';
-            const token = elements.token.value;
+            const token = elements.token.value.trim();
 
             if (!token) {
                 addMessage('Error: Token is required', 'system', true);
+                return;
+            }
+
+            if (token.startsWith('{') || token.includes('"type"')) {
+                addMessage('Error: Token looks like JSON — paste only the token string', 'system', true);
                 return;
             }
 
