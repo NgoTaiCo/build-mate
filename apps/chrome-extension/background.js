@@ -1,64 +1,132 @@
-const RELAY_URL = "http://127.0.0.1:8781";
+/**
+ * BuildMate extension service worker — DOM executor bridge client.
+ *
+ * Transport: an outbound **WebSocket** per BuildPC tab to the BE bridge
+ * (docs/dom-executor-bridge-contract.md §3). The worker never exposes a port;
+ * Chrome only needs to reach out. Flow per context (tab):
+ *
+ *   open        -> send { type: "dom.register", context_id, page_url }
+ *   bridge push -> { type: "dom.command", command_id, command }
+ *   execute via content script, then reply { type: "dom.result", command_id, ... }
+ *
+ * The bridge URL defaults to the cloudflare tunnel and can be overridden via
+ * chrome.storage.local `bridgeUrl` (see README). If you change the host, add it
+ * to manifest `host_permissions`.
+ */
+
+// Use cloudflare URL for testing
+const DEFAULT_BRIDGE_URL = "wss://administrators-carlo-received-nascar.trycloudflare.com/dom-bridge";
+const DEFAULT_CHAT_URL = "https://administrators-carlo-received-nascar.trycloudflare.com/chat";
+
+/** context_id -> { contextId, pageUrl, tabId, url, ws, closed, reconnectTimer } */
 const contexts = new Map();
 
-async function post(path, body) {
-  const response = await fetch(`${RELAY_URL}${path}`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!response.ok) throw new Error(`Relay returned HTTP ${response.status}`);
-  return response.json();
+async function resolveUrl(key, defaultUrl) {
+  try {
+    const data = await chrome.storage.local.get(key);
+    return typeof data[key] === "string" && data[key].trim() ? data[key].trim() : defaultUrl;
+  } catch {
+    return defaultUrl;
+  }
 }
 
-async function poll(contextId) {
-  const context = contexts.get(contextId);
-  if (!context || context.polling) return;
-  context.polling = true;
+function connect(ctx) {
+  let ws;
   try {
-    while (contexts.has(contextId)) {
-      const response = await fetch(`${RELAY_URL}/commands?context_id=${encodeURIComponent(contextId)}`);
-      if (!response.ok) throw new Error(`Relay returned HTTP ${response.status}`);
-      const { command } = await response.json();
-      if (!command) continue;
-
-      let result;
-      try {
-        result = await chrome.tabs.sendMessage(context.tabId, { type: "BUILDMATE_DOM_COMMAND", command });
-      } catch (error) {
-        result = { ok: false, error: error instanceof Error ? error.message : "TAB_UNAVAILABLE" };
-      }
-      await post(`/commands/${encodeURIComponent(command.command_id)}/result`, result);
-    }
+    ws = new WebSocket(ctx.url);
   } catch (error) {
-    console.warn("[BuildMate] relay disconnected", error);
-  } finally {
-    const current = contexts.get(contextId);
-    if (current) {
-      current.polling = false;
-      setTimeout(() => void poll(contextId), 1500);
-    }
+    console.warn("[BuildMate] bridge connect failed", error);
+    scheduleReconnect(ctx);
+    return;
   }
+  ctx.ws = ws;
+
+  ws.addEventListener("open", () => {
+    ws.send(JSON.stringify({ type: "dom.register", context_id: ctx.contextId, page_url: ctx.pageUrl }));
+  });
+
+  ws.addEventListener("message", async (event) => {
+    let msg;
+    try {
+      msg = JSON.parse(typeof event.data === "string" ? event.data : "");
+    } catch {
+      return;
+    }
+    if (msg.type !== "dom.command" || !msg.command) return;
+
+    // Never run selectors here — hand the semantic command to the content
+    // script's DOM adapter, which owns all page interaction and verification.
+    let result;
+    try {
+      result = await chrome.tabs.sendMessage(ctx.tabId, {
+        type: "BUILDMATE_DOM_COMMAND",
+        command: msg.command,
+      });
+    } catch (error) {
+      result = { ok: false, error: error instanceof Error ? error.message : "TAB_UNAVAILABLE" };
+    }
+    try {
+      ws.send(JSON.stringify({ type: "dom.result", command_id: msg.command_id, ...result }));
+    } catch (error) {
+      console.warn("[BuildMate] failed to send dom.result", error);
+    }
+  });
+
+  ws.addEventListener("close", () => scheduleReconnect(ctx));
+  ws.addEventListener("error", () => {
+    try {
+      ws.close();
+    } catch {
+      /* noop */
+    }
+  });
+}
+
+function scheduleReconnect(ctx) {
+  if (ctx.closed) return;
+  if (ctx.reconnectTimer) return;
+  ctx.reconnectTimer = setTimeout(() => {
+    ctx.reconnectTimer = null;
+    if (!ctx.closed) connect(ctx);
+  }, 1500);
 }
 
 async function registerContext({ contextId, pageUrl, tabId }) {
   if (typeof contextId !== "string" || typeof pageUrl !== "string") {
     return { ok: false, error: "INVALID_CONTEXT" };
   }
-  contexts.set(contextId, { tabId, pageUrl, polling: false, lastHeartbeatAt: Date.now() });
+  teardown(contextId); // drop any prior socket for this tab
+  const ctx = {
+    contextId,
+    pageUrl,
+    tabId,
+    url: await resolveUrl("bridgeUrl", DEFAULT_BRIDGE_URL),
+    ws: null,
+    closed: false,
+    reconnectTimer: null,
+  };
+  contexts.set(contextId, ctx);
+  connect(ctx);
+  return { ok: true, context_id: contextId };
+}
+
+function teardown(contextId) {
+  const ctx = contexts.get(contextId);
+  if (!ctx) return;
+  ctx.closed = true;
+  if (ctx.reconnectTimer) clearTimeout(ctx.reconnectTimer);
   try {
-    await post("/contexts", { context_id: contextId, page_url: pageUrl });
-    void poll(contextId);
-    return { ok: true, context_id: contextId };
-  } catch (error) {
-    return { ok: false, error: error instanceof Error ? error.message : String(error) };
+    ctx.ws?.close();
+  } catch {
+    /* noop */
   }
+  contexts.delete(contextId);
 }
 
 chrome.action.onClicked.addListener((tab) => {
   if (tab.id) {
     chrome.tabs.sendMessage(tab.id, { type: "BUILDMATE_TOGGLE_PANEL" }).catch(() => {
-      // Ignore errors if the content script is not loaded
+      // Content script not loaded on this tab — ignore.
     });
   }
 });
@@ -70,21 +138,28 @@ chrome.runtime.onConnect.addListener((port) => {
   port.onMessage.addListener((message) => {
     if (message?.type === "REGISTER") {
       contextId = message.context_id;
-      void registerContext({ contextId, pageUrl: message.page_url, tabId: port.sender.tab.id })
-        .then((result) => port.postMessage({ type: "REGISTERED", ...result }));
+      void registerContext({
+        contextId,
+        pageUrl: message.page_url,
+        tabId: port.sender.tab.id,
+      }).then((result) => port.postMessage({ type: "REGISTERED", ...result }));
       return;
     }
     if (message?.type === "HEARTBEAT" && contextId) {
-      const context = contexts.get(contextId);
-      if (context) {
-        context.lastHeartbeatAt = Date.now();
-        void poll(contextId);
+      // Keep the socket (and the MV3 worker) warm.
+      const ctx = contexts.get(contextId);
+      if (ctx?.ws && ctx.ws.readyState === WebSocket.OPEN) {
+        try {
+          ctx.ws.send(JSON.stringify({ type: "dom.ping" }));
+        } catch {
+          /* noop */
+        }
       }
     }
   });
 
   port.onDisconnect.addListener(() => {
-    if (contextId) contexts.delete(contextId);
+    if (contextId) teardown(contextId);
   });
 });
 
@@ -93,21 +168,23 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     // Append context_id and snapshot as a system instruction so the LLM knows it and can call MCP tools or answer directly
     const snapshotStr = message.snapshot ? JSON.stringify(message.snapshot) : "None";
     const payloadMessage = `${message.text}\n\n[System: User is on BuildPC page. Your context_id for MCP tools is "${message.sessionId}". Current build state: ${snapshotStr}]`;
-    fetch("https://administrators-carlo-received-nascar.trycloudflare.com/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: payloadMessage, sessionId: message.sessionId, currentBuild: message.snapshot })
-    })
-    .then(r => r.json())
-    .then(data => sendResponse({ ok: true, reply: data.reply }))
-    .catch(err => sendResponse({ ok: false, error: err.message }));
+    resolveUrl("chatUrl", DEFAULT_CHAT_URL).then(chatUrl => {
+      fetch(chatUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: payloadMessage, sessionId: message.sessionId, currentBuild: message.snapshot })
+      })
+      .then(r => r.json())
+      .then(data => sendResponse({ ok: true, reply: data.reply }))
+      .catch(err => sendResponse({ ok: false, error: err.message }));
+    });
     return true; // Keep message channel open for async response
   }
 
   if (message?.type !== "BUILDMATE_USER_INTENT") return undefined;
 
-  // The production worker forwards this envelope to BE over its authenticated
-  // bridge. It must never invoke a local DOM command or MCP client directly.
+  // Production forwards this envelope to BE over its authenticated bridge; it
+  // must never invoke a DOM command or MCP client directly from the page.
   sendResponse({ ok: false, error: "BACKEND_NOT_CONNECTED" });
   return undefined;
 });

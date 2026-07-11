@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   openclaw-gateway:
     image: openclaw/openclaw:latest
@@ -23,6 +21,52 @@ services:
     shm_size: 1gb
     cap_add:
       - SYS_ADMIN
+
+  chat-backend:
+    build:
+      context: ..
+      dockerfile: packages/chat-backend/Dockerfile
+    image: buildmate/chat-backend:latest
+    container_name: buildmate-chat-backend
+    restart: unless-stopped
+    depends_on:
+      - openclaw-gateway
+    ports:
+      - "${CHAT_BACKEND_PORT:-8790}:8790"
+    environment:
+      # Reach the gateway over the compose network by service name.
+      - OPENCLAW_GATEWAY_URL=ws://openclaw-gateway:18790
+      - OPENCLAW_GATEWAY_TOKEN=${GATEWAY_TOKEN}
+      - OPENCLAW_DEVICE_SEED=${OPENCLAW_DEVICE_SEED}
+      - PORT=8790
+      - REPLY_TIMEOUT_MS=${REPLY_TIMEOUT_MS:-60000}
+      - DEFAULT_AGENT_ID=${DEFAULT_AGENT_ID:-main}
+    env_file:
+      - .env
+
+  mcp-server:
+    build:
+      context: ..
+      dockerfile: packages/buildpc-mcp-server/Dockerfile
+    image: buildmate/mcp-server:latest
+    container_name: buildmate-mcp-server
+    restart: unless-stopped
+    ports:
+      - "${MCP_SERVER_PORT:-8791}:8791"
+    environment:
+      - PORT=8791
+      - MCP_PATH=/mcp
+      # Catalog data source: phongvu (cached JSON, default) | mock | live.
+      - CATALOG_DATA_SOURCE=${CATALOG_DATA_SOURCE:-phongvu}
+      # Only used when CATALOG_DATA_SOURCE=live; otherwise ignored.
+      - APIFY_API_KEY=${APIFY_API_KEY:-}
+      - APIFY_ACTOR_ID=${APIFY_ACTOR_ID:-}
+      # DOM executor bridge lives in chat-backend; reach it over the compose network.
+      - BUILDMATE_DOM_RELAY_URL=http://chat-backend:8790
+    depends_on:
+      - chat-backend
+    env_file:
+      - .env
 
 volumes:
   openclaw-config:

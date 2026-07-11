@@ -2,10 +2,15 @@ import {
   CatalogComponent,
   SearchCriteria,
   CatalogResult,
+  DataSource,
   DataSourceError,
   ALL_TYPES,
 } from "./types.js";
-import { loadAllCatalogs, loadCatalogByType } from "./data-loader.js";
+import {
+  loadAllCatalogs,
+  loadCatalogByTypeWithSource,
+} from "./data-loader.js";
+import { getCatalogDataMode } from "./config.js";
 import {
   makeTypePredicate,
   makeSocketPredicate,
@@ -121,49 +126,49 @@ export async function searchComponents(
   const targetTypes = criteria.type ? [criteria.type] : ALL_TYPES;
   const results: CatalogComponent[] = [];
   const errors: DataSourceError[] = [];
-  let hasMock = false;
-  let hasLive = false;
+  const seenSources = new Set<"live" | "phongvu" | "mock">();
+  const mode = getCatalogDataMode();
 
-  const client = createApifyClient();
+  const client = mode === "live" ? createApifyClient() : null;
 
-  // Fetch per-category with per-type fallback
+  // Fetch per-category with per-type fallback. Only attempt Apify in "live"
+  // mode; "phongvu"/"mock" modes read local data straight from the loader,
+  // which reports the concrete source it served.
   for (const type of targetTypes) {
-    try {
-      const liveResults = await client.fetchType(type);
-
-      if (liveResults && liveResults.length > 0) {
-        results.push(...liveResults);
-        hasLive = true;
-      } else {
-        // Fall back to cached data for this type
-        const cachedResults = loadCatalogByType(type);
-        results.push(...cachedResults);
-        hasMock = true;
-
-        if (!liveResults) {
-          errors.push({
-            type,
-            source: "apify",
-            message: "Apify returned empty or null",
-          });
+    if (client) {
+      try {
+        const liveResults = await client.fetchType(type);
+        if (liveResults && liveResults.length > 0) {
+          results.push(...liveResults);
+          seenSources.add("live");
+          continue;
         }
+        errors.push({
+          type,
+          source: "apify",
+          message: "Apify returned empty or null",
+        });
+      } catch (error) {
+        errors.push({
+          type,
+          source: "apify",
+          message: error instanceof Error ? error.message : "Unknown error",
+        });
       }
-    } catch (error) {
-      // Fall back to cached data on error
-      const cachedResults = loadCatalogByType(type);
-      results.push(...cachedResults);
-      hasMock = true;
-
-      errors.push({
-        type,
-        source: "apify",
-        message:
-          error instanceof Error
-            ? error.message
-            : "Unknown error",
-      });
     }
+
+    // Local fallback (live mode) or the primary path (phongvu/mock mode).
+    const cached = loadCatalogByTypeWithSource(type);
+    results.push(...cached.components);
+    seenSources.add(cached.source);
   }
+
+  const resolvedSource: DataSource =
+    seenSources.size === 0
+      ? "mock"
+      : seenSources.size === 1
+        ? ([...seenSources][0] as DataSource)
+        : "mixed";
 
   // Apply filters and sort
   const predicates: ((component: CatalogComponent) => boolean)[] = [];
@@ -200,7 +205,7 @@ export async function searchComponents(
     ) {
       return {
         components: [],
-        source: hasLive ? "live" : hasMock ? "mock" : "mixed",
+        source: resolvedSource,
         errors,
       };
     }
@@ -231,11 +236,9 @@ export async function searchComponents(
   const filtered = results.filter(composedPredicate);
   const sorted = filtered.sort(sortByPriceAscending);
 
-  const source = hasLive && !hasMock ? "live" : !hasLive && hasMock ? "mock" : "mixed";
-
   return {
     components: sorted,
-    source,
+    source: resolvedSource,
     errors,
   };
 }

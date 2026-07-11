@@ -47,7 +47,7 @@ $config = @"
         "xiaomi-token-plan/mimo-v2.5-pro": { "alias": "Xiaomi MiMo V2.5 Pro" }
       },
       "model": {
-        "primary": "$MODEL_PROVIDER"
+        "primary": "MODEL_PROVIDER_PLACEHOLDER"
       }
     }
   },
@@ -55,16 +55,17 @@ $config = @"
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "$GATEWAY_TOKEN"
+      "token": "GATEWAY_TOKEN_PLACEHOLDER"
     },
-    "port": $GATEWAY_PORT,
-    "bind": "loopback",
+    "port": GATEWAY_PORT_PLACEHOLDER,
+    "bind": "auto",
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
     },
     "controlUi": {
-      "allowInsecureAuth": true
+      "allowInsecureAuth": true,
+      "allowedOrigins": ["*"]
     },
     "nodes": {
       "denyCommands": [
@@ -83,7 +84,7 @@ $config = @"
     "dmScope": "per-channel-peer",
     "reset": {
       "mode": "idle",
-      "idleMinutes": $SESSION_IDLE_MINUTES
+      "idleMinutes": SESSION_IDLE_MINUTES_PLACEHOLDER
     }
   },
   "tools": {
@@ -97,8 +98,16 @@ $config = @"
       }
     }
   },
+  "mcp": {
+    "servers": {
+      "buildmate": {
+        "url": "http://mcp-server:8791/mcp",
+        "transport": "streamable-http"
+      }
+    }
+  },
   "memory": {
-    "backend": "$MEMORY_BACKEND"
+    "backend": "MEMORY_BACKEND_PLACEHOLDER"
   },
   "models": {
     "mode": "merge",

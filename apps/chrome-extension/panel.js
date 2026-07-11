@@ -1,6 +1,7 @@
 (function () {
   const ROOT_ID = "buildmate-extension-root";
   function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[c]); }
+
   function parseMarkdown(text) {
     if (!text) return "";
     let html = escapeHtml(text);
@@ -55,15 +56,24 @@
     const launcher = shadow.querySelector(".bm-launcher"), panel = shadow.querySelector(".bm-panel"), notice = shadow.querySelector(".bm-notice"), view = shadow.querySelector(".bm-view"), title = shadow.querySelector(".bm-title"), statusBar = shadow.querySelector("#bm-status-bar"), statusText = shadow.querySelector("#bm-status-text");
     let state = { ...globalThis.BuildMatePanelState.initialPanelState }, actionState = { ...globalThis.BuildMateActionState.initialActionState }, snapshot = { status: "unavailable", components: [], total: null }, bridgeConnected = false, pendingAdd = false, isTyping = false, handlers = {};
     
+    try {
+      const saved = localStorage.getItem("buildmate_messages");
+      if (saved) state.messages = JSON.parse(saved);
+    } catch (e) {}
+
     function snapshotMarkup() {
       const count = snapshot.components.length;
       if (snapshot.status !== "ready") return `<div class="bm-tracker bm-tracker--unavailable">${globalThis.BuildMateI18n.t('cartUnavailable')}</div>`;
       if (count === 0) return `<div class="bm-tracker bm-tracker--empty"><p class="bm-tracker-empty-text"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-right:6px;vertical-align:middle"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>${globalThis.BuildMateI18n.t('cartEmpty')}</p></div>`;
       const names = snapshot.components.map((c) => `<li><span>${escapeHtml(c.category)}</span><strong>${escapeHtml(c.name)}</strong></li>`).join("");
       let totalHtml = "";
-      if (snapshot.total) {
-        const amountMatch = snapshot.total.match(/[\d.,]+[^\d.,]*/);
-        const amountStr = amountMatch ? amountMatch[0].trim() : snapshot.total;
+      if (snapshot.total != null) {
+        let amountStr = "";
+        if (typeof snapshot.total === 'number') {
+          amountStr = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(snapshot.total);
+        } else {
+          amountStr = String(snapshot.total);
+        }
         totalHtml = `<div class="bm-tracker-total"><span>${globalThis.BuildMateI18n.t('totalCost')}</span><strong>${escapeHtml(amountStr)}</strong></div>`;
       }
       return `<section class="bm-tracker"><div class="bm-tracker-title"><span>${globalThis.BuildMateI18n.t('cartTitle')}</span>${count > 0 ? `<span class="bm-tracker-count">${count}</span>` : ""}</div><ul>${names}</ul>${totalHtml}</section>`;
@@ -156,7 +166,7 @@
             } else if (msg.type === "action") {
               contentHtml = `<div class="bm-chat-widget">${actionMarkup()}</div>`;
             } else if (msg.type === "product_recommendation") {
-              contentHtml = `<p class="bm-chat-text">${escapeHtml(msg.content)}</p>
+              contentHtml = `<div class="bm-chat-text">${parseMarkdown(msg.content)}</div>
                 <div class="bm-product-card">
                   <div class="bm-product-image">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -170,7 +180,7 @@
                   </div>
                 </div>`;
             } else if (msg.type === "build_recommendation") {
-              contentHtml = `<p class="bm-chat-text">${escapeHtml(msg.content)}</p>
+              contentHtml = `<div class="bm-chat-text">${parseMarkdown(msg.content)}</div>
                 <div class="bm-build-card">
                   <div class="bm-build-header">
                     <div class="bm-build-header-title">${globalThis.BuildMateI18n.t('buildCardTitle')}</div>
@@ -195,16 +205,23 @@
             return `<div class="bm-chat-message ${roleClass}">${contentHtml}</div>`;
           }).join("")}
           ${isTyping ? '<div class="bm-typing"><span></span><span></span><span></span></div>' : ''}
+          ${state.messages.length >= 30 ? `<div class="bm-chat-message bm-message-bot"><div class="bm-chat-text" style="padding: 10px 14px; margin: 0; font-size: 14px; word-break: break-word; color: #d32f2f; font-weight: bold;">Đã đạt giới hạn 30 tin nhắn cho bản Demo. Vui lòng bấm vào nút Xoá Chat (Thùng rác) ở trên để tiếp tục.</div></div>` : ''}
         `;
         lastRenderedIsTyping = isTyping;
         scrollChat();
       }
 
-      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd;
+      const isLimitReached = state.messages.length >= 30;
+      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd || isLimitReached;
+      
       if (busy) {
         input.disabled = true;
         submitBtn.disabled = true;
-        input.placeholder = globalThis.BuildMateI18n.t('processing');
+        if (isLimitReached) {
+          input.placeholder = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Giới hạn 30 tin nhắn. Vui lòng xoá chat!' : 'Limit 30 messages. Please clear chat!';
+        } else {
+          input.placeholder = globalThis.BuildMateI18n.t('processing');
+        }
         form.classList.add('bm-chat-input--disabled');
       } else {
         input.disabled = false;
@@ -220,7 +237,15 @@
       if (focusPanel && state.open && !busy) input.focus(); 
     }
     
-    function transition(event, options) { const wasOpen = state.open; state = globalThis.BuildMatePanelState.reducePanelState(state, event); render({ focusPanel: options?.focusPanel ?? (!wasOpen && state.open) }); if (wasOpen && !state.open) launcher.focus(); return state; }
+    function transition(event, options) { 
+      const wasOpen = state.open; 
+      state = globalThis.BuildMatePanelState.reducePanelState(state, event); 
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
+      render({ focusPanel: options?.focusPanel ?? (!wasOpen && state.open) }); 
+      if (!wasOpen && state.open) scrollChat();
+      if (wasOpen && !state.open) launcher.focus(); 
+      return state; 
+    }
     
     launcher.addEventListener("click", () => transition({ type: "TOGGLE" }));
     shadow.querySelector(".bm-close").addEventListener("click", () => transition({ type: "CLOSE" }));
@@ -229,6 +254,7 @@
       globalThis.BuildMateI18n.setLang(next);
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
       lastRenderedSnapshot = null;
       lastRenderedActionState = null;
       applyI18n();
@@ -237,6 +263,8 @@
     shadow.querySelector('#bm-clear-btn').addEventListener('click', () => {
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
+      if (handlers.onClearChat) handlers.onClearChat();
       render();
     });
     panel.addEventListener("click", (event) => { 
@@ -245,9 +273,29 @@
         const goal = globalThis.BuildMateDemoData.goals.find(g => g.id === button.dataset.goalId);
         if (goal) {
           const tTitle = globalThis.BuildMateI18n.t('goals')[goal.id].title;
-          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn ${tTitle.toLowerCase()}` : `I want to build for ${tTitle.toLowerCase()}` } });
+          const userMsg = globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn build máy: ${tTitle}` : `I want to build: ${tTitle}`;
+          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: userMsg } });
           isTyping = true; render();
-          setTimeout(() => { isTyping = false; transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'action', content: '' } }); }, 900);
+          
+          if (handlers.onChatMessage) {
+            handlers.onChatMessage(userMsg, snapshot).then((replyText) => {
+              isTyping = false;
+              if (replyText) {
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+              } else {
+                render();
+              }
+            }).catch(err => {
+              isTyping = false;
+              const errPrefix = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Lỗi kết nối server:' : 'Server connection error:';
+              transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `${errPrefix} ${err.message}` } });
+            });
+          } else {
+            setTimeout(() => {
+              isTyping = false;
+              render();
+            }, 500);
+          }
         }
       }
       if (button.dataset.action === "prepare-add") { pendingAdd = true; render(); } 
@@ -257,6 +305,7 @@
       if (button.dataset.action === "reset-action") { actionState = { ...globalThis.BuildMateActionState.initialActionState }; render(); } 
       if (button.dataset.mockAction === "add-product" || button.dataset.mockAction === "apply-build") { 
         state = { ...state, messages: state.messages.map(m => m.id === button.dataset.messageId ? { ...m, added: true } : m) };
+        try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
         render();
       }
     });

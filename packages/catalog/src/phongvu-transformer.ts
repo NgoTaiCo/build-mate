@@ -1,6 +1,6 @@
 import { CatalogComponent, ComponentType } from "./types.js";
 
-interface PhongVuProduct {
+export interface PhongVuProduct {
   sku: string;
   name: string;
   latestPrice: string;
@@ -31,7 +31,7 @@ function parsePrice(priceStr: string | number): number | null {
   }
 }
 
-function extractSharedFields(product: PhongVuProduct): ExtractedFields {
+export function extractSharedFields(product: PhongVuProduct): ExtractedFields {
   const price = parsePrice(product.latestPrice);
   if (price === null) return null as any;
 
@@ -71,6 +71,7 @@ function extractCpu(product: PhongVuProduct): CatalogComponent | null {
     type: "cpu" as const,
     socket,
     tdp,
+    ram_gen_supported: cpuRamGenSupported(socket),
   } as CatalogComponent;
 }
 
@@ -93,6 +94,7 @@ function extractMainboard(product: PhongVuProduct): CatalogComponent | null {
     type: "mainboard" as const,
     socket: socketMatch[1],
     ram_gen: ramGenMatch[1] as "DDR4" | "DDR5",
+    ram_gen_supported: [ramGenMatch[1]],
     form_factor: formFactorMatch[1] as "ATX" | "mATX" | "ITX",
   } as CatalogComponent;
 }
@@ -113,6 +115,8 @@ function extractRam(product: PhongVuProduct): CatalogComponent | null {
     ...shared,
     type: "ram" as const,
     ram_gen: ramGenMatch[1] as "DDR4" | "DDR5",
+    generation: ramGenMatch[1] as "DDR4" | "DDR5",
+    tdp: 3,
   } as CatalogComponent;
 }
 
@@ -146,52 +150,124 @@ function extractCooler(product: PhongVuProduct): CatalogComponent | null {
   const shared = extractSharedFields(product);
   if (!shared) return null;
 
-  const text = extractText(product.highlight || product.shortDescription);
+  const text = extractText(
+    product.highlight || product.shortDescription || product.name
+  );
   const textUpper = text.toUpperCase();
 
-  // Match socket list - capture until "/" or "TDP" or end
+  // Socket is OPTIONAL: the Compiler only checks cooler height vs case
+  // clearance (E004), never the cooler socket. PhongVu cooler descriptions
+  // rarely list sockets, so requiring one dropped 100% of coolers.
   const socketMatch = textUpper.match(/SOCKET[:\s]+([\w\d,\s]+?)(?:\s*\/|\s+TDP|$)/);
-  const tdpMatch = textUpper.match(/TDP[\s:]*(\d+)\s*W/);
+  let socket: string[] | undefined;
+  if (socketMatch) {
+    const sockets = socketMatch[1]
+      .split(/[,\/]/)
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0 && /[\w\d]/.test(s));
+    if (sockets.length > 0) socket = sockets;
+  }
 
-  if (!socketMatch) return null;
+  // Height drives the only cooler compatibility check. When the description
+  // doesn't state it, default by cooler kind: AIO/liquid coolers mount a low
+  // block on the socket (rarely a clearance problem), tower air coolers are tall.
+  const isLiquid = /tản nước|nước|aio|liquid|water/i.test(text);
+  const heightMatch = textUpper.match(
+    /(?:CAO|HEIGHT|CHIỀU CAO)[:\s]*(\d{2,3})\s*MM|(\d{2,3})\s*MM\s*(?:CAO|HEIGHT)/
+  );
+  const height = heightMatch
+    ? parseInt(heightMatch[1] || heightMatch[2], 10)
+    : isLiquid
+      ? 60
+      : 158;
 
-  const sockets = socketMatch[1]
-    .split(/[,\/]/)
-    .map((s) => s.trim())
-    .filter((s) => s.length > 0 && /[\w\d]/.test(s));
-
-  if (sockets.length === 0) return null;
-
-  const tdp = tdpMatch ? parseInt(tdpMatch[1], 10) : 200;
-
-  return {
+  // No tdp: cooler fan draw is negligible and would otherwise inflate PSU sizing.
+  const result = {
     ...shared,
     type: "cooler" as const,
-    socket: sockets,
-    tdp,
+    height,
   } as CatalogComponent;
+  if (socket) result.socket = socket;
+  return result;
+}
+
+// A case supports its own form factor plus every smaller one.
+export const FORM_FACTOR_ORDER = ["E-ATX", "ATX", "mATX", "ITX"] as const;
+
+export function normalizeFormFactor(raw: string): "E-ATX" | "ATX" | "mATX" | "ITX" {
+  const u = raw.toUpperCase().replace(/[\s-]/g, "");
+  if (u === "EATX") return "E-ATX";
+  if (u === "MICROATX" || u === "MATX") return "mATX";
+  if (u === "MINIITX" || u === "ITX") return "ITX";
+  return "ATX";
+}
+
+// Which RAM generations a CPU supports, inferred from its socket. The detail
+// API has no explicit CPU memory-support attribute, but socket determines it.
+// Kept permissive (both DDR gens) for unknown sockets to avoid false E002.
+export function cpuRamGenSupported(socket: string): string[] {
+  const s = socket.toUpperCase().replace(/[\s-]/g, "");
+  if (s === "AM5" || s === "STR5" || s === "1851" || s === "1700DDR5") return ["DDR5"];
+  if (s === "AM4" || s === "1200" || s === "115X" || s === "1151" || s === "1150")
+    return ["DDR4"];
+  if (s === "1700") return ["DDR4", "DDR5"]; // Alder/Raptor Lake support both
+  return ["DDR4", "DDR5"];
+}
+
+export function supportedMbFormFactors(caseFf: "E-ATX" | "ATX" | "mATX" | "ITX"): string[] {
+  const idx = FORM_FACTOR_ORDER.indexOf(caseFf);
+  // Everything from the case's size on down; drop E-ATX from the mainboard
+  // list since Compiler mainboards are ATX/mATX/ITX.
+  return FORM_FACTOR_ORDER.slice(idx).filter((f) => f !== "E-ATX");
 }
 
 function extractCase(product: PhongVuProduct): CatalogComponent | null {
   const shared = extractSharedFields(product);
   if (!shared) return null;
 
-  const text = extractText(product.highlight || product.shortDescription);
+  const text = extractText(
+    product.highlight || product.shortDescription || product.name
+  );
+  const textUpper = text.toUpperCase();
 
-  const formFactorMatch = text.match(/(ATX|mATX|ITX)/);
-  const clearanceMatch = text.match(/clearance[\s:]*(\d+)\s*mm|(\d+)\s*mm\s*clear|GPU\s*[Cc]learance[\s:]*(\d+)\s*mm/i);
+  // form_factor is OPTIONAL: the Compiler validates a case via
+  // supported_mb_form_factors / supported_psu_form_factors / max_cooler_height,
+  // not the case's own size label. Default to a mid-tower ATX when unstated.
+  const formFactorMatch = text.match(
+    /(E-?ATX|Micro-?ATX|mATX|Mini-?ITX|ITX|ATX)/i
+  );
+  const form_factor = normalizeFormFactor(
+    formFactorMatch ? formFactorMatch[1] : "ATX"
+  );
 
-  if (!formFactorMatch) return null;
+  const supported_mb_form_factors = supportedMbFormFactors(form_factor);
+  const supported_psu_form_factors = /SFX/i.test(text)
+    ? ["SFX", "ATX"]
+    : ["ATX"];
 
-  const form_factor = formFactorMatch[1] as "ATX" | "mATX" | "ITX";
+  // CPU-cooler clearance (max_cooler_height) if stated, else a mid-tower default.
+  const coolerHeightMatch = textUpper.match(
+    /(?:TẢN|COOLER|CPU)[^\d]{0,24}(\d{2,3})\s*MM|(\d{2,3})\s*MM[^\d]{0,10}(?:TẢN|COOLER|CPU)/
+  );
+  const max_cooler_height = coolerHeightMatch
+    ? parseInt(coolerHeightMatch[1] || coolerHeightMatch[2], 10)
+    : 160;
+
+  // GPU length clearance.
+  const clearanceMatch = text.match(
+    /GPU\s*[Cc]learance[\s:]*(\d+)\s*mm|clearance[\s:]*(\d+)\s*mm|(\d{3})\s*mm/i
+  );
   const clearance_mm = clearanceMatch
     ? parseInt(clearanceMatch[1] || clearanceMatch[2] || clearanceMatch[3], 10)
-    : 300;
+    : 330;
 
   return {
     ...shared,
     type: "case" as const,
     form_factor,
+    supported_mb_form_factors,
+    supported_psu_form_factors,
+    max_cooler_height,
     clearance_mm,
   } as CatalogComponent;
 }
