@@ -61,6 +61,10 @@ services:
       # Only used when CATALOG_DATA_SOURCE=live; otherwise ignored.
       - APIFY_API_KEY=${APIFY_API_KEY:-}
       - APIFY_ACTOR_ID=${APIFY_ACTOR_ID:-}
+      # DOM executor bridge lives in chat-backend; reach it over the compose network.
+      - BUILDMATE_DOM_RELAY_URL=http://chat-backend:8790
+    depends_on:
+      - chat-backend
     env_file:
       - .env
 

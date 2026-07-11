@@ -10,6 +10,7 @@ import { loadConfig, ConfigError } from './config.js';
 import { seedToKeyPair } from './device-auth.js';
 import { GatewayClient } from './gateway-client.js';
 import { createHttpServer } from './http-server.js';
+import { DomBridge } from './dom-bridge.js';
 
 function main(): void {
   let config;
@@ -29,7 +30,9 @@ function main(): void {
   const gateway = new GatewayClient(config, keyPair);
   gateway.connect();
 
-  const server = createHttpServer(gateway, config.defaultAgentId);
+  // DOM executor bridge: relays semantic commands MCP <-> BuildPC extension.
+  const domBridge = new DomBridge();
+  const server = createHttpServer(gateway, config.defaultAgentId, domBridge);
   server.listen(config.httpPort, () => {
     console.log(
       `[chat-backend] listening on :${config.httpPort} | deviceId=${keyPair.deviceId} | gateway=${config.gatewayUrl}`,
@@ -41,6 +44,7 @@ function main(): void {
 
   const shutdown = () => {
     gateway.close();
+    domBridge.close();
     server.close(() => process.exit(0));
   };
   process.on('SIGINT', shutdown);

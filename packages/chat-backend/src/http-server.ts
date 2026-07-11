@@ -8,6 +8,7 @@
 import { createServer, type Server } from 'node:http';
 import { ChatRequestSchema, type ErrorCode, type ErrorReply } from './schemas.js';
 import { sessionKeyFor, GatewayError, type GatewayClient } from './gateway-client.js';
+import type { DomBridge } from './dom-bridge.js';
 
 /** Map a stable error code to its HTTP status (contracts/http-chat.md). */
 const STATUS_BY_CODE: Record<ErrorCode, number> = {
@@ -31,9 +32,10 @@ const MAX_BODY_BYTES = 1_000_000; // 1 MB guard against oversized bodies
 export function createHttpServer(
   gateway: GatewayClient,
   defaultAgentId: string,
+  domBridge?: DomBridge,
 ): Server {
   return createServer((req, res) => {
-    // Permissive CORS for the demo frontend, including preflight (T020).
+    // Permissive CORS for the demo frontend + extension, including preflight (T020).
     for (const [k, v] of Object.entries(CORS_HEADERS)) res.setHeader(k, v);
     if (req.method === 'OPTIONS') {
       res.writeHead(204);
@@ -41,17 +43,23 @@ export function createHttpServer(
       return;
     }
 
-    const url = req.url ?? '/';
-    if (req.method === 'GET' && url.startsWith('/healthz')) {
+    const rawUrl = req.url ?? '/';
+    const url = new URL(rawUrl, 'http://localhost');
+
+    if (req.method === 'GET' && url.pathname.startsWith('/healthz')) {
       sendJson(res, 200, {
         ok: gateway.state === 'ready',
         gateway: gateway.state,
         deviceId: gateway.deviceId,
+        domContexts: domBridge?.contextCount ?? 0,
       });
       return;
     }
 
-    if (req.method === 'POST' && url.startsWith('/chat')) {
+    // DOM executor bridge routes (/contexts, /commands, /dom-commands).
+    if (domBridge?.tryHandle(req, res, url)) return;
+
+    if (req.method === 'POST' && url.pathname.startsWith('/chat')) {
       handleChat(req, res, gateway, defaultAgentId);
       return;
     }
