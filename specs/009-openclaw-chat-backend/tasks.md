@@ -21,9 +21,9 @@ New npm-workspace package at `packages/chat-backend/` (mirrors `packages/mcp-ser
 
 **Purpose**: Scaffold the workspace package so it builds, runs via `tsx`, and tests via `node --test`.
 
-- [ ] T001 Create `packages/chat-backend/package.json` — name `@buildmate/chat-backend`, `type: module`, deps `ws` ^8, `zod` ^3; devDeps `tsx` ^4, `typescript` ^5, `@types/node` ^22, `@types/ws`; scripts `dev` (`node --import tsx src/index.ts`), `test` (`node --import tsx --test tests/*.test.ts`), `typecheck` (`tsc --noEmit`), `build` (`tsc`)
-- [ ] T002 [P] Create `packages/chat-backend/tsconfig.json` — ESM, target ES2022, `moduleResolution` NodeNext, `strict`, `outDir dist`, matching `packages/mcp-server/tsconfig.json`
-- [ ] T003 Run `npm install` at repo root to register the new workspace (root `workspaces: packages/*`), then `npm run -w @buildmate/chat-backend typecheck` to confirm the empty package compiles
+- [X] T001 Create `packages/chat-backend/package.json` — name `@buildmate/chat-backend`, `type: module`, deps `ws` ^8, `zod` ^3; devDeps `tsx` ^4, `typescript` ^5, `@types/node` ^22, `@types/ws`; scripts `dev` (`node --import tsx src/index.ts`), `test` (`node --import tsx --test tests/*.test.ts`), `typecheck` (`tsc --noEmit`), `build` (`tsc`)
+- [X] T002 [P] Create `packages/chat-backend/tsconfig.json` — ESM, target ES2022, `moduleResolution` NodeNext, `strict`, `outDir dist`, matching `packages/mcp-server/tsconfig.json`
+- [X] T003 Run `npm install` at repo root to register the new workspace (root `workspaces: packages/*`), then `npm run -w @buildmate/chat-backend typecheck` to confirm the empty package compiles
 
 ---
 
