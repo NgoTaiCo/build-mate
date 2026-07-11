@@ -12,7 +12,7 @@ test("RAM generation filter", async (t) => {
     assert(results.length > 0, "Should find DDR5 mainboards");
     assert(
       results.every((c) =>
-        c.ram_gen_supported?.includes("DDR5")
+        c.ram_gen === "DDR5"
       ),
       "All mainboards should support DDR5"
     );
@@ -26,7 +26,7 @@ test("RAM generation filter", async (t) => {
 
     assert(results.length > 0, "Should find DDR5 RAM");
     assert(
-      results.every((c) => c.generation === "DDR5"),
+      results.every((c) => c.ram_gen === "DDR5"),
       "All RAM should be DDR5"
     );
   });
@@ -39,24 +39,19 @@ test("RAM generation filter", async (t) => {
 
     assert(results.length > 0, "Should find DDR4 RAM");
     assert(
-      results.every((c) => c.generation === "DDR4"),
+      results.every((c) => c.ram_gen === "DDR4"),
       "All RAM should be DDR4"
     );
   });
 
-  await t.test("should filter CPUs by supported RAM generation", () => {
+  await t.test("should return empty for CPUs with ram_gen filter (not supported)", () => {
     const results = searchComponentsMock({
       type: "cpu",
       ram_gen: "DDR5",
     });
 
-    assert(results.length > 0, "Should find DDR5-supporting CPUs");
-    assert(
-      results.every((c) =>
-        c.ram_gen_supported?.includes("DDR5")
-      ),
-      "All CPUs should support DDR5"
-    );
+    // CPUs don't have ram_gen in our data model, so filtering by ram_gen returns empty
+    assert(results.length === 0, "CPUs should not match ram_gen filter");
   });
 
   await t.test("should return empty for unknown RAM generation", () => {
@@ -89,7 +84,7 @@ test("RAM generation filter", async (t) => {
         (c) =>
           c.type === "mainboard" &&
           c.socket === "AM5" &&
-          c.ram_gen_supported?.includes("DDR5")
+          c.ram_gen === "DDR5"
       ),
       "Should apply all filters together"
     );

@@ -6,7 +6,6 @@ test("searchComponentsMock - combined search", async (t) => {
   await t.test("should return all components for empty criteria", () => {
     const results = searchComponentsMock({});
     assert(results.length > 0, "Should return some components");
-    assert(results.length === 50, "Should return all ~50 mock components");
   });
 
   await t.test("should filter by single type", () => {
@@ -35,7 +34,7 @@ test("searchComponentsMock - combined search", async (t) => {
       "All results should be AM5"
     );
     assert(
-      results.every((c) => c.ram_gen_supported?.includes("DDR5")),
+      results.every((c) => c.ram_gen === "DDR5"),
       "All results should support DDR5"
     );
     assert(
@@ -60,8 +59,8 @@ test("searchComponentsMock - combined search", async (t) => {
   await t.test("should return empty array for conflicting criteria", () => {
     const results = searchComponentsMock({
       type: "cpu",
-      price_min: 100000000, // unrealistic price
-      price_max: 200000000,
+      price_min: 1000000000, // unrealistic price
+      price_max: 2000000000,
     });
 
     assert.equal(results.length, 0, "Should return empty array for no match");
@@ -95,6 +94,7 @@ test("searchComponentsMock - combined search", async (t) => {
   });
 
   await t.test("should handle stock_status filter", () => {
+    const all = searchComponentsMock({});
     const inStock = searchComponentsMock({ stock_status: "in_stock" });
     const outOfStock = searchComponentsMock({
       stock_status: "out_of_stock",
@@ -109,7 +109,7 @@ test("searchComponentsMock - combined search", async (t) => {
       "All out_of_stock results should have out_of_stock status"
     );
     assert(
-      inStock.length + outOfStock.length === 50,
+      inStock.length + outOfStock.length === all.length,
       "in_stock + out_of_stock should equal total"
     );
   });

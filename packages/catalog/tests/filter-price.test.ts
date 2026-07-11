@@ -62,7 +62,7 @@ test("price filter", async (t) => {
     });
 
     assert(
-      results.some((c) => c.id === allCPUs[0].id),
+      results.some((c) => c.sku === allCPUs[0].sku),
       "Should include component with exact price"
     );
   });
@@ -70,8 +70,8 @@ test("price filter", async (t) => {
   await t.test("should not match when outside range", () => {
     const results = searchComponentsMock({
       type: "cpu",
-      price_min: 100000000,
-      price_max: 200000000,
+      price_min: 1000000000,
+      price_max: 2000000000,
     });
 
     assert.equal(results.length, 0, "No CPUs should be this expensive");

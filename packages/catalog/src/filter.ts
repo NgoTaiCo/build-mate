@@ -25,12 +25,11 @@ export function makeSocketPredicate(socket: string): Predicate {
 export function makeRamGenPredicate(ramGen: string): Predicate {
   return (component: CatalogComponent) => {
     if (component.type === "ram") {
-      return component.generation === ramGen;
+      return component.ram_gen === ramGen;
     }
 
-    if (component.type === "mainboard" || component.type === "cpu") {
-      if (!Array.isArray(component.ram_gen_supported)) return false;
-      return component.ram_gen_supported.includes(ramGen);
+    if (component.type === "mainboard") {
+      return component.ram_gen === ramGen;
     }
 
     return false;
