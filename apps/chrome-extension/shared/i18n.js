@@ -104,7 +104,7 @@
       panelTitle: "PhongVu BuildMate",
       clearChat: "Clear chat",
       closePanel: "Close BuildMate",
-      openAssistant: "BuildMate 😊",
+      openAssistant: "BuildMate",
 
       // Status bar
       statusOffline: "Gateway not connected",
