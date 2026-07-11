@@ -8,12 +8,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -31,7 +33,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -43,12 +45,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -60,12 +64,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -77,12 +83,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -94,7 +101,8 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -117,7 +125,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 140,
     "clearance_mm": 330
   },
   {
@@ -129,12 +137,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -146,7 +155,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -169,7 +180,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -199,12 +210,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -216,12 +228,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -233,12 +247,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -257,7 +273,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 157,
     "clearance_mm": 330
   },
   {
@@ -275,7 +291,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 157,
     "clearance_mm": 330
   },
   {
@@ -287,12 +303,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -304,12 +322,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -327,7 +347,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -339,12 +359,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -362,7 +384,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -380,7 +402,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 76,
     "clearance_mm": 330
   },
   {
@@ -416,7 +438,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -428,7 +450,8 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -452,7 +475,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -464,12 +487,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -506,7 +530,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -524,7 +548,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -542,7 +566,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 168,
     "clearance_mm": 330
   },
   {
@@ -554,12 +578,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -571,12 +597,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 173,
     "clearance_mm": 330
   },
   {
@@ -588,12 +616,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -605,12 +634,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 164,
     "clearance_mm": 330
   },
   {
@@ -622,12 +652,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -646,7 +677,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 169,
     "clearance_mm": 330
   },
   {
@@ -664,7 +695,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -676,12 +707,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 186,
     "clearance_mm": 330
   },
   {
@@ -700,7 +733,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -718,7 +751,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -736,7 +769,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -748,12 +781,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 171,
     "clearance_mm": 330
   },
   {
@@ -763,8 +797,10 @@
     "stock_status": "in_stock",
     "promo": "77% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -780,8 +816,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -798,8 +835,10 @@
     "stock_status": "in_stock",
     "promo": "61% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -815,8 +854,10 @@
     "stock_status": "in_stock",
     "promo": "61% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -889,8 +930,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -907,8 +949,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -925,8 +968,10 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -942,8 +987,10 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -959,8 +1006,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -977,8 +1025,9 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -995,8 +1044,10 @@
     "stock_status": "in_stock",
     "promo": "61% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1012,8 +1063,10 @@
     "stock_status": "in_stock",
     "promo": "61% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1086,8 +1139,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -1104,8 +1158,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -1122,8 +1177,10 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1139,8 +1196,10 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1156,8 +1215,9 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -1174,8 +1234,9 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -1201,7 +1262,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -1213,12 +1274,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -1230,7 +1293,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -1247,14 +1312,13 @@
     "type": "case",
     "form_factor": "mATX",
     "supported_mb_form_factors": [
-      "mATX",
-      "ITX"
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 120
+    "clearance_mm": 330
   },
   {
     "sku": "19030035",
@@ -1263,17 +1327,17 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
-    "clearance_mm": 120
+    "max_cooler_height": 170,
+    "clearance_mm": 330
   },
   {
     "sku": "19070009",
@@ -1282,17 +1346,17 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
-    "clearance_mm": 120
+    "max_cooler_height": 165,
+    "clearance_mm": 330
   },
   {
     "sku": "19070012",
@@ -1301,17 +1365,17 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
-    "clearance_mm": 120
+    "max_cooler_height": 166,
+    "clearance_mm": 330
   },
   {
     "sku": "19070013",
@@ -1320,17 +1384,17 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
-    "clearance_mm": 120
+    "max_cooler_height": 167,
+    "clearance_mm": 330
   },
   {
     "sku": "19070608",
@@ -1339,16 +1403,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -1360,12 +1424,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -1377,12 +1443,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 145,
     "clearance_mm": 330
   },
   {
@@ -1395,12 +1462,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -1412,12 +1480,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -1429,12 +1499,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1446,12 +1518,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -1463,14 +1537,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -1482,12 +1554,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -1499,12 +1573,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1516,12 +1592,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1534,6 +1612,7 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1552,6 +1631,7 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -1569,12 +1649,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1586,12 +1668,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 186,
     "clearance_mm": 330
   },
   {
@@ -1610,7 +1694,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 120,
     "clearance_mm": 330
   },
   {
@@ -1623,7 +1707,7 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -1641,12 +1725,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1659,7 +1744,7 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -1676,7 +1761,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -1693,12 +1780,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -1710,14 +1798,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -1729,12 +1815,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 130,
     "clearance_mm": 330
   },
   {
@@ -1746,12 +1833,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 140,
     "clearance_mm": 330
   },
   {
@@ -1769,7 +1858,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1787,7 +1876,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1799,12 +1888,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -1816,7 +1907,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -1833,14 +1926,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -1852,12 +1943,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -1869,12 +1962,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -1886,12 +1981,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -1903,12 +2000,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -1920,12 +2019,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -1935,17 +2036,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 120
+    "clearance_mm": 330
   },
   {
     "sku": "220101736",
@@ -1954,11 +2054,10 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2011,11 +2110,11 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ATX",
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2032,12 +2131,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -2057,7 +2158,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 360
+    "clearance_mm": 330
   },
   {
     "sku": "220103049",
@@ -2068,12 +2169,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -2085,7 +2188,8 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2100,15 +2204,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 162,
     "clearance_mm": 330
   },
   {
@@ -2118,15 +2223,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
+      "ITX",
       "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 162,
     "clearance_mm": 330
   },
   {
@@ -2138,12 +2244,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2155,12 +2263,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2170,10 +2280,10 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2209,12 +2319,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 166,
     "clearance_mm": 330
   },
   {
@@ -2226,12 +2338,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -2244,12 +2358,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 167,
     "clearance_mm": 330
   },
   {
@@ -2262,6 +2377,7 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -2318,7 +2434,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2330,13 +2446,12 @@
     "type": "case",
     "form_factor": "mATX",
     "supported_mb_form_factors": [
-      "mATX",
-      "ITX"
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2348,12 +2463,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -2365,12 +2482,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -2382,12 +2501,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -2400,12 +2521,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -2423,7 +2545,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -2435,12 +2557,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -2452,12 +2576,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 166,
     "clearance_mm": 330
   },
   {
@@ -2469,12 +2595,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2486,12 +2613,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -2503,7 +2632,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2520,12 +2651,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2537,7 +2669,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2572,12 +2706,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2590,12 +2726,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2607,12 +2744,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2624,12 +2763,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2641,12 +2782,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2658,12 +2801,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2675,14 +2820,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -2695,13 +2838,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -2720,7 +2863,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -2739,7 +2882,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2752,13 +2895,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -2771,13 +2914,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2790,13 +2933,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -2808,12 +2951,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2826,8 +2970,7 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -2844,12 +2987,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -2861,12 +3006,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -2878,12 +3025,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -2895,12 +3044,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -2912,12 +3063,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -2929,12 +3082,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -2946,12 +3101,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2963,12 +3120,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2980,12 +3139,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -2995,14 +3156,16 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -3021,7 +3184,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "240200102",
@@ -3032,12 +3195,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 163,
     "clearance_mm": 330
   },
   {
@@ -3055,7 +3220,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -3067,12 +3232,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -3103,12 +3269,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -3123,11 +3290,10 @@
       "ITX"
     ],
     "supported_psu_form_factors": [
-      "SFX",
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 400
+    "clearance_mm": 330
   },
   {
     "sku": "241004810",
@@ -3141,11 +3307,10 @@
       "ITX"
     ],
     "supported_psu_form_factors": [
-      "SFX",
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 400
+    "clearance_mm": 330
   },
   {
     "sku": "241105136",
@@ -3156,12 +3321,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -3173,12 +3340,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3197,7 +3366,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 157,
     "clearance_mm": 330
   },
   {
@@ -3210,12 +3379,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 400,
     "clearance_mm": 330
   },
   {
@@ -3234,7 +3404,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -3252,7 +3422,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 158,
     "clearance_mm": 330
   },
   {
@@ -3264,12 +3434,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3281,12 +3453,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3298,12 +3472,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -3315,12 +3491,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3332,12 +3510,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -3349,12 +3529,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 180,
     "clearance_mm": 330
   },
   {
@@ -3366,12 +3548,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -3400,12 +3584,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 164,
     "clearance_mm": 330
   },
   {
@@ -3418,12 +3603,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
+      "ATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3442,7 +3628,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3461,7 +3647,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 400,
     "clearance_mm": 330
   },
   {
@@ -3473,12 +3659,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 164,
     "clearance_mm": 330
   },
   {
@@ -3490,7 +3677,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -3505,8 +3694,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -3523,15 +3713,17 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 145,
-    "clearance_mm": 145
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204213",
@@ -3540,15 +3732,17 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 145,
-    "clearance_mm": 145
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204385",
@@ -3557,8 +3751,10 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -3583,8 +3779,8 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 157,
-    "clearance_mm": 157
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250415484",
@@ -3593,8 +3789,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "mATX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
       "mATX",
       "ITX"
     ],
@@ -3611,8 +3808,10 @@
     "stock_status": "out_of_stock",
     "promo": "77% discount",
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -3628,8 +3827,10 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -3655,7 +3856,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "250804814",
@@ -3673,8 +3874,8 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 157,
-    "clearance_mm": 157
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250904016",
@@ -3692,8 +3893,8 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 157,
-    "clearance_mm": 157
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250904050",
@@ -3711,8 +3912,8 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 157,
-    "clearance_mm": 157
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250904069",
@@ -3731,7 +3932,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "250904070",
@@ -3749,8 +3950,8 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 157,
-    "clearance_mm": 157
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251002214",
@@ -3759,8 +3960,10 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ITX",
+    "form_factor": "ATX",
     "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
       "ITX"
     ],
     "supported_psu_form_factors": [
@@ -3779,13 +3982,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3798,13 +4001,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3817,13 +4020,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3835,12 +4038,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -3852,14 +4057,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 190,
     "clearance_mm": 330
   },
   {
@@ -3878,7 +4081,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -3897,7 +4100,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -3915,7 +4118,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 140,
     "clearance_mm": 330
   },
   {
@@ -3934,7 +4137,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 185,
     "clearance_mm": 330
   },
   {
@@ -3952,7 +4155,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -3965,13 +4168,12 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -3984,13 +4186,13 @@
     "form_factor": "ATX",
     "supported_mb_form_factors": [
       "ATX",
-      "mATX",
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -4002,12 +4204,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4019,12 +4223,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4036,12 +4242,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4053,12 +4261,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -4070,12 +4279,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -4087,12 +4297,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -4104,12 +4315,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 155,
     "clearance_mm": 330
   },
   {
@@ -4126,7 +4338,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 67,
     "clearance_mm": 330
   },
   {
@@ -4138,12 +4350,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -4155,12 +4369,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -4172,12 +4388,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 161,
     "clearance_mm": 330
   },
   {
@@ -4189,12 +4407,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 166,
     "clearance_mm": 330
   },
   {
@@ -4206,12 +4426,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 198,
     "clearance_mm": 330
   },
   {
@@ -4223,12 +4445,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -4245,7 +4469,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4262,7 +4486,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4274,7 +4498,8 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -4291,12 +4516,13 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 150,
     "clearance_mm": 330
   },
   {
@@ -4308,14 +4534,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -4335,7 +4559,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "231103622",
@@ -4353,7 +4577,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "231103623",
@@ -4371,7 +4595,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "231103625",
@@ -4390,7 +4614,7 @@
       "ATX"
     ],
     "max_cooler_height": 160,
-    "clearance_mm": 160
+    "clearance_mm": 330
   },
   {
     "sku": "231103626",
@@ -4409,7 +4633,7 @@
       "ATX"
     ],
     "max_cooler_height": 170,
-    "clearance_mm": 170
+    "clearance_mm": 330
   },
   {
     "sku": "231103627",
@@ -4428,7 +4652,7 @@
       "ATX"
     ],
     "max_cooler_height": 170,
-    "clearance_mm": 170
+    "clearance_mm": 330
   },
   {
     "sku": "231103628",
@@ -4447,7 +4671,7 @@
       "ATX"
     ],
     "max_cooler_height": 180,
-    "clearance_mm": 180
+    "clearance_mm": 330
   },
   {
     "sku": "240302565",
@@ -4465,7 +4689,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 166,
     "clearance_mm": 330
   },
   {
@@ -4477,7 +4701,9 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -4501,7 +4727,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -4520,7 +4746,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -4538,7 +4764,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 157,
     "clearance_mm": 330
   },
   {
@@ -4551,12 +4777,13 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -4569,7 +4796,8 @@
     "form_factor": "mATX",
     "supported_mb_form_factors": [
       "mATX",
-      "ITX"
+      "ITX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
@@ -4586,12 +4814,14 @@
     "type": "case",
     "form_factor": "ITX",
     "supported_mb_form_factors": [
-      "ITX"
+      "ITX",
+      "mATX",
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 430,
     "clearance_mm": 330
   },
   {
@@ -4609,7 +4839,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -4621,14 +4851,12 @@
     "type": "case",
     "form_factor": "ATX",
     "supported_mb_form_factors": [
-      "ATX",
-      "mATX",
-      "ITX"
+      "ATX"
     ],
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 170,
     "clearance_mm": 330
   },
   {
@@ -4647,7 +4875,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 165,
     "clearance_mm": 330
   },
   {
@@ -4665,7 +4893,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   },
   {
@@ -4703,7 +4931,7 @@
     "supported_psu_form_factors": [
       "ATX"
     ],
-    "max_cooler_height": 160,
+    "max_cooler_height": 175,
     "clearance_mm": 330
   }
 ]

@@ -27,7 +27,7 @@
     "promo": "28% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "241003863",
@@ -37,7 +37,7 @@
     "promo": "41% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "220800030",
@@ -57,7 +57,7 @@
     "promo": "43% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "241003867",
@@ -67,7 +67,7 @@
     "promo": "41% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "250116202",
@@ -87,7 +87,7 @@
     "promo": "38% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "231002129",
@@ -97,7 +97,7 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "251014345",
@@ -107,7 +107,7 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "251204779",
@@ -127,7 +127,7 @@
     "promo": "29% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95
   },
   {
     "sku": "19070059",
@@ -167,7 +167,7 @@
     "promo": "21% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 58
   },
   {
     "sku": "260305656",
@@ -177,7 +177,7 @@
     "promo": "20% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 250
   },
   {
     "sku": "241100295",
@@ -187,7 +187,7 @@
     "promo": "20% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "220800024",
@@ -227,7 +227,7 @@
     "promo": "13% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95
   },
   {
     "sku": "211208132",
@@ -277,7 +277,7 @@
     "promo": "8% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "231204440",
@@ -317,7 +317,7 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60
   },
   {
     "sku": "250301292",
@@ -327,7 +327,7 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170
   },
   {
     "sku": "19070062",
@@ -337,7 +337,7 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 95
   },
   {
     "sku": "260304019",
@@ -347,7 +347,7 @@
     "promo": "3% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 200
   },
   {
     "sku": "1805132",
@@ -367,7 +367,7 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "200302000",
@@ -387,7 +387,7 @@
     "promo": null,
     "type": "cpu",
     "socket": "TR4",
-    "tdp": 65
+    "tdp": 180
   },
   {
     "sku": "200500556",
@@ -417,7 +417,7 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "211208138",
@@ -447,7 +447,7 @@
     "promo": "39% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "220800022",
@@ -487,7 +487,7 @@
     "promo": "30% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "211012373",
@@ -497,7 +497,7 @@
     "promo": "27% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "211208135",
@@ -517,7 +517,7 @@
     "promo": "26% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "200500953",
@@ -536,8 +536,8 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "cpu",
-    "socket": "FCLGA1700",
-    "tdp": 65
+    "socket": "FC1700",
+    "tdp": 125
   },
   {
     "sku": "231101852",
@@ -547,7 +547,7 @@
     "promo": "24% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "231002130",
@@ -557,7 +557,7 @@
     "promo": "22% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "241003868",
@@ -567,7 +567,7 @@
     "promo": "20% discount",
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "220800021",
@@ -577,7 +577,7 @@
     "promo": "19% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 10
   },
   {
     "sku": "201100012",
@@ -587,7 +587,7 @@
     "promo": "18% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "211208128",
@@ -597,7 +597,7 @@
     "promo": "16% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60
   },
   {
     "sku": "211012372",
@@ -607,7 +607,7 @@
     "promo": "15% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "221000496",
@@ -617,7 +617,7 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "231204439",
@@ -627,7 +627,7 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 58
   },
   {
     "sku": "201100013",
@@ -637,7 +637,7 @@
     "promo": "14% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "220800023",
@@ -657,7 +657,7 @@
     "promo": "12% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "220919568",
@@ -667,7 +667,7 @@
     "promo": "12% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170
   },
   {
     "sku": "221000501",
@@ -677,7 +677,7 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "221000499",
@@ -687,7 +687,7 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "221000498",
@@ -697,7 +697,7 @@
     "promo": "11% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "221000500",
@@ -707,7 +707,7 @@
     "promo": "10% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "250301293",
@@ -717,7 +717,7 @@
     "promo": "10% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "230603085",
@@ -757,7 +757,7 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170
   },
   {
     "sku": "240103590",
@@ -767,7 +767,7 @@
     "promo": "9% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "231103713",
@@ -776,8 +776,8 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "230603290",
@@ -787,7 +787,7 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "210300857",
@@ -797,7 +797,7 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1200",
-    "tdp": 65
+    "tdp": 58
   },
   {
     "sku": "211012371",
@@ -807,7 +807,7 @@
     "promo": "7% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "231103712",
@@ -816,8 +816,8 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "210800165",
@@ -847,7 +847,7 @@
     "promo": "6% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 46
   },
   {
     "sku": "260106723",
@@ -857,7 +857,7 @@
     "promo": "5% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "231204442",
@@ -887,7 +887,7 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60
   },
   {
     "sku": "230100131",
@@ -897,7 +897,7 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 60
   },
   {
     "sku": "230100133",
@@ -927,7 +927,7 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 170
   },
   {
     "sku": "240803312",
@@ -937,7 +937,7 @@
     "promo": "4% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 120
   },
   {
     "sku": "200500549",
@@ -967,7 +967,7 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM4",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "220802537",
@@ -976,8 +976,8 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280
   },
   {
     "sku": "220919569",
@@ -987,7 +987,7 @@
     "promo": "2% discount",
     "type": "cpu",
     "socket": "AM5",
-    "tdp": 65
+    "tdp": 105
   },
   {
     "sku": "240103589",
@@ -1026,8 +1026,8 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280
   },
   {
     "sku": "220801966",
@@ -1036,8 +1036,8 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280
   },
   {
     "sku": "250714657",
@@ -1046,8 +1046,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "260503497",
@@ -1057,7 +1057,7 @@
     "promo": null,
     "type": "cpu",
     "socket": "1700",
-    "tdp": 65
+    "tdp": 125
   },
   {
     "sku": "250116206",
@@ -1106,8 +1106,8 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cpu",
-    "socket": "FCLGA1700",
-    "tdp": 65
+    "socket": "FC1700",
+    "tdp": 150
   },
   {
     "sku": "231103714",
@@ -1116,8 +1116,8 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "231103715",
@@ -1126,8 +1126,8 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "230603082",
@@ -1136,8 +1136,8 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "cpu",
-    "socket": "SWRX8",
-    "tdp": 65
+    "socket": "sWRX8",
+    "tdp": 280
   },
   {
     "sku": "240803310",
@@ -1186,8 +1186,8 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "231103710",
@@ -1196,8 +1196,8 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "231103637",
@@ -1206,8 +1206,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "240103591",
@@ -1236,8 +1236,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803172",
@@ -1246,8 +1246,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803180",
@@ -1256,8 +1256,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803186",
@@ -1266,8 +1266,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803193",
@@ -1276,8 +1276,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803199",
@@ -1286,8 +1286,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "250803213",
@@ -1296,8 +1296,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cpu",
-    "socket": "STR5",
-    "tdp": 65
+    "socket": "sTR5",
+    "tdp": 350
   },
   {
     "sku": "260305644",
@@ -1307,7 +1307,7 @@
     "promo": null,
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 159
   },
   {
     "sku": "260305652",
@@ -1317,6 +1317,6 @@
     "promo": null,
     "type": "cpu",
     "socket": "1851",
-    "tdp": 65
+    "tdp": 159
   }
 ]

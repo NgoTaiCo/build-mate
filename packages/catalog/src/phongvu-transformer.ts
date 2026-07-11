@@ -1,6 +1,6 @@
 import { CatalogComponent, ComponentType } from "./types.js";
 
-interface PhongVuProduct {
+export interface PhongVuProduct {
   sku: string;
   name: string;
   latestPrice: string;
@@ -31,7 +31,7 @@ function parsePrice(priceStr: string | number): number | null {
   }
 }
 
-function extractSharedFields(product: PhongVuProduct): ExtractedFields {
+export function extractSharedFields(product: PhongVuProduct): ExtractedFields {
   const price = parsePrice(product.latestPrice);
   if (price === null) return null as any;
 
@@ -191,9 +191,9 @@ function extractCooler(product: PhongVuProduct): CatalogComponent | null {
 }
 
 // A case supports its own form factor plus every smaller one.
-const FORM_FACTOR_ORDER = ["E-ATX", "ATX", "mATX", "ITX"] as const;
+export const FORM_FACTOR_ORDER = ["E-ATX", "ATX", "mATX", "ITX"] as const;
 
-function normalizeFormFactor(raw: string): "E-ATX" | "ATX" | "mATX" | "ITX" {
+export function normalizeFormFactor(raw: string): "E-ATX" | "ATX" | "mATX" | "ITX" {
   const u = raw.toUpperCase().replace(/[\s-]/g, "");
   if (u === "EATX") return "E-ATX";
   if (u === "MICROATX" || u === "MATX") return "mATX";
@@ -201,7 +201,7 @@ function normalizeFormFactor(raw: string): "E-ATX" | "ATX" | "mATX" | "ITX" {
   return "ATX";
 }
 
-function supportedMbFormFactors(caseFf: "E-ATX" | "ATX" | "mATX" | "ITX"): string[] {
+export function supportedMbFormFactors(caseFf: "E-ATX" | "ATX" | "mATX" | "ITX"): string[] {
   const idx = FORM_FACTOR_ORDER.indexOf(caseFf);
   // Everything from the case's size on down; drop E-ATX from the mainboard
   // list since Compiler mainboards are ATX/mATX/ITX.
