@@ -14,6 +14,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@buildmate/catalog": "*",
     "@buildmate/compiler": "*",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^3.24.0"
