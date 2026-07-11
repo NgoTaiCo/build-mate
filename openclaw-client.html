@@ -380,6 +380,13 @@
                     </select>
                 </div>
 
+                <div class="config-group">
+                    <label>
+                        <input type="checkbox" id="skipDeviceAuth">
+                        Skip Device Auth
+                    </label>
+                </div>
+
                 <button class="btn-connect" id="connectBtn">Connect</button>
             </div>
 
@@ -411,6 +418,7 @@
             port: document.getElementById('port'),
             token: document.getElementById('token'),
             model: document.getElementById('model'),
+            skipDeviceAuth: document.getElementById('skipDeviceAuth'),
             connectBtn: document.getElementById('connectBtn'),
             messageInput: document.getElementById('messageInput'),
             sendBtn: document.getElementById('sendBtn'),
@@ -527,19 +535,6 @@
                             const role = 'operator';
                             const scopes = ['operator.read', 'operator.write'];
 
-                            const payloadStr = createSignaturePayload(
-                                state.deviceId,
-                                clientId,
-                                clientMode,
-                                role,
-                                scopes,
-                                ts,
-                                token,
-                                nonce
-                            );
-
-                            const signature = signPayload(state.privateKey, payloadStr);
-
                             const connectReq = {
                                 type: 'req',
                                 id: `req_${Date.now()}`,
@@ -556,16 +551,33 @@
                                     },
                                     role,
                                     scopes,
-                                    auth: { token },
-                                    device: {
-                                        id: state.deviceId,
-                                        publicKey: publicKeyBase64url,
-                                        signature,
-                                        signedAt: ts,
-                                        nonce
-                                    }
+                                    auth: { token }
                                 }
                             };
+
+                            // Only add device auth if not skipped
+                            if (!elements.skipDeviceAuth.checked) {
+                                const payloadStr = createSignaturePayload(
+                                    state.deviceId,
+                                    clientId,
+                                    clientMode,
+                                    role,
+                                    scopes,
+                                    ts,
+                                    token,
+                                    nonce
+                                );
+
+                                const signature = signPayload(state.privateKey, payloadStr);
+
+                                connectReq.params.device = {
+                                    id: state.deviceId,
+                                    publicKey: publicKeyBase64url,
+                                    signature,
+                                    signedAt: ts,
+                                    nonce
+                                };
+                            }
 
                             state.ws.send(JSON.stringify(connectReq));
                         }
