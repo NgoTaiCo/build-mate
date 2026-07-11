@@ -29,8 +29,8 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 **Purpose**: Project initialization — `packages/compiler/` self-contained package (ADR-0001 §4.4)
 
-- [ ] T001 Create packages/compiler/package.json with name `@buildmate/compiler`, scripts `test` (node --test via tsx), `typecheck` (tsc --noEmit), dev deps typescript/tsx/@types/node in packages/compiler/package.json
-- [ ] T002 [P] Create packages/compiler/tsconfig.json with strict mode, target ES2023, module NodeNext, outDir dist in packages/compiler/tsconfig.json
+- [X] T001 Create packages/compiler/package.json with name `@buildmate/compiler`, scripts `test` (node --test via tsx), `typecheck` (tsc --noEmit), dev deps typescript/tsx/@types/node in packages/compiler/package.json
+- [X] T002 [P] Create packages/compiler/tsconfig.json with strict mode, target ES2023, module NodeNext, outDir dist in packages/compiler/tsconfig.json
 
 **Checkpoint**: Package skeleton ready. `cd packages/compiler && npm install` should succeed.
 
@@ -42,8 +42,8 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T003 Define ErrorCode constants + names in packages/compiler/src/codes.ts — stable codes E001 SOCKET_MISMATCH, E002 RAM_GEN_MISMATCH, E003 MISSING_COMPONENT, E004 COOLER_CLEARANCE_MISMATCH, E005 FORM_FACTOR_MISMATCH, E006 MISSING_ATTRIBUTE, W001 PSU_TIGHT (per data-model.md §6, research.md §7)
-- [ ] T004 [P] Define TypeScript types in packages/compiler/src/types.ts — Build, Component discriminated union of 7 types (CPU/Mainboard/RAM/PSU/Cooler/Case/Storage + GPU optional), CompilerError, RepairPlan, Fix, Change, CompilerResult, ErrorCode (per data-model.md §1-§5). PSU type MUST NOT have `tdp` or `efficiency_rating` fields (research.md §11, §12). Storage type has only `type`+`id`+optional `tdp` (research.md §9).
+- [X] T003 Define ErrorCode constants + names in packages/compiler/src/codes.ts — stable codes E001 SOCKET_MISMATCH, E002 RAM_GEN_MISMATCH, E003 MISSING_COMPONENT, E004 COOLER_CLEARANCE_MISMATCH, E005 FORM_FACTOR_MISMATCH, E006 MISSING_ATTRIBUTE, W001 PSU_TIGHT (per data-model.md §6, research.md §7)
+- [X] T004 [P] Define TypeScript types in packages/compiler/src/types.ts — Build, Component discriminated union of 7 types (CPU/Mainboard/RAM/PSU/Cooler/Case/Storage + GPU optional), CompilerError, RepairPlan, Fix, Change, CompilerResult, ErrorCode (per data-model.md §1-§5). PSU type MUST NOT have `tdp` or `efficiency_rating` fields (research.md §11, §12). Storage type has only `type`+`id`+optional `tdp` (research.md §9).
 
 **Checkpoint**: Foundation ready — codes + types compile (`npx tsc --noEmit` passes on these 2 files). User story implementation can now begin.
 
@@ -57,23 +57,23 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 ### Tests for User Story 1 (TDD — write first, must FAIL before implementation)
 
-- [ ] T005 [P] [US1] Write socket rule tests (≥3 cases: pass / fail E001 / boundary) in packages/compiler/tests/socket.test.ts
-- [ ] T006 [P] [US1] Write ram-gen rule tests (≥3 cases: pass / fail E002 / multi-stick) in packages/compiler/tests/ram-gen.test.ts
-- [ ] T007 [P] [US1] Write missing-component rule tests (≥4 cases: each-of-7-types-missing / all-7-present / empty-build / non-required-type-present) in packages/compiler/tests/missing.test.ts
-- [ ] T008 [P] [US1] Write cooler clearance rule tests (≥3 cases: pass / fail E004 / boundary height===max) in packages/compiler/tests/cooler.test.ts
-- [ ] T009 [P] [US1] Write form-factor rule tests (≥3 cases: pass / fail E005 mainboard / fail E005 PSU) in packages/compiler/tests/form-factor.test.ts
-- [ ] T010 [US1] Write validate orchestration tests (multi-error simultaneous / empty-build all-E003 / missing-attribute E006 edge / deterministic order) in packages/compiler/tests/validate.test.ts
+- [X] T005 [P] [US1] Write socket rule tests (≥3 cases: pass / fail E001 / boundary) in packages/compiler/tests/socket.test.ts
+- [X] T006 [P] [US1] Write ram-gen rule tests (≥3 cases: pass / fail E002 / multi-stick) in packages/compiler/tests/ram-gen.test.ts
+- [X] T007 [P] [US1] Write missing-component rule tests (≥4 cases: each-of-7-types-missing / all-7-present / empty-build / non-required-type-present) in packages/compiler/tests/missing.test.ts
+- [X] T008 [P] [US1] Write cooler clearance rule tests (≥3 cases: pass / fail E004 / boundary height===max) in packages/compiler/tests/cooler.test.ts
+- [X] T009 [P] [US1] Write form-factor rule tests (≥3 cases: pass / fail E005 mainboard / fail E005 PSU) in packages/compiler/tests/form-factor.test.ts
+- [X] T010 [US1] Write validate orchestration tests (multi-error simultaneous / empty-build all-E003 / missing-attribute E006 edge / deterministic order) in packages/compiler/tests/validate.test.ts
 
 ### Implementation for User Story 1
 
-- [ ] T011 [P] [US1] Implement check-attr helper (returns E006 MISSING_ATTRIBUTE error when a required attribute is absent on a component; pure function, no crash) in packages/compiler/src/rules/check-attr.ts
-- [ ] T012 [P] [US1] Implement socket rule E001 (compare cpu.socket vs mainboard.socket; use check-attr for missing fields) in packages/compiler/src/rules/socket.ts
-- [ ] T013 [P] [US1] Implement ram-gen rule E002 (check every RAM stick generation ∈ cpu.ram_gen_supported AND ∈ mainboard.ram_gen_supported; use check-attr) in packages/compiler/src/rules/ram-gen.ts
-- [ ] T014 [P] [US1] Implement missing-component rule E003 (check ≥1 of each 7 required types: cpu, mainboard, ram, psu, cooler, case, storage; return E003 per missing type with `component_refs: ["type:<missing>"]`) in packages/compiler/src/rules/missing.ts
-- [ ] T015 [P] [US1] Implement cooler clearance rule E004 (cooler.height > case.max_cooler_height → E004; boundary height===max → pass; use check-attr) in packages/compiler/src/rules/cooler.ts
-- [ ] T016 [P] [US1] Implement form-factor rule E005 (mainboard.form_factor ∈ case.supported_mb_form_factors AND psu.form_factor ∈ case.supported_psu_form_factors; use check-attr) in packages/compiler/src/rules/form-factor.ts
-- [ ] T017 [US1] Implement validate.ts orchestration (rule order: E003 missing → E006 missing-attr → 5 compat rules; NO short-circuit; deterministic output order; collect all errors) in packages/compiler/src/validate.ts
-- [ ] T018 [US1] Implement detectErrors function + barrel export in packages/compiler/src/index.ts (delegates to validate.ts; export detectErrors)
+- [X] T011 [P] [US1] Implement check-attr helper (returns E006 MISSING_ATTRIBUTE error when a required attribute is absent on a component; pure function, no crash) in packages/compiler/src/rules/check-attr.ts
+- [X] T012 [P] [US1] Implement socket rule E001 (compare cpu.socket vs mainboard.socket; use check-attr for missing fields) in packages/compiler/src/rules/socket.ts
+- [X] T013 [P] [US1] Implement ram-gen rule E002 (check every RAM stick generation ∈ cpu.ram_gen_supported AND ∈ mainboard.ram_gen_supported; use check-attr) in packages/compiler/src/rules/ram-gen.ts
+- [X] T014 [P] [US1] Implement missing-component rule E003 (check ≥1 of each 7 required types: cpu, mainboard, ram, psu, cooler, case, storage; return E003 per missing type with `component_refs: ["type:<missing>"]`) in packages/compiler/src/rules/missing.ts
+- [X] T015 [P] [US1] Implement cooler clearance rule E004 (cooler.height > case.max_cooler_height → E004; boundary height===max → pass; use check-attr) in packages/compiler/src/rules/cooler.ts
+- [X] T016 [P] [US1] Implement form-factor rule E005 (mainboard.form_factor ∈ case.supported_mb_form_factors AND psu.form_factor ∈ case.supported_psu_form_factors; use check-attr) in packages/compiler/src/rules/form-factor.ts
+- [X] T017 [US1] Implement validate.ts orchestration (rule order: E003 missing → E006 missing-attr → 5 compat rules; NO short-circuit; deterministic output order; collect all errors) in packages/compiler/src/validate.ts
+- [X] T018 [US1] Implement detectErrors function + barrel export in packages/compiler/src/index.ts (delegates to validate.ts; export detectErrors)
 
 **Checkpoint**: `npm test` passes for socket/ram-gen/missing/cooler/form-factor/validate suites (≥15 tests green). `detectErrors(build)` returns E001-E006 correctly. US1 independently testable — MVP deliverable.
 
@@ -87,12 +87,12 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 ### Tests for User Story 2 (TDD)
 
-- [ ] T019 [P] [US2] Write repair plan tests (round-trip for E001-E006: construct errors → repairBuild → apply 1 fix/error → re-detect → original error gone; 1:1 mapping; ≥1 fix per error; constraint-based target_value not SKU) in packages/compiler/tests/repair.test.ts
+- [X] T019 [P] [US2] Write repair plan tests (round-trip for E001-E006: construct errors → repairBuild → apply 1 fix/error → re-detect → original error gone; 1:1 mapping; ≥1 fix per error; constraint-based target_value not SKU) in packages/compiler/tests/repair.test.ts
 
 ### Implementation for User Story 2
 
-- [ ] T020 [US2] Implement repair.ts (map each error code E001-E006 → ≥1 alternative Fix with constraint-based Changes per data-model.md §4 + contracts/compiler-api.md §3; E001 → 2 fixes [change cpu.socket OR change mainboard.socket]; E003 → 1 fix [add missing type]; E006 → 1 fix [add missing attribute]; round-trip invariant) in packages/compiler/src/repair.ts
-- [ ] T021 [US2] Implement repairBuild function + barrel export in packages/compiler/src/index.ts (signature: `repairBuild(build, errors): RepairPlan[]`; export repairBuild)
+- [X] T020 [US2] Implement repair.ts (map each error code E001-E006 → ≥1 alternative Fix with constraint-based Changes per data-model.md §4 + contracts/compiler-api.md §3; E001 → 2 fixes [change cpu.socket OR change mainboard.socket]; E003 → 1 fix [add missing type]; E006 → 1 fix [add missing attribute]; round-trip invariant) in packages/compiler/src/repair.ts
+- [X] T021 [US2] Implement repairBuild function + barrel export in packages/compiler/src/index.ts (signature: `repairBuild(build, errors): RepairPlan[]`; export repairBuild)
 
 **Checkpoint**: `npm test` passes repair suite. `repairBuild(build, errors)` returns 1:1 plan. US1 + US2 both independently functional.
 
@@ -106,13 +106,13 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 ### Tests for User Story 3 (TDD)
 
-- [ ] T022 [P] [US3] Write psu rule tests (≥3 cases: pass / W001 warn / boundary wattage===TDP×1.2 / PSU-tdp-excluded malformed case) in packages/compiler/tests/psu.test.ts
+- [X] T022 [P] [US3] Write psu rule tests (≥3 cases: pass / W001 warn / boundary wattage===TDP×1.2 / PSU-tdp-excluded malformed case) in packages/compiler/tests/psu.test.ts
 
 ### Implementation for User Story 3
 
-- [ ] T023 [US3] Implement psu rule W001 (compute tdp_total = sum of all components where `type !== "psu" && typeof tdp === "number" && tdp > 0`; if `psu.wattage < tdp_total * 1.2` → W001 warning with severity "warning"; boundary `===` → pass; use check-attr for missing psu.wattage) in packages/compiler/src/rules/psu.ts
-- [ ] T024 [US3] Integrate psu rule into validate.ts orchestration (add W001 to output after 5 compat rules; W001 is warning not error — does not block; preserve deterministic order) in packages/compiler/src/validate.ts
-- [ ] T025 [US3] Extend repair.ts to handle W001 fix (1 fix: increase `psu.wattage` to `target_value: ceil(tdp_total * 1.2)`; strategy replace_component; note: efficiency rating NOT consulted per research.md §12) in packages/compiler/src/repair.ts
+- [X] T023 [US3] Implement psu rule W001 (compute tdp_total = sum of all components where `type !== "psu" && typeof tdp === "number" && tdp > 0`; if `psu.wattage < tdp_total * 1.2` → W001 warning with severity "warning"; boundary `===` → pass; use check-attr for missing psu.wattage) in packages/compiler/src/rules/psu.ts
+- [X] T024 [US3] Integrate psu rule into validate.ts orchestration (add W001 to output after 5 compat rules; W001 is warning not error — does not block; preserve deterministic order) in packages/compiler/src/validate.ts
+- [X] T025 [US3] Extend repair.ts to handle W001 fix (1 fix: increase `psu.wattage` to `target_value: ceil(tdp_total * 1.2)`; strategy replace_component; note: efficiency rating NOT consulted per research.md §12) in packages/compiler/src/repair.ts
 
 **Checkpoint**: `npm test` passes psu suite. All 7 error/warning codes (E001-E006, W001) handled by detect + repair. US1+US2+US3 all independently functional.
 
@@ -122,11 +122,11 @@ description: "Task list for Build Compiler Deterministic Core feature implementa
 
 **Purpose**: Finalize `compileBuild` entry point, smoke test, and Constitution Quality Gate validation.
 
-- [ ] T026 Implement compileBuild function (compose detectErrors + repairBuild + is_valid; `compileBuild(build) = { errors: detectErrors(build), repair_plan: repairBuild(build, detectErrors(build)), is_valid: !detectErrors(build).some(e => e.severity === "error") }`) + barrel export in packages/compiler/src/index.ts
-- [ ] T027 [P] Complete smoke test script (3 scenarios: full 7-type build with E001 / missing-storage triggers E003 / PSU-tdp-exclusion verify) in packages/compiler/scripts/smoke.ts per quickstart.md
-- [ ] T028 [P] Write packages/compiler/README.md (public API: compileBuild/detectErrors/repairBuild signatures, error code catalog table E001-E006/W001, usage example, `npm test` gate)
-- [ ] T029 Run quickstart.md validation — Constitution Quality Gate: `cd packages/compiler && npm install && npm test && npm run typecheck && npx tsx scripts/smoke.ts` — ALL must pass (≥15 tests green, 0 typecheck errors, smoke output matches expected)
-- [ ] T030 Verify FR-013 out-of-scope compliance (no RGB/aesthetic/price/monitor-performance/PSU-rating logic anywhere in src/; no Monitor entity, no efficiency_rating field on PSU, no storage capacity check — grep + code review)
+- [X] T026 Implement compileBuild function (compose detectErrors + repairBuild + is_valid; `compileBuild(build) = { errors: detectErrors(build), repair_plan: repairBuild(build, detectErrors(build)), is_valid: !detectErrors(build).some(e => e.severity === "error") }`) + barrel export in packages/compiler/src/index.ts
+- [X] T027 [P] Complete smoke test script (3 scenarios: full 7-type build with E001 / missing-storage triggers E003 / PSU-tdp-exclusion verify) in packages/compiler/scripts/smoke.ts per quickstart.md
+- [X] T028 [P] Write packages/compiler/README.md (public API: compileBuild/detectErrors/repairBuild signatures, error code catalog table E001-E006/W001, usage example, `npm test` gate)
+- [X] T029 Run quickstart.md validation — Constitution Quality Gate: `cd packages/compiler && npm install && npm test && npm run typecheck && npx tsx scripts/smoke.ts` — ALL must pass (≥15 tests green, 0 typecheck errors, smoke output matches expected)
+- [X] T030 Verify FR-013 out-of-scope compliance (no RGB/aesthetic/price/monitor-performance/PSU-rating logic anywhere in src/; no Monitor entity, no efficiency_rating field on PSU, no storage capacity check — grep + code review)
 
 **Checkpoint**: Constitution Quality Gate `npm test` GREEN. Compiler core ready for wire-up (feature sau, HOUR 8-10 ADR-0003).
 
