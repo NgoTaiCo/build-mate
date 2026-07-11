@@ -1,64 +1,6 @@
 (function () {
   const ROOT_ID = "buildmate-extension-root";
   function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[c]); }
-  function tryParseBuildRecommendation(text) {
-    if (!text) return null;
-    
-    const lines = text.split(/\r?\n/);
-    let tableStartIndex = -1;
-    let tableEndIndex = -1;
-    
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (/^\|[\s\-:]+\|[\s\-:]+(\|[\s\-:]+)*\|?$/.test(line) && i > 0 && lines[i-1].includes('|')) {
-            tableStartIndex = i - 1;
-            tableEndIndex = i + 1;
-            while (tableEndIndex < lines.length && lines[tableEndIndex].trim().startsWith('|')) {
-                tableEndIndex++;
-            }
-            break;
-        }
-    }
-
-    if (tableStartIndex === -1 || tableEndIndex - tableStartIndex < 3) return null;
-
-    const tableLines = lines.slice(tableStartIndex, tableEndIndex);
-    const components = [];
-    
-    for (let i = 2; i < tableLines.length; i++) {
-        const cleanRow = tableLines[i].trim().replace(/^\||\|$/g, '');
-        const cells = cleanRow.split('|').map(c => c.trim());
-        
-        if (cells.length > 1 && (cells[0].toLowerCase().includes("tổng") || cells[1].toLowerCase().includes("tổng"))) {
-            continue;
-        }
-        
-        if (cells.length >= 2 && cells[0] !== "" && cells[1] !== "") {
-            components.push({ category: cells[0], name: cells[1] });
-        }
-    }
-
-    if (components.length === 0) return null;
-
-    let total = "";
-    const totalMatch = text.match(/(?:Tổng|Total|Giá|Chi phí)[^\d]*([~]?[\d.,]+\s*(?:₫|VND|đ))/i);
-    if (totalMatch) {
-      total = totalMatch[1];
-    } else {
-      for (const line of tableLines) {
-         if (line.toLowerCase().includes("tổng")) {
-            const m = line.match(/([~]?[\d.,]+\s*(?:₫|VND|đ))/i);
-            if (m) total = m[1];
-         }
-      }
-    }
-
-    const contentBefore = lines.slice(0, tableStartIndex).join('\n').trim();
-    const contentAfter = lines.slice(tableEndIndex).join('\n').trim();
-    const content = (contentBefore + "\n\n" + contentAfter).trim();
-    
-    return { type: "build_recommendation", build: { components, total: total || "N/A" }, content };
-  }
 
   function parseMarkdown(text) {
     if (!text) return "";
@@ -224,7 +166,7 @@
             } else if (msg.type === "action") {
               contentHtml = `<div class="bm-chat-widget">${actionMarkup()}</div>`;
             } else if (msg.type === "product_recommendation") {
-              contentHtml = `<p class="bm-chat-text">${escapeHtml(msg.content)}</p>
+              contentHtml = `<div class="bm-chat-text">${parseMarkdown(msg.content)}</div>
                 <div class="bm-product-card">
                   <div class="bm-product-image">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -238,7 +180,7 @@
                   </div>
                 </div>`;
             } else if (msg.type === "build_recommendation") {
-              contentHtml = `<p class="bm-chat-text">${escapeHtml(msg.content)}</p>
+              contentHtml = `<div class="bm-chat-text">${parseMarkdown(msg.content)}</div>
                 <div class="bm-build-card">
                   <div class="bm-build-header">
                     <div class="bm-build-header-title">${globalThis.BuildMateI18n.t('buildCardTitle')}</div>
@@ -339,12 +281,7 @@
             handlers.onChatMessage(userMsg, snapshot).then((replyText) => {
               isTyping = false;
               if (replyText) {
-                const parsed = tryParseBuildRecommendation(replyText);
-                if (parsed) {
-                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
-                } else {
-                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
-                }
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
               } else {
                 render();
               }
@@ -370,34 +307,6 @@
         state = { ...state, messages: state.messages.map(m => m.id === button.dataset.messageId ? { ...m, added: true } : m) };
         try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
         render();
-        
-        // Auto-send command to AI
-        const cmd = button.dataset.mockAction === "apply-build" ? 
-          (globalThis.BuildMateI18n.getLang() === 'vi' ? 'Hãy tự động ráp cấu hình này vào trang web cho tôi nhé!' : 'Please add this build configuration to the website!') :
-          (globalThis.BuildMateI18n.getLang() === 'vi' ? 'Hãy add sản phẩm này vào cấu hình cho tôi nhé!' : 'Please add this product to the config!');
-        
-        transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: cmd } });
-        isTyping = true; render();
-        
-        if (handlers.onChatMessage) {
-          handlers.onChatMessage(cmd, snapshot).then((replyText) => {
-            isTyping = false;
-            if (replyText) {
-              const parsed = tryParseBuildRecommendation(replyText);
-              if (parsed) {
-                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
-              } else {
-                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
-              }
-            } else {
-              render();
-            }
-          }).catch(err => {
-            isTyping = false;
-            const errPrefix = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Lỗi kết nối server:' : 'Server connection error:';
-            transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `${errPrefix} ${err.message}` } });
-          });
-        }
       }
     });
     
@@ -416,12 +325,7 @@
             handlers.onChatMessage(val, snapshot).then((replyText) => {
               isTyping = false;
               if (replyText) {
-                const parsed = tryParseBuildRecommendation(replyText);
-                if (parsed) {
-                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
-                } else {
-                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
-                }
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
               } else {
                 render();
               }
