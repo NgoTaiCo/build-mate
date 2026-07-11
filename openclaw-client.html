@@ -502,6 +502,18 @@
             return base64urlEncode(signature);
         }
 
+        function extractChatText(message) {
+            if (!message) return '';
+            if (typeof message.content === 'string') return message.content;
+            if (Array.isArray(message.content)) {
+                return message.content
+                    .filter(part => part.type === 'text' && part.text)
+                    .map(part => part.text)
+                    .join('\n');
+            }
+            return '';
+        }
+
         async function connect() {
             if (state.connected) {
                 disconnect();
@@ -640,12 +652,16 @@
                                 addMessage(`✗ ${data.error.code}: ${data.error.message}`, 'system', true);
                             }
                         }
-                        // Handle streamed chat / agent events
-                        else if (data.type === 'event' && (data.event === 'chat' || data.event === 'agent' || data.event === 'session.message')) {
+                        // Handle streamed chat events
+                        else if (data.type === 'event' && data.event === 'chat') {
                             const p = data.payload || {};
-                            const content = p.content || p.text || p.message?.content || p.delta;
-                            if (content && typeof content === 'string') {
-                                addMessage(content, 'assistant');
+                            // Only show final assistant messages (skip partial/streaming duplicates)
+                            if (p.state === 'final' || p.state === 'error') {
+                                const text = extractChatText(p.message);
+                                if (text) {
+                                    addMessage(text, 'assistant', p.state === 'error');
+                                    state.conversationHistory.push({ role: 'assistant', content: text });
+                                }
                             }
                         }
                         // Ignore noisy events (tick, heartbeat, presence, health)
@@ -696,7 +712,10 @@
                 id: `req_${Date.now()}`,
                 method: 'chat.send',
                 params: {
-                    text: content
+                    sessionKey: state.sessionKey || 'agent:main:main',
+                    agentId: 'main',
+                    message: content,
+                    idempotencyKey: crypto.randomUUID()
                 }
             };
 
