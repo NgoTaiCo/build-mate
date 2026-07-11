@@ -1,5 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerCompileBuildTool } from "./tools/compile-build.js";
+import { registerDetectErrorsTool } from "./tools/detect-errors.js";
+import { registerRepairBuildTool } from "./tools/repair-build.js";
 
 export function createServer(): McpServer {
   const server = new McpServer({
@@ -8,6 +10,8 @@ export function createServer(): McpServer {
   });
 
   registerCompileBuildTool(server);
+  registerDetectErrorsTool(server);
+  registerRepairBuildTool(server);
 
   return server;
 }
