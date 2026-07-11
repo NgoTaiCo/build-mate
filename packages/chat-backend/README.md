@@ -68,6 +68,37 @@ npm run -w @buildmate/chat-backend build
 node packages/chat-backend/dist/index.js
 ```
 
+## Chạy bằng Docker Compose
+
+Service `chat-backend` đã được khai báo trong [docker/docker-compose.yml](../../docker/docker-compose.yml),
+khởi động cùng gateway khi `docker compose up`.
+
+```bash
+cd docker
+docker compose up -d          # start cả openclaw-gateway và chat-backend
+```
+
+Cấu hình qua `docker/.env` (xem `docker/.env.example`):
+- `GATEWAY_TOKEN` — phải khớp token trong `openclaw.json`.
+- `OPENCLAW_DEVICE_SEED` — seed cố định (tạo 1 lần, xem bên dưới).
+- `CHAT_BACKEND_PORT` — port host, mặc định `8790`.
+
+Trong compose, backend tự trỏ tới gateway qua `ws://openclaw-gateway:18790`
+(service name trên compose network). Lần đầu vẫn cần approve device đúng một lần:
+
+```bash
+docker exec openclaw-gateway openclaw devices list --json
+docker exec openclaw-gateway openclaw devices approve <requestId> --token "$GATEWAY_TOKEN"
+```
+
+Approval nằm trong named volume `openclaw-config` nên sống qua mọi lần
+`docker compose up`/recreate — không phải approve lại.
+
+```bash
+curl -s http://localhost:8790/healthz | jq          # kiểm tra ready
+docker logs buildmate-chat-backend                  # xem log
+```
+
 ## API
 
 ### `POST /chat`

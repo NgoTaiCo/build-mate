@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   openclaw-gateway:
     image: openclaw/openclaw:latest
@@ -23,6 +21,28 @@ services:
     shm_size: 1gb
     cap_add:
       - SYS_ADMIN
+
+  chat-backend:
+    build:
+      context: ..
+      dockerfile: packages/chat-backend/Dockerfile
+    image: buildmate/chat-backend:latest
+    container_name: buildmate-chat-backend
+    restart: unless-stopped
+    depends_on:
+      - openclaw-gateway
+    ports:
+      - "${CHAT_BACKEND_PORT:-8790}:8790"
+    environment:
+      # Reach the gateway over the compose network by service name.
+      - OPENCLAW_GATEWAY_URL=ws://openclaw-gateway:18790
+      - OPENCLAW_GATEWAY_TOKEN=${GATEWAY_TOKEN}
+      - OPENCLAW_DEVICE_SEED=${OPENCLAW_DEVICE_SEED}
+      - PORT=8790
+      - REPLY_TIMEOUT_MS=${REPLY_TIMEOUT_MS:-60000}
+      - DEFAULT_AGENT_ID=${DEFAULT_AGENT_ID:-main}
+    env_file:
+      - .env
 
 volumes:
   openclaw-config:
