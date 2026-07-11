@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { transformPhongVuProduct } from "../src/phongvu-transformer.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -60,10 +61,7 @@ async function fetchPhongVuPage(
       sort: "SORT_BY_UNSPECIFIED",
       order: "ORDER_BY_UNSPECIFIED",
     },
-    filter: {
-      priceGte: 1500000,
-      priceLte: 43500000,
-    },
+    filter: {},
     pageSize: PAGE_SIZE,
     page,
     isNeedFeaturedProducts: false,
@@ -110,7 +108,7 @@ async function fetchAllPages(
       allProducts.push(...products);
       page++;
 
-      if (page > 10) {
+      if (page > 100) {
         console.warn(`  Hit page limit (10), stopping for safety`);
         hasMore = false;
       }
@@ -143,9 +141,21 @@ async function fetchAndSaveType(
     allProducts.push(...products);
   }
 
+  // Transform raw API data to CatalogComponent schema
+  const transformed = allProducts
+    .map((product) => transformPhongVuProduct(product, type))
+    .filter((component) => component !== null);
+
   const filePath = resolve(dataDir, `phongvu-catalog-${type}.json`);
-  writeFileSync(filePath, JSON.stringify(allProducts, null, 2));
-  console.log(`  ✓ Saved ${allProducts.length} products to ${filePath}`);
+  writeFileSync(filePath, JSON.stringify(transformed, null, 2));
+  console.log(
+    `  ✓ Saved ${transformed.length} transformed products to ${filePath}`
+  );
+  if (transformed.length < allProducts.length) {
+    console.log(
+      `  ⚠️  Filtered out ${allProducts.length - transformed.length} products (missing required fields)`
+    );
+  }
 }
 
 async function main(): Promise<void> {

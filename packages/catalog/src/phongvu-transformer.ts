@@ -25,7 +25,7 @@ function parsePrice(priceStr: string | number): number | null {
         ? priceStr.replace(/[^0-9]/g, "")
         : String(priceStr);
     const parsed = parseInt(cleaned, 10);
-    return isNaN(parsed) || parsed < 0 ? null : parsed;
+    return isNaN(parsed) || parsed <= 0 ? null : parsed;
   } catch {
     return null;
   }

@@ -5,7 +5,7 @@ import {
   DataSourceError,
   ALL_TYPES,
 } from "./types.js";
-import { MOCK_CATALOG } from "./mock-data.js";
+import { loadAllCatalogs, loadCatalogByType } from "./data-loader.js";
 import {
   makeTypePredicate,
   makeSocketPredicate,
@@ -107,8 +107,11 @@ export function searchComponentsMock(
   // Compose all predicates with AND logic
   const composedPredicate = composePredicates(...predicates);
 
+  // Load catalog (PhongVu JSON if available, fallback to mock)
+  const catalog = loadAllCatalogs();
+
   // Filter and sort
-  const filtered = MOCK_CATALOG.filter(composedPredicate);
+  const filtered = catalog.filter(composedPredicate);
   return filtered.sort(sortByPriceAscending);
 }
 
@@ -132,9 +135,9 @@ export async function searchComponents(
         results.push(...liveResults);
         hasLive = true;
       } else {
-        // Fall back to mock for this type
-        const mockResults = MOCK_CATALOG.filter((c) => c.type === type);
-        results.push(...mockResults);
+        // Fall back to cached data for this type
+        const cachedResults = loadCatalogByType(type);
+        results.push(...cachedResults);
         hasMock = true;
 
         if (!liveResults) {
@@ -146,9 +149,9 @@ export async function searchComponents(
         }
       }
     } catch (error) {
-      // Fall back to mock on error
-      const mockResults = MOCK_CATALOG.filter((c) => c.type === type);
-      results.push(...mockResults);
+      // Fall back to cached data on error
+      const cachedResults = loadCatalogByType(type);
+      results.push(...cachedResults);
       hasMock = true;
 
       errors.push({

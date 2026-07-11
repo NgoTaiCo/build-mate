@@ -1,0 +1,830 @@
+[
+  {
+    "sku": "210800095",
+    "name": "Bộ nhớ/ RAM Desktop Kingston Fury Beast 8GB DDR4 3200Mhz (KF432C16BB/8)",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "220101518",
+    "name": "RAM desktop TeamGroup T-Force Delta RGB (1 x 8GB) DDR4 3200MHz (TF4D48G3200HC16C01)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "32% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "220303972",
+    "name": "RAM desktop Corsair Vengeance LPX (1 x 8GB) DDR4 3200MHz (CMK8GX4M1E3200C16)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "28% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "220303974",
+    "name": "RAM desktop Corsair Vengeance RGB RS (1 x 8GB) DDR4 3200MHz (CMG8GX4M1E3200C16)",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "221003862",
+    "name": "Ram Desktop ADATA XPG D50 DDR4 8GB (1x8GB) 3200 RGB Grey (AX4U32008G16A-ST50)",
+    "price": 2390000,
+    "stock_status": "out_of_stock",
+    "promo": "25% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "230201379",
+    "name": "RAM desktop Corsair Dominator Platinum RGB (2 x 32GB) DDR5 5600MHz (CMT64GX5M2B5600C40W)",
+    "price": 30990000,
+    "stock_status": "in_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "230800416",
+    "name": "RAM desktop TeamGroup T-Force Delta RGB (1 x 8GB) DDR4 3600MHz (TF4D48G3600HC18J01)",
+    "price": 2490000,
+    "stock_status": "in_stock",
+    "promo": "22% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "230800423",
+    "name": "RAM desktop Adata XPG LANCER RGB (1 x 16GB) DDR5 6000MHz (AX5U6000C3016G-CLARWH)",
+    "price": 6890000,
+    "stock_status": "in_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "230904040",
+    "name": "RAM Team T-Force Delta Black RGB 8GB (1x8GB) DDR4 3200 Mhz (TF3D48G3200HC16C01)",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "240703548",
+    "name": "RAM desktop CORSAIR CMG8GX4M1D3600C18 (1 x 8GB) DDR4 3600MHz (CMG8GX4M1D3600C18)",
+    "price": 2590000,
+    "stock_status": "in_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "240706621",
+    "name": "RAM desktop TeamGroup Elite Plus (1 x 8GB) DDR4 3200MHz (TPD48G3200HC2201)",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250418645",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 16GB) DDR5 6000MHz (CMH32GX5M2E6000C36)",
+    "price": 14190000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250633614",
+    "name": "RAM desktop Adata Lancer Blade (1 x 16GB) DDR5 6000MHz (AX5U6000C3616G-SLABRBK)",
+    "price": 6290000,
+    "stock_status": "out_of_stock",
+    "promo": "32% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250646008",
+    "name": "RAM desktop Kingston FURY Beast EXPO (1 x 16GB) DDR5 6000MHz (KF560C36BBE2-16WP)",
+    "price": 6390000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250646015",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (1 x 16GB) DDR5 6000MHz (KF560C36BBE2A-16WP)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250709457",
+    "name": "RAM desktop SP XPOWER Zenith (1 x 16GB) DDR5 6000MHz (SP032GXLWU60BFSF)",
+    "price": 6290000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250709458",
+    "name": "RAM desktop SP XPOWER Turbine (1 x 8GB) DDR4 3200MHz (SP008GXLZU320BSA)",
+    "price": 2090000,
+    "stock_status": "out_of_stock",
+    "promo": "28% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250800150",
+    "name": "RAM desktop SP XPOWER Zenith (1 x 32GB) DDR5 6000MHz (SP032GXLWU60BFSE)",
+    "price": 12290000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250800171",
+    "name": "RAM desktop SP XPOWER Zenith RGB (1 x 16GB) DDR5 6000MHz (SP016GXLWU60CFSH)",
+    "price": 6190000,
+    "stock_status": "out_of_stock",
+    "promo": "28% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250800190",
+    "name": "RAM desktop SP XPOWER Zenith (1 x 8GB) DDR4 3200MHz (SP008GXLZU320BSHK0)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250803163",
+    "name": "RAM desktop TeamGroup Vulcan Z (1 x 16GB) DDR4 3200MHz (TLZGD416G3200HC16F01)",
+    "price": 3490000,
+    "stock_status": "in_stock",
+    "promo": "13% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250803205",
+    "name": "RAM desktop Corsair Vengeance (1 x 16GB) DDR5 6000MHz (CMH16GX5M1E6000Z36)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250906235",
+    "name": "RAM desktop TeamGroup Delta (1 x 32GB) DDR5 6000MHz (FF3D532G6000HC38J01)",
+    "price": 12490000,
+    "stock_status": "in_stock",
+    "promo": "29% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251012469",
+    "name": "RAM desktop Kingston FURY Beast (1 x 16GB) DDR4 3200MHz (KF432C16BB1/16WP)",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "57% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "251111503",
+    "name": "RAM desktop Patriot VIPER ELITE 5 RGB (1 x 16GB) DDR5 6000MHz (PVER516G60C30W)",
+    "price": 6290000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251111506",
+    "name": "Patriot (1 x 16GB) DDR4 3200MHz (PSP416G3200H1)",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "51% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "251113480",
+    "name": "RAM desktop Kingston (1 x 8GB) DDR4 3200MHz (KVR32N22S8/8WP)",
+    "price": 2390000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "260302064",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO 32GB (1 x 32GB) DDR5 6000MHz (KF560C36BBE2A-32)",
+    "price": 14990000,
+    "stock_status": "in_stock",
+    "promo": "6% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "260508984",
+    "name": "RAM desktop Apacer 16GB (1 x 16GB) DDR5 6000MHz (AH5U16G60C622MBAA-1)",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "1809395",
+    "name": "RAM desktop Crucial Ballistix Tactical Tracer RGB BLT4K8G4D26BFT4K (4x8GB) DDR4 2666MHz",
+    "price": 5590000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "200601311",
+    "name": "RAM desktop Corsair Dominator Platinum RGB (2 x 8GB) DDR4 3200MHz (CMT16GX4M2C3200C16W)",
+    "price": 5390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "211109619",
+    "name": "RAM desktop Kingston FURY Beast (1 x 16GB) DDR5 4800MHz (KF548C38BB-16)",
+    "price": 1549000,
+    "stock_status": "out_of_stock",
+    "promo": "59% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "211109621",
+    "name": "RAM desktop Kingston FURY Beast (2 x 16GB) DDR5 5200MHz (KF552C40BBK2-32)",
+    "price": 4590000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220500525",
+    "name": "RAM desktop Kingston (1 x 16GB) DDR5 4800MHz (KVR48U40BS8-16)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220500526",
+    "name": "RAM desktop Kingston FURY Beast (1 x 16GB) DDR5 5200MHz (KF552C40BB-16)",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220500527",
+    "name": "RAM desktop Kingston FURY Beast (2 x 16GB) DDR5 6000MHz (KF560C40BBK2-32)",
+    "price": 3199000,
+    "stock_status": "out_of_stock",
+    "promo": "52% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220500575",
+    "name": "RAM desktop Kingston FURY Beast (2 x 16GB) DDR5 5600MHz (KF556C40BBK2-32WP)",
+    "price": 14390000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220700866",
+    "name": "RAM desktop Crucial (1 x 8GB) DDR5 4800MHz (CT8G48C40U5)",
+    "price": 3690000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220700867",
+    "name": "RAM desktop Crucial (1 x 16GB) DDR5 4800MHz (CT16G48C40U5)",
+    "price": 6790000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "220706827",
+    "name": "RAM desktop Apacer NOX RGB AURA 2 (1 x 16GB) DDR4 3200MHz (AH4U16G32C28YNWAA-1)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "230302710",
+    "name": "RAM desktop Corsair Vengeance LPX (2 x 16GB) DDR5 5200MHz (CMK32GX5M2B5200C40)",
+    "price": 3790000,
+    "stock_status": "out_of_stock",
+    "promo": "45% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "230302722",
+    "name": "RAM desktop Corsair Dominator Platinum RGB (2 x 32GB) DDR5 5200MHz (CMT64GX5M2B5200C40)",
+    "price": 6799000,
+    "stock_status": "out_of_stock",
+    "promo": "43% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "230702528",
+    "name": "RAM desktop Adata XPG SPECTRIX D35G (1 x 16GB) DDR4 3200MHz (AX4U320016G16A-SBKD35G)",
+    "price": 4590000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "231004196",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 16GB) DDR5 6000MHz (CMP32GX5M2B6000C30)",
+    "price": 14990000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "231004200",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 32GB) DDR5 6000MHz (CMP64GX5M2B6000C30)",
+    "price": 33990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "231204421",
+    "name": "RAM desktop Adata XPG D35 (1 x 8GB) DDR4 3200MHz (AX4U320016G16A-SBKD35)",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "240302549",
+    "name": "RAM desktop CORSAIR Vengeance LPX Black Heatspreader (1 x 16GB) DDR5 5600MHz (CMK16GX5M1B5600C40)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "240703615",
+    "name": "RAM desktop TEAM FF9D548G7200HC34ADC01 (2 x 24GB) DDR5 7200MHz (FF9D548G7200HC34ADC01)",
+    "price": 6790000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "240703617",
+    "name": "RAM desktop TEAM TED48G3200C2201 (1 x 8GB) DDR4 3200MHz (TED48G3200C2201)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "240902582",
+    "name": "RAM Teamgroup Xtreem ARGB Black 2x24GB DDR5-8000",
+    "price": 8590000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "241002564",
+    "name": "RAM desktop TeamGroup Elite (1 x 16GB) DDR4 3200MHz (TED416G3200C2201)",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250102936",
+    "name": "RAM desktop Crucial (1 x 16GB) DDR5 5600MHz (CT16G56C46U5)",
+    "price": 6790000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250203230",
+    "name": "RAM desktop TeamGroup Delta RGB (1 x 16GB) DDR5 6000MHz (FF3D516G6000HC38G01)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250203274",
+    "name": "RAM desktop TeamGroup Elite (1 x 16GB) DDR5 5600MHz (TED516G5600C4601)",
+    "price": 2090000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250415369",
+    "name": "RAM desktop Kingston FURY Beast (2 x 32GB) DDR5 5600MHz (KF556C40BBAK2-64)",
+    "price": 28990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250418647",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 48GB) DDR5 6600 MHz (CMP64GX5M2X6600C32W)",
+    "price": 44990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250418648",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 16GB) DDR5 6600 MHz (CMP32GX5M2X6600C32W)",
+    "price": 15490000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520581",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (2 x 32GB) DDR5 6000MHz (KF560C36BBEAK2-64)",
+    "price": 24590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250709450",
+    "name": "Silicon (1 x 16GB) DDR4 3200MHz (SP016GXLZU320BSD)",
+    "price": 1390000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250722535",
+    "name": "RAM desktop G.skill Trident Z5 Neo RGB (2 x 32GB) DDR5 6000MHz (F5-6000J3636F32GX2-TZ5NR)",
+    "price": 33990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250808940",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 64GB) DDR5 6400MHz (CMH128GX5M2B6400C42)",
+    "price": 55990000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250809142",
+    "name": "RAM desktop Kingston FURY Beast RGB (2 x 8GB) DDR5 5200MHz (KF552C40BBAK2-16)",
+    "price": 7190000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250809217",
+    "name": "RAM desktop Kingston (1 x 16GB) DDR5 5600MHz (KVR56U46BS8-16WP)",
+    "price": 7990000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250907122",
+    "name": "RAM desktop TeamGroup T FORCE XTREEM ARGB (2 x 16GB) DDR5 7200MHz (FF9D532G7200HC34ADC01)",
+    "price": 13990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251001961",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 32GB) DDR5 6000MHz (CMH64GX5M2D6000C40)",
+    "price": 29990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251013329",
+    "name": "RAM desktop SP XPOWER Zenith (1 x 16GB) DDR5 6000MHz (SP016GXLWU60FFSF)",
+    "price": 3690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251102033",
+    "name": "RAM desktop Kingmax HEATSINK Horizon (1 x 16GB) DDR5 5600MHz (KM-LD54-5600-16GSHN38)",
+    "price": 7590000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251113487",
+    "name": "RAM desktop Kingston (1 x 16GB) DDR4 3200MHz (KVR32N22D8/16WP)",
+    "price": 4790000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "251204801",
+    "name": "RAM desktop G.skill Trident Z5 RGB (1 x 32GB) DDR5 6000MHz (F5-6000J3636F32GX1-TZ5RK)",
+    "price": 14990000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "230302714",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 16GB) DDR5 5200MHz (CMH32GX5M2B5200C40W)",
+    "price": 5490000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "240704394",
+    "name": "RAM desktop HP V2 (1 x 16GB) DDR4 3200MHz (18X16AA)",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "ram",
+    "ram_gen": "DDR4"
+  },
+  {
+    "sku": "250203276",
+    "name": "RAM desktop TeamGroup Elite (1 x 32GB) DDR5 5600MHz (TED532G5600C4601)",
+    "price": 2890000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250302312",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 32GB) DDR5 6000MHz (CMH64GX5M2B6000C40W)",
+    "price": 9490000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250302319",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 48GB) DDR5 5600MHz (CMH96GX5M2B5600C40)",
+    "price": 10190000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250418649",
+    "name": "RAM desktop Corsair Dominator Platinum RGB (2 x 16GB) DDR5 6000MHz (CMT32GX5M2X6000C36W)",
+    "price": 4490000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520580",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (1 x 16GB) DDR5 6000MHz (KF560C36BBE-32)",
+    "price": 1730000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520583",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (1 x 16GB) DDR5 6000MHz ",
+    "price": 1920000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520587",
+    "name": "RAM desktop Kingston FURY Beast XMP (1 x 16GB) DDR5 6000MHz (KF560C30BB-16)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520593",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (2 x 16GB) DDR5 6000MHz (DIMM (Kit of 2) FURY Beast RGB EXPO)",
+    "price": 3840000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250520594",
+    "name": "RAM desktop Kingston FURY Beast EXPO (2 x 16GB) DDR5 6000MHz (KF560C36BBE2K2-32)",
+    "price": 3380000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250717329",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (2 x 16GB) DDR5 6000MHz ",
+    "price": 16990000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250717332",
+    "name": "RAM desktop TeamGroup Vulcan (1 x 16GB) DDR5 6000MHz ",
+    "price": 6690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250719850",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 16GB) DDR5 7200MHz (CMP32GX5M2X7200C34)",
+    "price": 17990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250719863",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 16GB) DDR5 6000MHz (CMP32GX5M2B6000Z30)",
+    "price": 15390000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250719873",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 32GB) DDR5 6000MHz (CMP64GX5M2B6000Z30W)",
+    "price": 33990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250719882",
+    "name": "RAM desktop Corsair DOMINATOR TITANIUM RGB (2 x 48GB) DDR5 6000MHz (CMP96GX5M2B6000Z30)",
+    "price": 14590000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250809133",
+    "name": "RAM desktop Kingston FURY Beast (1 x 16GB) DDR5 5600MHz (KF556C40BB-16WP)",
+    "price": 7990000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250809149",
+    "name": "RAM desktop Kingston FURY Beast RGB (2 x 8GB) DDR5 5600MHz (KF556C40BBAK2-16)",
+    "price": 8990000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "250809156",
+    "name": "RAM desktop Kingston FURY Beast RGB EXPO (2 x 32GB) DDR5 6000MHz (KF560C36BBE2AK2-64)",
+    "price": 32990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251005761",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 16GB) DDR5 6000MHz (CMH32GX5M2E6000Z36)",
+    "price": 14190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251005765",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 32GB) DDR5 6000MHz (CMH64GX5M2B6000Z40)",
+    "price": 8990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "ram",
+    "ram_gen": "DDR5"
+  },
+  {
+    "sku": "251005766",
+    "name": "RAM desktop Corsair Vengeance RGB (2 x 48GB) DDR5 6000MHz (CMH96GX5M2E6000C36)",
+    "price": 36990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "ram",
+    "ram_gen": "DDR5"
+  }
+]
