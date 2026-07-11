@@ -5,6 +5,7 @@ services:
     image: openclaw/openclaw:latest
     container_name: openclaw-gateway
     restart: unless-stopped
+    user: "0:0"
     ports:
       - "${OPENCLAW_PORT:-18789}:18789"
     volumes:
@@ -16,6 +17,7 @@ services:
       - NODE_ENV=${NODE_ENV:-development}
       - OPENCLAW_CONFIG_PATH=/root/.openclaw/openclaw.json
       - OPENCLAW_STATE_DIR=/root/.openclaw
+      - XIAOMI_TOKEN_PLAN_API_KEY=${XIAOMI_TOKEN_PLAN_API_KEY}
     env_file:
       - .env
     shm_size: 1gb
