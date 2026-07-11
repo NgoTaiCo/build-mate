@@ -1,6 +1,6 @@
 #!/usr/bin/env npx tsx
 /**
- * Capture a single scene from the local WebChat UI using Playwright.
+ * Capture a single scene from local WebChat using screenshot polling + ffmpeg.
  *
  * Usage:
  *   npx tsx scripts/capture-scene.ts <sceneId>
@@ -10,96 +10,152 @@
  *
  * Output: public/scenes/<sceneId>.mp4
  *
- * Requires:
- *   - OpenClaw gateway running at http://127.0.0.1:18789/
- *   - Sample catalog data loaded
+ * Prerequisites:
+ *   - ffmpeg on PATH (brew install ffmpeg)
+ *   - OpenClaw gateway at http://127.0.0.1:18789/
  */
 
-import { chromium } from "playwright";
+import { chromium, type Page } from "playwright";
 import path from "node:path";
 import fs from "node:fs";
-
-const WEBCHAT_URL = process.env["WEBCHAT_URL"] ?? "http://127.0.0.1:18789/";
-const SCENES_DIR = path.resolve(
-  import.meta.dirname ?? __dirname,
-  "../public/scenes"
-);
-
-// --- Inline step lookup (avoids tsx import complexity in some envs) ---
+import { execSync, spawnSync } from "node:child_process";
 import { WEBCHAT_CAPTURE_STEPS } from "../src/capture-steps";
 
+const WEBCHAT_URL = process.env["WEBCHAT_URL"] ?? "http://127.0.0.1:18789/";
+const SCENES_DIR = path.resolve(import.meta.dirname, "../public/scenes");
+const FPS = 10;
+
+function ensureDir(dir: string) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+function hasFfmpeg(): boolean {
+  try {
+    execSync("ffmpeg -version", { stdio: "ignore" });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function captureFrames(
+  page: Page,
+  framesDir: string,
+  durationMs: number
+): Promise<number> {
+  ensureDir(framesDir);
+  const intervalMs = Math.round(1000 / FPS);
+  const totalFrames = Math.ceil(durationMs / intervalMs);
+  let frameIdx = 0;
+
+  return new Promise((resolve, reject) => {
+    const take = async () => {
+      if (frameIdx >= totalFrames) {
+        resolve(frameIdx);
+        return;
+      }
+      try {
+        const framePath = path.join(
+          framesDir,
+          `frame-${String(frameIdx).padStart(4, "0")}.png`
+        );
+        await page.screenshot({ path: framePath, type: "png" });
+        frameIdx++;
+        setTimeout(take, intervalMs);
+      } catch (err) {
+        reject(err);
+      }
+    };
+    take();
+  });
+}
+
+function assembleVideo(framesDir: string, outputMp4: string): void {
+  const pattern = path.join(framesDir, "frame-%04d.png");
+  const result = spawnSync(
+    "ffmpeg",
+    [
+      "-y",
+      "-framerate", String(FPS),
+      "-i", pattern,
+      "-c:v", "libx264",
+      "-crf", "18",
+      "-pix_fmt", "yuv420p",
+      "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2",
+      outputMp4,
+    ],
+    { encoding: "utf8" }
+  );
+  if (result.status !== 0) {
+    throw new Error(`ffmpeg failed:\n${result.stderr}`);
+  }
+}
+
 async function captureScene(sceneId: string): Promise<void> {
-  const step = WEBCHAT_CAPTURE_STEPS.find((s) => s.sceneId === sceneId);
-  if (!step) {
-    const valid = WEBCHAT_CAPTURE_STEPS.map((s) => s.sceneId).join(", ");
-    console.error(`Unknown scene id: "${sceneId}". Valid ids: ${valid}`);
+  if (!hasFfmpeg()) {
+    console.error("[capture] ffmpeg not found. Install: brew install ffmpeg");
     process.exit(1);
   }
 
-  console.log(`[capture] Scene: ${step.sceneId} — ${step.label}`);
+  const step = WEBCHAT_CAPTURE_STEPS.find((s) => s.sceneId === sceneId);
+  if (!step) {
+    const valid = WEBCHAT_CAPTURE_STEPS.map((s) => s.sceneId).join(", ");
+    console.error(`Unknown scene: "${sceneId}". Valid: ${valid}`);
+    process.exit(1);
+  }
 
-  const outputPath = path.join(SCENES_DIR, `${sceneId}.webm`);
+  ensureDir(SCENES_DIR);
+  const outputMp4 = path.join(SCENES_DIR, `${sceneId}.mp4`);
+  const framesDir = path.join(SCENES_DIR, `_frames_${sceneId}`);
+
+  console.log(`[capture] Scene: ${sceneId} — ${step.label}`);
 
   const browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext({
-    viewport: { width: 1920, height: 1080 },
-    recordVideo: {
-      dir: SCENES_DIR,
-      size: { width: 1920, height: 1080 },
-    },
-  });
-
+  const context = await browser.newContext({ viewport: { width: 1920, height: 1080 } });
   const page = await context.newPage();
-  await page.goto(WEBCHAT_URL, { waitUntil: "networkidle" });
 
-  // Allow WebChat UI to fully load
+  await page.goto(WEBCHAT_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
   await page.waitForTimeout(2000);
 
   if (step.chatMessage) {
-    // Find chat input and type the message
-    const inputSelector =
-      'textarea[placeholder], input[type="text"][placeholder], [contenteditable="true"]';
-    await page.waitForSelector(inputSelector, { timeout: 10000 });
+    const inputSelector = [
+      'textarea',
+      'input[type="text"]',
+      '[contenteditable="true"]',
+      '[role="textbox"]',
+    ].join(", ");
+    await page.waitForSelector(inputSelector, { timeout: 15000 });
     const input = page.locator(inputSelector).first();
+    await input.click();
     await input.fill(step.chatMessage);
     await page.keyboard.press("Enter");
-    console.log(`[capture] Sent message: "${step.chatMessage}"`);
+    console.log(`[capture] Sent: "${step.chatMessage}"`);
   }
 
   if (step.delayBeforeRecordMs) {
-    console.log(`[capture] Waiting ${step.delayBeforeRecordMs}ms for UI to settle...`);
     await page.waitForTimeout(step.delayBeforeRecordMs);
   }
 
-  console.log(`[capture] Recording for ${step.recordMs}ms...`);
-  await page.waitForTimeout(step.recordMs);
+  console.log(`[capture] Capturing ${step.recordMs}ms @ ${FPS}fps...`);
+  const frameCount = await captureFrames(page, framesDir, step.recordMs);
+  console.log(`[capture] ${frameCount} frames. Assembling MP4...`);
 
-  // Close context to flush the video file
-  await context.close();
-  await browser.close();
-
-  // Playwright names files with a hash; rename to our sceneId
-  const files = fs.readdirSync(SCENES_DIR).filter((f) => f.endsWith(".webm"));
-  const latest = files
-    .map((f) => ({ f, mtime: fs.statSync(path.join(SCENES_DIR, f)).mtimeMs }))
-    .sort((a, b) => b.mtime - a.mtime)[0];
-
-  if (latest && latest.f !== `${sceneId}.webm`) {
-    const rawPath = path.join(SCENES_DIR, latest.f);
-    fs.renameSync(rawPath, outputPath);
+  try {
+    assembleVideo(framesDir, outputMp4);
+    console.log(`[capture] Saved: ${outputMp4}`);
+  } finally {
+    fs.rmSync(framesDir, { recursive: true, force: true });
   }
 
-  console.log(`[capture] Saved: ${outputPath}`);
-  console.log(
-    `[info] WebM captured. Convert to MP4 with:\n  ffmpeg -i ${outputPath} -c:v libx264 -crf 18 ${outputPath.replace(".webm", ".mp4")}`
-  );
+  await context.close();
+  await browser.close();
 }
 
 const sceneId = process.argv[2];
 if (!sceneId) {
-  console.error("Usage: npx tsx scripts/capture-scene.ts <sceneId>");
   const ids = WEBCHAT_CAPTURE_STEPS.map((s) => s.sceneId).join(", ");
-  console.error(`Available scene ids: ${ids}`);
+  console.error(`Usage: npx tsx scripts/capture-scene.ts <sceneId>`);
+  console.error(`Available: ${ids}`);
   process.exit(1);
 }
 
