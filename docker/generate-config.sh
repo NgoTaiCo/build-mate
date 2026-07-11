@@ -89,6 +89,14 @@ cat > openclaw.json << 'CONFIGEOF'
       }
     }
   },
+  "mcp": {
+    "servers": {
+      "buildmate": {
+        "url": "http://mcp-server:8791/mcp",
+        "transport": "streamable-http"
+      }
+    }
+  },
   "memory": {
     "backend": "MEMORY_BACKEND_PLACEHOLDER"
   },
