@@ -2,6 +2,13 @@
 
 > Contract handoff giữa MCP server, BE và Chrome extension. Local relay `:8781`
 > hiện tại là simulator để kiểm chứng; production thay bằng BE bridge này.
+>
+> **Transport đang ship:** BE bridge (`packages/chat-backend/src/dom-bridge.ts`)
+> và extension hiện dùng **HTTP long-poll** (không phải WebSocket): extension
+> `POST /contexts` để register, `GET /commands?context_id=` long-poll, và
+> `POST /commands/:command_id/result` để trả kết quả; MCP gọi `POST /dom-commands`.
+> Phần §3–4 mô tả bản WebSocket là hướng tương lai — semantic (ID, action,
+> guard, result envelope) giữ nguyên.
 
 ## 1. Ranh giới trách nhiệm
 

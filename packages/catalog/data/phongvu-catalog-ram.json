@@ -6,7 +6,9 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "220101518",
@@ -15,7 +17,9 @@
     "stock_status": "out_of_stock",
     "promo": "32% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "220303972",
@@ -24,7 +28,9 @@
     "stock_status": "out_of_stock",
     "promo": "28% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "220303974",
@@ -33,7 +39,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "221003862",
@@ -42,7 +50,9 @@
     "stock_status": "out_of_stock",
     "promo": "25% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "230201379",
@@ -51,7 +61,9 @@
     "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "230800416",
@@ -60,7 +72,9 @@
     "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "230800423",
@@ -69,7 +83,9 @@
     "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "230904040",
@@ -78,7 +94,9 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "240703548",
@@ -87,7 +105,9 @@
     "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "240706621",
@@ -96,7 +116,9 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250418645",
@@ -105,7 +127,9 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250633614",
@@ -114,7 +138,9 @@
     "stock_status": "out_of_stock",
     "promo": "32% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250646008",
@@ -123,7 +149,9 @@
     "stock_status": "out_of_stock",
     "promo": "27% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250646015",
@@ -132,7 +160,9 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250709457",
@@ -141,7 +171,9 @@
     "stock_status": "out_of_stock",
     "promo": "27% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250709458",
@@ -150,7 +182,9 @@
     "stock_status": "out_of_stock",
     "promo": "28% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250800150",
@@ -159,7 +193,9 @@
     "stock_status": "out_of_stock",
     "promo": "27% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250800171",
@@ -168,7 +204,9 @@
     "stock_status": "out_of_stock",
     "promo": "28% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250800190",
@@ -177,7 +215,9 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250803163",
@@ -186,7 +226,9 @@
     "stock_status": "in_stock",
     "promo": "13% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250803205",
@@ -195,7 +237,9 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250906235",
@@ -204,7 +248,9 @@
     "stock_status": "in_stock",
     "promo": "29% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251012469",
@@ -213,7 +259,9 @@
     "stock_status": "out_of_stock",
     "promo": "57% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "251111503",
@@ -222,7 +270,9 @@
     "stock_status": "out_of_stock",
     "promo": "27% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251111506",
@@ -231,7 +281,9 @@
     "stock_status": "out_of_stock",
     "promo": "51% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "251113480",
@@ -240,7 +292,9 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "260302064",
@@ -249,7 +303,9 @@
     "stock_status": "in_stock",
     "promo": "6% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "260508984",
@@ -258,7 +314,9 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "1809395",
@@ -267,7 +325,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "200601311",
@@ -276,7 +336,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "211109619",
@@ -285,7 +347,9 @@
     "stock_status": "out_of_stock",
     "promo": "59% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "211109621",
@@ -294,7 +358,9 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220500525",
@@ -303,7 +369,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220500526",
@@ -312,7 +380,9 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220500527",
@@ -321,7 +391,9 @@
     "stock_status": "out_of_stock",
     "promo": "52% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220500575",
@@ -330,7 +402,9 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220700866",
@@ -339,7 +413,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220700867",
@@ -348,7 +424,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "220706827",
@@ -357,7 +435,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "230302710",
@@ -366,7 +446,9 @@
     "stock_status": "out_of_stock",
     "promo": "45% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "230302722",
@@ -375,7 +457,9 @@
     "stock_status": "out_of_stock",
     "promo": "43% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "230702528",
@@ -384,7 +468,9 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "231004196",
@@ -393,7 +479,9 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "231004200",
@@ -402,7 +490,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "231204421",
@@ -411,7 +501,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "240302549",
@@ -420,7 +512,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "240703615",
@@ -429,7 +523,9 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "240703617",
@@ -438,7 +534,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "240902582",
@@ -447,7 +545,9 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "241002564",
@@ -456,7 +556,9 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250102936",
@@ -465,7 +567,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250203230",
@@ -474,7 +578,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250203274",
@@ -483,7 +589,9 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250415369",
@@ -492,7 +600,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250418647",
@@ -501,7 +611,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250418648",
@@ -510,7 +622,9 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520581",
@@ -519,7 +633,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250709450",
@@ -528,7 +644,9 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250722535",
@@ -537,7 +655,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250808940",
@@ -546,7 +666,9 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250809142",
@@ -555,7 +677,9 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250809217",
@@ -564,7 +688,9 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250907122",
@@ -573,7 +699,9 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251001961",
@@ -582,7 +710,9 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251013329",
@@ -591,7 +721,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251102033",
@@ -600,7 +732,9 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251113487",
@@ -609,7 +743,9 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "251204801",
@@ -618,7 +754,9 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "230302714",
@@ -627,7 +765,9 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "240704394",
@@ -636,7 +776,9 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "ram",
-    "ram_gen": "DDR4"
+    "ram_gen": "DDR4",
+    "generation": "DDR4",
+    "tdp": 3
   },
   {
     "sku": "250203276",
@@ -645,7 +787,9 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250302312",
@@ -654,7 +798,9 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250302319",
@@ -663,7 +809,9 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250418649",
@@ -672,7 +820,9 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520580",
@@ -681,7 +831,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520583",
@@ -690,7 +842,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520587",
@@ -699,7 +853,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520593",
@@ -708,7 +864,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250520594",
@@ -717,7 +875,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250717329",
@@ -726,7 +886,9 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250717332",
@@ -735,7 +897,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250719850",
@@ -744,7 +908,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250719863",
@@ -753,7 +919,9 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250719873",
@@ -762,7 +930,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250719882",
@@ -771,7 +941,9 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250809133",
@@ -780,7 +952,9 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250809149",
@@ -789,7 +963,9 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "250809156",
@@ -798,7 +974,9 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251005761",
@@ -807,7 +985,9 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251005765",
@@ -816,7 +996,9 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   },
   {
     "sku": "251005766",
@@ -825,6 +1007,8 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "ram",
-    "ram_gen": "DDR5"
+    "ram_gen": "DDR5",
+    "generation": "DDR5",
+    "tdp": 3
   }
 ]

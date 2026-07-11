@@ -111,7 +111,9 @@ test("PhongVu transformer - Cooler extraction", () => {
   ok(result.socket.includes("AM5"));
   ok(result.socket.includes("AM4"));
   ok(result.socket.includes("LGA1700"));
-  strictEqual(result.tdp, 220);
+  // Coolers no longer carry a tdp: fan draw is negligible and must not inflate
+  // PSU sizing. Validated by height vs case clearance only.
+  strictEqual(result.tdp, undefined);
   strictEqual(result.price, 2500000);
 });
 

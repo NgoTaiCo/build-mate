@@ -9,3 +9,5 @@ export type {
   StockStatus,
 } from "./types.js";
 export { ALL_TYPES } from "./types.js";
+export { getCatalogDataMode } from "./config.js";
+export type { CatalogDataMode } from "./config.js";
