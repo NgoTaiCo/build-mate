@@ -36,3 +36,5 @@ logs/
 
 # OpenClaw per-machine state (lives in home, not repo — ignore just in case)
 .openclaw-state/
+
+.claude
