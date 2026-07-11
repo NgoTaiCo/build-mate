@@ -1,0 +1,1322 @@
+[
+  {
+    "sku": "211208130",
+    "name": "CPU Intel Core i5-12400F (6 nhân 12 luồng - Boost tối đa 4.4 GHz - 18MB - 1700)",
+    "price": 4490000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "211208131",
+    "name": "CPU Intel Core i5-12400 (6 nhân 12 luồng - Boost tối đa 4.4 GHz - 18MB - 1700)",
+    "price": 5590000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231002128",
+    "name": "CPU Intel Core i9-14900K (24 nhân 32 luồng - Boost to 6.0 GHz - 36MB - 1700)",
+    "price": 16490000,
+    "stock_status": "out_of_stock",
+    "promo": "28% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "241003863",
+    "name": "CPU Intel Core Ultra 9-285K (24 nhân 24 luồng - Turbo boost to 5.7 GHz - 36MB - LGA 1851)",
+    "price": 16990000,
+    "stock_status": "out_of_stock",
+    "promo": "41% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "220800030",
+    "name": "CPU AMD RYZEN™ 5 3400G (4 Core/8 Threads - 3.7GHz Boost to 4.2GHz - 4MB Cache - AM4)",
+    "price": 2190000,
+    "stock_status": "out_of_stock",
+    "promo": "54% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211108636",
+    "name": "CPU Intel Core i5-12600K (10 nhân 16 luồng - Boost tối đa 4.9 GHz - 20MB - 1700)",
+    "price": 5790000,
+    "stock_status": "out_of_stock",
+    "promo": "43% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "241003867",
+    "name": "CPU Intel Core Ultra 5-245K (14 nhân 14 luồng - Turbo boost to 5.2GHz - 24MB - LGA 1851)",
+    "price": 6190000,
+    "stock_status": "out_of_stock",
+    "promo": "41% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "250116202",
+    "name": "CPU Intel Core Ultra 5-225F (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
+    "price": 4490000,
+    "stock_status": "in_stock",
+    "promo": "40% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "241003862",
+    "name": "CPU Intel® Core™ Ultra 5-245KF (14 nhân 14 luồng - Turbo Boost to 5.2 GHz - 24MB - 1851)",
+    "price": 5890000,
+    "stock_status": "in_stock",
+    "promo": "38% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "250116201",
+    "name": "CPU Intel Core Ultra 5-225 (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
+    "price": 5090000,
+    "stock_status": "in_stock",
+    "promo": "36% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "231002129",
+    "name": "CPU Intel Core i9-14900KF (24 nhân 32 luồng - Boost to 6.0 GHz - 36MB - 1700)",
+    "price": 15390000,
+    "stock_status": "out_of_stock",
+    "promo": "30% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "251014345",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 7 7800X3D (8C-16T | Up to 5.0GHz | 104MB | Radeon Graphics 2CU | No Cooler | AM5)",
+    "price": 9090000,
+    "stock_status": "in_stock",
+    "promo": "30% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "251204779",
+    "name": "Bộ vi xử lý/ CPU Intel Core i7-12700 (12C-20T | Upto 4.90GHz | 25MB | UHD Graphics 770 |  LGA-1700)",
+    "price": 9190000,
+    "stock_status": "out_of_stock",
+    "promo": "29% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "1700971",
+    "name": "CPU AMD RYZEN™ 7 1800X (8 Core/16 Threads - 3.6 GHz Boost to 4 GHz - 16MB Cache - AM4)",
+    "price": 6559000,
+    "stock_status": "in_stock",
+    "promo": "29% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "19070059",
+    "name": "CPU AMD RYZEN™ 3 3200G (4 Core/4 Threads - 3.6 GHz up to 4GHz - 4MB Cache - AM4)",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": "25% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "250808056",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 5 7500F",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "250116203",
+    "name": "CPU Intel Core Ultra 7-265 (20 nhân 20 luồng - Boost tối đa 5.3 GHz - 30MB - 1851)",
+    "price": 9990000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "211208127",
+    "name": "CPU Intel Core i3 12100F (4 nhân 8 luồng - Boost tối đa 4.3 GHz - 12MB - 1700)",
+    "price": 2749000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "260305656",
+    "name": "Bộ vi xử lý/ CPU Intel Core Ultra 7 270K Plus (24C - 24T | Upto 5.5 GHz | 40MB | Intel Graphics | LGA1851)",
+    "price": 9590000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "241100295",
+    "name": "CPU AMD Ryzen 7 9800X3D (8 nhân 16 luồng - Boost to 5.2 GHz - 104MB - AM5)",
+    "price": 13590000,
+    "stock_status": "in_stock",
+    "promo": "20% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "220800024",
+    "name": "CPU AMD RYZEN™ 5 5500 (6 Core/12 Threads - 3.6 GHz Boost to 4.2 GHz - 16MB Cache - AM4)",
+    "price": 2649000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "240103593",
+    "name": "CPU AMD Ryzen 5 8500G (6 nhân 12 luồng - Boost to 5.0 GHz - 22MB - AM5)",
+    "price": 4150000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "231204445",
+    "name": "CPU Intel Core i9-14900 (24 nhân 32 luồng - Boost to 5.8 GHz - 36MB - 1700)",
+    "price": 17190000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "1805133",
+    "name": "CPU AMD RYZEN™ 5 2600X (6 Core/12 Threads - 3.6 GHz Boost to 4.2 GHz - 16MB Cache - AM4)",
+    "price": 5919000,
+    "stock_status": "in_stock",
+    "promo": "13% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211208132",
+    "name": "Bộ vi xử lý/ CPU Intel Core i5 12500 (6 Cores 12 Threads 4.6 GHz Alder Lake 12th Gen LGA 1700)",
+    "price": 6090000,
+    "stock_status": "in_stock",
+    "promo": "12% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231204443",
+    "name": "CPU Intel Core i7-14700 (20 nhân 28 luồng - Boost to 5.4 GHz - 33MB - 1700)",
+    "price": 11490000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "240103594",
+    "name": "CPU AMD RYZEN™ 5 5600GT (6 Core/12 Threads - 3.6 GHz Boost to 4.6 GHz - 19MB Cache - AM4)",
+    "price": 4190000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "260106711",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 7 5700X  (3.4 GHz up to 4.6GHz/ 36MB/ 8 cores 16 threads/ 65W/ socket AM4) (100-100000926WOF)",
+    "price": 5290000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "220919570",
+    "name": "CPU AMD Ryzen 5 7600X (6 nhân 12 luồng - Boost to 5.3 GHz - 32MB - AM5)",
+    "price": 6649000,
+    "stock_status": "in_stock",
+    "promo": "8% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "231204440",
+    "name": "CPU Intel Core i5-14400 (10 nhân 16 luồng - Boost to 4.7 GHz - 20MB - 1700)",
+    "price": 7390000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "240602358",
+    "name": "CPU AMD RYZEN™ 5 5500GT (6 Core/12 Threads - 3.6GHz Boost to 4.4Ghz - 16MB Cache - AM4)",
+    "price": 3890000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "231204441",
+    "name": "CPU Intel Core i5-14400F (10 nhân 16 luồng - Boost to 4.7 GHz - 20MB - 1700)",
+    "price": 6490000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "251204778",
+    "name": "Bộ vi xử lý/ CPU Intel Core i3-14100 (4C - 8T | 12MB | Up to 4.7 GHz | UHD Graphics 730 | LGA1700)",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "250301292",
+    "name": "CPU AMD Ryzen 9 9950X3D (16C-32T | Up to 5.7GHz | 144MB | Radeon Graphics 2CUs - RDNA 2.0 | No Cooler | AM5)",
+    "price": 20790000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "19070062",
+    "name": "CPU AMD RYZEN™ 5 3600X (6 Core/12 Threads - 3.8GHz Boost to 4.4 GHz - 32MB Cache - AM4)",
+    "price": 6449000,
+    "stock_status": "in_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "260304019",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 9 9950X3D2",
+    "price": 28990000,
+    "stock_status": "in_stock",
+    "promo": "3% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "1805132",
+    "name": "CPU AMD RYZEN™ 5 2600 (6 Core/12 Threads - 3.4 GHz Boost to 3.9 GHz - 16MB Cache - AM4)",
+    "price": 4869000,
+    "stock_status": "in_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "231002131",
+    "name": "CPU Intel Core i7-14700KF (20 nhân 28 luồng - Boost to 5.6 GHz - 33MB - 1700)",
+    "price": 11490000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "200302000",
+    "name": "CPU AMD RYZEN™ 5 3500 (6 Core/6 Threads - 3.6 GHz up to 4.1 GHz - 16MB Cache - AM4)",
+    "price": 3869000,
+    "stock_status": "in_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "1805453",
+    "name": "CPU AMD RYZEN™ Threadripper 1920X (12 Core/24 Threads - 3.5 GHz Boost to 4.0 GHz - 39MB Cache - TR4)",
+    "price": 22200000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "TR4",
+    "tdp": 65
+  },
+  {
+    "sku": "200500556",
+    "name": "CPU AMD RYZEN™ 3 3100 (4 Core/8 Threads - 3.6 GHz Up to 3.9 GHz - 16MB Cache - AM4)",
+    "price": 2729000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "260501434",
+    "name": "Bộ vi xử lý/ CPU Intel Core i7-14700F (20C - 28T | Up to 5.4 GHz | 33MB | No iGPU | LGA-1700)",
+    "price": 10790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "241003865",
+    "name": "CPU Intel Core Ultra 7-265K (20 nhân 20 luồng - Turbo Boost to 5.5 GHz - 30MB - LGA 1851)",
+    "price": 10490000,
+    "stock_status": "out_of_stock",
+    "promo": "30% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "211208138",
+    "name": "CPU Intel Core i9 12900 (16 nhân 24 luồng - Boost tối đa 5.1 GHz - 30MB - 1700)",
+    "price": 10999000,
+    "stock_status": "out_of_stock",
+    "promo": "40% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "211208137",
+    "name": "CPU Intel Core i9 13900F (16 nhân 24 luồng - Boost tối đa 5.1 GHz - 30MB - 1700)",
+    "price": 10499000,
+    "stock_status": "out_of_stock",
+    "promo": "39% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "210300864",
+    "name": "Bộ vi xử lý/ CPU Intel Core i9-11900K (8 Cores 16 Threads up to 5.3 GHz 11th Gen LGA 1200)",
+    "price": 11599000,
+    "stock_status": "out_of_stock",
+    "promo": "39% discount",
+    "type": "cpu",
+    "socket": "1200",
+    "tdp": 65
+  },
+  {
+    "sku": "220800022",
+    "name": "CPU AMD RYZEN™ 3 4100 BOX (4 Core/8 Threads - 3.8 GHz Boost to 4.0 GHz - 4MB Cache - AM4)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "38% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211007831",
+    "name": "Bộ vi xử lý/ CPU Intel Core i7-11700F 2.50 Up to 4.90GHz, 16M, 8 Cores 16 Threads (BX8070811700FSRKNR)",
+    "price": 6299000,
+    "stock_status": "out_of_stock",
+    "promo": "34% discount",
+    "type": "cpu",
+    "socket": "1200",
+    "tdp": 65
+  },
+  {
+    "sku": "201100011",
+    "name": "CPU AMD Ryzen 9 5950X (16 nhân 32 luồng - Boost to 4.9 GHz - 64MB - AM4)",
+    "price": 10600000,
+    "stock_status": "out_of_stock",
+    "promo": "30% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211012373",
+    "name": "CPU Intel Core i9-12900K (16 nhân 24 luồng - Boost tối đa 5.2 GHz - 30MB - 1700)",
+    "price": 13290000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "211208135",
+    "name": "CPU Intel Core i7-12700F (12 nhân 20 luồng - Boost tối đa 4.9 GHz - 25MB - 1700)",
+    "price": 8390000,
+    "stock_status": "out_of_stock",
+    "promo": "27% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "230603084",
+    "name": "CPU AMD Ryzen 9 7900X3D (12 nhân 24 luồng - Boost to 5.6 GHz - 128MB - AM5)",
+    "price": 14859000,
+    "stock_status": "out_of_stock",
+    "promo": "26% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "200500953",
+    "name": "Bộ vi xử lý/ CPU Intel Comet Lake Core i3-10100 (4 Cores 8 Threads up to 4.30 GHz 10th Gen LGA 1200)",
+    "price": 2949000,
+    "stock_status": "out_of_stock",
+    "promo": "25% discount",
+    "type": "cpu",
+    "socket": "1200",
+    "tdp": 65
+  },
+  {
+    "sku": "240603291",
+    "name": "CPU Intel Core i5-14600KF (14 nhân 20 luồng - Boost to 5.3 GHz - 24MB - 1700)",
+    "price": 7590000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "cpu",
+    "socket": "FCLGA1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231101852",
+    "name": "CPU Intel Core i5-14600K (14 nhân 20 luồng - Boost to 5.3 GHz - 24MB - 1700)",
+    "price": 7990000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231002130",
+    "name": "CPU Intel Core i7-14700K (20 nhân 28 luồng - Boost to 5.6 GHz - 33MB - 1700)",
+    "price": 13190000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "241003868",
+    "name": "CPU Intel® Core™ Ultra 7-265KF (20 nhân 20 luồng - Turbo boost to 5.5GHz - 30MB - 1851)",
+    "price": 9990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "220800021",
+    "name": "CPU AMD RYZEN™ 5 4500 (6 Core/12 Threads - 3.6 GHz Boost to 4.1 GHz - 8MB Cache - AM4)",
+    "price": 2249000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "201100012",
+    "name": "CPU AMD RYZEN™ 9 5900X (12 Core/24 Threads - 3.70 GHz Boost to 4.80 GHz - 64MB Cache - AM4)",
+    "price": 8600000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211208128",
+    "name": "CPU Intel Core i3 12100 (4 nhân 8 luồng - Boost tối đa 4.3 GHz - 12MB - 1700)",
+    "price": 4590000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "211012372",
+    "name": "CPU Intel Core i7-12700K (12 nhân 20 luồng - Boost tối đa 5.0 GHz - 25MB - 1700)",
+    "price": 9490000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "221000496",
+    "name": "CPU Intel Core i5-13600KF (14 nhân 20 luồng - Boost tối đa 5.1 GHz - 24MB - 1700)",
+    "price": 7729000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231204439",
+    "name": "CPU Intel Core i3-14100F (4 nhân 8 luồng -Boost to 4.7 GHz - 12MB - 1700)",
+    "price": 3090000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "201100013",
+    "name": "CPU AMD RYZEN™ 7 5800X (8 Core/16 Threads - 3.80 GHz Boost to 4.70 GHz - 32MB Cache - AM4)",
+    "price": 6300000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "220800023",
+    "name": "CPU AMD RYZEN™ 5 5600 (6 Core/12 Threads - 3.5 GHz Boost to 4.4 GHz - 32MB Cache - AM4)",
+    "price": 3729000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "230603083",
+    "name": "CPU AMD Ryzen 9 7950X3D (16 nhân 32 luồng - Boost to 5.7 GHz - 128MB - AM5)",
+    "price": 19289000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "220919568",
+    "name": "CPU AMD Ryzen 9 7900X (12 nhân 24 luồng - Boost to 5.6 GHz - 64MB - AM5)",
+    "price": 11290000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "221000501",
+    "name": "CPU Intel Core i9-13900K (24 nhân 32 luồng - Boost tối đa 5.8 GHz - 36MB - 1700)",
+    "price": 15499000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "221000499",
+    "name": "CPU Intel Core i7-13700K (16 nhân 24 luồng - Boost tối đa 5.4 GHz - 30MB - 1700)",
+    "price": 11190000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "221000498",
+    "name": "CPU Intel Core i7-13700KF (16 nhân 24 luồng - Boost tối đa 5.4 GHz - 30MB - 1700)",
+    "price": 10490000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "221000500",
+    "name": "CPU Intel Core i9-13900KF (24 nhân 32 luồng - Boost tối đa 5.8 GHz - 36MB - 1700)",
+    "price": 14999000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "250301293",
+    "name": "CPU AMD Ryzen 9 9900X3D (12C/24T | Up to 5.5GHz | 140MB | AM5 | Radeon Graphics 2CUs - RDNA 2.0) (100-100001368WOF)",
+    "price": 18090000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "230603085",
+    "name": "CPU AMD Ryzen 7 7700 (8 nhân 16 luồng - Boost to 5.3 GHz - 32MB - AM5)",
+    "price": 9090000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "230100132",
+    "name": "CPU Intel Core i5-13400F (10 nhân 16 luồng - Boost tối đa 4.6 GHz - 20MB - 1700)",
+    "price": 5090000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "230100137",
+    "name": "CPU Intel Core i9-13900 (24 nhân 32 luồng - Boost tối đa 5.6 GHz - 36MB - 1700)",
+    "price": 15599000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "220919567",
+    "name": "CPU AMD Ryzen 9 7950X (16 nhân 32 luồng - Boost to 5.7 GHz - 64MB - AM5)",
+    "price": 20990000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "240103590",
+    "name": "CPU AMD RYZEN™ 7 5700X3D (8 Core/16 Threads - 3.0 GHz Boost to 4.1 GHz - 100MB Cache - AM4)",
+    "price": 7490000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "231103713",
+    "name": "CPU AMD Ryzen Threadripper 7975WX (32 nhân 64 luồng - Boost to 5.3 GHz - 160MB - sTR5)",
+    "price": 119000000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "230603290",
+    "name": "CPU Intel Core i9-13900KS (24 nhân 32 luồng - Boost tối đa 6.0 GHz - 36MB - 1700)",
+    "price": 18499000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "210300857",
+    "name": "Bộ vi xử lý/ CPU Intel Pentium Gold G6405 (2 Cores 4 Threads 4.1 GHz 11th Gen LGA 1200)",
+    "price": 2590000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "1200",
+    "tdp": 65
+  },
+  {
+    "sku": "211012371",
+    "name": "CPU Intel Core i7-12700KF (12 nhân 20 luồng - Boost tối đa 5.0 GHz - 25MB - 1700)",
+    "price": 9290000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231103712",
+    "name": "CPU AMD Ryzen Threadripper 7965WX (24 nhân 48 luồng - Boost to 5.3 GHz - 152MB - sTR5)",
+    "price": 79990000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "210800165",
+    "name": "CPU AMD RYZEN™ 5 5600G (6 Core/12 Threads - 3.9 GHz Boost to 4.4 GHz - 3MB Cache - AM4)",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "210800164",
+    "name": "CPU AMD RYZEN™ 7 5700G (8 Core/16 Threads - 3.8 GHz Boost to 4.6 GHz - 4MB Cache - AM4)",
+    "price": 6090000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "211208126",
+    "name": "Bộ vi xử lý/ CPU Intel Pentium G7400 (2 Cores 4 Threads 3.7 GHz Alder Lake 12th Gen LGA 1700)",
+    "price": 3090000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "260106723",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 7 9850X3D (8C-16T | Up to 5.6GHz | 104MB | Radeon Graphics 2CU | AM5 | DDR5)",
+    "price": 15090000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "231204442",
+    "name": "CPU Intel Core i5-14500 (14 nhân 20 luồng - Boost to 5.0 GHz - 24MB - 1700)",
+    "price": 9490000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "230104440",
+    "name": "CPU AMD Ryzen 9 7900 (12 nhân 24 luồng - Boost to 5.4 GHz - 64MB - AM5)",
+    "price": 10490000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "260203202",
+    "name": "Bộ vi xử lý/ CPU Intel Core i3-13100 TRAY (không box)",
+    "price": 4290000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "230100131",
+    "name": "CPU Intel Core i3-13100 (4 nhân 8 luồng - Boost tối đa 4.5 GHz - 12MB - 1700)",
+    "price": 4390000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "230100133",
+    "name": "CPU Intel Core i5-13400 (10 nhân 16 luồng - Boost tối đa 4.6 GHz - 20MB - 1700)",
+    "price": 6690000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "240803309",
+    "name": "CPU AMD Ryzen 7 9700X (8 nhân 16 luồng - Boost to 5.5 GHz - 32MB - AM5)",
+    "price": 10090000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "240803311",
+    "name": "CPU AMD Ryzen 9 9950X (16 nhân 32 luồng - Boost to 5.1 GHz - 64MB - AM5)",
+    "price": 17990000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "240803312",
+    "name": "CPU AMD Ryzen 9 9900X (12 nhân 24 luồng - Boost to 5.6 GHz - 64MB - AM5)",
+    "price": 12700000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "200500549",
+    "name": "CPU Intel® Core™ i5-10400 Comet Lake (2.90 GHz up to 4.30 GHz/6 Nhân 12 Luồng/12MB/LGA1200)",
+    "price": 4790000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cpu",
+    "socket": "1200",
+    "tdp": 65
+  },
+  {
+    "sku": "231003449",
+    "name": "CPU Intel Core i5-13500 (14 nhân 20 luồng - Boost tối đa 4.8 GHz - 24MB - 1700)",
+    "price": 7290000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "220800019",
+    "name": "CPU AMD RYZEN™ 7 5800X3D (8 Core/16 Threads - 3.4GHz Boost to 4.5GHz - 96MB Cache - AM4)",
+    "price": 9559000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "220802537",
+    "name": "CPU AMD RYZEN™ Threadripper pro 5975WX (32 Core/64 Threads - 3.6 GHz Boost to 4.5 GHz - 128MB Cache - sWRX8)",
+    "price": 97990000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "SWRX8",
+    "tdp": 65
+  },
+  {
+    "sku": "220919569",
+    "name": "CPU AMD Ryzen 7 7700X (8 nhân 16 luồng - Boost to 5.4 GHz - 32MB - AM5)",
+    "price": 9790000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "240103589",
+    "name": "CPU AMD Ryzen 7 8700G (8 nhân 16 luồng - Boost to 5.1 GHz - 24MB - AM5)",
+    "price": 9790000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "240103592",
+    "name": "CPU AMD Ryzen 5 8600G (6 nhân 12 luồng - Boost to 5.1 GHz - 22MB - AM5)",
+    "price": 6890000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "230100136",
+    "name": "CPU Intel Core i9-13900F (24 nhân 32 luồng - Boost tối đa 5.6 GHz - 36MB - 1700)",
+    "price": 16390000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "220801965",
+    "name": "CPU AMD RYZEN™ Threadripper pro 5995WX (64 Core/128 Threads - 2.7 GHz Boost to 4.5 GHz - 256MB Cache - sWRX8)",
+    "price": 177909000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "SWRX8",
+    "tdp": 65
+  },
+  {
+    "sku": "220801966",
+    "name": "CPU AMD RYZEN™ Threadripper pro 5965WX (24 Core/48 Threads - 3.8 GHz Boost to 4.5 GHz - 128MB Cache - sWRX8)",
+    "price": 65259000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "SWRX8",
+    "tdp": 65
+  },
+  {
+    "sku": "250714657",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper PRO 9975WX (32C-64T | Upto 5.4GHz | 160MB | 350W | No iGPU | No Cooler | Socket sTR5)",
+    "price": 129000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "260503497",
+    "name": "Bộ vi xử lý/ CPU Intel Core i7-14700K Tray (Không box)",
+    "price": 12390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "250116206",
+    "name": "CPU Intel Core Ultra 7-265F (20 nhân 20 luồng - Boost tối đa 5.3 GHz - 30MB - 1851)",
+    "price": 10990000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "250116205",
+    "name": "CPU Intel Core Ultra 5-245 (14 nhân 14 luồng - Boost tối đa 5.1 GHz - 24MB - 1851)",
+    "price": 8190000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "240602365",
+    "name": "CPU AMD Ryzen 5 8400F (6 nhân 12 luồng - Boost to 4.7 GHz - 16MB - AM5)",
+    "price": 5190000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "250116204",
+    "name": "CPU Intel Core Ultra 9-285 (24 nhân 24 luồng - Boost tối đa 5.6 GHz - 36MB - 1851)",
+    "price": 16990000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "240300696",
+    "name": "CPU Intel Core i9-14900KS (24 nhân 32 luồng - Boost tối đa 6.2 GHz - 36MB - 1700)",
+    "price": 18490000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "cpu",
+    "socket": "FCLGA1700",
+    "tdp": 65
+  },
+  {
+    "sku": "231103714",
+    "name": "CPU AMD Ryzen Threadripper 7985WX (64 nhân 128 luồng - Boost to 5.1 GHz - 320MB - sTR5)",
+    "price": 209179000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "231103715",
+    "name": "CPU AMD Ryzen Threadripper 7995WX (96 nhân 192 luồng - Boost to 5.1 GHz - 480MB - sTR5)",
+    "price": 288380000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "230603082",
+    "name": "CPU AMD RYZEN™ Threadripper pro 5955WX (16 Core/32 Threads - 4.0GHz Boost to 4.5GHz - 64MB Cache - sWRX8)",
+    "price": 35589000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "SWRX8",
+    "tdp": 65
+  },
+  {
+    "sku": "240803310",
+    "name": "CPU AMD Ryzen 5 9600X (6 nhân 12 luồng - Boost to 5.4 GHz - 32MB - AM5)",
+    "price": 7900000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "250116207",
+    "name": "CPU Intel Core Ultra 5-235 (14 nhân 14 luồng - Boost tối đa 5.0 GHz - 24MB - 1851)",
+    "price": 8690000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "231204446",
+    "name": "CPU Intel Core i9-14900F (24 nhân 32 luồng - Boost to 5.8 GHz - 36MB - 1700)",
+    "price": 16490000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "cpu",
+    "socket": "1700",
+    "tdp": 65
+  },
+  {
+    "sku": "260202513",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen 5 7500X3D TRAY (Không box)",
+    "price": 7149000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "231103711",
+    "name": "CPU AMD Ryzen Threadripper 7980X (64 nhân 128 luồng - Boost to 5.1 GHz - 320MB - sTR5)",
+    "price": 150390000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "231103710",
+    "name": "CPU AMD Ryzen Threadripper 7970X (32 nhân 64 luồng - Boost to 5.3 GHz - 160MB - sTR5)",
+    "price": 75290000,
+    "stock_status": "out_of_stock",
+    "promo": "1% discount",
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "231103637",
+    "name": "CPU AMD Ryzen Threadripper 7960X (24 nhân 48 luồng - Boost to 5.3 GHz - 152MB - sTR5)",
+    "price": 44990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "240103591",
+    "name": "CPU AMD RYZEN™ 7 5700 (8 Core/16 Threads - 3.7 GHz Boost to 4.6 GHz - 20MB Cache - AM4)",
+    "price": 4800000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "240602379",
+    "name": "CPU AMD Ryzen 7 8700F (8 nhân 16 luồng - Boost to 5.0 GHz - 16MB - AM5)",
+    "price": 7890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803167",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper 9980X (100-100001593WOF)",
+    "price": 189000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803172",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper 9970X (100-100001594WOF)",
+    "price": 94900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803180",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper PRO 9965WX (24C-48T | Up to 5.4GHz | 152MB | Non-iGPU | sTR5)",
+    "price": 105900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803186",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper 9960X (100-100001595WOF)",
+    "price": 55900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803193",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper PRO 9955WX (100-100000725WOF)",
+    "price": 59900000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803199",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper PRO 9985WX (100-100000722WOZ)",
+    "price": 299000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "250803213",
+    "name": "Bộ vi xử lý/ CPU AMD Ryzen Threadripper PRO 9995WX (100-100001361WOF)",
+    "price": 419000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "STR5",
+    "tdp": 65
+  },
+  {
+    "sku": "260305644",
+    "name": "Bộ vi xử lý/ CPU Intel Core Ultra 5 250K Plus, 4.2 GHz, 30MB BX80768250K S A4UZ",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  },
+  {
+    "sku": "260305652",
+    "name": "Bộ vi xử lý/ CPU Intel Core Ultra 5 250KF Plus, 4.2 GHz, 30MB BX80768250KF S A4V3",
+    "price": 6590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "cpu",
+    "socket": "1851",
+    "tdp": 65
+  }
+]

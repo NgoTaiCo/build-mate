@@ -1,0 +1,18 @@
+{
+  "name": "@buildmate/compiler",
+  "version": "0.1.0",
+  "description": "Build Compiler deterministic trust layer — pure-function compatibility rules + repair plan generator",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

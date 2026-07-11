@@ -2,7 +2,43 @@
 
 Tài liệu cho thành viên mới: cài gì vào máy để chạy/develop BuildMate.
 
-## 1. Yêu cầu tối thiểu
+**2 cách setup:**
+- **[Option A](#option-a-docker--recommended)** Docker (recommended) ← dễ, không phụ thuộc local Node
+- **[Option B](#option-b-local-installation)** Local installation (nếu muốn custom, sandbox riêng)
+
+## Option A: Docker (Recommended)
+
+### 1. Yêu cầu
+
+| Component | Version |
+|---|---|
+| Docker Desktop / Engine | latest |
+| `make` command | (optional) |
+| Model API key | mimo pro (opencode Go plan) |
+
+### 2. Quick start
+
+```bash
+cd docker/
+
+# 1. Cấu hình
+make setup
+
+# 2. Start
+make up
+make init
+
+# 3. Truy cập
+# http://localhost:18789
+```
+
+👉 Chi tiết xem [docker/README.md](../docker/README.md)
+
+---
+
+## Option B: Local Installation
+
+### 1. Yêu cầu tối thiểu
 
 | Component | Version | Mục đích |
 |---|---|---|
@@ -11,7 +47,7 @@ Tài liệu cho thành viên mới: cài gì vào máy để chạy/develop Buil
 | Chrome | bất kỳ bản gần đây | Test Extension MV3 |
 | Model API key | mimo pro (opencode Go plan) | LLM provider cho OpenClaw |
 
-## 2. Cài OpenClaw
+### 2. Cài OpenClaw
 
 ```powershell
 npm install -g openclaw@latest
@@ -24,7 +60,7 @@ openclaw gateway                    # start gateway
 # mở http://127.0.0.1:18789/  → WebChat UI
 ```
 
-## 3. Cấu hình OpenClaw tối thiểu (`~/.openclaw/openclaw.json`)
+### 3. Cấu hình OpenClaw tối thiểu (`~/.openclaw/openclaw.json`)
 
 ```json5
 {
@@ -44,24 +80,38 @@ openclaw gateway                    # start gateway
 
 Verify model: `openclaw dashboard` → chat "hello" → agent reply = gateway+model OK.
 
-## 4. Project này
+### 4. Project này
 
 ```powershell
 # cd vào project
 # (Khi có code production) cài deps theo từng package
 ```
 
-Kiến trúc & scope: đọc `AGENTS.md` + `docs/adr/README.md` trước.
+---
 
-## 5. Extension approach
+## Kiến trúc & scope
+
+Đọc `AGENTS.md` + `docs/adr/README.md` trước.
+
+## Extension approach
 
 Cách extension Chrome thao tác trên `phongvu.vn/buildpc` (cấu trúc DOM, selector stable/brittle, SyntheticEvent, keep-alive, code patterns) nằm trong `docs/extension-phongvu-integration.md`. Extension là stretch (xem ADR-0003), không phải primary demo 1 ngày.
 
-## 6. OpenClaw reference (capability + tools)
+## OpenClaw reference (capability + tools)
 
 Xem `docs/openclaw-reference.md` (compile từ docs chính thức) để biết: sessions, tools plugin SDK, channels (Zalo native), skills, multi-agent, browser automation.
 
-## 7. Troubleshooting nhanh
+## Troubleshooting nhanh
+
+### Docker setup
+
+| Triệu chứng | Xử lý |
+|---|---|
+| Container không start | `make logs` để check error; verify Docker daemon running |
+| Health check fail | `make restart` + chờ 10s; check `.env` có `MODEL_PROVIDER` không |
+| Config reset sau restart | Xem `docker/README.md` § Mounted packages |
+
+### Local installation
 
 | Triệu chứng | Xử lý |
 |---|---|

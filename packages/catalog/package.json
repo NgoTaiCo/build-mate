@@ -1,0 +1,26 @@
+{
+  "name": "@buildmate/catalog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Catalog adapter for PC component search with live Apify integration and mock fallback",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "dev": "tsc --watch",
+    "fetch:phongvu": "bash scripts/fetch-phongvu-catalog.sh"
+  },
+  "dependencies": {
+    "apify-client": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "tsx": "^4.19.0"
+  },
+  "engines": {
+    "node": ">=22.17.0"
+  }
+}

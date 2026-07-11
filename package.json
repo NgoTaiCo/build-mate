@@ -1,8 +1,13 @@
 {
-  "name": "buildmate",
+  "name": "build-mate",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "node --test apps/chrome-extension/tests/*.test.js"
+    "test": "npm test --workspaces --if-present && node --test apps/chrome-extension/tests/*.test.js",
+    "test:ui": "node --test apps/chrome-extension/tests/*.test.js",
+    "typecheck": "npm run typecheck --workspaces --if-present"
   }
 }

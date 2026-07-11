@@ -1,0 +1,2592 @@
+[
+  {
+    "sku": "250803195",
+    "name": "Vỏ máy tính/ Case ASUS A31 ATX Black 4FA",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204744",
+    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F  (3 Fan) (EN45967)",
+    "price": 729000,
+    "stock_status": "in_stock",
+    "promo": "8% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250405179",
+    "name": "Vỏ máy tính/ Case Cooler Master MasterFrame 600",
+    "price": 5990000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "201100369",
+    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072",
+    "price": 449000,
+    "stock_status": "in_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "210801121",
+    "name": "Thùng máy/ Case máy tính Deepcool Matrexx 40 3FS",
+    "price": 809000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220909035",
+    "name": "Thùng máy/ Case MSI MAG FORCE M100A (4 Fan RGB)",
+    "price": 829000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302781",
+    "name": "Thùng máy tính/ Case MIK LV12 MINI ELITE",
+    "price": 1190000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231000901",
+    "name": "Case MIK AETHER GAMING (BLACK)",
+    "price": 649000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103053",
+    "name": "Case MSI MAG FORGE 320R AIRFLOW (306-7G23R21-809)",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240603475",
+    "name": "Case Xigmatek Alphard M 3GF(3 FAN RGB) - EN44090",
+    "price": 690000,
+    "stock_status": "in_stock",
+    "promo": "27% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240700221",
+    "name": "Thùng máy/ Case MIK Phong Vu Office",
+    "price": 590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240705235",
+    "name": "Vỏ máy tính/ Case MIK MORAX 3FA ARGB BLACK",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241105091",
+    "name": "Thùng máy/ Case NZXT H5 Flow RGB V2",
+    "price": 2690000,
+    "stock_status": "in_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241105129",
+    "name": "Thùng máy/ Case NZXT H7 Flow V2",
+    "price": 2990000,
+    "stock_status": "in_stock",
+    "promo": "6% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241201699",
+    "name": "Thùng máy/ Case MIK BARBATOS - Màu Đen",
+    "price": 1290000,
+    "stock_status": "in_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204742",
+    "name": "Thùng máy/ CASE MIK FOCALORS M BLACK (Đen)",
+    "price": 1049000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250302280",
+    "name": "Vỏ máy tính Corsair FRAME 4000D RS ARGB Mid-Tower",
+    "price": 2700000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250504129",
+    "name": "Thùng máy/ Case Corsair 3500X Tempered Glass Mid-Tower (Đen) (CC-9011276-WW)",
+    "price": 1890000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250646001",
+    "name": "Thùng máy/ CASE NZXT H3 FLOW ALL M-ATX",
+    "price": 1390000,
+    "stock_status": "in_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250646006",
+    "name": "Thùng máy/ CASE NZXT H9 FLOW RGB (2025) ALL",
+    "price": 4290000,
+    "stock_status": "in_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250713731",
+    "name": "Thùng máy/ CASE MIK G3 PRISM GLASS M BLACK",
+    "price": 790000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250719821",
+    "name": "Thùng máy/ Case MIK Mini Phong Vu V35 (Nguồn 300W)",
+    "price": 1690000,
+    "stock_status": "in_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250808770",
+    "name": "Thùng máy/ CASE MSI PAG PANO M110A",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250906233",
+    "name": "Thùng máy/ CASE MAGIC CUBI-M ELITE BLACK",
+    "price": 590000,
+    "stock_status": "out_of_stock",
+    "promo": "40% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250906257",
+    "name": "Thùng máy/ Case Jonsbo TK-1 Black",
+    "price": 2190000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250906264",
+    "name": "Thùng máy/ Case Art Ultra HM1 White ATX",
+    "price": 2190000,
+    "stock_status": "in_stock",
+    "promo": "27% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250906290",
+    "name": "Thùng máy/ Case Jonsbo Z20 Black",
+    "price": 1649000,
+    "stock_status": "in_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251102040",
+    "name": "Thùng máy/ CASE MSI MAG PANO 130R PZ (4 fan)",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251211475",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN49118)",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251211482",
+    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F (3 Fan) (EN49125)",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260200455",
+    "name": "Vỏ máy tính/ CASE MAGIC ES GASMING Aircraft 007 BLACK Ultra-Cool Display ARGB 3 FAN",
+    "price": 3490000,
+    "stock_status": "in_stock",
+    "promo": "30% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302472",
+    "name": "Thùng máy/ Case Jonsbo TK-3 (ATX)",
+    "price": 1890000,
+    "stock_status": "in_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302481",
+    "name": "Vỏ máy tính/ Case Jonsbo BO400 (ATX)",
+    "price": 5690000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302486",
+    "name": "Thùng máy/ Case Jonsbo C6 Max (M-ATX)",
+    "price": 990000,
+    "stock_status": "in_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302506",
+    "name": "Thùng máy/ Case Jonsbo D32 STD (M-ATX)",
+    "price": 990000,
+    "stock_status": "in_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302519",
+    "name": "Thùng máy/ Case Jonsbo D300 (M-ATX)",
+    "price": 1690000,
+    "stock_status": "in_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302523",
+    "name": "Thùng máy/ Case Jonsbo D400 (ATX)",
+    "price": 1590000,
+    "stock_status": "in_stock",
+    "promo": "16% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302631",
+    "name": "Vỏ máy tính/ Case Xigmatek Cloud M DGT - Đen (EN49859)",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260304422",
+    "name": "Vỏ máy tính/ CASE Cooler Master COSMOS Alpha",
+    "price": 17990000,
+    "stock_status": "in_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260501455",
+    "name": "Vỏ máy tính/ Case Xigmatek Heaven - Đen (EN49873)",
+    "price": 2090000,
+    "stock_status": "in_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260501470",
+    "name": "Vỏ máy tính/ Case Xigmatek Moon ML DGT - Đen (EN49699)",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260508253",
+    "name": "Vỏ máy tính/ CASE Aigo C218M",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260508561",
+    "name": "Vỏ máy tính/ Case Jonsbo D200 M-ATX",
+    "price": 1390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204161",
+    "name": "Thùng máy/ Case Cooler Master Masterbox 5 MSI - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "77% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251203579",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950) - ",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601731",
+    "name": "Thùng máy/ Case máy tính Deepcool Matrexx 40 3FS - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601758",
+    "name": "Thùng máy/ Case MSI MAG FORCE M100A (4 Fan RGB) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601759",
+    "name": "CASE Xigmatek DUO X 3F (3 Fan) (EN45127) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "71% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601760",
+    "name": "Thùng máy/ Case Xigmatek Fly II 3GF (3 FAN RGB) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601761",
+    "name": "Thùng máy/ Case Xigmatek Fly II Arctic 3GF (3 FAN RGB) - White - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601762",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601763",
+    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F (3 Fan) (EN45967) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601764",
+    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072 - Demo",
+    "price": 179000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601765",
+    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567 - Demo",
+    "price": 179000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601766",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3F - Mặt kính (EN42553) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601767",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3GF (EN43871) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231203191",
+    "name": "Thùng máy/ Case ASUS ROG HYPERION GR701",
+    "price": 11990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250637346",
+    "name": "Thùng máy/ Case HYTE Y70 Standard",
+    "price": 6290000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "1800549",
+    "name": "Case máy tính Golden Field Z2 (E-sport 21+)",
+    "price": 1290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "1807625",
+    "name": "Case máy tính Golden Field N55B Gaming 21+",
+    "price": 699000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19030035",
+    "name": "Case máy tính Gigabyte AORUS C300 GLASS",
+    "price": 2190000,
+    "stock_status": "out_of_stock",
+    "promo": "22% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070009",
+    "name": "Case máy tính Cooler Master Masterbox MB520 Red Trim",
+    "price": 1699000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070012",
+    "name": "Case máy tính Cooler Master NR600",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070013",
+    "name": "Case máy tính Cooler Master MasterCase H500",
+    "price": 2790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070608",
+    "name": "Case máy tính Golden Field H2B - Full Tower (Đen)",
+    "price": 490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070609",
+    "name": "Case máy tính Golden Field H3B - Mid Tower (Đen)",
+    "price": 445000,
+    "stock_status": "out_of_stock",
+    "promo": "19% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "19070611",
+    "name": "Case máy tính Golden Field X10 - Mid Tower (Đen)",
+    "price": 379000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "190800352",
+    "name": "Thùng máy/ Case Golden Field N17 Plus (3 Fans Golden Field LED Rainbow)",
+    "price": 709000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "190900045",
+    "name": "Thùng máy/ Case ASUS ROG Strix Helios GX601 (90DC0020-B30000)",
+    "price": 6490000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "190900197",
+    "name": "Thùng máy/ Case Gigabyte C200G",
+    "price": 1200000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "191007142",
+    "name": "Thùng máy / case Xigmatek Aquarius Plus Black (No fan) EN43330",
+    "price": 1999000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200301725",
+    "name": "Thùng máy/ Case CM MasterCase H500P TG Mesh White ARGB",
+    "price": 4099000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200301726",
+    "name": "Thùng máy/ Case CM MasterBox MB500 ARGB",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200301728",
+    "name": "Thùng máy/ Case CM MasterBox MB511 TG ARGB",
+    "price": 1899000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200301729",
+    "name": "Thùng máy/ Case CM MasterBox MB520 ARGB",
+    "price": 1999000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200400780",
+    "name": "Thùng máy/ Case Antec NX400- Tempered Glass",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200400782",
+    "name": "Thùng máy/ Case Antec DP501- Tempered Glass",
+    "price": 1290000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200500965",
+    "name": "Thùng máy/ Case CM MasterBox TD500 Mesh ARGB",
+    "price": 2199000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200700332",
+    "name": "Thùng máy/ Case Deepcool MACUBE 550 WHITE",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200800208",
+    "name": "Thùng máy/ Case ASUS ROG Strix Helios GX601 White Edition (90DC0023-B30000)",
+    "price": 7890000,
+    "stock_status": "out_of_stock",
+    "promo": "21% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200900240",
+    "name": "Thùng máy/ Case Golden Field N27W (1 Fan 120mm LED)",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200900242",
+    "name": "Thùng máy/ Case Golden Field P31b (2 Fan 20cm ARGB)",
+    "price": 849000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200900243",
+    "name": "Thùng máy/ Case Golden Field Z23G",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200900423",
+    "name": "Thùng máy/ Case MSI MAG VAMPIRIC 100R",
+    "price": 1290000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "200900709",
+    "name": "Thùng máy/ Case Xigmatek OMG Aqua EN45808 (No Fan)",
+    "price": 799000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "201001265",
+    "name": "Thùng máy/ Case Corsair 4000D Airflow TG Black (CC-9011200-WW)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "201100829",
+    "name": "Thùng máy/ Case ASUS ROG Z11 GR101 (90DC00B0-B30020)",
+    "price": 6990000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "201104546",
+    "name": "Thùng máy/ Case MSI MAG VAMPIRIC 100L (ATX) RGB STRIP",
+    "price": 1099000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "210101763",
+    "name": "Thùng máy/ Case Deepcool Macube 110 Black M-ATX",
+    "price": 989000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "210101764",
+    "name": "Thùng máy/ Case Deepcool Macube 110 White M-ATX",
+    "price": 989000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "210300245",
+    "name": "Thùng máy/ Case CM MasterBox MB511 TG Red Trim (MCB-B511D-KGNN-S00)",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "210301516",
+    "name": "Thùng máy/Case Gigabyte Aorus C700 Glass Full Tower (GB-AC700G)",
+    "price": 9199000,
+    "stock_status": "out_of_stock",
+    "promo": "23% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "211000719",
+    "name": "Vỏ máy tính/ Case Corsair 5000D Airflow TG Black (CC-9011210-WW)",
+    "price": 3790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101412",
+    "name": "Thùng máy/ Case Deepcool CG560 Black (3 Fan ARGB + 1 Fan Black)",
+    "price": 1490000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101413",
+    "name": "Thùng máy/ Case Deepcool CK500 WH (2 Fan)",
+    "price": 1559000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101414",
+    "name": "Thùng máy/ Case Deepcool CK500 Black (2 Fan)",
+    "price": 1559000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101415",
+    "name": "Thùng máy/ Case Deepcool CK560 WH (3 Fan ARGB + 1 Fan Black)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101416",
+    "name": "Thùng máy/ Case Deepcool CK560 Black (3 Fan ARGB + 1 Fan Black)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220101744",
+    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567",
+    "price": 399000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220103049",
+    "name": "Thùng máy/ Case XIGMATEK XA-24 (EN48359) - ATX",
+    "price": 390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220501973",
+    "name": "Thùng máy/ Case Xigmatek Gemini II Queen 3FB (EN48380)",
+    "price": 1059000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220502671",
+    "name": "Thùng máy/ Case SEGOTEP Gank 6 Black",
+    "price": 1139000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220502672",
+    "name": "Thùng máy/ Case SEGOTEP Gank 6 White",
+    "price": 1239000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220502673",
+    "name": "Thùng máy/ Case SEGOTEP Gank 360 Black",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220502674",
+    "name": "Thùng máy/ Case SEGOTEP Gank 360 White",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220502680",
+    "name": "Case SEGOTEP Artist 2F RGB White",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220600595",
+    "name": "Thùng máy/ Case MSI MAG SHIELD 110R",
+    "price": 1790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609340",
+    "name": "Thùng máy/ Case Cooler Master MasterCase HAF700 EVO (H700E-IGNN-S00)",
+    "price": 12800000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609466",
+    "name": "Thùng máy/ Case CM MasterBox MB600L (MCB-B600L-KANN-S02 (Gunmetal , wo/ODD))",
+    "price": 840000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609468",
+    "name": "Thùng máy/ Case CM MasterCase HAF 500 (H500-KGNN-S00)",
+    "price": 3599000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609469",
+    "name": "Thùng máy/ Case CM MasterCase HAF 500 WHITE (H500-WGNN-S00)",
+    "price": 3899000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609651",
+    "name": "Thùng máy/ Case NZXT H1 Version2 2022 Black ( CS-H11BB-EU )",
+    "price": 8539000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609652",
+    "name": "Thùng máy/ Case NZXT H1 Version2 2022 White ( CS-H11BW-EU )",
+    "price": 8539000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609653",
+    "name": "Thùng máy/ Case NZXT H210",
+    "price": 2039000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609655",
+    "name": "Thùng máy/ Case NZXT H510 Flow BLACK ( CA-H52FB-01 )",
+    "price": 1849000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609657",
+    "name": "Thùng máy/ Case NZXT H7 ELITE ALL BLACK",
+    "price": 4449000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609659",
+    "name": "Thùng máy/ Case NZXT H7 FLOW ALL",
+    "price": 2889000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220609661",
+    "name": "Thùng máy/ Case NZXT H7 FLOW BLACK & WHITE",
+    "price": 2899000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220610015",
+    "name": "Thùng máy/ Case ASUS TUF Gaming GT501 White Edition (SP005268)",
+    "price": 3940000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220610017",
+    "name": "Thùng máy/ Case ASUS PRIME AP201 MESH White",
+    "price": 1850000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220610406",
+    "name": "Thùng máy/ Case MSI MPG GUNGNIR 110R WHITE (306-7G10W21-W57)",
+    "price": 2630000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "220800995",
+    "name": "Thùng máy/ Case COOLERMASTER MasterBox NR600 without ODD (MCB-NR600-KGNN-S00)",
+    "price": 1650000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "221002909",
+    "name": "Thùng máy/ Case Thermaltake S100 TG",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "221002913",
+    "name": "Thùng máy/ Case Thermaltake Core P5 V2 TG (Đen) (CA-1E7-00M1WN-05)",
+    "price": 4039000,
+    "stock_status": "out_of_stock",
+    "promo": "6% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "221002914",
+    "name": "Thùng máy/ Case Thermaltake V250 TG ARGB (Đen) (CA-1Q5-00M1WN-00)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "221201190",
+    "name": "Thùng máy/ Case Deepcool Macube 110 Green M-ATX",
+    "price": 989000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230100363",
+    "name": "Thùng máy/ Case Xigmatek Aqua III",
+    "price": 1259000,
+    "stock_status": "out_of_stock",
+    "promo": "26% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230100365",
+    "name": "Thùng máy/ Case Xigmatek Aqua M (EN40061)",
+    "price": 899000,
+    "stock_status": "out_of_stock",
+    "promo": "35% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230100370",
+    "name": "Thùng máy/ Case MSI QUIETUDE 100S",
+    "price": 3990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230200079",
+    "name": "Thùng máy/ Case MSI MPG VELOX 100R",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "18% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230200080",
+    "name": "Thùng máy/ Case MSI MPG VELOX 100P AIRFLOW",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230300489",
+    "name": "Thùng máy/ Case NZXT H9 ELITE",
+    "price": 4899000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230300491",
+    "name": "Thùng máy/ Case NZXT H9 FLOW BLACK",
+    "price": 3389000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230300493",
+    "name": "Thùng máy/ Case NZXT H5 ELITE WHITE",
+    "price": 2899000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230300850",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 7000X RGB TG (CC-9011227-WW)",
+    "price": 8290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302745",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 4000D RGB Airflow",
+    "price": 3299000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302759",
+    "name": "Thùng máy tính/ Case ASUS TUF GAMING GT502",
+    "price": 3790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302786",
+    "name": "Thùng máy tính/ Case MIK LV07 - BLACK",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304322",
+    "name": "Thùng máy/ Case Deepcool CC560 White (R-CC560-WHGAA4-G-1)",
+    "price": 1099000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304323",
+    "name": "Thùng máy/ Case Deepcool CH510 MESH DIGITAL (R-CH510-BKNSE1-G-1)",
+    "price": 1999000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304324",
+    "name": "Thùng máy/ Case Deepcool CH510",
+    "price": 1579000,
+    "stock_status": "out_of_stock",
+    "promo": "28% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304326",
+    "name": "Thùng máy/ Case Deepcool CH370 White (R-CH370-WHNAM1-G-1)",
+    "price": 1199000,
+    "stock_status": "out_of_stock",
+    "promo": "43% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304330",
+    "name": "Thùng máy/ case Xigmatek NYX Arctic 3F",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400169",
+    "name": "Thùng máy/Case Gigabyte C301 Glass White (C301G WHT)",
+    "price": 2100000,
+    "stock_status": "out_of_stock",
+    "promo": "16% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400839",
+    "name": "Thùng máy/ Case Cooler Master CMP 510 Without fan Edition (CP510-KGNN-S01)",
+    "price": 1200000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400840",
+    "name": "Thùng máy/ Case Cooler Master CMP510 Without ODD ARGB Edition (CP510-KGNN-S00)",
+    "price": 1800000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400846",
+    "name": "Thùng máy/ Case Cooler Master CMP 520 (CP520-KGNN-S00)",
+    "price": 1390000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230603850",
+    "name": "Thùng máy/ Case NZXT H7 ELITE RGB",
+    "price": 4190000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230603852",
+    "name": "Thùng máy/ Case NZXT H7 FLOW RGB ALL",
+    "price": 3739000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230603854",
+    "name": "Thùng máy/ Case NZXT H5 FLOW RGB ALL",
+    "price": 2690000,
+    "stock_status": "out_of_stock",
+    "promo": "7% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230704104",
+    "name": "Case Xigmatek Anubis Pro 4FX (EN40771)",
+    "price": 1149000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231000864",
+    "name": "Case Xigmatek HERO II AIR 3F (Đen) (EN41655)",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231100492",
+    "name": "Thùng máy/ Case NZXT H6 Flow All",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103624",
+    "name": "Vỏ máy tính/ Case Xigmatek NYX Air II 3F Đen (EN41952)",
+    "price": 590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240200102",
+    "name": "Thùng máy/ Case NZXT H6 FLOW RGB ALL",
+    "price": 3390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240401329",
+    "name": "Thùng máy/ Case MSI PANO M100R PZ",
+    "price": 2449000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240804670",
+    "name": "Thùng máy/Case Gigabyte C102G",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240902184",
+    "name": "Thùng máy/ Case HYTE Y60",
+    "price": 5490000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240902989",
+    "name": "Thùng máy/ Case MSI MAG PANO M100R",
+    "price": 2390000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241004806",
+    "name": "Thùng máy/ Case COOLER MASTER SHARK X",
+    "price": 89990000,
+    "stock_status": "out_of_stock",
+    "promo": "24% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241004810",
+    "name": "Thùng máy/ Case COOLER MASTER SNEAKER X",
+    "price": 23990000,
+    "stock_status": "out_of_stock",
+    "promo": "20% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241105136",
+    "name": "Thùng máy/ Case NZXT H7 Flow RGB V2",
+    "price": 3290000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241105150",
+    "name": "Thùng máy/ Case NZXT H5 Flow V2",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241201707",
+    "name": "Thùng máy/ Case MIK BARBATOS - Màu Trắng",
+    "price": 1390000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250116591",
+    "name": "Thùng máy tính/ Case MSI MEG PROSPECT 700R",
+    "price": 10490000,
+    "stock_status": "out_of_stock",
+    "promo": "13% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250203125",
+    "name": "Thùng máy/ Case MSI MPG GUNGNIR 300R AIRFLOW",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204740",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950)",
+    "price": 729000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250302320",
+    "name": "Vỏ máy tính Corsair FRAME 4000D Mid-Tower Black (CC-9011290-WW)",
+    "price": 2190000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250504134",
+    "name": "Thùng máy/ Case Corsair 3500X RGB Tempered Glass Mid-Tower",
+    "price": 2490000,
+    "stock_status": "out_of_stock",
+    "promo": "3% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250637339",
+    "name": "Thùng máy/ Case HYTE Y70 Touch Infinite Pitch",
+    "price": 12490000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250640481",
+    "name": "Thùng máy/ Case Corsair iCUE LINK 3500X RGB Tempered Glass Mid-Tower",
+    "price": 3490000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250646014",
+    "name": "Thùng máy/ CASE NZXT H9 FLOW RGB PLUS (2025) ALL",
+    "price": 5890000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250719790",
+    "name": "Thùng máy/ CASE Corsair iCUE LINK 9000D AIRFLOW TG Super-Tower (CC-9011273-WW) Đen",
+    "price": 13600000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251101071",
+    "name": "Thùng máy/ CASE ROG Strix Helios II Hatsune Miku Edition",
+    "price": 11690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251107207",
+    "name": "Thùng máy/ CASE ART ULTRA W1",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251110934",
+    "name": "Thùng máy/ Case Jonsbo D32 Pro (M-ATX)",
+    "price": 1329000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260102027",
+    "name": "Thùng máy/ CASE HYTE X50 AIR (Đen)",
+    "price": 3890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260102043",
+    "name": "Thùng máy/ CASE HYTE X50 (Đen)",
+    "price": 4790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260105090",
+    "name": "Vỏ máy tính/ CASE MSI MPG VELOX 300R AIRFLOW PZ",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260204242",
+    "name": "Vỏ máy tính/ CASE Deepcool CH160 PLUS Black",
+    "price": 1490000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302071",
+    "name": "Vỏ máy tính/ CASE Cooler Master Elite 600 - 7 Fan",
+    "price": 2090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240901179",
+    "name": "Thùng máy/ Case Sama Combat - Demo",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "241101031",
+    "name": "Thùng máy/ Case Golden Field X10 - Demo",
+    "price": 499000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204213",
+    "name": "Thùng máy/ Case Golden Field X10 - Demo",
+    "price": 499000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204385",
+    "name": "Thùng máy/ Case Xigmatek XS-19 (EN44380) - Đã sử dụng",
+    "price": 300000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250307950",
+    "name": "Thùng máy/Case Golden Field U2 (Q25B) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250415484",
+    "name": "Thùng máy/ Case Phong Vũ PV-880B (Black) - Đã sử dụng",
+    "price": 599000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250520252",
+    "name": "Thùng máy/ Case Corsair 465X White (CC-9011189-WW) - Demo",
+    "price": 790000,
+    "stock_status": "out_of_stock",
+    "promo": "77% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250645717",
+    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072 - Demo",
+    "price": 550000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250804684",
+    "name": "Thùng máy/ Case Golden Field N95 - Demo",
+    "price": 595000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250804814",
+    "name": "Thùng máy/Case Golden Field U2 (Q25B) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250904016",
+    "name": "Thùng máy/Case Golden Field U2 (Q25B) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250904050",
+    "name": "Thùng máy/Case Golden Field U2 (Q25B) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250904069",
+    "name": "Thùng máy/ Case Golden Field N95 - Demo",
+    "price": 595000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250904070",
+    "name": "Thùng máy/Case Golden Field U2 (Q25B) - Demo",
+    "price": 449000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251002214",
+    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567 - Demo",
+    "price": 499000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601802",
+    "name": "Thùng máy/ Case máy tính Deepcool Matrexx 40 3FS - Demo",
+    "price": 390000,
+    "stock_status": "out_of_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601804",
+    "name": "Thùng máy/ Case MSI MAG FORCE M100A (4 Fan RGB) - Demo",
+    "price": 390000,
+    "stock_status": "out_of_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601805",
+    "name": "CASE Xigmatek DUO X 3F (3 Fan) (EN45127) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "71% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601806",
+    "name": "Thùng máy/ Case Xigmatek Fly II 3GF (3 FAN RGB) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601807",
+    "name": "Thùng máy/ Case Xigmatek Fly II Arctic 3GF (3 FAN RGB) - White - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601808",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601809",
+    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F (3 Fan) (EN45967) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601810",
+    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072 - Demo",
+    "price": 179000,
+    "stock_status": "out_of_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601811",
+    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567 - Demo",
+    "price": 179000,
+    "stock_status": "out_of_stock",
+    "promo": "64% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601812",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3F - Mặt kính (EN42553) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260601813",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3GF (EN43871) - Demo",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302747",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 5000X RGB TG",
+    "price": 4299000,
+    "stock_status": "out_of_stock",
+    "promo": "17% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302749",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 5000X RGB QL True White (CC-9011233-WW)",
+    "price": 6999000,
+    "stock_status": "out_of_stock",
+    "promo": "9% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302750",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 5000D RGB Airflow",
+    "price": 4799000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302752",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 5000T RGB",
+    "price": 8499000,
+    "stock_status": "out_of_stock",
+    "promo": "15% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302754",
+    "name": "Vỏ máy tính/ Case Corsair 7000D Airflow TG",
+    "price": 5690000,
+    "stock_status": "out_of_stock",
+    "promo": "11% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302774",
+    "name": "Thùng máy tính/ Case MIK STORM 360",
+    "price": 1290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302776",
+    "name": "Thùng máy tính/ Case MIK STORM 360 3FA",
+    "price": 1590000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302778",
+    "name": "Thùng máy tính/ Case MIK LV12 MINI FLOW",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302783",
+    "name": "Thùng máy tính/ Case MIK LV12 - WHITE",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302784",
+    "name": "Thùng máy tính/ Case MIK TM06 - BLACK",
+    "price": 749000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230302785",
+    "name": "Thùng máy tính/ Case MIK TN10 (3 FAN GALAXY ARGB)",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230304328",
+    "name": "Thùng máy/ Case Deepcool CYCLOPS",
+    "price": 1599000,
+    "stock_status": "out_of_stock",
+    "promo": "5% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400831",
+    "name": "Thùng máy/ Case Cooler Master MasterBox 520 ARGB - Trắng (White) (MB520-WGNN-S01)",
+    "price": 2499000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400832",
+    "name": "Thùng máy/ Case Cooler Master MasterBox 520 Mesh ARGB Black (MB520-KGNN-S00)",
+    "price": 2051000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400833",
+    "name": "Thùng máy/ Case Cooler Master MasterBox 520 Mesh ARGB Trắng (White) (MB520-KGNN-S00)",
+    "price": 1999000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400834",
+    "name": "Thùng máy/ Case Cooler Master MasterBox NR200P Caribbean Blue (Cyan/White) (MCB-NR200P-ACNN-S00)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400835",
+    "name": "Thùng máy/ Case Cooler Master MasterBox NR200P Sunset Orange (Orange/Black) (MCB-NR200P-OCNN-S00)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400836",
+    "name": "Thùng máy/ Case Cooler Master MasterBox NR200P Flamingo Pink (Pink/White) (MCB-NR200P-QCNN-S00)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400837",
+    "name": "Thùng máy/ Case Cooler Master MasterBox NR200P Nightshade Purple (Purple/Black) (MCB-NR200P-PCNN-S00)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400838",
+    "name": "Thùng máy/ Case Cooler Master MasterBox NR200P Max (NR200P-MCNN85-SL0)",
+    "price": 7500000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400841",
+    "name": "Thùng máy/ Case Cooler Master Elite 500 Without ODD (E500-KNNN-S00)",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400842",
+    "name": "Thùng máy/ Case Cooler Master Elite 500 Without ODD TG left panel (E500-KGNN-S00)",
+    "price": 1150000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400843",
+    "name": "Thùng máy/ Case Cooler Master MASTERBOX MB600L V2 (MB600L2-KNNN-S00)",
+    "price": 1000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400844",
+    "name": "Thùng máy/ Case Cooler Master HAF 700 (H700-IGNN-S00)",
+    "price": 8000000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230400845",
+    "name": "Thùng máy/ Case Cooler Master Cosmos C700M White (MCC-C700M-WG5N-S00)",
+    "price": 12800000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230704103",
+    "name": "Thùng máy/ Case Xigmatek Gaming Z 3F (EN41082)",
+    "price": 790000,
+    "stock_status": "out_of_stock",
+    "promo": "12% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230704105",
+    "name": "Vỏ máy tính/ Case Corsair 2000D AIRFLOW - ITX Tower",
+    "price": 3300000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230704107",
+    "name": "Vỏ máy tính/ Case Corsair iCUE 2000D RGB AIRFLOW - ITX Tower",
+    "price": 4850000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230901142",
+    "name": "Thùng máy/ Case Xigmatek NYX Air Arctic 3F (EN40924)",
+    "price": 690000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "230901144",
+    "name": "Thùng máy/ Case Xigmatek XS-27 (EN41556)",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231100617",
+    "name": "Vỏ máy tính/ Case Corsair 3000D AirFlow Tempered Glass Mid-Tower, White (CC-9011252-WW)",
+    "price": 1990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103621",
+    "name": "Vỏ máy tính/ Case Xigmatek XAS-33 Đen (EN42003)",
+    "price": 290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103622",
+    "name": "Vỏ máy tính/ Case Xigmatek XS-29 Đen (EN42010)",
+    "price": 239000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103623",
+    "name": "Vỏ máy tính/ Case Xigmatek NYX II 3F Đen (EN42188)",
+    "price": 650000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103625",
+    "name": "Vỏ máy tính/ Case Xigmatek Sky 3F Đen (EN42157)",
+    "price": 650000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103626",
+    "name": "Vỏ máy tính/ Case Xigmatek Endorphin Air / Đen (EN41785)",
+    "price": 1090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103627",
+    "name": "Vỏ máy tính/ Case Xigmatek Endorphin Air Arctic / Trắng (EN41792)",
+    "price": 1190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "231103628",
+    "name": "Vỏ máy tính/ Case Xigmatek CUBI /( EATX, USB3.0x1+Type C, 3PCS Tempered Glass, No Fan) (EN41921)",
+    "price": 2390000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240302565",
+    "name": "Thùng máy/ Case Thermaltake S200 (With 4 ARGB ) Black/ Đen (CA-1X2-00M1WN-01)",
+    "price": 1290000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "240302567",
+    "name": "Case Thermaltake H570 TG - Black/ Đen (CA-1T9-00M1WN-01)",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250203123",
+    "name": "Thùng máy/ Case MSI MPG GUNGNIR 300P AIRFLOW",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250203124",
+    "name": "Thùng máy/ Case MSI MPG GUNGNIR 300R AIRFLOW WHITE",
+    "price": 3590000,
+    "stock_status": "out_of_stock",
+    "promo": "14% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250204732",
+    "name": "Thùng máy/ CASE MIK FOCALORS M WHITE (Trắng)",
+    "price": 1090000,
+    "stock_status": "out_of_stock",
+    "promo": "8% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "250719797",
+    "name": "Thùng máy/ CASE Corsair 3500X CALL OF DUTY BLACK OPS 6 EDITION LIMITED (CC-9011276-COD)",
+    "price": 2290000,
+    "stock_status": "out_of_stock",
+    "promo": "2% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "251017416",
+    "name": "Thùng máy/ CASE Xigmatek DUO X 3F (3 Fan) - EN49002",
+    "price": 949000,
+    "stock_status": "out_of_stock",
+    "promo": "4% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260105671",
+    "name": "Vỏ máy tính/ CASE Cooler Master MasterFrame 360 Panorama",
+    "price": 5390000,
+    "stock_status": "out_of_stock",
+    "promo": "10% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260302638",
+    "name": "Vỏ máy tính/ Case Xigmatek Cloud M DGT Arctic - Trắng (EN49866)",
+    "price": 890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260303848",
+    "name": "Vỏ máy tính/ CASE MSI MEG MAESTRO 700L PZ",
+    "price": 11990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260501463",
+    "name": "Vỏ máy tính/ Case Xigmatek Heaven Arctic - Trắng (EN49880)",
+    "price": 2190000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260501478",
+    "name": "Vỏ máy tính/ Case Xigmatek Moon ML DGT Arctic - Trắng (EN49705)",
+    "price": 1090000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260602183",
+    "name": "Vỏ máy tính/ Case DARKFLASH TH285 Plus - Trắng",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  },
+  {
+    "sku": "260602189",
+    "name": "Vỏ máy tính/ Case DARKFLASH K430 - Đen",
+    "price": 1890000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "clearance_mm": 300
+  }
+]
