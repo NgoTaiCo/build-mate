@@ -7,7 +7,14 @@
     "promo": "18% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204744",
@@ -16,8 +23,16 @@
     "stock_status": "in_stock",
     "promo": "8% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250405179",
@@ -27,7 +42,14 @@
     "promo": "9% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "201100369",
@@ -37,7 +59,14 @@
     "promo": "18% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "210801121",
@@ -47,7 +76,14 @@
     "promo": "18% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220909035",
@@ -57,7 +93,14 @@
     "promo": "16% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302781",
@@ -66,8 +109,16 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231000901",
@@ -77,7 +128,14 @@
     "promo": "7% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231103053",
@@ -87,7 +145,14 @@
     "promo": "20% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240603475",
@@ -96,8 +161,16 @@
     "stock_status": "in_stock",
     "promo": "27% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240700221",
@@ -106,8 +179,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240705235",
@@ -117,7 +198,14 @@
     "promo": "22% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241105091",
@@ -127,7 +215,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241105129",
@@ -137,7 +232,14 @@
     "promo": "6% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241201699",
@@ -147,7 +249,16 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204742",
@@ -156,8 +267,16 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250302280",
@@ -167,7 +286,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250504129",
@@ -177,7 +303,14 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250646001",
@@ -186,8 +319,16 @@
     "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250646006",
@@ -197,7 +338,14 @@
     "promo": "4% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250713731",
@@ -206,8 +354,16 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250719821",
@@ -216,8 +372,16 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250808770",
@@ -226,8 +390,16 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250906233",
@@ -236,8 +408,16 @@
     "stock_status": "out_of_stock",
     "promo": "40% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250906257",
@@ -247,7 +427,14 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250906264",
@@ -257,7 +444,16 @@
     "promo": "27% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250906290",
@@ -267,7 +463,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251102040",
@@ -277,7 +480,16 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251211475",
@@ -286,8 +498,16 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251211482",
@@ -296,8 +516,16 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260200455",
@@ -306,8 +534,16 @@
     "stock_status": "in_stock",
     "promo": "30% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302472",
@@ -317,7 +553,14 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302481",
@@ -327,7 +570,14 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302486",
@@ -337,7 +587,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302506",
@@ -347,7 +604,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302519",
@@ -357,7 +621,14 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302523",
@@ -367,7 +638,16 @@
     "promo": "16% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302631",
@@ -376,8 +656,16 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260304422",
@@ -387,7 +675,14 @@
     "promo": "18% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260501455",
@@ -397,7 +692,16 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260501470",
@@ -406,8 +710,16 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260508253",
@@ -416,8 +728,16 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260508561",
@@ -427,7 +747,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204161",
@@ -437,7 +764,14 @@
     "promo": "77% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251203579",
@@ -446,8 +780,16 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601731",
@@ -457,7 +799,14 @@
     "promo": "61% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601758",
@@ -467,7 +816,14 @@
     "promo": "61% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601759",
@@ -477,7 +833,16 @@
     "promo": "71% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601760",
@@ -487,7 +852,16 @@
     "promo": "61% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601761",
@@ -497,7 +871,16 @@
     "promo": "63% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601762",
@@ -506,8 +889,16 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601763",
@@ -516,8 +907,16 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601764",
@@ -527,7 +926,14 @@
     "promo": "67% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601765",
@@ -537,7 +943,14 @@
     "promo": "64% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601766",
@@ -546,8 +959,16 @@
     "stock_status": "in_stock",
     "promo": "63% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260601767",
@@ -556,8 +977,213 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "case",
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601802",
+    "name": "Thùng máy/ Case máy tính Deepcool Matrexx 40 3FS - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601804",
+    "name": "Thùng máy/ Case MSI MAG FORCE M100A (4 Fan RGB) - Demo",
+    "price": 390000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601805",
+    "name": "CASE Xigmatek DUO X 3F (3 Fan) (EN45127) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "71% discount",
+    "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601806",
+    "name": "Thùng máy/ Case Xigmatek Fly II 3GF (3 FAN RGB) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "61% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601807",
+    "name": "Thùng máy/ Case Xigmatek Fly II Arctic 3GF (3 FAN RGB) - White - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601808",
+    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601809",
+    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F (3 Fan) (EN45967) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601810",
+    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072 - Demo",
+    "price": 179000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601811",
+    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567 - Demo",
+    "price": 179000,
+    "stock_status": "in_stock",
+    "promo": "64% discount",
+    "type": "case",
+    "form_factor": "ITX",
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601812",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3F - Mặt kính (EN42553) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "63% discount",
+    "type": "case",
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "260601813",
+    "name": "Vỏ máy tính/ Case Xigmatek Fly 3GF (EN43871) - Demo",
+    "price": 290000,
+    "stock_status": "in_stock",
+    "promo": "67% discount",
+    "type": "case",
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231203191",
@@ -567,7 +1193,16 @@
     "promo": "20% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250637346",
@@ -577,7 +1212,14 @@
     "promo": "10% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "1800549",
@@ -587,7 +1229,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "1807625",
@@ -596,8 +1245,16 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
   },
   {
     "sku": "19030035",
@@ -607,7 +1264,16 @@
     "promo": "22% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
   },
   {
     "sku": "19070009",
@@ -617,7 +1283,16 @@
     "promo": "10% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
   },
   {
     "sku": "19070012",
@@ -627,7 +1302,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
   },
   {
     "sku": "19070013",
@@ -637,7 +1321,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
   },
   {
     "sku": "19070608",
@@ -647,7 +1340,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "19070609",
@@ -657,7 +1359,14 @@
     "promo": "19% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "19070611",
@@ -667,7 +1376,14 @@
     "promo": "24% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "190800352",
@@ -676,8 +1392,16 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "190900045",
@@ -687,7 +1411,14 @@
     "promo": "7% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "190900197",
@@ -697,7 +1428,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "191007142",
@@ -707,7 +1445,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200301725",
@@ -717,7 +1462,16 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200301726",
@@ -727,7 +1481,14 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200301728",
@@ -737,7 +1498,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200301729",
@@ -747,7 +1515,14 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200400780",
@@ -756,8 +1531,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200400782",
@@ -766,8 +1549,16 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200500965",
@@ -777,7 +1568,14 @@
     "promo": "12% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200700332",
@@ -787,7 +1585,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200800208",
@@ -797,7 +1602,16 @@
     "promo": "21% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200900240",
@@ -806,8 +1620,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200900242",
@@ -816,8 +1638,16 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200900243",
@@ -826,8 +1656,16 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200900423",
@@ -837,7 +1675,14 @@
     "promo": "4% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "200900709",
@@ -847,7 +1692,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "201001265",
@@ -857,7 +1709,16 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "201100829",
@@ -867,7 +1728,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "201104546",
@@ -877,7 +1745,14 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "210101763",
@@ -886,8 +1761,16 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "210101764",
@@ -896,8 +1779,16 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "210300245",
@@ -907,7 +1798,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "210301516",
@@ -917,7 +1815,14 @@
     "promo": "23% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "211000719",
@@ -927,7 +1832,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101412",
@@ -937,7 +1851,14 @@
     "promo": "12% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101413",
@@ -947,7 +1868,14 @@
     "promo": "2% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101414",
@@ -957,7 +1885,14 @@
     "promo": "2% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101415",
@@ -967,7 +1902,14 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101416",
@@ -977,7 +1919,109 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "220101735",
+    "name": "Thùng máy/ Case Xigmatek FADIL 1F (1 FAN X20F) - EN47970",
+    "price": 790000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 120
+  },
+  {
+    "sku": "220101736",
+    "name": "Thùng máy/ Case Xigmatek FADIL ARTIC 1F (1 FAN X20F) - EN48083",
+    "price": 850000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "220101738",
+    "name": "Thùng máy/ Case Xigmatek LUX A SHADOW - EN47826",
+    "price": 1050000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "220101742",
+    "name": "Thùng máy/ Case Xigmatek LUX S 3FX (3 FAN X22ARGB) - EN47840",
+    "price": 990000,
+    "stock_status": "out_of_stock",
+    "promo": "29% discount",
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "220101743",
+    "name": "Thùng máy/ Case Xigmatek LUX S ARTIC 3FX (3 FAN X22ARGB) - EN47857",
+    "price": 1450000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220101744",
@@ -987,7 +2031,33 @@
     "promo": "20% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
+  },
+  {
+    "sku": "220103047",
+    "name": "Thùng máy/ Case XIGMATEK X7 WHITE (EN46225) - PREMIUM GAMING E-ATX",
+    "price": 2990000,
+    "stock_status": "out_of_stock",
+    "promo": null,
+    "type": "case",
+    "form_factor": "ATX",
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 360
   },
   {
     "sku": "220103049",
@@ -997,7 +2067,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220501973",
@@ -1007,7 +2084,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220502671",
@@ -1016,8 +2100,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220502672",
@@ -1026,8 +2118,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220502673",
@@ -1037,7 +2137,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220502674",
@@ -1047,7 +2154,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220502680",
@@ -1056,8 +2170,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220600595",
@@ -1067,7 +2189,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609340",
@@ -1077,7 +2208,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609466",
@@ -1087,7 +2225,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609468",
@@ -1096,8 +2241,16 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609469",
@@ -1106,8 +2259,16 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609651",
@@ -1117,7 +2278,14 @@
     "promo": "9% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609652",
@@ -1127,7 +2295,14 @@
     "promo": "9% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609653",
@@ -1137,7 +2312,14 @@
     "promo": "7% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609655",
@@ -1146,8 +2328,16 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609657",
@@ -1157,7 +2347,14 @@
     "promo": "9% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609659",
@@ -1167,7 +2364,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220609661",
@@ -1177,7 +2381,14 @@
     "promo": "12% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220610015",
@@ -1186,8 +2397,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220610017",
@@ -1196,8 +2415,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220610406",
@@ -1207,7 +2434,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "220800995",
@@ -1217,7 +2451,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "221002909",
@@ -1227,7 +2468,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "221002913",
@@ -1237,7 +2485,14 @@
     "promo": "6% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "221002914",
@@ -1247,7 +2502,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "221201190",
@@ -1257,7 +2519,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230100363",
@@ -1267,7 +2536,14 @@
     "promo": "26% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230100365",
@@ -1276,8 +2552,16 @@
     "stock_status": "out_of_stock",
     "promo": "35% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230100370",
@@ -1287,7 +2571,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230200079",
@@ -1296,8 +2587,16 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230200080",
@@ -1307,7 +2606,14 @@
     "promo": "16% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230300489",
@@ -1317,7 +2623,14 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230300491",
@@ -1327,7 +2640,14 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230300493",
@@ -1337,7 +2657,14 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230300850",
@@ -1347,7 +2674,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302745",
@@ -1357,7 +2693,16 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302759",
@@ -1367,7 +2712,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302786",
@@ -1377,7 +2731,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304322",
@@ -1387,7 +2750,16 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304323",
@@ -1397,7 +2769,16 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304324",
@@ -1407,7 +2788,16 @@
     "promo": "28% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304326",
@@ -1417,7 +2807,14 @@
     "promo": "43% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304330",
@@ -1427,7 +2824,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400169",
@@ -1437,7 +2843,14 @@
     "promo": "16% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400839",
@@ -1447,7 +2860,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400840",
@@ -1457,7 +2877,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400846",
@@ -1467,7 +2894,14 @@
     "promo": "10% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230603850",
@@ -1477,7 +2911,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230603852",
@@ -1487,7 +2928,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230603854",
@@ -1497,7 +2945,14 @@
     "promo": "7% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230704104",
@@ -1507,7 +2962,14 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231000864",
@@ -1517,7 +2979,14 @@
     "promo": "8% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231100492",
@@ -1527,7 +2996,14 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231103624",
@@ -1536,8 +3012,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "240200102",
@@ -1547,7 +3031,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240401329",
@@ -1556,8 +3047,16 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240804670",
@@ -1567,7 +3066,14 @@
     "promo": "8% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240902184",
@@ -1577,7 +3083,16 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240902989",
@@ -1587,7 +3102,14 @@
     "promo": "4% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241004806",
@@ -1597,7 +3119,15 @@
     "promo": "24% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "SFX",
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 400
   },
   {
     "sku": "241004810",
@@ -1607,7 +3137,15 @@
     "promo": "20% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "SFX",
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 400
   },
   {
     "sku": "241105136",
@@ -1617,7 +3155,14 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241105150",
@@ -1627,7 +3172,14 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241201707",
@@ -1637,7 +3189,16 @@
     "promo": "13% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250116591",
@@ -1646,8 +3207,16 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250203125",
@@ -1657,7 +3226,16 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204740",
@@ -1666,8 +3244,16 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250302320",
@@ -1677,7 +3263,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250504134",
@@ -1687,7 +3280,14 @@
     "promo": "3% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250637339",
@@ -1697,7 +3297,14 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250640481",
@@ -1707,7 +3314,14 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250646014",
@@ -1717,7 +3331,14 @@
     "promo": "2% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250719790",
@@ -1727,7 +3348,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251101071",
@@ -1737,7 +3365,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251107207",
@@ -1747,7 +3382,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251110934",
@@ -1757,7 +3399,14 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260102027",
@@ -1766,8 +3415,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260102043",
@@ -1777,7 +3434,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260105090",
@@ -1787,7 +3453,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260204242",
@@ -1797,7 +3472,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302071",
@@ -1807,7 +3489,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240901179",
@@ -1816,8 +3505,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "241101031",
@@ -1827,7 +3524,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 145,
+    "clearance_mm": 145
   },
   {
     "sku": "250204213",
@@ -1837,7 +3541,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 145,
+    "clearance_mm": 145
   },
   {
     "sku": "250204385",
@@ -1847,7 +3558,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250307950",
@@ -1857,7 +3575,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 157,
+    "clearance_mm": 157
   },
   {
     "sku": "250415484",
@@ -1866,8 +3593,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250520252",
@@ -1877,7 +3612,14 @@
     "promo": "77% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250645717",
@@ -1887,7 +3629,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250804684",
@@ -1897,7 +3646,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "250804814",
@@ -1907,7 +3665,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 157,
+    "clearance_mm": 157
   },
   {
     "sku": "250904016",
@@ -1917,7 +3684,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 157,
+    "clearance_mm": 157
   },
   {
     "sku": "250904050",
@@ -1927,7 +3703,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 157,
+    "clearance_mm": 157
   },
   {
     "sku": "250904069",
@@ -1937,7 +3722,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "250904070",
@@ -1947,7 +3741,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 157,
+    "clearance_mm": 157
   },
   {
     "sku": "251002214",
@@ -1957,117 +3760,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601802",
-    "name": "Thùng máy/ Case máy tính Deepcool Matrexx 40 3FS - Demo",
-    "price": 390000,
-    "stock_status": "out_of_stock",
-    "promo": "61% discount",
-    "type": "case",
-    "form_factor": "ITX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601804",
-    "name": "Thùng máy/ Case MSI MAG FORCE M100A (4 Fan RGB) - Demo",
-    "price": 390000,
-    "stock_status": "out_of_stock",
-    "promo": "61% discount",
-    "type": "case",
-    "form_factor": "ITX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601805",
-    "name": "CASE Xigmatek DUO X 3F (3 Fan) (EN45127) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "71% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601806",
-    "name": "Thùng máy/ Case Xigmatek Fly II 3GF (3 FAN RGB) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "61% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601807",
-    "name": "Thùng máy/ Case Xigmatek Fly II Arctic 3GF (3 FAN RGB) - White - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "63% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601808",
-    "name": "Thùng máy/ CASE Xigmatek MYX 3F (3 Fan) (EN45950) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "63% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601809",
-    "name": "Thùng máy/ CASE Xigmatek MYX Air 3F (3 Fan) (EN45967) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "63% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601810",
-    "name": "Thùng máy/ Case Xigmatek XA-20 (ATX) EN46072 - Demo",
-    "price": 179000,
-    "stock_status": "out_of_stock",
-    "promo": "67% discount",
-    "type": "case",
-    "form_factor": "ITX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601811",
-    "name": "Thùng máy/ Case Xigmatek XA-22 (ATX) EN47567 - Demo",
-    "price": 179000,
-    "stock_status": "out_of_stock",
-    "promo": "64% discount",
-    "type": "case",
-    "form_factor": "ITX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601812",
-    "name": "Vỏ máy tính/ Case Xigmatek Fly 3F - Mặt kính (EN42553) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "63% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
-  },
-  {
-    "sku": "260601813",
-    "name": "Vỏ máy tính/ Case Xigmatek Fly 3GF (EN43871) - Demo",
-    "price": 290000,
-    "stock_status": "out_of_stock",
-    "promo": "67% discount",
-    "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302747",
@@ -2077,7 +3777,16 @@
     "promo": "17% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302749",
@@ -2087,7 +3796,16 @@
     "promo": "9% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302750",
@@ -2097,7 +3815,16 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302752",
@@ -2107,7 +3834,14 @@
     "promo": "15% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302754",
@@ -2117,7 +3851,16 @@
     "promo": "11% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302774",
@@ -2127,7 +3870,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302776",
@@ -2137,7 +3889,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302778",
@@ -2146,8 +3907,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302783",
@@ -2157,7 +3926,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302784",
@@ -2166,8 +3944,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230302785",
@@ -2177,7 +3963,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230304328",
@@ -2187,7 +3982,16 @@
     "promo": "5% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400831",
@@ -2197,7 +4001,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400832",
@@ -2207,7 +4018,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400833",
@@ -2217,7 +4035,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400834",
@@ -2227,7 +4052,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400835",
@@ -2237,7 +4069,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400836",
@@ -2247,7 +4086,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400837",
@@ -2257,7 +4103,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400838",
@@ -2267,7 +4120,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400841",
@@ -2277,7 +4137,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400842",
@@ -2287,7 +4154,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400843",
@@ -2297,7 +4171,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400844",
@@ -2307,7 +4188,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230400845",
@@ -2317,7 +4205,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230704103",
@@ -2327,7 +4222,14 @@
     "promo": "12% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230704105",
@@ -2337,7 +4239,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230704107",
@@ -2347,7 +4256,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230901142",
@@ -2357,7 +4273,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "230901144",
@@ -2367,7 +4290,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231100617",
@@ -2377,7 +4307,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "231103621",
@@ -2387,7 +4326,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "231103622",
@@ -2396,8 +4344,16 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "231103623",
@@ -2406,8 +4362,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "231103625",
@@ -2417,7 +4381,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 160
   },
   {
     "sku": "231103626",
@@ -2427,7 +4400,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 170,
+    "clearance_mm": 170
   },
   {
     "sku": "231103627",
@@ -2437,7 +4419,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 170,
+    "clearance_mm": 170
   },
   {
     "sku": "231103628",
@@ -2447,7 +4438,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 180,
+    "clearance_mm": 180
   },
   {
     "sku": "240302565",
@@ -2457,7 +4457,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "240302567",
@@ -2467,7 +4476,14 @@
     "promo": null,
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250203123",
@@ -2477,7 +4493,16 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250203124",
@@ -2487,7 +4512,16 @@
     "promo": "14% discount",
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250204732",
@@ -2496,8 +4530,16 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "250719797",
@@ -2506,8 +4548,16 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "251017416",
@@ -2516,8 +4566,16 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260105671",
@@ -2527,7 +4585,14 @@
     "promo": "10% discount",
     "type": "case",
     "form_factor": "ITX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260302638",
@@ -2536,8 +4601,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260303848",
@@ -2547,7 +4620,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260501463",
@@ -2557,7 +4639,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260501478",
@@ -2566,8 +4657,16 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "case",
-    "form_factor": "ATX",
-    "clearance_mm": 300
+    "form_factor": "mATX",
+    "supported_mb_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260602183",
@@ -2577,7 +4676,16 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   },
   {
     "sku": "260602189",
@@ -2587,6 +4695,15 @@
     "promo": null,
     "type": "case",
     "form_factor": "ATX",
-    "clearance_mm": 300
+    "supported_mb_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "max_cooler_height": 160,
+    "clearance_mm": 330
   }
 ]

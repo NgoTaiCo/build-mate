@@ -90,16 +90,6 @@
     "tdp": 65
   },
   {
-    "sku": "250116201",
-    "name": "CPU Intel Core Ultra 5-225 (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
-    "price": 5090000,
-    "stock_status": "in_stock",
-    "promo": "36% discount",
-    "type": "cpu",
-    "socket": "1851",
-    "tdp": 65
-  },
-  {
     "sku": "231002129",
     "name": "CPU Intel Core i9-14900KF (24 nhân 32 luồng - Boost to 6.0 GHz - 36MB - 1700)",
     "price": 15390000,
@@ -467,6 +457,16 @@
     "promo": "38% discount",
     "type": "cpu",
     "socket": "AM4",
+    "tdp": 65
+  },
+  {
+    "sku": "250116201",
+    "name": "CPU Intel Core Ultra 5-225 (10 nhân 10 luồng - Boost tối đa 4.9 GHz - 20MB - 1851)",
+    "price": 5090000,
+    "stock_status": "out_of_stock",
+    "promo": "36% discount",
+    "type": "cpu",
+    "socket": "1851",
     "tdp": 65
   },
   {

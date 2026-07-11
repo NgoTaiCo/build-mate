@@ -151,9 +151,18 @@ async function fetchAndSaveType(
   console.log(
     `  ✓ Saved ${transformed.length} transformed products to ${filePath}`
   );
-  if (transformed.length < allProducts.length) {
+
+  const dropped = allProducts.length - transformed.length;
+  if (dropped > 0) {
+    // Distinguish the two drop reasons so the count isn't misread as a bug:
+    // unpriced items (latestPrice "0") are intentionally skipped, whereas
+    // priced-but-unparseable items point at a transformer gap worth fixing.
+    const noPrice = allProducts.filter(
+      (p) => !p.latestPrice || parseInt(String(p.latestPrice).replace(/[^0-9]/g, ""), 10) <= 0
+    ).length;
+    const noSpecs = dropped - noPrice;
     console.log(
-      `  ⚠️  Filtered out ${allProducts.length - transformed.length} products (missing required fields)`
+      `  ⚠️  Filtered out ${dropped} products (${noPrice} without a price, ${noSpecs} with unparseable specs)`
     );
   }
 }
