@@ -5,7 +5,8 @@
     "price": 2690000,
     "stock_status": "out_of_stock",
     "promo": "23% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1303806",
@@ -13,7 +14,8 @@
     "price": 3690000,
     "stock_status": "out_of_stock",
     "promo": "26% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "18120128",
@@ -21,7 +23,8 @@
     "price": 3590000,
     "stock_status": "in_stock",
     "promo": "18% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "191101275",
@@ -29,7 +32,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": "26% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "19030055",
@@ -37,7 +41,8 @@
     "price": 3390000,
     "stock_status": "out_of_stock",
     "promo": "3% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230803477",
@@ -45,7 +50,8 @@
     "price": 5990000,
     "stock_status": "out_of_stock",
     "promo": "9% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "210700722",
@@ -53,7 +59,8 @@
     "price": 2749000,
     "stock_status": "out_of_stock",
     "promo": "39% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "250206244",
@@ -61,7 +68,8 @@
     "price": 4190000,
     "stock_status": "out_of_stock",
     "promo": "30% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1404017",
@@ -69,7 +77,8 @@
     "price": 3190000,
     "stock_status": "out_of_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "210103641",
@@ -77,7 +86,8 @@
     "price": 3290000,
     "stock_status": "in_stock",
     "promo": "34% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1806226",
@@ -85,7 +95,8 @@
     "price": 3390000,
     "stock_status": "out_of_stock",
     "promo": "32% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240302554",
@@ -93,7 +104,8 @@
     "price": 5790000,
     "stock_status": "out_of_stock",
     "promo": "3% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "241201615",
@@ -101,7 +113,8 @@
     "price": 3490000,
     "stock_status": "in_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230704111",
@@ -109,7 +122,8 @@
     "price": 20690000,
     "stock_status": "in_stock",
     "promo": "6% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "191100205",
@@ -117,7 +131,8 @@
     "price": 24990000,
     "stock_status": "in_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "191101284",
@@ -125,7 +140,8 @@
     "price": 7590000,
     "stock_status": "in_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230401885",
@@ -133,7 +149,8 @@
     "price": 10990000,
     "stock_status": "in_stock",
     "promo": "15% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230502044",
@@ -141,7 +158,8 @@
     "price": 7390000,
     "stock_status": "out_of_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230803708",
@@ -149,7 +167,8 @@
     "price": 3390000,
     "stock_status": "out_of_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260301631",
@@ -157,7 +176,8 @@
     "price": 25290000,
     "stock_status": "in_stock",
     "promo": "10% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260301664",
@@ -165,7 +185,8 @@
     "price": 26590000,
     "stock_status": "in_stock",
     "promo": "8% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260400578",
@@ -173,7 +194,8 @@
     "price": 7990000,
     "stock_status": "in_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260503900",
@@ -181,7 +203,8 @@
     "price": 10490000,
     "stock_status": "in_stock",
     "promo": "19% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260602326",
@@ -189,7 +212,8 @@
     "price": 25890000,
     "stock_status": "in_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230500916",
@@ -197,7 +221,8 @@
     "price": 8990000,
     "stock_status": "out_of_stock",
     "promo": "25% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "241004809",
@@ -205,7 +230,8 @@
     "price": 6890000,
     "stock_status": "out_of_stock",
     "promo": "1% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1600820",
@@ -213,7 +239,8 @@
     "price": 5490000,
     "stock_status": "out_of_stock",
     "promo": "8% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1700733",
@@ -221,7 +248,8 @@
     "price": 1199000,
     "stock_status": "out_of_stock",
     "promo": "7% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "1701913",
@@ -229,7 +257,8 @@
     "price": 1489000,
     "stock_status": "out_of_stock",
     "promo": "25% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "19050323",
@@ -237,7 +266,8 @@
     "price": 1690000,
     "stock_status": "out_of_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "190900000",
@@ -245,7 +275,8 @@
     "price": 12990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "191100709",
@@ -253,7 +284,8 @@
     "price": 8490000,
     "stock_status": "out_of_stock",
     "promo": "6% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "191100710",
@@ -261,7 +293,8 @@
     "price": 6990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "200200546",
@@ -269,7 +302,8 @@
     "price": 5690000,
     "stock_status": "out_of_stock",
     "promo": "12% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "200200547",
@@ -277,7 +311,8 @@
     "price": 14190000,
     "stock_status": "out_of_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "200501164",
@@ -285,7 +320,8 @@
     "price": 4990000,
     "stock_status": "out_of_stock",
     "promo": "3% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "210200906",
@@ -293,7 +329,8 @@
     "price": 5590000,
     "stock_status": "out_of_stock",
     "promo": "7% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "210500222",
@@ -301,7 +338,8 @@
     "price": 8090000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "211006745",
@@ -309,7 +347,8 @@
     "price": 2299000,
     "stock_status": "out_of_stock",
     "promo": "8% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "220102826",
@@ -317,7 +356,8 @@
     "price": 8788000,
     "stock_status": "out_of_stock",
     "promo": "31% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "220609955",
@@ -325,7 +365,8 @@
     "price": 7370000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "221002778",
@@ -333,7 +374,8 @@
     "price": 5980000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230300035",
@@ -341,7 +383,8 @@
     "price": 6690000,
     "stock_status": "out_of_stock",
     "promo": "4% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230600835",
@@ -349,7 +392,8 @@
     "price": 6990000,
     "stock_status": "out_of_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230603099",
@@ -357,7 +401,8 @@
     "price": 2690000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230603704",
@@ -365,7 +410,8 @@
     "price": 9390000,
     "stock_status": "out_of_stock",
     "promo": "6% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240302556",
@@ -373,7 +419,8 @@
     "price": 14290000,
     "stock_status": "out_of_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240302560",
@@ -381,7 +428,8 @@
     "price": 3390000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240303238",
@@ -389,7 +437,8 @@
     "price": 77990000,
     "stock_status": "out_of_stock",
     "promo": "3% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "241101879",
@@ -397,7 +446,8 @@
     "price": 5790000,
     "stock_status": "out_of_stock",
     "promo": "17% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "241202771",
@@ -405,7 +455,8 @@
     "price": 3690000,
     "stock_status": "out_of_stock",
     "promo": "18% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "241205216",
@@ -413,7 +464,8 @@
     "price": 12790000,
     "stock_status": "out_of_stock",
     "promo": "9% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260100028",
@@ -421,7 +473,8 @@
     "price": 19990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "260107822",
@@ -429,7 +482,8 @@
     "price": 15990000,
     "stock_status": "out_of_stock",
     "promo": "6% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "211006743",
@@ -437,7 +491,8 @@
     "price": 10895000,
     "stock_status": "out_of_stock",
     "promo": "19% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240302559",
@@ -445,7 +500,8 @@
     "price": 5190000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "240302564",
@@ -453,7 +509,8 @@
     "price": 4890000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "250719880",
@@ -461,7 +518,8 @@
     "price": 6490000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "221101183",
@@ -469,7 +527,8 @@
     "price": 5490000,
     "stock_status": "in_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240901735",
@@ -477,7 +536,8 @@
     "price": 4890000,
     "stock_status": "out_of_stock",
     "promo": "36% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "221003866",
@@ -485,7 +545,8 @@
     "price": 2690000,
     "stock_status": "out_of_stock",
     "promo": "18% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "1704463",
@@ -493,7 +554,8 @@
     "price": 3590000,
     "stock_status": "out_of_stock",
     "promo": "10% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210300262",
@@ -501,7 +563,8 @@
     "price": 7990000,
     "stock_status": "out_of_stock",
     "promo": "22% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "241002562",
@@ -509,7 +572,8 @@
     "price": 1890000,
     "stock_status": "out_of_stock",
     "promo": "43% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240703616",
@@ -517,7 +581,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": "22% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250516527",
@@ -525,7 +590,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": "22% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "201000772",
@@ -533,7 +599,8 @@
     "price": 5990000,
     "stock_status": "out_of_stock",
     "promo": "33% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "241002409",
@@ -541,7 +608,8 @@
     "price": 3390000,
     "stock_status": "out_of_stock",
     "promo": "28% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250203223",
@@ -549,7 +617,8 @@
     "price": 5790000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250516529",
@@ -557,7 +626,8 @@
     "price": 2590000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230901149",
@@ -565,7 +635,8 @@
     "price": 2990000,
     "stock_status": "out_of_stock",
     "promo": "33% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230500634",
@@ -573,7 +644,8 @@
     "price": 8290000,
     "stock_status": "out_of_stock",
     "promo": "12% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250115742",
@@ -581,7 +653,8 @@
     "price": 7190000,
     "stock_status": "out_of_stock",
     "promo": "18% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250516528",
@@ -589,7 +662,8 @@
     "price": 5790000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250640762",
@@ -597,7 +671,8 @@
     "price": 4590000,
     "stock_status": "out_of_stock",
     "promo": "34% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240503456",
@@ -605,7 +680,8 @@
     "price": 4790000,
     "stock_status": "out_of_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250307013",
@@ -613,7 +689,8 @@
     "price": 4290000,
     "stock_status": "out_of_stock",
     "promo": "10% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250521429",
@@ -621,7 +698,8 @@
     "price": 6690000,
     "stock_status": "out_of_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "200801521",
@@ -629,7 +707,8 @@
     "price": 6790000,
     "stock_status": "out_of_stock",
     "promo": "15% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240303046",
@@ -637,7 +716,8 @@
     "price": 7490000,
     "stock_status": "out_of_stock",
     "promo": "17% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "201000347",
@@ -645,7 +725,8 @@
     "price": 6290000,
     "stock_status": "out_of_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250302129",
@@ -653,7 +734,8 @@
     "price": 5490000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250414791",
@@ -661,7 +743,8 @@
     "price": 9490000,
     "stock_status": "in_stock",
     "promo": "5% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240502354",
@@ -669,7 +752,8 @@
     "price": 5590000,
     "stock_status": "in_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250521408",
@@ -677,7 +761,8 @@
     "price": 7990000,
     "stock_status": "out_of_stock",
     "promo": "27% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240502405",
@@ -685,7 +770,8 @@
     "price": 4690000,
     "stock_status": "in_stock",
     "promo": "15% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250521422",
@@ -693,7 +779,8 @@
     "price": 7990000,
     "stock_status": "out_of_stock",
     "promo": "27% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250640739",
@@ -701,7 +788,8 @@
     "price": 15990000,
     "stock_status": "in_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250803119",
@@ -709,7 +797,8 @@
     "price": 15490000,
     "stock_status": "out_of_stock",
     "promo": "33% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220500836",
@@ -717,7 +806,8 @@
     "price": 5190000,
     "stock_status": "in_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230401886",
@@ -725,7 +815,8 @@
     "price": 6990000,
     "stock_status": "in_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240802736",
@@ -733,7 +824,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": "15% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251107200",
@@ -741,7 +833,8 @@
     "price": 5990000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251107253",
@@ -749,7 +842,8 @@
     "price": 5290000,
     "stock_status": "out_of_stock",
     "promo": "24% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251111502",
@@ -757,7 +851,8 @@
     "price": 1690000,
     "stock_status": "out_of_stock",
     "promo": "23% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251111504",
@@ -765,7 +860,8 @@
     "price": 890000,
     "stock_status": "out_of_stock",
     "promo": "53% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251111509",
@@ -773,7 +869,8 @@
     "price": 5690000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "260102057",
@@ -781,7 +878,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": "17% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "260102156",
@@ -789,7 +887,8 @@
     "price": 5790000,
     "stock_status": "in_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "260202533",
@@ -797,7 +896,8 @@
     "price": 4490000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "260303853",
@@ -805,7 +905,8 @@
     "price": 5490000,
     "stock_status": "out_of_stock",
     "promo": "31% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250803179",
@@ -813,7 +914,8 @@
     "price": 7690000,
     "stock_status": "out_of_stock",
     "promo": "9% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "1800272",
@@ -821,7 +923,8 @@
     "price": 1790000,
     "stock_status": "out_of_stock",
     "promo": "7% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "1805087",
@@ -829,7 +932,8 @@
     "price": 719000,
     "stock_status": "out_of_stock",
     "promo": "27% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "1809371",
@@ -837,7 +941,8 @@
     "price": 749000,
     "stock_status": "out_of_stock",
     "promo": "5% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "1809372",
@@ -845,7 +950,8 @@
     "price": 1550000,
     "stock_status": "out_of_stock",
     "promo": "9% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "19010153",
@@ -853,7 +959,8 @@
     "price": 8299000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "19030376",
@@ -861,7 +968,8 @@
     "price": 1550000,
     "stock_status": "out_of_stock",
     "promo": "33% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "19050386",
@@ -869,7 +977,8 @@
     "price": 790000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "201201044",
@@ -877,7 +986,8 @@
     "price": 5890000,
     "stock_status": "out_of_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210101084",
@@ -885,7 +995,8 @@
     "price": 2159000,
     "stock_status": "out_of_stock",
     "promo": "45% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210200024",
@@ -893,7 +1004,8 @@
     "price": 2299000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210200026",
@@ -901,7 +1013,8 @@
     "price": 699000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210200909",
@@ -909,7 +1022,8 @@
     "price": 9990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210500218",
@@ -917,7 +1031,8 @@
     "price": 2890000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210700746",
@@ -925,7 +1040,8 @@
     "price": 3490000,
     "stock_status": "out_of_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210900657",
@@ -933,7 +1049,8 @@
     "price": 4490000,
     "stock_status": "out_of_stock",
     "promo": "10% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "211006627",
@@ -941,7 +1058,8 @@
     "price": 4390000,
     "stock_status": "out_of_stock",
     "promo": "46% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "211110014",
@@ -949,7 +1067,8 @@
     "price": 5590000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220500837",
@@ -957,7 +1076,8 @@
     "price": 6190000,
     "stock_status": "out_of_stock",
     "promo": "6% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220500840",
@@ -965,7 +1085,8 @@
     "price": 2390000,
     "stock_status": "out_of_stock",
     "promo": "11% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220605528",
@@ -973,7 +1094,8 @@
     "price": 3490000,
     "stock_status": "out_of_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220700868",
@@ -981,7 +1103,8 @@
     "price": 2690000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220707576",
@@ -989,7 +1112,8 @@
     "price": 6890000,
     "stock_status": "out_of_stock",
     "promo": "14% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "220800943",
@@ -997,7 +1121,8 @@
     "price": 2390000,
     "stock_status": "out_of_stock",
     "promo": "32% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230400254",
@@ -1005,7 +1130,8 @@
     "price": 11290000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 6
   },
   {
     "sku": "230603101",
@@ -1013,7 +1139,8 @@
     "price": 2490000,
     "stock_status": "out_of_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230803475",
@@ -1021,7 +1148,8 @@
     "price": 9690000,
     "stock_status": "out_of_stock",
     "promo": "21% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240303049",
@@ -1029,7 +1157,8 @@
     "price": 3690000,
     "stock_status": "out_of_stock",
     "promo": "25% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240502362",
@@ -1037,7 +1166,8 @@
     "price": 2990000,
     "stock_status": "out_of_stock",
     "promo": "14% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240503458",
@@ -1045,7 +1175,8 @@
     "price": 3890000,
     "stock_status": "out_of_stock",
     "promo": "13% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240503461",
@@ -1053,7 +1184,8 @@
     "price": 1890000,
     "stock_status": "out_of_stock",
     "promo": "37% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "240805930",
@@ -1061,7 +1193,8 @@
     "price": 6990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250512075",
@@ -1069,7 +1202,8 @@
     "price": 2090000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250516531",
@@ -1077,7 +1211,8 @@
     "price": 13990000,
     "stock_status": "out_of_stock",
     "promo": "20% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251111649",
@@ -1085,7 +1220,8 @@
     "price": 11090000,
     "stock_status": "out_of_stock",
     "promo": "8% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "211109624",
@@ -1093,7 +1229,8 @@
     "price": 15790000,
     "stock_status": "out_of_stock",
     "promo": "33% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "210600382",
@@ -1101,7 +1238,8 @@
     "price": 7990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "211006270",
@@ -1109,7 +1247,8 @@
     "price": 5390000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230201966",
@@ -1117,7 +1256,8 @@
     "price": 1090000,
     "stock_status": "out_of_stock",
     "promo": "31% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "230502046",
@@ -1125,7 +1265,8 @@
     "price": 3790000,
     "stock_status": "out_of_stock",
     "promo": "10% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250400544",
@@ -1133,7 +1274,8 @@
     "price": 7990000,
     "stock_status": "out_of_stock",
     "promo": "27% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250717330",
@@ -1141,7 +1283,8 @@
     "price": 12990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "250803208",
@@ -1149,7 +1292,8 @@
     "price": 32990000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251107165",
@@ -1157,7 +1301,8 @@
     "price": 4090000,
     "stock_status": "out_of_stock",
     "promo": null,
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251111627",
@@ -1165,7 +1310,8 @@
     "price": 12590000,
     "stock_status": "out_of_stock",
     "promo": "16% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "251113491",
@@ -1173,7 +1319,8 @@
     "price": 17990000,
     "stock_status": "out_of_stock",
     "promo": "18% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   },
   {
     "sku": "260301660",
@@ -1181,6 +1328,7 @@
     "price": 29990000,
     "stock_status": "out_of_stock",
     "promo": "19% discount",
-    "type": "storage"
+    "type": "storage",
+    "tdp": 5
   }
 ]

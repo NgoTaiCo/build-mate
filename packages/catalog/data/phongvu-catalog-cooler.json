@@ -6,7 +6,6 @@
     "stock_status": "in_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -24,7 +23,6 @@
     "stock_status": "in_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -40,7 +38,6 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -60,7 +57,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 155,
     "socket": [
       "20XX",
@@ -79,7 +75,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1151-v2",
@@ -99,7 +94,6 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152,
     "socket": [
       "1851",
@@ -117,7 +111,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 300,
     "socket": [
       "1200",
@@ -135,7 +128,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -145,7 +137,6 @@
     "stock_status": "in_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -155,7 +146,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152,
     "socket": [
       "1851",
@@ -173,7 +163,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 163,
     "socket": [
       "20XX",
@@ -195,7 +184,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -205,7 +193,6 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 42
   },
   {
@@ -215,7 +202,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 72,
     "socket": [
       "1700",
@@ -234,7 +220,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -244,7 +229,6 @@
     "stock_status": "out_of_stock",
     "promo": "47% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -254,7 +238,6 @@
     "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -264,7 +247,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140,
     "socket": [
       "1851",
@@ -283,7 +265,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -301,7 +282,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 165,
     "socket": [
       "TR4"
@@ -314,7 +294,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -324,7 +303,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 83
   },
   {
@@ -334,7 +312,6 @@
     "stock_status": "in_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -352,7 +329,6 @@
     "stock_status": "in_stock",
     "promo": "33% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -362,7 +338,6 @@
     "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 157,
     "socket": [
       "1151",
@@ -380,7 +355,6 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -402,7 +376,6 @@
     "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 52
   },
   {
@@ -412,7 +385,6 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -434,7 +406,6 @@
     "stock_status": "in_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -454,7 +425,6 @@
     "stock_status": "in_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 10,
     "socket": [
       "AM5",
@@ -474,7 +444,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -484,7 +453,6 @@
     "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -504,7 +472,6 @@
     "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -524,7 +491,6 @@
     "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -540,7 +506,6 @@
     "stock_status": "in_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 139,
     "socket": [
       "1151-v2",
@@ -561,7 +526,6 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -571,7 +535,6 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -581,7 +544,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -597,7 +559,6 @@
     "stock_status": "in_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -613,7 +574,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 132,
     "socket": [
       "1151-v2",
@@ -635,7 +595,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1151-v2",
@@ -656,7 +615,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "1151-v2",
@@ -677,7 +635,6 @@
     "stock_status": "in_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 28
   },
   {
@@ -687,7 +644,6 @@
     "stock_status": "in_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 28
   },
   {
@@ -697,7 +653,6 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 28
   },
   {
@@ -707,7 +662,6 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 28
   },
   {
@@ -717,7 +671,6 @@
     "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 66,
     "socket": [
       "115X",
@@ -734,7 +687,6 @@
     "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -756,7 +708,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -778,7 +729,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 128,
     "socket": [
       "115X",
@@ -795,7 +745,6 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "1700",
@@ -810,7 +759,6 @@
     "stock_status": "in_stock",
     "promo": "62% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -820,7 +768,6 @@
     "stock_status": "in_stock",
     "promo": "58% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -830,7 +777,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 72
   },
   {
@@ -840,7 +786,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -850,7 +795,6 @@
     "stock_status": "in_stock",
     "promo": "70% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27
   },
   {
@@ -860,7 +804,6 @@
     "stock_status": "in_stock",
     "promo": "81% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -870,7 +813,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -880,7 +822,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -890,7 +831,6 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -900,7 +840,6 @@
     "stock_status": "in_stock",
     "promo": "62% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -910,7 +849,6 @@
     "stock_status": "in_stock",
     "promo": "49% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152
   },
   {
@@ -920,7 +858,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 154
   },
   {
@@ -930,7 +867,6 @@
     "stock_status": "in_stock",
     "promo": "70% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 93
   },
   {
@@ -940,7 +876,6 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -950,7 +885,6 @@
     "stock_status": "in_stock",
     "promo": "58% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -960,7 +894,6 @@
     "stock_status": "in_stock",
     "promo": "58% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -970,7 +903,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -980,7 +912,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -990,7 +921,6 @@
     "stock_status": "in_stock",
     "promo": "81% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1000,7 +930,6 @@
     "stock_status": "in_stock",
     "promo": "62% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1010,7 +939,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1020,7 +948,6 @@
     "stock_status": "in_stock",
     "promo": "49% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152
   },
   {
@@ -1030,7 +957,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 154
   },
   {
@@ -1040,7 +966,6 @@
     "stock_status": "in_stock",
     "promo": "70% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 93
   },
   {
@@ -1050,7 +975,6 @@
     "stock_status": "in_stock",
     "promo": "67% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1060,7 +984,6 @@
     "stock_status": "in_stock",
     "promo": "58% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -1070,7 +993,6 @@
     "stock_status": "in_stock",
     "promo": "58% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -1080,7 +1002,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -1090,7 +1011,6 @@
     "stock_status": "in_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -1100,7 +1020,6 @@
     "stock_status": "in_stock",
     "promo": "81% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1110,7 +1029,6 @@
     "stock_status": "in_stock",
     "promo": "62% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1120,7 +1038,6 @@
     "stock_status": "in_stock",
     "promo": "66% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150
   },
   {
@@ -1130,7 +1047,6 @@
     "stock_status": "in_stock",
     "promo": "70% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27
   },
   {
@@ -1140,7 +1056,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "AM5",
@@ -1156,7 +1071,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 157,
     "socket": [
       "1851",
@@ -1177,7 +1091,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1187,7 +1100,6 @@
     "stock_status": "out_of_stock",
     "promo": "30% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 158
   },
   {
@@ -1197,7 +1109,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1207,7 +1118,6 @@
     "stock_status": "out_of_stock",
     "promo": "25% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 135,
     "socket": [
       "1151-v2",
@@ -1229,7 +1139,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 37,
     "socket": [
       "1151",
@@ -1244,7 +1153,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 120,
     "socket": [
       "1150",
@@ -1266,7 +1174,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 120,
     "socket": [
       "2066",
@@ -1283,7 +1190,6 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "1151",
@@ -1305,7 +1211,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "1151",
@@ -1327,7 +1232,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 40,
     "socket": [
       "1151",
@@ -1343,7 +1247,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 730,
     "socket": [
       "1151",
@@ -1362,7 +1265,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -1384,7 +1286,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -1406,7 +1307,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -1428,7 +1328,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1438,7 +1337,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -1448,7 +1346,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -1470,7 +1367,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -1492,7 +1388,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1502,7 +1397,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1512,7 +1406,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -1522,7 +1415,6 @@
     "stock_status": "out_of_stock",
     "promo": "30% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -1532,7 +1424,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -1542,7 +1433,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "1151",
@@ -1562,7 +1452,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -1584,7 +1473,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -1606,7 +1494,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -1628,7 +1515,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -1648,7 +1534,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1200",
@@ -1670,7 +1555,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -1680,7 +1564,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 158,
     "socket": [
       "1151-v2",
@@ -1702,7 +1585,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -1712,7 +1594,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 245,
     "socket": [
       "1151",
@@ -1734,7 +1615,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 158,
     "socket": [
       "2066",
@@ -1756,7 +1636,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "1151",
@@ -1778,7 +1657,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 155,
     "socket": [
       "1200",
@@ -1795,7 +1673,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 10,
     "socket": [
       "1700",
@@ -1814,7 +1691,6 @@
     "stock_status": "out_of_stock",
     "promo": "25% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -1836,7 +1712,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -1858,7 +1733,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 26,
     "socket": [
       "2066",
@@ -1880,7 +1754,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 26,
     "socket": [
       "2066",
@@ -1902,7 +1775,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 147,
     "socket": [
       "1151-v2",
@@ -1923,7 +1795,6 @@
     "stock_status": "out_of_stock",
     "promo": "35% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 148,
     "socket": [
       "1151-v2",
@@ -1944,7 +1815,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -1954,7 +1824,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -1976,7 +1845,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -1998,7 +1866,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 155,
     "socket": [
       "1151",
@@ -2020,7 +1887,6 @@
     "stock_status": "out_of_stock",
     "promo": "53% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 90,
     "socket": [
       "1700",
@@ -2039,7 +1905,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 50,
     "socket": [
       "1151-v2",
@@ -2061,7 +1926,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -2082,7 +1946,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -2104,7 +1967,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -2126,7 +1988,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -2148,7 +2009,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -2158,7 +2018,6 @@
     "stock_status": "out_of_stock",
     "promo": "26% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -2180,7 +2039,6 @@
     "stock_status": "out_of_stock",
     "promo": "29% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "2066",
@@ -2202,7 +2060,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -2212,7 +2069,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -2233,7 +2089,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151",
@@ -2254,7 +2109,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150,
     "socket": [
       "1151",
@@ -2273,7 +2127,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -2295,7 +2148,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2317,7 +2169,6 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2339,7 +2190,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "2066",
@@ -2359,7 +2209,6 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2379,7 +2228,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2399,7 +2247,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2419,7 +2266,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2439,7 +2285,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2459,7 +2304,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2479,7 +2323,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2499,7 +2342,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2519,7 +2361,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2541,7 +2382,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2563,7 +2403,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2585,7 +2424,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2607,7 +2445,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2629,7 +2466,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2651,7 +2487,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -2673,7 +2508,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2695,7 +2529,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2716,7 +2549,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -2738,7 +2570,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 140,
     "socket": [
       "2066",
@@ -2760,7 +2591,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -2782,7 +2612,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1700",
@@ -2804,7 +2633,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1700",
@@ -2826,7 +2654,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 75
   },
   {
@@ -2836,7 +2663,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2855,7 +2681,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2874,7 +2699,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -2893,7 +2717,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 155,
     "socket": [
       "1151-v2",
@@ -2914,7 +2737,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2011",
@@ -2936,7 +2758,6 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -2958,7 +2779,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -2980,7 +2800,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3002,7 +2821,6 @@
     "stock_status": "out_of_stock",
     "promo": "29% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -3024,7 +2842,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3046,7 +2863,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -3068,7 +2884,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3090,7 +2905,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -3112,7 +2926,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3134,7 +2947,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 394,
     "socket": [
       "1151-v2",
@@ -3156,7 +2968,6 @@
     "stock_status": "out_of_stock",
     "promo": "48% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150,
     "socket": [
       "1151-v2",
@@ -3175,7 +2986,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 45,
     "socket": [
       "1151-v2",
@@ -3197,7 +3007,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -3207,7 +3016,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160
   },
   {
@@ -3217,7 +3025,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -3239,7 +3046,6 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -3261,7 +3067,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -3283,7 +3088,6 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -3305,7 +3109,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -3327,7 +3130,6 @@
     "stock_status": "out_of_stock",
     "promo": "44% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 10
   },
   {
@@ -3337,7 +3139,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 3,
     "socket": [
       "AM5",
@@ -3354,7 +3155,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 3,
     "socket": [
       "AM5",
@@ -3371,7 +3171,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 97,
     "socket": [
       "1151-v2",
@@ -3390,7 +3189,6 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 158,
     "socket": [
       "1851",
@@ -3411,7 +3209,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 156,
     "socket": [
       "1151-v2",
@@ -3431,7 +3228,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "AM5",
@@ -3453,7 +3249,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -3475,7 +3270,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -3497,7 +3291,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -3517,7 +3310,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -3527,7 +3319,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -3537,7 +3328,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1700",
@@ -3554,7 +3344,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "2066",
@@ -3576,7 +3365,6 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 110,
     "socket": [
       "1700",
@@ -3596,7 +3384,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 20,
     "socket": [
       "1851",
@@ -3617,7 +3404,6 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "2066",
@@ -3639,7 +3425,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 130
   },
   {
@@ -3649,7 +3434,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 52,
     "socket": [
       "1700",
@@ -3666,7 +3450,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 132,
     "socket": [
       "AM4",
@@ -3682,7 +3465,6 @@
     "stock_status": "out_of_stock",
     "promo": "64% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1851",
@@ -3700,7 +3482,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -3721,7 +3502,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150,
     "socket": [
       "1851",
@@ -3739,7 +3519,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140,
     "socket": [
       "1851",
@@ -3757,7 +3536,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3778,7 +3556,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -3799,7 +3576,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 90,
     "socket": [
       "1851",
@@ -3819,7 +3595,6 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1851",
@@ -3840,7 +3615,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -3850,7 +3624,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -3866,7 +3639,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 157,
     "socket": [
       "1851",
@@ -3884,7 +3656,6 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 26,
     "socket": [
       "1851",
@@ -3904,7 +3675,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 90,
     "socket": [
       "1851",
@@ -3925,7 +3695,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 32,
     "socket": [
       "AM4",
@@ -3941,7 +3710,6 @@
     "stock_status": "out_of_stock",
     "promo": "97% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -3951,7 +3719,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 97,
     "socket": [
       "1151",
@@ -3973,7 +3740,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 168,
     "socket": [
       "1151",
@@ -3992,7 +3758,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -4002,7 +3767,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -4012,7 +3776,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -4022,7 +3785,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -4032,7 +3794,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -4042,7 +3803,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -4052,7 +3812,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4062,7 +3821,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4072,7 +3830,6 @@
     "stock_status": "out_of_stock",
     "promo": "72% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -4082,7 +3839,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 150,
     "socket": [
       "TR4",
@@ -4096,7 +3852,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1151-v2",
@@ -4118,7 +3873,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1200",
@@ -4140,7 +3894,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4162,7 +3915,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4184,7 +3936,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1700",
@@ -4206,7 +3957,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4228,7 +3978,6 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -4250,7 +3999,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -4272,7 +4020,6 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1700",
@@ -4294,7 +4041,6 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -4316,7 +4062,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 54,
     "socket": [
       "1151-v2",
@@ -4338,7 +4083,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -4348,7 +4092,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 50
   },
   {
@@ -4358,7 +4101,6 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 75
   },
   {
@@ -4368,7 +4110,6 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 50
   },
   {
@@ -4378,7 +4119,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 50
   },
   {
@@ -4388,7 +4128,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -4398,7 +4137,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20,
     "socket": [
       "1151-v2",
@@ -4420,7 +4158,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20,
     "socket": [
       "1151-v2",
@@ -4442,7 +4179,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 10,
     "socket": [
       "1151-v2",
@@ -4462,7 +4198,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1700",
@@ -4484,7 +4219,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4506,7 +4240,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4528,7 +4261,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4550,7 +4282,6 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4572,7 +4303,6 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -4594,7 +4324,6 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4616,7 +4345,6 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30,
     "socket": [
       "1150",
@@ -4638,7 +4366,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "2066",
@@ -4660,7 +4387,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 151,
     "socket": [
       "2066",
@@ -4682,7 +4408,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4702,7 +4427,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4722,7 +4446,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4742,7 +4465,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 45,
     "socket": [
       "1700",
@@ -4764,7 +4486,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 45,
     "socket": [
       "1151-v2",
@@ -4786,7 +4507,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -4796,7 +4516,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 20
   },
   {
@@ -4806,7 +4525,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4828,7 +4546,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4838,7 +4555,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4848,7 +4564,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4858,7 +4573,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 100
   },
   {
@@ -4868,7 +4582,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 156,
     "socket": [
       "1700",
@@ -4888,7 +4601,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -4910,7 +4622,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4932,7 +4643,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -4954,7 +4664,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -4976,7 +4685,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -4998,7 +4706,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5020,7 +4727,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27
   },
   {
@@ -5030,7 +4736,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5052,7 +4757,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "2066",
@@ -5074,7 +4778,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5096,7 +4799,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "2066",
@@ -5118,7 +4820,6 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 100,
     "socket": [
       "1700",
@@ -5137,7 +4838,6 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 20,
     "socket": [
       "1851",
@@ -5158,7 +4858,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5179,7 +4878,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5200,7 +4898,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5222,7 +4919,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140
   },
   {
@@ -5232,7 +4928,6 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 120
   },
   {
@@ -5242,7 +4937,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 280
   },
   {
@@ -5252,7 +4946,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140
   },
   {
@@ -5262,7 +4955,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 280
   },
   {
@@ -5272,7 +4964,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140
   },
   {
@@ -5282,7 +4973,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 360
   },
   {
@@ -5292,7 +4982,6 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 140
   },
   {
@@ -5302,7 +4991,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 360
   },
   {
@@ -5312,7 +5000,6 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 240
   },
   {
@@ -5322,7 +5009,6 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 120
   },
   {
@@ -5332,7 +5018,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 240
   },
   {
@@ -5342,7 +5027,6 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 120
   },
   {
@@ -5352,7 +5036,6 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 120
   },
   {
@@ -5362,7 +5045,6 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -5383,7 +5065,6 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -5404,7 +5085,6 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1150",
@@ -5426,7 +5106,6 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 150,
     "socket": [
       "1851",
@@ -5444,7 +5123,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5460,7 +5138,6 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 30
   },
   {
@@ -5470,7 +5147,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152,
     "socket": [
       "1851",
@@ -5491,7 +5167,6 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 152,
     "socket": [
       "1851",
@@ -5512,7 +5187,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 157,
     "socket": [
       "1851",
@@ -5530,7 +5204,6 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1151-v2",
@@ -5550,7 +5223,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5570,7 +5242,6 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5590,7 +5261,6 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 157,
     "socket": [
       "1151-v2",
@@ -5611,7 +5281,6 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 26,
     "socket": [
       "1851",
@@ -5632,7 +5301,6 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1151-v2",
@@ -5654,7 +5322,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 10,
     "socket": [
       "1151-v2",
@@ -5674,7 +5341,6 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25,
     "socket": [
       "1851",
@@ -5695,7 +5361,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -5705,7 +5370,6 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -5715,7 +5379,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5733,7 +5396,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "1851",
@@ -5753,7 +5415,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 25
   },
   {
@@ -5763,7 +5424,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 27,
     "socket": [
       "AM4",
@@ -5779,7 +5439,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "1700",
@@ -5796,7 +5455,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 154,
     "socket": [
       "1700",
@@ -5813,7 +5471,6 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "cooler",
-    "tdp": 200,
     "height": 160,
     "socket": [
       "115X",

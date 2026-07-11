@@ -4,6 +4,7 @@ import {
   extractSharedFields,
   normalizeFormFactor,
   supportedMbFormFactors,
+  cpuRamGenSupported,
 } from "./phongvu-transformer.js";
 
 /**
@@ -70,6 +71,27 @@ function ramGen(raw?: string): "DDR4" | "DDR5" | undefined {
   return m ? (m[0] as "DDR4" | "DDR5") : undefined;
 }
 
+// Estimate GPU board power from its auxiliary power connectors (+75W PCIe slot).
+// The detail API has no direct card-TDP field; connectors give a realistic
+// upper bound, far better than a flat default for PSU sizing.
+function gpuTdpFromConnectors(raw?: string): number | null {
+  if (!raw) return null;
+  const t = raw.toLowerCase();
+  if (/12vhpwr|12v-?2x6|16-?pin|16 pin/.test(t)) return 600; // high-end single cable
+  const per = (count: number, watts: number) => count * watts;
+  let total = 0;
+  for (const m of t.matchAll(/(\d+)\s*x\s*(\d+)\s*-?\s*pin/g)) {
+    const count = parseInt(m[1], 10);
+    const pins = parseInt(m[2], 10);
+    total += per(count, pins >= 8 ? 150 : 75);
+  }
+  if (total === 0) {
+    const single = t.match(/(\d+)\s*-?\s*pin/);
+    if (single) total = parseInt(single[1], 10) >= 8 ? 150 : 75;
+  }
+  return total > 0 ? total + 75 : null;
+}
+
 /**
  * Build a CatalogComponent from list-provided shared fields + detail attributes.
  * Returns null only when shared fields are invalid (e.g. no price) — spec gaps
@@ -85,13 +107,16 @@ export function transformPhongVuDetail(
 
   switch (type) {
     case "cpu": {
-      const socket = first(attrs, "cpu_socket");
-      if (!socket) return null; // socket is essential for E001
+      const socketRaw = first(attrs, "cpu_socket");
+      if (!socketRaw) return null; // socket is essential for E001
+      const socket = normalizeSocket(socketRaw);
       return {
         ...shared,
         type: "cpu",
-        socket: normalizeSocket(socket),
+        socket,
         tdp: parseWatts(first(attrs, "tieu_thu_dien_nang_cpu")) ?? 65,
+        // ram_gen_supported drives the E002 RAM-generation check.
+        ram_gen_supported: cpuRamGenSupported(socket),
       } as CatalogComponent;
     }
 
@@ -104,7 +129,8 @@ export function transformPhongVuDetail(
         ...shared,
         type: "mainboard",
         socket: normalizeSocket(socket),
-        ram_gen: gen,
+        ram_gen: gen, // search filter
+        ram_gen_supported: [gen], // E002 check
         form_factor: normalizeFormFactor(ff),
       } as CatalogComponent;
     }
@@ -112,7 +138,13 @@ export function transformPhongVuDetail(
     case "ram": {
       const gen = ramGen(first(attrs, "ram_thehe"));
       if (!gen) return null;
-      return { ...shared, type: "ram", ram_gen: gen } as CatalogComponent;
+      return {
+        ...shared,
+        type: "ram",
+        ram_gen: gen, // search filter
+        generation: gen, // E002 check
+        tdp: 3, // modules draw a few watts; feeds PSU sizing
+      } as CatalogComponent;
     }
 
     case "psu": {
@@ -140,10 +172,13 @@ export function transformPhongVuDetail(
         cmToMm(first(attrs, "height")) ??
         parseMm(first(attrs, "tannhiet_chieucaotankhi")) ??
         (isLiquid ? 60 : 158);
+      // No tdp: a cooler's fan draw is negligible, and the Compiler would
+      // otherwise sum it into required PSU wattage (the old 200W default
+      // inflated every build's PSU requirement). Coolers are validated by
+      // height vs case clearance only.
       const result = {
         ...shared,
         type: "cooler",
-        tdp: 200,
         height,
       } as CatalogComponent;
       if (sockets.length > 0) result.socket = sockets;
@@ -170,14 +205,18 @@ export function transformPhongVuDetail(
     }
 
     case "storage": {
-      return { ...shared, type: "storage" } as CatalogComponent;
+      const kind = (first(attrs, "ocung_phanloai") ?? "").toLowerCase();
+      // HDDs spin platters (~6W); SSDs are lower (~5W). Small but real for PSU sizing.
+      const tdp = kind.includes("hdd") ? 6 : 5;
+      return { ...shared, type: "storage", tdp } as CatalogComponent;
     }
 
     case "gpu": {
       return {
         ...shared,
         type: "gpu",
-        tdp: 300,
+        // Estimate board power from aux connectors; feeds PSU sizing (W001).
+        tdp: gpuTdpFromConnectors(first(attrs, "vga_daucapnguonphu")) ?? 300,
         clearance_mm: cmToMm(first(attrs, "length")) ?? 300,
       } as CatalogComponent;
     }

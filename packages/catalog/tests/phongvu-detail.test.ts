@@ -84,10 +84,95 @@ test("detail psu: parses wattage and form factor", () => {
   strictEqual(psu.form_factor, "ATX");
 });
 
-test("detail gpu: card length (cm) becomes clearance_mm", () => {
-  const map = toAttrMap([attr("length", ["22.8"])]);
+test("detail gpu: card length (cm) becomes clearance_mm, TDP from connectors", () => {
+  const map = toAttrMap([
+    attr("length", ["22.8"]),
+    attr("vga_daucapnguonphu", ["1 x 8-pin"]),
+  ]);
   const gpu = transformPhongVuDetail(product(), "gpu", map)!;
   strictEqual(gpu.clearance_mm, 228);
+  strictEqual(gpu.tdp, 225); // 150 (8-pin) + 75 (slot)
+
+  const twoConnectors = transformPhongVuDetail(
+    product(),
+    "gpu",
+    toAttrMap([attr("vga_daucapnguonphu", ["2 x 8-pin"])]),
+  )!;
+  strictEqual(twoConnectors.tdp, 375); // 2*150 + 75
+
+  const hpwr = transformPhongVuDetail(
+    product(),
+    "gpu",
+    toAttrMap([attr("vga_daucapnguonphu", ["1 x 16-pin (12VHPWR)"])]),
+  )!;
+  strictEqual(hpwr.tdp, 600);
+
+  const noInfo = transformPhongVuDetail(product(), "gpu", toAttrMap([]))!;
+  strictEqual(noInfo.tdp, 300); // fallback
+});
+
+test("detail cpu: ram_gen_supported inferred from socket", () => {
+  const am5 = transformPhongVuDetail(
+    product(),
+    "cpu",
+    toAttrMap([attr("cpu_socket", ["AM5"])]),
+  )!;
+  deepEqual(am5.ram_gen_supported, ["DDR5"]);
+
+  const intel = transformPhongVuDetail(
+    product(),
+    "cpu",
+    toAttrMap([attr("cpu_socket", ["1700"])]),
+  )!;
+  deepEqual(intel.ram_gen_supported, ["DDR4", "DDR5"]);
+});
+
+test("detail ram: sets generation (E002) alongside ram_gen (search)", () => {
+  const ram = transformPhongVuDetail(
+    product(),
+    "ram",
+    toAttrMap([attr("ram_thehe", ["DDR5"])]),
+  )!;
+  strictEqual(ram.ram_gen, "DDR5");
+  strictEqual(ram.generation, "DDR5");
+  strictEqual(ram.tdp, 3);
+});
+
+test("detail mainboard: exposes ram_gen_supported for E002", () => {
+  const mb = transformPhongVuDetail(
+    product(),
+    "mainboard",
+    toAttrMap([
+      attr("mainboard_socket", ["AM5"]),
+      attr("mainboard_thehebonhohotro", ["DDR5"]),
+      attr("mainboard_chuankichthuoc", ["ATX"]),
+    ]),
+  )!;
+  deepEqual(mb.ram_gen_supported, ["DDR5"]);
+});
+
+test("detail cooler: carries no tdp (must not inflate PSU sizing)", () => {
+  const c = transformPhongVuDetail(
+    product(),
+    "cooler",
+    toAttrMap([attr("height", ["15.5"])]),
+  )!;
+  strictEqual(c.tdp, undefined);
+});
+
+test("detail storage: HDD vs SSD tdp", () => {
+  const hdd = transformPhongVuDetail(
+    product(),
+    "storage",
+    toAttrMap([attr("ocung_phanloai", ["di động HDD"])]),
+  )!;
+  strictEqual(hdd.tdp, 6);
+  const ssd = transformPhongVuDetail(
+    product(),
+    "storage",
+    toAttrMap([attr("ocung_phanloai", ["SSD NVMe"])]),
+  )!;
+  strictEqual(ssd.tdp, 5);
 });
 
 test("detail: invalid price returns null regardless of attributes", () => {

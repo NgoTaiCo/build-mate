@@ -8,6 +8,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -19,6 +22,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -30,6 +36,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -41,6 +50,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -52,6 +64,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -63,6 +78,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -74,6 +92,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -85,6 +106,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -96,6 +120,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -107,6 +134,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -118,6 +148,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -129,6 +162,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -140,6 +176,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -151,6 +190,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -162,6 +204,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -173,6 +218,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -184,6 +232,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -195,6 +246,9 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -206,6 +260,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -217,6 +274,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -228,6 +288,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -239,6 +302,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -250,6 +316,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -261,6 +330,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -272,6 +344,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -283,6 +358,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -294,6 +372,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -305,6 +386,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -316,6 +400,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -327,6 +414,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -338,6 +428,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -349,6 +442,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -360,6 +456,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -371,6 +470,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -382,6 +484,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -393,6 +498,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -404,6 +512,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -415,6 +526,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -426,6 +540,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -437,6 +554,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -448,6 +568,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -459,6 +582,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -470,6 +596,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -481,6 +610,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -492,6 +624,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -503,6 +638,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -514,6 +652,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -525,6 +666,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -536,6 +680,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -547,6 +694,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -558,6 +708,9 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -569,6 +722,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -580,6 +736,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -591,6 +750,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -602,6 +764,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -613,6 +778,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -624,6 +792,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -635,6 +806,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -646,6 +820,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -657,6 +834,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -668,6 +848,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -679,6 +862,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -690,6 +876,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -701,6 +890,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -712,6 +904,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -723,6 +918,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -734,6 +932,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -745,6 +946,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -756,6 +960,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -767,6 +974,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -778,6 +988,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -789,6 +1002,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -800,6 +1016,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -811,6 +1030,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -822,6 +1044,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -833,6 +1058,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -844,6 +1072,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -855,6 +1086,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -866,6 +1100,9 @@
     "type": "mainboard",
     "socket": "AM4",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -877,6 +1114,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -888,6 +1128,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -899,6 +1142,9 @@
     "type": "mainboard",
     "socket": "1700",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -910,6 +1156,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -921,6 +1170,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -932,6 +1184,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -943,6 +1198,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -954,6 +1212,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -965,6 +1226,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -976,6 +1240,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -987,6 +1254,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -998,6 +1268,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1009,6 +1282,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1020,6 +1296,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1031,6 +1310,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1042,6 +1324,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1053,6 +1338,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1064,6 +1352,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1075,6 +1366,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1086,6 +1380,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1097,6 +1394,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1108,6 +1408,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1119,6 +1422,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1130,6 +1436,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1141,6 +1450,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1152,6 +1464,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1163,6 +1478,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1174,6 +1492,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1185,6 +1506,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1196,6 +1520,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1207,6 +1534,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ITX"
   },
   {
@@ -1218,6 +1548,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1229,6 +1562,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1240,6 +1576,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1251,6 +1590,9 @@
     "type": "mainboard",
     "socket": "1851",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1262,6 +1604,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1273,6 +1618,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1284,6 +1632,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1295,6 +1646,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   },
   {
@@ -1306,6 +1660,9 @@
     "type": "mainboard",
     "socket": "1200",
     "ram_gen": "DDR4",
+    "ram_gen_supported": [
+      "DDR4"
+    ],
     "form_factor": "mATX"
   },
   {
@@ -1317,6 +1674,9 @@
     "type": "mainboard",
     "socket": "AM5",
     "ram_gen": "DDR5",
+    "ram_gen_supported": [
+      "DDR5"
+    ],
     "form_factor": "ATX"
   }
 ]

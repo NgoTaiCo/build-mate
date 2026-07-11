@@ -71,6 +71,7 @@ function extractCpu(product: PhongVuProduct): CatalogComponent | null {
     type: "cpu" as const,
     socket,
     tdp,
+    ram_gen_supported: cpuRamGenSupported(socket),
   } as CatalogComponent;
 }
 
@@ -93,6 +94,7 @@ function extractMainboard(product: PhongVuProduct): CatalogComponent | null {
     type: "mainboard" as const,
     socket: socketMatch[1],
     ram_gen: ramGenMatch[1] as "DDR4" | "DDR5",
+    ram_gen_supported: [ramGenMatch[1]],
     form_factor: formFactorMatch[1] as "ATX" | "mATX" | "ITX",
   } as CatalogComponent;
 }
@@ -113,6 +115,8 @@ function extractRam(product: PhongVuProduct): CatalogComponent | null {
     ...shared,
     type: "ram" as const,
     ram_gen: ramGenMatch[1] as "DDR4" | "DDR5",
+    generation: ramGenMatch[1] as "DDR4" | "DDR5",
+    tdp: 3,
   } as CatalogComponent;
 }
 
@@ -164,9 +168,6 @@ function extractCooler(product: PhongVuProduct): CatalogComponent | null {
     if (sockets.length > 0) socket = sockets;
   }
 
-  const tdpMatch = textUpper.match(/TDP[\s:]*(\d+)\s*W/);
-  const tdp = tdpMatch ? parseInt(tdpMatch[1], 10) : 200;
-
   // Height drives the only cooler compatibility check. When the description
   // doesn't state it, default by cooler kind: AIO/liquid coolers mount a low
   // block on the socket (rarely a clearance problem), tower air coolers are tall.
@@ -180,10 +181,10 @@ function extractCooler(product: PhongVuProduct): CatalogComponent | null {
       ? 60
       : 158;
 
+  // No tdp: cooler fan draw is negligible and would otherwise inflate PSU sizing.
   const result = {
     ...shared,
     type: "cooler" as const,
-    tdp,
     height,
   } as CatalogComponent;
   if (socket) result.socket = socket;
@@ -199,6 +200,18 @@ export function normalizeFormFactor(raw: string): "E-ATX" | "ATX" | "mATX" | "IT
   if (u === "MICROATX" || u === "MATX") return "mATX";
   if (u === "MINIITX" || u === "ITX") return "ITX";
   return "ATX";
+}
+
+// Which RAM generations a CPU supports, inferred from its socket. The detail
+// API has no explicit CPU memory-support attribute, but socket determines it.
+// Kept permissive (both DDR gens) for unknown sockets to avoid false E002.
+export function cpuRamGenSupported(socket: string): string[] {
+  const s = socket.toUpperCase().replace(/[\s-]/g, "");
+  if (s === "AM5" || s === "STR5" || s === "1851" || s === "1700DDR5") return ["DDR5"];
+  if (s === "AM4" || s === "1200" || s === "115X" || s === "1151" || s === "1150")
+    return ["DDR4"];
+  if (s === "1700") return ["DDR4", "DDR5"]; // Alder/Raptor Lake support both
+  return ["DDR4", "DDR5"];
 }
 
 export function supportedMbFormFactors(caseFf: "E-ATX" | "ATX" | "mATX" | "ITX"): string[] {

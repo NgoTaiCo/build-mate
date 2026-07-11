@@ -6,7 +6,7 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 228
   },
   {
@@ -16,7 +16,7 @@
     "stock_status": "in_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 329
   },
   {
@@ -26,7 +26,7 @@
     "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -36,7 +36,7 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 197
   },
   {
@@ -66,7 +66,7 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 197
   },
   {
@@ -96,7 +96,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 190
   },
   {
@@ -106,7 +106,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 390
   },
   {
@@ -126,7 +126,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 226
   },
   {
@@ -136,7 +136,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 228
   },
   {
@@ -146,7 +146,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -156,7 +156,7 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -166,7 +166,7 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -176,7 +176,7 @@
     "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -186,7 +186,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 229
   },
   {
@@ -196,7 +196,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 231
   },
   {
@@ -206,7 +206,7 @@
     "stock_status": "in_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 288
   },
   {
@@ -216,7 +216,7 @@
     "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 348
   },
   {
@@ -226,7 +226,7 @@
     "stock_status": "out_of_stock",
     "promo": "28% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 199
   },
   {
@@ -246,7 +246,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 197
   },
   {
@@ -256,7 +256,7 @@
     "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -276,7 +276,7 @@
     "stock_status": "in_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 348
   },
   {
@@ -286,7 +286,7 @@
     "stock_status": "in_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -296,7 +296,7 @@
     "stock_status": "in_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -306,7 +306,7 @@
     "stock_status": "in_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -316,7 +316,7 @@
     "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -326,7 +326,7 @@
     "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 320
   },
   {
@@ -336,7 +336,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 236
   },
   {
@@ -346,7 +346,7 @@
     "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -356,7 +356,7 @@
     "stock_status": "in_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -366,7 +366,7 @@
     "stock_status": "in_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 204
   },
   {
@@ -376,7 +376,7 @@
     "stock_status": "in_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -386,7 +386,7 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 197
   },
   {
@@ -396,7 +396,7 @@
     "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 305
   },
   {
@@ -406,7 +406,7 @@
     "stock_status": "in_stock",
     "promo": "14% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 197
   },
   {
@@ -416,7 +416,7 @@
     "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -426,7 +426,7 @@
     "stock_status": "in_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 228
   },
   {
@@ -436,7 +436,7 @@
     "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -446,7 +446,7 @@
     "stock_status": "in_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -456,7 +456,7 @@
     "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -466,7 +466,7 @@
     "stock_status": "in_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -476,7 +476,7 @@
     "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 241
   },
   {
@@ -496,7 +496,7 @@
     "stock_status": "in_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 305
   },
   {
@@ -506,7 +506,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -516,7 +516,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -526,7 +526,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 97
   },
   {
@@ -536,7 +536,7 @@
     "stock_status": "in_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 292
   },
   {
@@ -556,7 +556,7 @@
     "stock_status": "in_stock",
     "promo": "13% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 226
   },
   {
@@ -566,7 +566,7 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 292
   },
   {
@@ -576,7 +576,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 292
   },
   {
@@ -586,7 +586,7 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 262
   },
   {
@@ -596,7 +596,7 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 262
   },
   {
@@ -606,7 +606,7 @@
     "stock_status": "in_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 332
   },
   {
@@ -616,7 +616,7 @@
     "stock_status": "in_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 229
   },
   {
@@ -626,7 +626,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 201
   },
   {
@@ -636,7 +636,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -646,7 +646,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -656,7 +656,7 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 329
   },
   {
@@ -666,7 +666,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   },
   {
@@ -676,7 +676,7 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 312
   },
   {
@@ -686,7 +686,7 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 280
   },
   {
@@ -696,7 +696,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 359
   },
   {
@@ -706,7 +706,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 224
   },
   {
@@ -716,7 +716,7 @@
     "stock_status": "out_of_stock",
     "promo": "50% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 226
   },
   {
@@ -746,7 +746,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -756,7 +756,7 @@
     "stock_status": "out_of_stock",
     "promo": "29% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 230
   },
   {
@@ -766,7 +766,7 @@
     "stock_status": "out_of_stock",
     "promo": "29% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 242
   },
   {
@@ -776,7 +776,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -786,7 +786,7 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 305
   },
   {
@@ -796,7 +796,7 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 324
   },
   {
@@ -806,7 +806,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 335
   },
   {
@@ -826,7 +826,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -836,7 +836,7 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 240
   },
   {
@@ -846,7 +846,7 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 301
   },
   {
@@ -856,7 +856,7 @@
     "stock_status": "out_of_stock",
     "promo": "33% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 301
   },
   {
@@ -866,7 +866,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -876,7 +876,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -886,7 +886,7 @@
     "stock_status": "out_of_stock",
     "promo": "29% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -896,7 +896,7 @@
     "stock_status": "out_of_stock",
     "promo": "33% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -906,7 +906,7 @@
     "stock_status": "out_of_stock",
     "promo": "31% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -926,7 +926,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -936,7 +936,7 @@
     "stock_status": "out_of_stock",
     "promo": "52% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -956,7 +956,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 316
   },
   {
@@ -1006,7 +1006,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 270
   },
   {
@@ -1016,7 +1016,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 215
   },
   {
@@ -1026,7 +1026,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -1036,7 +1036,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -1046,7 +1046,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 177
   },
   {
@@ -1056,7 +1056,7 @@
     "stock_status": "out_of_stock",
     "promo": "33% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 213
   },
   {
@@ -1066,7 +1066,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -1076,7 +1076,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -1086,7 +1086,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -1106,7 +1106,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -1116,7 +1116,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -1126,7 +1126,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -1136,7 +1136,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 245
   },
   {
@@ -1146,7 +1146,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 304
   },
   {
@@ -1156,7 +1156,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1166,7 +1166,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1176,7 +1176,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1186,7 +1186,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1196,7 +1196,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 304
   },
   {
@@ -1206,7 +1206,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1216,7 +1216,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1226,7 +1226,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1236,7 +1236,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 294
   },
   {
@@ -1246,7 +1246,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 247
   },
   {
@@ -1256,7 +1256,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 245
   },
   {
@@ -1266,7 +1266,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 245
   },
   {
@@ -1316,7 +1316,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 243
   },
   {
@@ -1326,7 +1326,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 303
   },
   {
@@ -1336,7 +1336,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 330
   },
   {
@@ -1346,7 +1346,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -1356,7 +1356,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 278
   },
   {
@@ -1366,7 +1366,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 305
   },
   {
@@ -1376,7 +1376,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 305
   },
   {
@@ -1386,7 +1386,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 172
   },
   {
@@ -1406,7 +1406,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 235
   },
   {
@@ -1416,7 +1416,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 172
   },
   {
@@ -1426,7 +1426,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   },
   {
@@ -1436,7 +1436,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 325
   },
   {
@@ -1446,7 +1446,7 @@
     "stock_status": "out_of_stock",
     "promo": "36% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 207
   },
   {
@@ -1456,7 +1456,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 222
   },
   {
@@ -1466,7 +1466,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 253
   },
   {
@@ -1476,7 +1476,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 316
   },
   {
@@ -1486,7 +1486,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 323
   },
   {
@@ -1496,7 +1496,7 @@
     "stock_status": "out_of_stock",
     "promo": "37% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 310
   },
   {
@@ -1506,7 +1506,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 253
   },
   {
@@ -1516,7 +1516,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 330
   },
   {
@@ -1536,7 +1536,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 170
   },
   {
@@ -1546,7 +1546,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 290
   },
   {
@@ -1556,7 +1556,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 290
   },
   {
@@ -1566,7 +1566,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 320
   },
   {
@@ -1576,7 +1576,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 320
   },
   {
@@ -1586,7 +1586,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 320
   },
   {
@@ -1596,7 +1596,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 320
   },
   {
@@ -1606,7 +1606,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -1616,7 +1616,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -1626,7 +1626,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -1646,7 +1646,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -1656,7 +1656,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -1666,7 +1666,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -1696,7 +1696,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -1726,7 +1726,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 323
   },
   {
@@ -1736,7 +1736,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 327
   },
   {
@@ -1746,7 +1746,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 348
   },
   {
@@ -1756,7 +1756,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 336
   },
   {
@@ -1766,7 +1766,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -1776,7 +1776,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -1786,7 +1786,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 336
   },
   {
@@ -1796,7 +1796,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -1806,7 +1806,7 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -1816,7 +1816,7 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 348
   },
   {
@@ -1826,7 +1826,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -1836,7 +1836,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -1846,7 +1846,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 330
   },
   {
@@ -1856,7 +1856,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 330
   },
   {
@@ -1866,7 +1866,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 330
   },
   {
@@ -1876,7 +1876,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -1886,7 +1886,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 310
   },
   {
@@ -1896,7 +1896,7 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 200
   },
   {
@@ -1906,7 +1906,7 @@
     "stock_status": "out_of_stock",
     "promo": "23% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 301
   },
   {
@@ -1916,7 +1916,7 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 305
   },
   {
@@ -1926,7 +1926,7 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -1936,7 +1936,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 261
   },
   {
@@ -1946,7 +1946,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 261
   },
   {
@@ -1956,7 +1956,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -1966,7 +1966,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 247
   },
   {
@@ -1976,7 +1976,7 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 123
   },
   {
@@ -1986,7 +1986,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -1996,7 +1996,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 272
   },
   {
@@ -2006,7 +2006,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 190
   },
   {
@@ -2016,7 +2016,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 199
   },
   {
@@ -2026,7 +2026,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 242
   },
   {
@@ -2036,7 +2036,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 261
   },
   {
@@ -2046,7 +2046,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -2056,7 +2056,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 261
   },
   {
@@ -2066,7 +2066,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 342
   },
   {
@@ -2076,7 +2076,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -2086,7 +2086,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 112
   },
   {
@@ -2096,7 +2096,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -2106,7 +2106,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 357
   },
   {
@@ -2116,7 +2116,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -2126,7 +2126,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 305
   },
   {
@@ -2166,7 +2166,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 310
   },
   {
@@ -2176,7 +2176,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 325
   },
   {
@@ -2186,7 +2186,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 202
   },
   {
@@ -2196,7 +2196,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 359
   },
   {
@@ -2206,7 +2206,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 280
   },
   {
@@ -2216,7 +2216,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -2226,7 +2226,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 357
   },
   {
@@ -2236,7 +2236,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -2246,7 +2246,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 306
   },
   {
@@ -2256,7 +2256,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -2266,7 +2266,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -2276,7 +2276,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -2286,7 +2286,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 420
   },
   {
@@ -2296,7 +2296,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 303
   },
   {
@@ -2306,7 +2306,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 357
   },
   {
@@ -2316,7 +2316,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   },
   {
@@ -2326,7 +2326,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -2336,7 +2336,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -2346,7 +2346,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -2356,7 +2356,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -2366,7 +2366,7 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 348
   },
   {
@@ -2376,7 +2376,7 @@
     "stock_status": "out_of_stock",
     "promo": "26% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 289
   },
   {
@@ -2386,7 +2386,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -2396,7 +2396,7 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 357
   },
   {
@@ -2406,7 +2406,7 @@
     "stock_status": "out_of_stock",
     "promo": "24% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 312
   },
   {
@@ -2416,7 +2416,7 @@
     "stock_status": "out_of_stock",
     "promo": "28% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 330
   },
   {
@@ -2426,7 +2426,7 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 320
   },
   {
@@ -2436,7 +2436,7 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 320
   },
   {
@@ -2446,7 +2446,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 320
   },
   {
@@ -2456,7 +2456,7 @@
     "stock_status": "out_of_stock",
     "promo": "36% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 280
   },
   {
@@ -2466,7 +2466,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 282
   },
   {
@@ -2476,7 +2476,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -2486,7 +2486,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -2496,7 +2496,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   },
   {
@@ -2506,7 +2506,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 302
   },
   {
@@ -2516,7 +2516,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 288
   },
   {
@@ -2526,7 +2526,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   },
   {
@@ -2536,7 +2536,7 @@
     "stock_status": "out_of_stock",
     "promo": "16% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 359
   },
   {
@@ -2546,7 +2546,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 325
   },
   {
@@ -2556,7 +2556,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 208
   },
   {
@@ -2566,7 +2566,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -2576,7 +2576,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 215
   },
   {
@@ -2606,7 +2606,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 329
   },
   {
@@ -2616,7 +2616,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 280
   },
   {
@@ -2626,7 +2626,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 229
   },
   {
@@ -2636,7 +2636,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 204
   },
   {
@@ -2646,7 +2646,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -2656,7 +2656,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -2666,7 +2666,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -2676,7 +2676,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -2686,7 +2686,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -2696,7 +2696,7 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -2706,7 +2706,7 @@
     "stock_status": "out_of_stock",
     "promo": "22% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 208
   },
   {
@@ -2716,7 +2716,7 @@
     "stock_status": "out_of_stock",
     "promo": "17% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 208
   },
   {
@@ -2726,7 +2726,7 @@
     "stock_status": "out_of_stock",
     "promo": "20% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 329
   },
   {
@@ -2736,7 +2736,7 @@
     "stock_status": "out_of_stock",
     "promo": "15% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 199
   },
   {
@@ -2746,7 +2746,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -2756,7 +2756,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 302
   },
   {
@@ -2766,7 +2766,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 268
   },
   {
@@ -2776,7 +2776,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 302
   },
   {
@@ -2786,7 +2786,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 302
   },
   {
@@ -2796,7 +2796,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -2806,7 +2806,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 248
   },
   {
@@ -2816,7 +2816,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 282
   },
   {
@@ -2826,7 +2826,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 306
   },
   {
@@ -2836,7 +2836,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -2846,7 +2846,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -2856,7 +2856,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 253
   },
   {
@@ -2866,7 +2866,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -2876,7 +2876,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -2886,7 +2886,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 331
   },
   {
@@ -2896,7 +2896,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 331
   },
   {
@@ -2906,7 +2906,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 301
   },
   {
@@ -2916,7 +2916,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -2926,7 +2926,7 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 202
   },
   {
@@ -2936,7 +2936,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -2946,7 +2946,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -2956,7 +2956,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 225
   },
   {
@@ -2966,7 +2966,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 225
   },
   {
@@ -2976,7 +2976,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 225
   },
   {
@@ -2986,7 +2986,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 225
   },
   {
@@ -2996,7 +2996,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 300
   },
   {
@@ -3006,7 +3006,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -3016,7 +3016,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 3570
   },
   {
@@ -3026,7 +3026,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 267
   },
   {
@@ -3036,7 +3036,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 267
   },
   {
@@ -3076,7 +3076,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 267
   },
   {
@@ -3086,7 +3086,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 301
   },
   {
@@ -3096,7 +3096,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -3116,7 +3116,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 97
   },
   {
@@ -3126,7 +3126,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 118
   },
   {
@@ -3136,7 +3136,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 262
   },
   {
@@ -3146,7 +3146,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 332
   },
   {
@@ -3156,7 +3156,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 262
   },
   {
@@ -3166,7 +3166,7 @@
     "stock_status": "out_of_stock",
     "promo": "34% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -3176,7 +3176,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -3186,7 +3186,7 @@
     "stock_status": "out_of_stock",
     "promo": "21% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 342
   },
   {
@@ -3196,7 +3196,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 427
   },
   {
@@ -3206,7 +3206,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 293
   },
   {
@@ -3216,7 +3216,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 174
   },
   {
@@ -3226,7 +3226,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 277
   },
   {
@@ -3236,7 +3236,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 277
   },
   {
@@ -3246,7 +3246,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 277
   },
   {
@@ -3256,7 +3256,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 305
   },
   {
@@ -3286,7 +3286,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 330
   },
   {
@@ -3296,7 +3296,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3306,7 +3306,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3316,7 +3316,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3326,7 +3326,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -3336,7 +3336,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 240
   },
   {
@@ -3366,7 +3366,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -3376,7 +3376,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -3406,7 +3406,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 330
   },
   {
@@ -3416,7 +3416,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 280
   },
   {
@@ -3426,7 +3426,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 340
   },
   {
@@ -3436,7 +3436,7 @@
     "stock_status": "out_of_stock",
     "promo": "12% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 290
   },
   {
@@ -3446,7 +3446,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 320
   },
   {
@@ -3456,7 +3456,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 320
   },
   {
@@ -3466,7 +3466,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 250
   },
   {
@@ -3476,7 +3476,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 280
   },
   {
@@ -3486,7 +3486,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 250
   },
   {
@@ -3496,7 +3496,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 250
   },
   {
@@ -3506,7 +3506,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 240
   },
   {
@@ -3526,7 +3526,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3536,7 +3536,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -3546,7 +3546,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3556,7 +3556,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3566,7 +3566,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 340
   },
   {
@@ -3576,7 +3576,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 240
   },
   {
@@ -3586,7 +3586,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 240
   },
   {
@@ -3596,7 +3596,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 336
   },
   {
@@ -3606,7 +3606,7 @@
     "stock_status": "out_of_stock",
     "promo": "27% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 115
   },
   {
@@ -3616,7 +3616,7 @@
     "stock_status": "out_of_stock",
     "promo": "18% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 115
   },
   {
@@ -3626,7 +3626,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -3636,7 +3636,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -3646,7 +3646,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 227
   },
   {
@@ -3656,7 +3656,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -3676,7 +3676,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 308
   },
   {
@@ -3686,7 +3686,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 322
   },
   {
@@ -3696,7 +3696,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 172
   },
   {
@@ -3706,7 +3706,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 172
   },
   {
@@ -3716,7 +3716,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 230
   },
   {
@@ -3726,7 +3726,7 @@
     "stock_status": "out_of_stock",
     "promo": "25% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 339
   },
   {
@@ -3736,7 +3736,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -3746,7 +3746,7 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 308
   },
   {
@@ -3756,7 +3756,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 354
   },
   {
@@ -3766,7 +3766,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 354
   },
   {
@@ -3776,7 +3776,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 243
   },
   {
@@ -3786,7 +3786,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 242
   },
   {
@@ -3796,7 +3796,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 307
   },
   {
@@ -3806,7 +3806,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 242
   },
   {
@@ -3816,7 +3816,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 308
   },
   {
@@ -3826,7 +3826,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 307
   },
   {
@@ -3836,7 +3836,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 322
   },
   {
@@ -3846,7 +3846,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 322
   },
   {
@@ -3856,7 +3856,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -3866,7 +3866,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 261
   },
   {
@@ -3876,7 +3876,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 261
   },
   {
@@ -3886,7 +3886,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -3896,7 +3896,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -3906,7 +3906,7 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 301
   },
   {
@@ -3916,7 +3916,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 330
   },
   {
@@ -3926,7 +3926,7 @@
     "stock_status": "out_of_stock",
     "promo": "1% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 342
   },
   {
@@ -3936,7 +3936,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -3946,7 +3946,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 190
   },
   {
@@ -3956,7 +3956,7 @@
     "stock_status": "out_of_stock",
     "promo": "25% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 219
   },
   {
@@ -3966,7 +3966,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 325
   },
   {
@@ -3976,7 +3976,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 325
   },
   {
@@ -3986,7 +3986,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 349
   },
   {
@@ -3996,7 +3996,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -4006,7 +4006,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 325
   },
   {
@@ -4016,7 +4016,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 249
   },
   {
@@ -4026,7 +4026,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 315
   },
   {
@@ -4036,7 +4036,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 349
   },
   {
@@ -4046,7 +4046,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 249
   },
   {
@@ -4056,7 +4056,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -4066,7 +4066,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 325
   },
   {
@@ -4076,7 +4076,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 325
   },
   {
@@ -4086,7 +4086,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -4096,7 +4096,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 314
   },
   {
@@ -4106,7 +4106,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 325
   },
   {
@@ -4116,7 +4116,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 349
   },
   {
@@ -4126,7 +4126,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 249
   },
   {
@@ -4136,7 +4136,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -4146,7 +4146,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 288
   },
   {
@@ -4156,7 +4156,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -4166,7 +4166,7 @@
     "stock_status": "out_of_stock",
     "promo": "34% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 525,
     "clearance_mm": 280
   },
   {
@@ -4176,7 +4176,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 290
   },
   {
@@ -4186,7 +4186,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 236
   },
   {
@@ -4196,7 +4196,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 208
   },
   {
@@ -4206,7 +4206,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 332
   },
   {
@@ -4216,7 +4216,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 300
   },
   {
@@ -4226,7 +4226,7 @@
     "stock_status": "out_of_stock",
     "promo": "14% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 337
   },
   {
@@ -4236,7 +4236,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 247
   },
   {
@@ -4246,7 +4246,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 304
   },
   {
@@ -4256,7 +4256,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 182
   },
   {
@@ -4266,7 +4266,7 @@
     "stock_status": "out_of_stock",
     "promo": "19% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 281
   },
   {
@@ -4276,7 +4276,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -4286,7 +4286,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 145
   },
   {
@@ -4296,7 +4296,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4306,7 +4306,7 @@
     "stock_status": "out_of_stock",
     "promo": "10% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 303
   },
   {
@@ -4316,7 +4316,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4326,7 +4326,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4336,7 +4336,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4346,7 +4346,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 360
   },
   {
@@ -4356,7 +4356,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 301
   },
   {
@@ -4366,7 +4366,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 330
   },
   {
@@ -4376,7 +4376,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -4386,7 +4386,7 @@
     "stock_status": "out_of_stock",
     "promo": "3% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 300
   },
   {
@@ -4396,7 +4396,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 330
   },
   {
@@ -4406,7 +4406,7 @@
     "stock_status": "out_of_stock",
     "promo": "2% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 150,
     "clearance_mm": 282
   },
   {
@@ -4416,7 +4416,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 330
   },
   {
@@ -4426,7 +4426,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 331
   },
   {
@@ -4436,7 +4436,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 336
   },
   {
@@ -4446,7 +4446,7 @@
     "stock_status": "out_of_stock",
     "promo": "4% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -4456,7 +4456,7 @@
     "stock_status": "out_of_stock",
     "promo": "7% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -4466,7 +4466,7 @@
     "stock_status": "out_of_stock",
     "promo": "8% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 355
   },
   {
@@ -4476,7 +4476,7 @@
     "stock_status": "out_of_stock",
     "promo": "9% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 231
   },
   {
@@ -4486,7 +4486,7 @@
     "stock_status": "out_of_stock",
     "promo": "13% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 301
   },
   {
@@ -4496,7 +4496,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4506,7 +4506,7 @@
     "stock_status": "out_of_stock",
     "promo": "11% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 358
   },
   {
@@ -4516,7 +4516,7 @@
     "stock_status": "out_of_stock",
     "promo": "6% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 280
   },
   {
@@ -4526,7 +4526,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 182
   },
   {
@@ -4536,7 +4536,7 @@
     "stock_status": "out_of_stock",
     "promo": "5% discount",
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 304
   },
   {
@@ -4546,7 +4546,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 375,
     "clearance_mm": 300
   },
   {
@@ -4556,7 +4556,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 332
   },
   {
@@ -4566,7 +4566,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 225,
     "clearance_mm": 262
   },
   {
@@ -4576,7 +4576,7 @@
     "stock_status": "out_of_stock",
     "promo": null,
     "type": "gpu",
-    "tdp": 300,
+    "tdp": 600,
     "clearance_mm": 338
   }
 ]
