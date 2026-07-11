@@ -457,10 +457,8 @@
             return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
         }
 
-        async function getPublicKeyPem(publicKey) {
-            const pubKeyStr = String.fromCharCode(...publicKey);
-            const pubKeyBase64 = btoa(pubKeyStr);
-            return `-----BEGIN PUBLIC KEY-----\n${pubKeyBase64}\n-----END PUBLIC KEY-----`;
+        async function getPublicKeyBase64url(publicKey) {
+            return base64urlEncode(publicKey);
         }
 
         async function getPublicKeyFingerprint(publicKey) {
@@ -503,7 +501,7 @@
                 const keyPair = generateDeviceKey();
                 state.privateKey = keyPair.secretKey;
                 state.publicKey = keyPair.publicKey;
-                const publicKeyPem = await getPublicKeyPem(keyPair.publicKey);
+                const publicKeyBase64url = await getPublicKeyBase64url(keyPair.publicKey);
                 const deviceId = await getPublicKeyFingerprint(keyPair.publicKey);
                 state.deviceId = deviceId;
 
@@ -558,7 +556,7 @@
                                     auth: { token },
                                     device: {
                                         id: state.deviceId,
-                                        publicKey: publicKeyPem,
+                                        publicKey: publicKeyBase64url,
                                         signature,
                                         signedAt: ts,
                                         nonce
