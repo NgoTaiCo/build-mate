@@ -2,7 +2,14 @@
   if (!globalThis.BuildMateEligibility.isExactBuildPcUrl(location.href)) return;
   const panel = globalThis.BuildMatePanel.ensureMounted();
   const trackerStop = globalThis.BuildMateTracker.startBuildTracker({ doc: document, onSnapshot: (snapshot) => panel.setSnapshot(snapshot) });
-  const contextId = crypto.randomUUID();
+  
+  let contextId = null;
+  try { contextId = localStorage.getItem("buildmate_session_id"); } catch(e) {}
+  if (!contextId) {
+    contextId = crypto.randomUUID();
+    try { localStorage.setItem("buildmate_session_id", contextId); } catch(e) {}
+  }
+  
   const bridge = globalThis.BuildMateBridgeAdapter.createBridgeAdapter({ onCommand: (command) => panel.applyBridgeCommand(command) });
   let actionInFlight = false;
 
@@ -12,11 +19,12 @@
     panel.setAction({ type: "START" });
     try {
       const result = await globalThis.BuildMateDomAdapter.addComponent(component);
+      const isVi = globalThis.BuildMateI18n?.getLang() === 'vi';
       if (result.ok) {
         panel.setSnapshot(result.snapshot);
-        panel.setAction({ type: "SUCCESS", message: `Đã thêm ${component.sku} thành công.`, component, revision: result.snapshot?.revision ?? null });
+        panel.setAction({ type: "SUCCESS", message: isVi ? `Đã thêm ${component.sku} thành công.` : `Successfully added ${component.sku}.`, component, revision: result.snapshot?.revision ?? null });
       } else {
-        panel.setAction({ type: "FAILED", code: result.error, message: `Lỗi: ${result.error}` });
+        panel.setAction({ type: "FAILED", code: result.error, message: isVi ? `Lỗi: ${result.error}` : `Error: ${result.error}` });
       }
       return result;
     } catch (error) {
@@ -33,11 +41,12 @@
     panel.setAction({ type: "REVERT_START" });
     try {
       const result = await globalThis.BuildMateDomAdapter.removeComponent(component, expectedRevision);
+      const isVi = globalThis.BuildMateI18n?.getLang() === 'vi';
       if (result.ok) {
         panel.setSnapshot(result.snapshot);
-        panel.setAction({ type: "REVERT_SUCCESS", message: `Đã hoàn tác ${component.sku}.` });
+        panel.setAction({ type: "REVERT_SUCCESS", message: isVi ? `Đã hoàn tác ${component.sku}.` : `Reverted ${component.sku}.` });
       } else {
-        panel.setAction({ type: "FAILED", code: result.error, message: `Không thể hoàn tác: ${result.error}` });
+        panel.setAction({ type: "FAILED", code: result.error, message: isVi ? `Không thể hoàn tác: ${result.error}` : `Cannot revert: ${result.error}` });
       }
       return result;
     } catch (error) {
@@ -69,19 +78,23 @@
     },
     onRequestRevert: async (component, expectedRevision) => {
       if (!component) return;
-      panel.setAction({ type: "REQUESTED", message: "Đã gửi yêu cầu hoàn tác tới OpenClaw." });
+      const isVi = globalThis.BuildMateI18n?.getLang() === 'vi';
+      panel.setAction({ type: "REQUESTED", message: isVi ? "Đã gửi yêu cầu hoàn tác tới OpenClaw." : "Revert request sent to OpenClaw." });
       try {
         await sendUserIntent({ type: "request_revert", component, expected_revision: expectedRevision ?? undefined, user_confirmed: true });
       } catch (error) {
         panel.setAction({ type: "FAILED", code: "BACKEND_NOT_CONNECTED", message: String(error) });
       }
     },
-    onMockCommand: () => bridge.receive({
-      v: 1, id: `mock-${Date.now()}`, type: "buildmate.ui.suggest",
-      tab: { origin: "https://phongvu.vn", path: "/buildpc" },
-      issuedAt: Date.now(), expiresAt: Date.now() + 30000,
-      payload: { message: "OpenClaw mock: hãy xác nhận trước khi thêm VGA demo.", category: "VGA" }
-    }),
+    onMockCommand: () => {
+      const isVi = globalThis.BuildMateI18n?.getLang() === 'vi';
+      return bridge.receive({
+        v: 1, id: `mock-${Date.now()}`, type: "buildmate.ui.suggest",
+        tab: { origin: "https://phongvu.vn", path: "/buildpc" },
+        issuedAt: Date.now(), expiresAt: Date.now() + 30000,
+        payload: { message: isVi ? "OpenClaw mock: hãy xác nhận trước khi thêm VGA demo." : "OpenClaw mock: please confirm before adding VGA demo.", category: "VGA" }
+      });
+    },
     onChatMessage: async (text, snapshot) => {
       return new Promise((resolve, reject) => {
         chrome.runtime.sendMessage({
@@ -99,6 +112,13 @@
           }
         });
       });
+    },
+    onClearChat: () => {
+      contextId = crypto.randomUUID();
+      try { localStorage.setItem("buildmate_session_id", contextId); } catch(e) {}
+      clearInterval(heartbeatTimer);
+      bridgePort?.disconnect();
+      connectBridge();
     }
   });
 

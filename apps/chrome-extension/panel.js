@@ -1,6 +1,65 @@
 (function () {
   const ROOT_ID = "buildmate-extension-root";
   function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[c]); }
+  function tryParseBuildRecommendation(text) {
+    if (!text) return null;
+    
+    const lines = text.split(/\r?\n/);
+    let tableStartIndex = -1;
+    let tableEndIndex = -1;
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (/^\|[\s\-:]+\|[\s\-:]+(\|[\s\-:]+)*\|?$/.test(line) && i > 0 && lines[i-1].includes('|')) {
+            tableStartIndex = i - 1;
+            tableEndIndex = i + 1;
+            while (tableEndIndex < lines.length && lines[tableEndIndex].trim().startsWith('|')) {
+                tableEndIndex++;
+            }
+            break;
+        }
+    }
+
+    if (tableStartIndex === -1 || tableEndIndex - tableStartIndex < 3) return null;
+
+    const tableLines = lines.slice(tableStartIndex, tableEndIndex);
+    const components = [];
+    
+    for (let i = 2; i < tableLines.length; i++) {
+        const cleanRow = tableLines[i].trim().replace(/^\||\|$/g, '');
+        const cells = cleanRow.split('|').map(c => c.trim());
+        
+        if (cells.length > 1 && (cells[0].toLowerCase().includes("tổng") || cells[1].toLowerCase().includes("tổng"))) {
+            continue;
+        }
+        
+        if (cells.length >= 2 && cells[0] !== "" && cells[1] !== "") {
+            components.push({ category: cells[0], name: cells[1] });
+        }
+    }
+
+    if (components.length === 0) return null;
+
+    let total = "";
+    const totalMatch = text.match(/(?:Tổng|Total|Giá|Chi phí)[^\d]*([~]?[\d.,]+\s*(?:₫|VND|đ))/i);
+    if (totalMatch) {
+      total = totalMatch[1];
+    } else {
+      for (const line of tableLines) {
+         if (line.toLowerCase().includes("tổng")) {
+            const m = line.match(/([~]?[\d.,]+\s*(?:₫|VND|đ))/i);
+            if (m) total = m[1];
+         }
+      }
+    }
+
+    const contentBefore = lines.slice(0, tableStartIndex).join('\n').trim();
+    const contentAfter = lines.slice(tableEndIndex).join('\n').trim();
+    const content = (contentBefore + "\n\n" + contentAfter).trim();
+    
+    return { type: "build_recommendation", build: { components, total: total || "N/A" }, content };
+  }
+
   function parseMarkdown(text) {
     if (!text) return "";
     let html = escapeHtml(text);
@@ -55,15 +114,24 @@
     const launcher = shadow.querySelector(".bm-launcher"), panel = shadow.querySelector(".bm-panel"), notice = shadow.querySelector(".bm-notice"), view = shadow.querySelector(".bm-view"), title = shadow.querySelector(".bm-title"), statusBar = shadow.querySelector("#bm-status-bar"), statusText = shadow.querySelector("#bm-status-text");
     let state = { ...globalThis.BuildMatePanelState.initialPanelState }, actionState = { ...globalThis.BuildMateActionState.initialActionState }, snapshot = { status: "unavailable", components: [], total: null }, bridgeConnected = false, pendingAdd = false, isTyping = false, handlers = {};
     
+    try {
+      const saved = localStorage.getItem("buildmate_messages");
+      if (saved) state.messages = JSON.parse(saved);
+    } catch (e) {}
+
     function snapshotMarkup() {
       const count = snapshot.components.length;
       if (snapshot.status !== "ready") return `<div class="bm-tracker bm-tracker--unavailable">${globalThis.BuildMateI18n.t('cartUnavailable')}</div>`;
       if (count === 0) return `<div class="bm-tracker bm-tracker--empty"><p class="bm-tracker-empty-text"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-right:6px;vertical-align:middle"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>${globalThis.BuildMateI18n.t('cartEmpty')}</p></div>`;
       const names = snapshot.components.map((c) => `<li><span>${escapeHtml(c.category)}</span><strong>${escapeHtml(c.name)}</strong></li>`).join("");
       let totalHtml = "";
-      if (snapshot.total) {
-        const amountMatch = snapshot.total.match(/[\d.,]+[^\d.,]*/);
-        const amountStr = amountMatch ? amountMatch[0].trim() : snapshot.total;
+      if (snapshot.total != null) {
+        let amountStr = "";
+        if (typeof snapshot.total === 'number') {
+          amountStr = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(snapshot.total);
+        } else {
+          amountStr = String(snapshot.total);
+        }
         totalHtml = `<div class="bm-tracker-total"><span>${globalThis.BuildMateI18n.t('totalCost')}</span><strong>${escapeHtml(amountStr)}</strong></div>`;
       }
       return `<section class="bm-tracker"><div class="bm-tracker-title"><span>${globalThis.BuildMateI18n.t('cartTitle')}</span>${count > 0 ? `<span class="bm-tracker-count">${count}</span>` : ""}</div><ul>${names}</ul>${totalHtml}</section>`;
@@ -195,16 +263,23 @@
             return `<div class="bm-chat-message ${roleClass}">${contentHtml}</div>`;
           }).join("")}
           ${isTyping ? '<div class="bm-typing"><span></span><span></span><span></span></div>' : ''}
+          ${state.messages.length >= 30 ? `<div class="bm-chat-message bm-message-bot"><div class="bm-chat-text" style="padding: 10px 14px; margin: 0; font-size: 14px; word-break: break-word; color: #d32f2f; font-weight: bold;">Đã đạt giới hạn 30 tin nhắn cho bản Demo. Vui lòng bấm vào nút Xoá Chat (Thùng rác) ở trên để tiếp tục.</div></div>` : ''}
         `;
         lastRenderedIsTyping = isTyping;
         scrollChat();
       }
 
-      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd;
+      const isLimitReached = state.messages.length >= 30;
+      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd || isLimitReached;
+      
       if (busy) {
         input.disabled = true;
         submitBtn.disabled = true;
-        input.placeholder = globalThis.BuildMateI18n.t('processing');
+        if (isLimitReached) {
+          input.placeholder = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Giới hạn 30 tin nhắn. Vui lòng xoá chat!' : 'Limit 30 messages. Please clear chat!';
+        } else {
+          input.placeholder = globalThis.BuildMateI18n.t('processing');
+        }
         form.classList.add('bm-chat-input--disabled');
       } else {
         input.disabled = false;
@@ -220,7 +295,15 @@
       if (focusPanel && state.open && !busy) input.focus(); 
     }
     
-    function transition(event, options) { const wasOpen = state.open; state = globalThis.BuildMatePanelState.reducePanelState(state, event); render({ focusPanel: options?.focusPanel ?? (!wasOpen && state.open) }); if (wasOpen && !state.open) launcher.focus(); return state; }
+    function transition(event, options) { 
+      const wasOpen = state.open; 
+      state = globalThis.BuildMatePanelState.reducePanelState(state, event); 
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
+      render({ focusPanel: options?.focusPanel ?? (!wasOpen && state.open) }); 
+      if (!wasOpen && state.open) scrollChat();
+      if (wasOpen && !state.open) launcher.focus(); 
+      return state; 
+    }
     
     launcher.addEventListener("click", () => transition({ type: "TOGGLE" }));
     shadow.querySelector(".bm-close").addEventListener("click", () => transition({ type: "CLOSE" }));
@@ -229,6 +312,7 @@
       globalThis.BuildMateI18n.setLang(next);
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
       lastRenderedSnapshot = null;
       lastRenderedActionState = null;
       applyI18n();
@@ -237,6 +321,8 @@
     shadow.querySelector('#bm-clear-btn').addEventListener('click', () => {
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
+      try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
+      if (handlers.onClearChat) handlers.onClearChat();
       render();
     });
     panel.addEventListener("click", (event) => { 
@@ -245,9 +331,34 @@
         const goal = globalThis.BuildMateDemoData.goals.find(g => g.id === button.dataset.goalId);
         if (goal) {
           const tTitle = globalThis.BuildMateI18n.t('goals')[goal.id].title;
-          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn ${tTitle.toLowerCase()}` : `I want to build for ${tTitle.toLowerCase()}` } });
+          const userMsg = globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn build máy: ${tTitle}` : `I want to build: ${tTitle}`;
+          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: userMsg } });
           isTyping = true; render();
-          setTimeout(() => { isTyping = false; transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'action', content: '' } }); }, 900);
+          
+          if (handlers.onChatMessage) {
+            handlers.onChatMessage(userMsg, snapshot).then((replyText) => {
+              isTyping = false;
+              if (replyText) {
+                const parsed = tryParseBuildRecommendation(replyText);
+                if (parsed) {
+                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
+                } else {
+                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+                }
+              } else {
+                render();
+              }
+            }).catch(err => {
+              isTyping = false;
+              const errPrefix = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Lỗi kết nối server:' : 'Server connection error:';
+              transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `${errPrefix} ${err.message}` } });
+            });
+          } else {
+            setTimeout(() => {
+              isTyping = false;
+              render();
+            }, 500);
+          }
         }
       }
       if (button.dataset.action === "prepare-add") { pendingAdd = true; render(); } 
@@ -257,7 +368,36 @@
       if (button.dataset.action === "reset-action") { actionState = { ...globalThis.BuildMateActionState.initialActionState }; render(); } 
       if (button.dataset.mockAction === "add-product" || button.dataset.mockAction === "apply-build") { 
         state = { ...state, messages: state.messages.map(m => m.id === button.dataset.messageId ? { ...m, added: true } : m) };
+        try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
         render();
+        
+        // Auto-send command to AI
+        const cmd = button.dataset.mockAction === "apply-build" ? 
+          (globalThis.BuildMateI18n.getLang() === 'vi' ? 'Hãy tự động ráp cấu hình này vào trang web cho tôi nhé!' : 'Please add this build configuration to the website!') :
+          (globalThis.BuildMateI18n.getLang() === 'vi' ? 'Hãy add sản phẩm này vào cấu hình cho tôi nhé!' : 'Please add this product to the config!');
+        
+        transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: cmd } });
+        isTyping = true; render();
+        
+        if (handlers.onChatMessage) {
+          handlers.onChatMessage(cmd, snapshot).then((replyText) => {
+            isTyping = false;
+            if (replyText) {
+              const parsed = tryParseBuildRecommendation(replyText);
+              if (parsed) {
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
+              } else {
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+              }
+            } else {
+              render();
+            }
+          }).catch(err => {
+            isTyping = false;
+            const errPrefix = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Lỗi kết nối server:' : 'Server connection error:';
+            transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `${errPrefix} ${err.message}` } });
+          });
+        }
       }
     });
     
@@ -276,7 +416,12 @@
             handlers.onChatMessage(val, snapshot).then((replyText) => {
               isTyping = false;
               if (replyText) {
-                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+                const parsed = tryParseBuildRecommendation(replyText);
+                if (parsed) {
+                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', content: parsed.content, build: parsed.build } });
+                } else {
+                  transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+                }
               } else {
                 render();
               }

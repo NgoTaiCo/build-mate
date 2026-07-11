@@ -296,17 +296,19 @@
   }
 
   function productSearchInput(modal) {
-    return [...modal.querySelectorAll("input")].find((input) => {
+    const inputs = [...modal.querySelectorAll("input[type='text'], input[type='search']")];
+    if (inputs.length === 1) return inputs[0];
+    return inputs.find((input) => {
       const hint = [input.type, input.name, input.placeholder, input.getAttribute("aria-label")]
         .filter(Boolean)
         .join(" ")
         .toLowerCase();
-      return input.type === "search" || /tìm\s*kiếm|tim\s*kiem|search/.test(hint);
-    }) ?? null;
+      return input.type === "search" || /tìm\s*kiếm|tim\s*kiem|search|nhập|nhap|mã|sku|tên/i.test(hint);
+    }) ?? inputs[0] ?? null;
   }
 
   function setInputValue(input, value) {
-    const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value")?.set;
+    const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")?.set;
     if (setter) setter.call(input, value);
     else input.value = value;
     input.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
@@ -318,6 +320,30 @@
     if (!input) return false;
     input.focus();
     setInputValue(input, vendorProductId);
+    
+    // Simulate pressing Enter to trigger search
+    // React and other frameworks may listen to keydown, keypress, or keyup.
+    const enterConfig = {
+      key: "Enter",
+      code: "Enter",
+      keyCode: 13,
+      which: 13,
+      bubbles: true,
+      cancelable: true,
+      composed: true
+    };
+    input.dispatchEvent(new KeyboardEvent("keydown", enterConfig));
+    input.dispatchEvent(new KeyboardEvent("keypress", enterConfig));
+    input.dispatchEvent(new KeyboardEvent("keyup", enterConfig));
+    
+    // Try to click any search button nearby just in case (like a form submit)
+    const form = input.closest("form");
+    if (form) {
+      form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+    }
+    
+    // Wait for debounce/API call to fire
+    await new Promise(r => setTimeout(r, 1000));
     return true;
   }
 
