@@ -441,7 +441,39 @@
             elements.messages.scrollTop = elements.messages.scrollHeight;
         }
 
-        function connect() {
+        async function generateDeviceKey() {
+            const keyPair = await crypto.subtle.generateKey(
+                {
+                    name: 'RSASSA-PKCS1-v1_5',
+                    modulusLength: 2048,
+                    publicExponent: new Uint8Array([1, 0, 1]),
+                    hash: 'SHA-256',
+                },
+                true,
+                ['sign', 'verify']
+            );
+            return keyPair;
+        }
+
+        function bufferToHex(buffer) {
+            const view = new Uint8Array(buffer);
+            return Array.from(view).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function getPublicKeyPem(publicKey) {
+            const exported = await crypto.subtle.exportKey('spki', publicKey);
+            const exportedAsString = String.fromCharCode.apply(null, new Uint8Array(exported));
+            const exportedAsBase64 = btoa(exportedAsString);
+            return `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
+        }
+
+        async function signNonce(privateKey, nonce, timestamp) {
+            const signData = new TextEncoder().encode(`${nonce}${timestamp}`);
+            const signature = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', privateKey, signData);
+            return bufferToHex(signature);
+        }
+
+        async function connect() {
             if (state.connected) {
                 disconnect();
                 return;
@@ -460,46 +492,88 @@
             addMessage(`Connecting to ${wsUrl}...`, 'system');
 
             try {
+                // Generate device keypair
+                addMessage('Generating device keypair...', 'system');
+                const keyPair = await generateDeviceKey();
+                state.privateKey = keyPair.privateKey;
+                const publicKeyPem = await getPublicKeyPem(keyPair.publicKey);
+                const deviceId = `device_${bufferToHex(crypto.getRandomValues(new Uint8Array(8)))}`;
+
                 state.ws = new WebSocket(wsUrl);
 
                 state.ws.onopen = () => {
-                    updateStatus(true);
-                    addMessage('✓ Connected to OpenClaw', 'system');
-
-                    // Send initial authentication
-                    const authMessage = {
-                        type: 'auth',
-                        token: token
-                    };
-                    state.ws.send(JSON.stringify(authMessage));
+                    addMessage('✓ WebSocket connected', 'system');
                 };
 
-                state.ws.onmessage = (event) => {
+                state.ws.onmessage = async (event) => {
                     try {
                         const data = JSON.parse(event.data);
 
-                        if (data.type === 'auth_response') {
-                            if (data.success) {
+                        // Handle challenge
+                        if (data.type === 'event' && data.event === 'connect.challenge') {
+                            const { nonce, ts } = data.payload;
+                            addMessage('Received authentication challenge...', 'system');
+
+                            const signature = await signNonce(state.privateKey, nonce, ts);
+
+                            const connectReq = {
+                                type: 'req',
+                                id: `req_${Date.now()}`,
+                                method: 'connect',
+                                params: {
+                                    minProtocol: 4,
+                                    maxProtocol: 4,
+                                    client: {
+                                        id: 'cli-web',
+                                        version: '1.0.0',
+                                        platform: 'web',
+                                        mode: 'operator'
+                                    },
+                                    role: 'operator',
+                                    scopes: ['operator.read', 'operator.write'],
+                                    auth: { token },
+                                    device: {
+                                        id: deviceId,
+                                        publicKey: publicKeyPem,
+                                        signature,
+                                        signedAt: ts,
+                                        nonce
+                                    }
+                                }
+                            };
+
+                            state.ws.send(JSON.stringify(connectReq));
+                        }
+                        // Handle connection response
+                        else if (data.type === 'res') {
+                            if (data.result?.ok) {
+                                updateStatus(true);
                                 addMessage('✓ Authenticated successfully', 'system');
                             } else {
-                                addMessage(`✗ Authentication failed: ${data.message}`, 'system', true);
+                                addMessage(`✗ Authentication failed: ${data.result?.error || 'Unknown error'}`, 'system', true);
+                                state.ws.close();
                             }
-                        } else if (data.type === 'message') {
-                            addMessage(data.content, 'assistant');
-                        } else if (data.type === 'error') {
-                            addMessage(`Error: ${data.message}`, 'system', true);
-                        } else {
-                            // Display raw response
-                            addMessage(JSON.stringify(data, null, 2), 'assistant');
+                        }
+                        // Handle messages
+                        else if (data.type === 'event' && data.event === 'chat.message') {
+                            const content = data.payload?.content;
+                            if (content) {
+                                addMessage(content, 'assistant');
+                                state.conversationHistory.push({ role: 'assistant', content });
+                            }
+                        }
+                        // Display other events
+                        else if (data.type === 'event') {
+                            addMessage(`[${data.event}] ${JSON.stringify(data.payload)}`, 'system');
                         }
                     } catch (e) {
-                        addMessage(event.data, 'assistant');
+                        addMessage(`Error parsing message: ${e.message}`, 'system', true);
                     }
                 };
 
                 state.ws.onerror = (error) => {
                     updateStatus(false);
-                    addMessage(`✗ WebSocket error: ${error.message || 'Unknown error'}`, 'system', true);
+                    addMessage(`✗ WebSocket error`, 'system', true);
                 };
 
                 state.ws.onclose = () => {
@@ -527,19 +601,23 @@
             // Add user message to history
             addMessage(content, 'user');
             state.conversationHistory.push({ role: 'user', content });
+            elements.messageInput.value = '';
 
-            // Send message
+            // Send message via OpenClaw protocol
             const message = {
-                type: 'message',
-                model: elements.model.value,
-                messages: state.conversationHistory,
-                temperature: 0.7,
-                max_tokens: 2048
+                type: 'req',
+                id: `req_${Date.now()}`,
+                method: 'agent.execute',
+                params: {
+                    model: elements.model.value,
+                    messages: state.conversationHistory,
+                    temperature: 0.7,
+                    maxTokens: 2048
+                }
             };
 
             try {
                 state.ws.send(JSON.stringify(message));
-                elements.messageInput.value = '';
             } catch (error) {
                 addMessage(`✗ Failed to send message: ${error.message}`, 'system', true);
             }
