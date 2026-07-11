@@ -1,8 +1,11 @@
 (function () {
   const initialPanelState = Object.freeze({
     open: false,
-    activeView: "welcome",
-    selectedGoalId: null
+    activeView: "chat",
+    selectedGoalId: null,
+    messages: [
+      { id: "msg-welcome", role: "assistant", type: "welcome", content: "Chatbot đang theo dõi Build PC read-only. Chọn mục tiêu mẫu hoặc nhập yêu cầu của bạn dưới đây." }
+    ]
   });
 
   function reducePanelState(state, event) {
@@ -14,11 +17,15 @@
       case "TOGGLE":
         return { ...state, open: !state.open };
       case "SELECT_GOAL":
-        return { open: true, activeView: "goal", selectedGoalId: event.goalId };
+        return { ...state, open: true, selectedGoalId: event.goalId };
       case "OPEN_REVIEW":
         return { ...state, open: true, activeView: "review" };
       case "SHOW_WELCOME":
-        return { open: true, activeView: "welcome", selectedGoalId: null };
+        return { ...state, open: true, activeView: "chat", selectedGoalId: null, messages: initialPanelState.messages };
+      case "ADD_MESSAGE":
+        return { ...state, messages: [...state.messages, event.message] };
+      case "CLEAR_CHAT":
+        return { ...state, messages: initialPanelState.messages };
       default:
         return state;
     }

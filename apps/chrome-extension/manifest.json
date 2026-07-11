@@ -5,8 +5,10 @@
   "description": "BuildMate local UI demo on Phong Vu Build PC pages.",
   "permissions": ["activeTab"],
   "action": {
-    "default_title": "BuildMate",
-    "default_popup": "popup.html"
+    "default_title": "BuildMate"
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -14,6 +16,7 @@
         "https://phongvu.vn/buildpc"
       ],
       "js": [
+        "shared/i18n.js",
         "shared/demo-data.js",
         "shared/eligibility.js",
         "shared/panel-state.js",

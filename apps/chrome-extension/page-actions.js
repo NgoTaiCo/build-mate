@@ -77,8 +77,8 @@
     onStep("locating_category", "Đang tìm category VGA…");
     const row = findVgaRow(doc);
     if (!row) return { ok: false, code: "VGA_ROW_NOT_FOUND", message: "Không tìm thấy category VGA trên trang." };
-    const categoryButton = row.querySelector('button[aria-label="Chọn"]') || Array.from(row.querySelectorAll("button")).find((button) => /^(Chọn|Select)$/i.test(text(button)));
-    if (!categoryButton) return { ok: false, code: "CATEGORY_BUTTON_NOT_FOUND", message: "Không tìm thấy nút chọn VGA." };
+    const categoryButton = row.querySelector('button[aria-label="Chọn"], button[aria-label="Sửa"], button[aria-label="Thay thế"]') || Array.from(row.querySelectorAll("button")).find((button) => /^(Chọn|Select|Sửa|Thay thế|\+ Thay thế|\+ Sửa)$/i.test(text(button)));
+    if (!categoryButton) return { ok: false, code: "CATEGORY_BUTTON_NOT_FOUND", message: "Không tìm thấy nút Chọn/Sửa VGA." };
 
     onStep("opening_modal", "Đang mở danh sách VGA…");
     syntheticClick(categoryButton);
