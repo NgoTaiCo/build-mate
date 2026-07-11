@@ -655,13 +655,11 @@
                         // Handle streamed chat events
                         else if (data.type === 'event' && data.event === 'chat') {
                             const p = data.payload || {};
-                            // Only show final assistant messages (skip partial/streaming duplicates)
-                            if (p.state === 'final' || p.state === 'error') {
-                                const text = extractChatText(p.message);
-                                if (text) {
-                                    addMessage(text, 'assistant', p.state === 'error');
-                                    state.conversationHistory.push({ role: 'assistant', content: text });
-                                }
+                            console.log('[chat event]', JSON.stringify(p, null, 2));
+                            const text = extractChatText(p.message);
+                            if (text && p.state !== 'partial' && p.state !== 'delta') {
+                                addMessage(text, 'assistant', p.state === 'error');
+                                state.conversationHistory.push({ role: 'assistant', content: text });
                             }
                         }
                         // Ignore noisy events (tick, heartbeat, presence, health)
