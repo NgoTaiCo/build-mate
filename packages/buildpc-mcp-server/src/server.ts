@@ -3,8 +3,11 @@ import { registerCompileBuildTool } from "./tools/compile-build.js";
 import { registerDetectErrorsTool } from "./tools/detect-errors.js";
 import { registerRepairBuildTool } from "./tools/repair-build.js";
 import { registerSearchComponentsTool } from "./tools/search-components.js";
+import { createHttpDomBridgeClient, type DomBridgeClient } from "./dom/bridge-client.js";
+import { registerAddToBuildTool } from "./tools/add-to-build.js";
+import { registerReadCurrentBuildTool } from "./tools/read-current-build.js";
 
-export function createServer(): McpServer {
+export function createServer(options: { domBridgeClient?: DomBridgeClient } = {}): McpServer {
   const server = new McpServer({
     name: "buildmate-compiler",
     version: "0.1.0",
@@ -14,6 +17,9 @@ export function createServer(): McpServer {
   registerDetectErrorsTool(server);
   registerRepairBuildTool(server);
   registerSearchComponentsTool(server);
+  const domBridgeClient = options.domBridgeClient ?? createHttpDomBridgeClient();
+  registerReadCurrentBuildTool(server, domBridgeClient);
+  registerAddToBuildTool(server, domBridgeClient);
 
   return server;
 }

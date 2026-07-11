@@ -5,8 +5,10 @@ import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { createServer } from "../src/server.js";
 
 const EXPECTED_TOOLS = [
+  "add_to_build",
   "compile_build",
   "detect_errors",
+  "read_current_build",
   "repair_build",
   "search_components",
 ];
@@ -22,7 +24,7 @@ async function connectedClient() {
   return { client, server };
 }
 
-test("protocol: tools/list returns all 4 tools with non-empty input schemas", async () => {
+test("protocol: tools/list returns all BuildMate tools with non-empty input schemas", async () => {
   const { client } = await connectedClient();
   const { tools } = await client.listTools();
   const names = tools.map((t) => t.name).sort();
@@ -80,7 +82,7 @@ test("protocol: detect_errors then repair_build is callable via the generic clie
   assert.equal(repairPlan.length, errors.length);
 });
 
-test("protocol: a freshly restarted server (new createServer() call) lists the same 4 tools", async () => {
+test("protocol: a freshly restarted server (new createServer() call) lists the same tools", async () => {
   const { client } = await connectedClient();
   const { tools } = await client.listTools();
   assert.deepEqual(

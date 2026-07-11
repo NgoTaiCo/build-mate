@@ -1,11 +1,11 @@
-# @buildmate/mcp-server
+# @buildmate/buildpc-mcp-server
 
-Standalone MCP (Model Context Protocol) server that exposes the deterministic
 [`@buildmate/compiler`](../compiler) trust layer plus the
-[`@buildmate/catalog`](../catalog) search as four MCP tools:
-`compile_build`, `detect_errors`, `repair_build`, `search_components`. The
-server only wraps and dispatches to the Compiler/Catalog — it adds no
-compatibility or search logic of its own.
+[`@buildmate/catalog`](../catalog) search and DOM execution as six MCP tools:
+`compile_build`, `detect_errors`, `repair_build`, `search_components`,
+`read_current_build`, `add_to_build`. Compiler/Catalog tools only wrap and
+dispatch (no compatibility or search logic of their own); DOM tools forward
+semantic commands to the DOM bridge.
 
 Two transports are provided:
 
@@ -24,7 +24,7 @@ npm install
 ## Run (dev mode)
 
 ```sh
-cd packages/mcp-server
+cd packages/buildpc-mcp-server
 npx tsx src/index.ts
 ```
 
@@ -34,7 +34,7 @@ a client connects is expected behavior.
 ### HTTP transport (dev)
 
 ```sh
-cd packages/mcp-server
+cd packages/buildpc-mcp-server
 PORT=8791 npx tsx src/http.ts
 # health check:  curl localhost:8791/health   -> {"status":"ok"}
 # MCP endpoint:  POST http://localhost:8791/mcp
@@ -53,8 +53,8 @@ curl localhost:${MCP_SERVER_PORT:-8791}/health
 ```
 
 The image multi-stage builds `@buildmate/compiler` → `@buildmate/catalog` →
-`@buildmate/mcp-server` and runs `node dist/http.js`. The PhongVu catalog JSON
-(`packages/catalog/data/`) is shipped in the image.
+`@buildmate/buildpc-mcp-server` and runs `node dist/http.js`. The PhongVu catalog
+JSON (`packages/catalog/data/`) is shipped in the image.
 
 ### Catalog data source (`CATALOG_DATA_SOURCE`)
 
@@ -73,7 +73,7 @@ Override in compose via `docker/.env` (`CATALOG_DATA_SOURCE=live`). `APIFY_API_K
 ## Test / typecheck
 
 ```sh
-cd packages/mcp-server
+cd packages/buildpc-mcp-server
 npm test          # dispatch-level tests + InMemoryTransport protocol round-trip
 npm run typecheck # tsc --noEmit strict
 ```
@@ -85,9 +85,9 @@ npm run typecheck # tsc --noEmit strict
 ```json
 {
   "mcpServers": {
-    "buildmate": {
+    "buildmate-buildpc": {
       "command": "node",
-      "args": ["/absolute/path/to/packages/mcp-server/dist/index.js"]
+      "args": ["/absolute/path/to/packages/buildpc-mcp-server/dist/index.js"]
     }
   }
 }
@@ -118,6 +118,8 @@ Inside the compose network use the service DNS name instead of `localhost`:
 | `detect_errors` | `{ build }` | `CompilerError[]` | `detectErrors(build)` |
 | `repair_build` | `{ build, errors }` | `RepairPlan[]` (1:1 with `errors`) | `repairBuild(build, errors)` |
 | `search_components` | `SearchCriteria` (`type`, `socket`, `ram_gen`, `form_factor`, price/tdp/wattage range, `stock_status`) | `CatalogResult` (`components`, `source`, `errors`) | `searchComponents(criteria)` |
+| `read_current_build` | `{ context_id }` | `BuildSnapshot` | DOM bridge read |
+| `add_to_build` | `{ context_id, component }` | `BuildSnapshot` | DOM bridge add/verify |
 
 Malformed/structurally invalid input returns `{ isError: true, content: [...] }`
 instead of crashing the process. See [`../../specs/008-compiler-mcp-server/quickstart.md`](../../specs/008-compiler-mcp-server/quickstart.md)

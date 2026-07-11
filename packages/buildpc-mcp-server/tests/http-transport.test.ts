@@ -43,7 +43,7 @@ test("http: /health returns ok", async () => {
   });
 });
 
-test("http: initialize + tools/list returns the 4 tools", async () => {
+test("http: initialize + tools/list returns all tools", async () => {
   await withServer(async (baseUrl) => {
     const init = (await rpc(baseUrl, {
       jsonrpc: "2.0",
@@ -65,8 +65,10 @@ test("http: initialize + tools/list returns the 4 tools", async () => {
     })) as { result: { tools: Array<{ name: string }> } };
     const names = list.result.tools.map((t) => t.name).sort();
     assert.deepEqual(names, [
+      "add_to_build",
       "compile_build",
       "detect_errors",
+      "read_current_build",
       "repair_build",
       "search_components",
     ]);

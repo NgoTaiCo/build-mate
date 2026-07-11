@@ -47,7 +47,7 @@ services:
   mcp-server:
     build:
       context: ..
-      dockerfile: packages/mcp-server/Dockerfile
+      dockerfile: packages/buildpc-mcp-server/Dockerfile
     image: buildmate/mcp-server:latest
     container_name: buildmate-mcp-server
     restart: unless-stopped

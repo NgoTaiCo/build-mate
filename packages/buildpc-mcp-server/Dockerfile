@@ -12,18 +12,18 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 COPY packages/compiler/package.json packages/compiler/
 COPY packages/catalog/package.json packages/catalog/
-COPY packages/mcp-server/package.json packages/mcp-server/
+COPY packages/buildpc-mcp-server/package.json packages/buildpc-mcp-server/
 RUN npm install
 
 # Sources for the three packages this image needs.
 COPY packages/compiler packages/compiler
 COPY packages/catalog packages/catalog
-COPY packages/mcp-server packages/mcp-server
+COPY packages/buildpc-mcp-server packages/buildpc-mcp-server
 
 # Build in dependency order (mcp-server imports the compiled dist of the others).
 RUN npm run build -w @buildmate/compiler \
   && npm run build -w @buildmate/catalog \
-  && npm run build -w @buildmate/mcp-server \
+  && npm run build -w @buildmate/buildpc-mcp-server \
   && npm prune --omit=dev
 
 # ---- runtime stage: prod node_modules + compiled output only ----
@@ -44,10 +44,10 @@ COPY --from=builder /app/packages/catalog/dist ./packages/catalog/dist
 # PhongVu catalog JSON — data-loader reads ../data relative to dist at runtime.
 # Without this, search_components silently falls back to the tiny MOCK_CATALOG.
 COPY --from=builder /app/packages/catalog/data ./packages/catalog/data
-COPY --from=builder /app/packages/mcp-server/package.json ./packages/mcp-server/package.json
-COPY --from=builder /app/packages/mcp-server/dist ./packages/mcp-server/dist
+COPY --from=builder /app/packages/buildpc-mcp-server/package.json ./packages/buildpc-mcp-server/package.json
+COPY --from=builder /app/packages/buildpc-mcp-server/dist ./packages/buildpc-mcp-server/dist
 
 # Streamable HTTP transport port (overridable via PORT env).
 EXPOSE 8791
-WORKDIR /app/packages/mcp-server
+WORKDIR /app/packages/buildpc-mcp-server
 CMD ["node", "dist/http.js"]
