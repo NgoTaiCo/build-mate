@@ -19,7 +19,7 @@ export interface DataSourceError {
 export type StockStatus = "in_stock" | "out_of_stock";
 
 export interface CatalogComponent {
-  id: string;
+  sku: string;
   name: string;
   type: ComponentType;
   price: number;
@@ -28,6 +28,7 @@ export interface CatalogComponent {
   // Type-specific fields
   socket?: string | string[];
   tdp?: number;
+  ram_gen?: string;
   ram_gen_supported?: string[];
   generation?: string;
   wattage?: number;

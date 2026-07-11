@@ -9,7 +9,8 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "fetch:phongvu": "bash scripts/fetch-phongvu-catalog.sh"
   },
   "dependencies": {
     "apify-client": "^2.23.0"

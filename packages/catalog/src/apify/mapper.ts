@@ -70,7 +70,7 @@ export function mapScrapedProduct(
   const type = inferredType;
 
   const base: CatalogComponent = {
-    id: `${type}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    sku: `${type}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     name: product.name,
     type,
     price: product.price,

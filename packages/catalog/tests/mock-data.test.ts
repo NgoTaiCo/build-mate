@@ -32,32 +32,32 @@ test("Mock data integrity", async (t) => {
   });
 
   await t.test("should have unique IDs", () => {
-    const ids = MOCK_CATALOG.map((c) => c.id);
-    const uniqueIds = new Set(ids);
+    const skus = MOCK_CATALOG.map((c) => c.sku);
+    const uniqueSkus = new Set(skus);
 
     assert.equal(
-      ids.length,
-      uniqueIds.size,
-      `Found ${ids.length - uniqueIds.size} duplicate IDs`
+      skus.length,
+      uniqueSkus.size,
+      `Found ${skus.length - uniqueSkus.size} duplicate SKUs`
     );
   });
 
   await t.test("should have all required shared fields non-null", () => {
     for (const component of MOCK_CATALOG) {
-      assert(component.id !== undefined, `Component missing id`);
-      assert(component.name !== undefined, `Component ${component.id} missing name`);
-      assert(component.type !== undefined, `Component ${component.id} missing type`);
+      assert(component.sku !== undefined, `Component missing sku`);
+      assert(component.name !== undefined, `Component ${component.sku} missing name`);
+      assert(component.type !== undefined, `Component ${component.sku} missing type`);
       assert(
         component.price !== undefined && component.price >= 0,
-        `Component ${component.id} missing valid price`
+        `Component ${component.sku} missing valid price`
       );
       assert(
         component.stock_status === "in_stock" || component.stock_status === "out_of_stock",
-        `Component ${component.id} has invalid stock_status`
+        `Component ${component.sku} has invalid stock_status`
       );
       assert(
         component.promo === null || typeof component.promo === "string",
-        `Component ${component.id} has invalid promo`
+        `Component ${component.sku} has invalid promo`
       );
     }
   });
@@ -68,7 +68,7 @@ test("Mock data integrity", async (t) => {
     for (const component of MOCK_CATALOG) {
       assert(
         validTypes.has(component.type),
-        `Component ${component.id} has invalid type: '${component.type}'`
+        `Component ${component.sku} has invalid type: '${component.type}'`
       );
     }
   });
@@ -77,48 +77,48 @@ test("Mock data integrity", async (t) => {
     for (const component of MOCK_CATALOG) {
       switch (component.type) {
         case "cpu":
-          assert(component.socket, `CPU ${component.id} missing socket`);
-          assert(component.tdp !== undefined, `CPU ${component.id} missing tdp`);
+          assert(component.socket, `CPU ${component.sku} missing socket`);
+          assert(component.tdp !== undefined, `CPU ${component.sku} missing tdp`);
           assert(
             Array.isArray(component.ram_gen_supported),
-            `CPU ${component.id} missing ram_gen_supported`
+            `CPU ${component.sku} missing ram_gen_supported`
           );
           break;
         case "mainboard":
-          assert(component.socket, `Mainboard ${component.id} missing socket`);
+          assert(component.socket, `Mainboard ${component.sku} missing socket`);
           assert(
             Array.isArray(component.ram_gen_supported),
-            `Mainboard ${component.id} missing ram_gen_supported`
+            `Mainboard ${component.sku} missing ram_gen_supported`
           );
-          assert(component.form_factor, `Mainboard ${component.id} missing form_factor`);
+          assert(component.form_factor, `Mainboard ${component.sku} missing form_factor`);
           break;
         case "ram":
-          assert(component.generation, `RAM ${component.id} missing generation`);
+          assert(component.generation, `RAM ${component.sku} missing generation`);
           break;
         case "psu":
-          assert(component.wattage !== undefined, `PSU ${component.id} missing wattage`);
-          assert(component.form_factor, `PSU ${component.id} missing form_factor`);
+          assert(component.wattage !== undefined, `PSU ${component.sku} missing wattage`);
+          assert(component.form_factor, `PSU ${component.sku} missing form_factor`);
           break;
         case "cooler":
-          assert(Array.isArray(component.socket), `Cooler ${component.id} socket should be array`);
-          assert(component.height !== undefined, `Cooler ${component.id} missing height`);
+          assert(Array.isArray(component.socket), `Cooler ${component.sku} socket should be array`);
+          assert(component.height !== undefined, `Cooler ${component.sku} missing height`);
           break;
         case "case":
           assert(
             component.max_cooler_height !== undefined,
-            `Case ${component.id} missing max_cooler_height`
+            `Case ${component.sku} missing max_cooler_height`
           );
           assert(
             Array.isArray(component.supported_mb_form_factors),
-            `Case ${component.id} missing supported_mb_form_factors`
+            `Case ${component.sku} missing supported_mb_form_factors`
           );
           assert(
             Array.isArray(component.supported_psu_form_factors),
-            `Case ${component.id} missing supported_psu_form_factors`
+            `Case ${component.sku} missing supported_psu_form_factors`
           );
           break;
         case "gpu":
-          assert(component.tdp !== undefined, `GPU ${component.id} missing tdp`);
+          assert(component.tdp !== undefined, `GPU ${component.sku} missing tdp`);
           break;
       }
     }

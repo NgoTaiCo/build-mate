@@ -3,7 +3,7 @@ import { CatalogComponent } from "./types.js";
 export const MOCK_CATALOG: CatalogComponent[] = [
   // CPU - AM5 (6 CPUs: 3 in-stock, 3 out-of-stock)
   {
-    id: "cpu-001",
+    sku: "cpu-001",
     name: "AMD Ryzen 7 7800X3D",
     type: "cpu",
     price: 9500000,
@@ -14,7 +14,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     ram_gen_supported: ["DDR5"],
   },
   {
-    id: "cpu-002",
+    sku: "cpu-002",
     name: "AMD Ryzen 9 7950X",
     type: "cpu",
     price: 12000000,
@@ -25,7 +25,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     ram_gen_supported: ["DDR5"],
   },
   {
-    id: "cpu-003",
+    sku: "cpu-003",
     name: "AMD Ryzen 5 7600",
     type: "cpu",
     price: 4500000,
@@ -36,7 +36,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     ram_gen_supported: ["DDR5"],
   },
   {
-    id: "cpu-004",
+    sku: "cpu-004",
     name: "AMD Ryzen 7 9700X",
     type: "cpu",
     price: 11000000,
@@ -47,7 +47,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     ram_gen_supported: ["DDR5"],
   },
   {
-    id: "cpu-005",
+    sku: "cpu-005",
     name: "AMD Ryzen 5 7600X",
     type: "cpu",
     price: 5500000,
@@ -58,7 +58,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     ram_gen_supported: ["DDR5"],
   },
   {
-    id: "cpu-006",
+    sku: "cpu-006",
     name: "Intel Core i9-14900K",
     type: "cpu",
     price: 14000000,
@@ -71,7 +71,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // Mainboard - AM5 & LGA1700 (6 mainboards)
   {
-    id: "mb-001",
+    sku: "mb-001",
     name: "ASUS TUF B650-PLUS",
     type: "mainboard",
     price: 3200000,
@@ -82,7 +82,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "mb-002",
+    sku: "mb-002",
     name: "MSI B650E Gaming WiFi",
     type: "mainboard",
     price: 3800000,
@@ -93,7 +93,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "mb-003",
+    sku: "mb-003",
     name: "ASUS ROG STRIX X870-F",
     type: "mainboard",
     price: 5000000,
@@ -104,7 +104,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "mb-004",
+    sku: "mb-004",
     name: "MSI MPG B750E Edge WiFi",
     type: "mainboard",
     price: 4200000,
@@ -115,7 +115,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "mATX",
   },
   {
-    id: "mb-005",
+    sku: "mb-005",
     name: "GIGABYTE B650 AORUS Master",
     type: "mainboard",
     price: 4500000,
@@ -126,7 +126,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "mb-006",
+    sku: "mb-006",
     name: "ASUS ProArt B760-Creator",
     type: "mainboard",
     price: 5500000,
@@ -139,7 +139,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // RAM - DDR5 & DDR4 (6 RAM modules)
   {
-    id: "ram-001",
+    sku: "ram-001",
     name: "Corsair Vengeance DDR5 32GB (2x16GB) 6000MHz",
     type: "ram",
     price: 2800000,
@@ -149,7 +149,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 3,
   },
   {
-    id: "ram-002",
+    sku: "ram-002",
     name: "Kingston FURY Beast DDR5 32GB (2x16GB) 5600MHz",
     type: "ram",
     price: 2500000,
@@ -159,7 +159,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 3,
   },
   {
-    id: "ram-003",
+    sku: "ram-003",
     name: "G.Skill Trident Z5 DDR5 64GB (2x32GB) 6400MHz",
     type: "ram",
     price: 5000000,
@@ -169,7 +169,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 3,
   },
   {
-    id: "ram-004",
+    sku: "ram-004",
     name: "Corsair Vengeance DDR4 32GB (2x16GB) 3200MHz",
     type: "ram",
     price: 2000000,
@@ -179,7 +179,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 2,
   },
   {
-    id: "ram-005",
+    sku: "ram-005",
     name: "Kingston HyperX DDR4 16GB (2x8GB) 3200MHz",
     type: "ram",
     price: 1200000,
@@ -189,7 +189,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 2,
   },
   {
-    id: "ram-006",
+    sku: "ram-006",
     name: "G.Skill Ripjaws DDR4 32GB (2x16GB) 3600MHz",
     type: "ram",
     price: 2300000,
@@ -201,7 +201,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // PSU - 550W-1000W (6 PSUs)
   {
-    id: "psu-001",
+    sku: "psu-001",
     name: "Corsair RM650",
     type: "psu",
     price: 1800000,
@@ -211,7 +211,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "psu-002",
+    sku: "psu-002",
     name: "EVGA SuperNOVA 750 G6",
     type: "psu",
     price: 2200000,
@@ -221,7 +221,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "psu-003",
+    sku: "psu-003",
     name: "Seasonic FOCUS Plus 850",
     type: "psu",
     price: 2600000,
@@ -231,7 +231,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "psu-004",
+    sku: "psu-004",
     name: "Corsair SF750",
     type: "psu",
     price: 2400000,
@@ -241,7 +241,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "SFX",
   },
   {
-    id: "psu-005",
+    sku: "psu-005",
     name: "MSI A650 GOLD 650W",
     type: "psu",
     price: 1900000,
@@ -251,7 +251,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     form_factor: "ATX",
   },
   {
-    id: "psu-006",
+    sku: "psu-006",
     name: "be quiet! Pure Power 1000W",
     type: "psu",
     price: 3200000,
@@ -263,7 +263,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // Cooler - Air & AIO (6 coolers)
   {
-    id: "cooler-001",
+    sku: "cooler-001",
     name: "Noctua NH-D15",
     type: "cooler",
     price: 900000,
@@ -274,7 +274,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 250,
   },
   {
-    id: "cooler-002",
+    sku: "cooler-002",
     name: "Corsair H150i Elite Capellix",
     type: "cooler",
     price: 2200000,
@@ -285,7 +285,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 280,
   },
   {
-    id: "cooler-003",
+    sku: "cooler-003",
     name: "Noctua NH-U12S chromax",
     type: "cooler",
     price: 700000,
@@ -296,7 +296,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 220,
   },
   {
-    id: "cooler-004",
+    sku: "cooler-004",
     name: "Lian Li Galahad AIO 360",
     type: "cooler",
     price: 1800000,
@@ -307,7 +307,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 260,
   },
   {
-    id: "cooler-005",
+    sku: "cooler-005",
     name: "Thermalright Peerless Assassin 120 SE",
     type: "cooler",
     price: 600000,
@@ -318,7 +318,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     tdp: 280,
   },
   {
-    id: "cooler-006",
+    sku: "cooler-006",
     name: "Arctic Liquid Freezer II 240",
     type: "cooler",
     price: 1500000,
@@ -331,7 +331,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // Case - ATX, mATX, ITX (6 cases)
   {
-    id: "case-001",
+    sku: "case-001",
     name: "Corsair 5000T RGB",
     type: "case",
     price: 3500000,
@@ -344,7 +344,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 370,
   },
   {
-    id: "case-002",
+    sku: "case-002",
     name: "Lian Li Lancool 216",
     type: "case",
     price: 1200000,
@@ -357,7 +357,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 320,
   },
   {
-    id: "case-003",
+    sku: "case-003",
     name: "Fractal Core 1000",
     type: "case",
     price: 900000,
@@ -370,7 +370,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 280,
   },
   {
-    id: "case-004",
+    sku: "case-004",
     name: "Noctua D5 XL",
     type: "case",
     price: 800000,
@@ -383,7 +383,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 250,
   },
   {
-    id: "case-005",
+    sku: "case-005",
     name: "Sliger SM580",
     type: "case",
     price: 1800000,
@@ -396,7 +396,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 200,
   },
   {
-    id: "case-006",
+    sku: "case-006",
     name: "Jonsbo RM4",
     type: "case",
     price: 1600000,
@@ -411,7 +411,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // Storage - NVMe, SATA SSD, HDD (6 storage devices)
   {
-    id: "storage-001",
+    sku: "storage-001",
     name: "Samsung 980 Pro 1TB NVMe SSD",
     type: "storage",
     price: 1200000,
@@ -419,7 +419,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     promo: null,
   },
   {
-    id: "storage-002",
+    sku: "storage-002",
     name: "WD Black SN850X 1TB NVMe SSD",
     type: "storage",
     price: 1100000,
@@ -428,7 +428,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     height: undefined,
   },
   {
-    id: "storage-003",
+    sku: "storage-003",
     name: "Crucial P5 Plus 1TB NVMe SSD",
     type: "storage",
     price: 1000000,
@@ -436,7 +436,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     promo: null,
   },
   {
-    id: "storage-004",
+    sku: "storage-004",
     name: "Samsung 870 QVO 1TB SATA SSD",
     type: "storage",
     price: 700000,
@@ -444,7 +444,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     promo: null,
   },
   {
-    id: "storage-005",
+    sku: "storage-005",
     name: "Seagate Barracuda 2TB HDD",
     type: "storage",
     price: 800000,
@@ -452,7 +452,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     promo: null,
   },
   {
-    id: "storage-006",
+    sku: "storage-006",
     name: "WD Red Plus 2TB HDD",
     type: "storage",
     price: 1000000,
@@ -462,7 +462,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
 
   // GPU - NVIDIA & AMD (8 GPUs)
   {
-    id: "gpu-001",
+    sku: "gpu-001",
     name: "NVIDIA RTX 4090",
     type: "gpu",
     price: 35000000,
@@ -472,7 +472,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 320,
   },
   {
-    id: "gpu-002",
+    sku: "gpu-002",
     name: "NVIDIA RTX 4080",
     type: "gpu",
     price: 22000000,
@@ -482,7 +482,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 310,
   },
   {
-    id: "gpu-003",
+    sku: "gpu-003",
     name: "NVIDIA RTX 4070",
     type: "gpu",
     price: 12000000,
@@ -492,7 +492,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 280,
   },
   {
-    id: "gpu-004",
+    sku: "gpu-004",
     name: "AMD Radeon RX 7900 XTX",
     type: "gpu",
     price: 18000000,
@@ -502,7 +502,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 330,
   },
   {
-    id: "gpu-005",
+    sku: "gpu-005",
     name: "NVIDIA RTX 4070 Super",
     type: "gpu",
     price: 13500000,
@@ -512,7 +512,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 290,
   },
   {
-    id: "gpu-006",
+    sku: "gpu-006",
     name: "AMD Radeon RX 7800 XT",
     type: "gpu",
     price: 11000000,
@@ -522,7 +522,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 270,
   },
   {
-    id: "gpu-007",
+    sku: "gpu-007",
     name: "Intel Arc A770",
     type: "gpu",
     price: 7000000,
@@ -532,7 +532,7 @@ export const MOCK_CATALOG: CatalogComponent[] = [
     clearance_mm: 250,
   },
   {
-    id: "gpu-008",
+    sku: "gpu-008",
     name: "NVIDIA RTX 4060",
     type: "gpu",
     price: 5500000,
