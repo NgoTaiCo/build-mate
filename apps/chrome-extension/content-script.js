@@ -81,7 +81,25 @@
       tab: { origin: "https://phongvu.vn", path: "/buildpc" },
       issuedAt: Date.now(), expiresAt: Date.now() + 30000,
       payload: { message: "OpenClaw mock: hãy xác nhận trước khi thêm VGA demo.", category: "VGA" }
-    })
+    }),
+    onChatMessage: async (text, snapshot) => {
+      return new Promise((resolve, reject) => {
+        chrome.runtime.sendMessage({
+          type: "BUILDMATE_CHAT_MESSAGE",
+          text: text,
+          sessionId: contextId,
+          snapshot: snapshot
+        }, (response) => {
+          if (chrome.runtime.lastError) {
+            reject(new Error(chrome.runtime.lastError.message));
+          } else if (!response?.ok) {
+            reject(new Error(response?.error ?? "BACKEND_NOT_CONNECTED"));
+          } else {
+            resolve(response.reply);
+          }
+        });
+      });
+    }
   });
 
   let bridgePort;

@@ -89,6 +89,21 @@ chrome.runtime.onConnect.addListener((port) => {
 });
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.type === "BUILDMATE_CHAT_MESSAGE") {
+    // Append context_id and snapshot as a system instruction so the LLM knows it and can call MCP tools or answer directly
+    const snapshotStr = message.snapshot ? JSON.stringify(message.snapshot) : "None";
+    const payloadMessage = `${message.text}\n\n[System: User is on BuildPC page. Your context_id for MCP tools is "${message.sessionId}". Current build state: ${snapshotStr}]`;
+    fetch("https://administrators-carlo-received-nascar.trycloudflare.com/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: payloadMessage, sessionId: message.sessionId, currentBuild: message.snapshot })
+    })
+    .then(r => r.json())
+    .then(data => sendResponse({ ok: true, reply: data.reply }))
+    .catch(err => sendResponse({ ok: false, error: err.message }));
+    return true; // Keep message channel open for async response
+  }
+
   if (message?.type !== "BUILDMATE_USER_INTENT") return undefined;
 
   // The production worker forwards this envelope to BE over its authenticated

@@ -1,6 +1,37 @@
 (function () {
   const ROOT_ID = "buildmate-extension-root";
   function escapeHtml(value) { return String(value ?? "").replace(/[&<>'"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[c]); }
+  function parseMarkdown(text) {
+    if (!text) return "";
+    let html = escapeHtml(text);
+    html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" class="bm-link">$1</a>');
+    
+    let lines = html.split('\n');
+    let inList = false;
+    for (let i = 0; i < lines.length; i++) {
+      let match = lines[i].match(/^(\s*(?:-|\*|\d+\.)\s+)(.*)/);
+      if (match) {
+        if (!inList) { lines[i] = '<ul style="margin: 8px 0; padding-left: 20px;">\n<li>' + match[2] + '</li>'; inList = true; }
+        else { lines[i] = '<li>' + match[2] + '</li>'; }
+      } else {
+        if (inList) { lines[i] = '</ul>\n' + lines[i]; inList = false; }
+      }
+    }
+    if (inList) lines.push('</ul>');
+    html = lines.join('\n');
+    
+    html = html.replace(/\n\n/g, '<br><br>');
+    html = html.replace(/\n/g, '<br>');
+    html = html.replace(/<br>\s*<ul/g, '<ul');
+    html = html.replace(/<\/ul>\s*<br>/g, '</ul>');
+    html = html.replace(/<br>\s*<li/g, '<li');
+    html = html.replace(/<\/li>\s*<br>/g, '</li>');
+    return html;
+  }
   function ensureMounted() {
     const existing = document.getElementById(ROOT_ID); if (existing?.__buildMatePanel) return existing.__buildMatePanel;
     const host = document.createElement("div"); host.id = ROOT_ID; host.setAttribute("data-buildmate-owner", "extension"); const shadow = host.attachShadow({ mode: "open" });
@@ -158,7 +189,7 @@
                   </div>
                 </div>`;
             } else {
-              contentHtml = `<p class="bm-chat-text">${escapeHtml(msg.content)}</p>`;
+              contentHtml = `<div class="bm-chat-text" style="padding: 10px 14px; margin: 0; font-size: 14px; word-break: break-word;">${parseMarkdown(msg.content)}</div>`;
             }
             const roleClass = msg.role === 'user' ? 'bm-message-user' : 'bm-message-bot';
             return `<div class="bm-chat-message ${roleClass}">${contentHtml}</div>`;
@@ -241,43 +272,23 @@
           // Show typing indicator
           isTyping = true;
           render();
-          const lowerVal = val.toLowerCase();
-          function botReply(delay, msg) {
-            setTimeout(() => {
+          if (handlers.onChatMessage) {
+            handlers.onChatMessage(val, snapshot).then((replyText) => {
               isTyping = false;
-              transition({ type: "ADD_MESSAGE", message: msg });
-            }, delay);
-          }
-          const triggers = globalThis.BuildMateI18n.t('triggers');
-          const matchVga = triggers.vga.some(k => lowerVal.includes(k));
-          const matchPeripheral = triggers.peripheral.some(k => lowerVal.includes(k));
-          const matchFull = triggers.fullBuild.some(k => lowerVal.includes(k));
-          if (matchVga) {
-            botReply(800, { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'action', content: '' });
-          } else if (matchPeripheral) {
-            botReply(1000, { 
-              id: `msg-${Date.now()+1}`, role: 'assistant', type: 'product_recommendation', 
-              content: globalThis.BuildMateI18n.t('peripheralReply'),
-              product: { name: 'Logitech G102 Lightsync RGB', price: globalThis.BuildMateI18n.getLang() === 'en' ? '450,000 VND' : '450.000 đ' }
-            });
-          } else if (matchFull) {
-            botReply(1200, { 
-              id: `msg-${Date.now()+1}`, role: 'assistant', type: 'build_recommendation', 
-              content: globalThis.BuildMateI18n.t('fullBuildReply'),
-              build: { 
-                total: globalThis.BuildMateI18n.getLang() === 'en' ? '15,490,000 VND' : '15.490.000 đ', 
-                components: [
-                  { category: 'CPU', name: 'Intel Core i5-12400F' },
-                  { category: 'Mainboard', name: 'ASUS PRIME H610M-K D4' },
-                  { category: 'RAM', name: 'Corsair Vengeance LPX 16GB' },
-                  { category: 'VGA', name: 'ASUS Dual GeForce RTX 3060 12GB' }
-                ]
+              if (replyText) {
+                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
+              } else {
+                render();
               }
+            }).catch(err => {
+              isTyping = false;
+              transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `Lỗi kết nối server: ${err.message}` } });
             });
           } else {
-            const fallbacks = globalThis.BuildMateI18n.t('fallbacks');
-            botReply(800, { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: fallbacks[Math.floor(Math.random() * fallbacks.length)] });
-
+            setTimeout(() => {
+              isTyping = false;
+              render();
+            }, 500);
           }
 
         } 

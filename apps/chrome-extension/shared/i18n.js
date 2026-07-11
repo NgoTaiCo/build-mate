@@ -8,8 +8,8 @@
       openAssistant: "Trợ lý AI",
 
       // Status bar
-      statusOffline: "Demo local — Gateway chưa kết nối",
-      statusOnline: "Đã kết nối DOM bridge demo",
+      statusOffline: "Gateway chưa kết nối",
+      statusOnline: "Đã kết nối OpenClaw",
 
       // Welcome
       welcome: "Chatbot đang theo dõi Build PC read-only. Chọn mục tiêu mẫu hoặc nhập yêu cầu của bạn dưới đây.",
@@ -107,8 +107,8 @@
       openAssistant: "AI Assistant",
 
       // Status bar
-      statusOffline: "Local demo — Gateway not connected",
-      statusOnline: "Demo DOM bridge connected",
+      statusOffline: "Gateway not connected",
+      statusOnline: "OpenClaw connected",
 
       // Welcome
       welcome: "BuildMate is monitoring your Build PC (read-only). Pick a goal below or type your requirements.",
