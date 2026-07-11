@@ -620,27 +620,38 @@
                                 state.ws.send(JSON.stringify(connectReq));
                             }
                         }
-                        // Handle connection response
+                        // Handle response messages (top-level ok / payload)
                         else if (data.type === 'res') {
-                            if (data.result?.ok) {
+                            // Connection handshake success
+                            if (data.ok && data.payload?.type === 'hello-ok') {
                                 updateStatus(true);
+                                state.deviceToken = data.payload.auth?.deviceToken;
+                                state.connId = data.payload.server?.connId;
                                 addMessage('✓ Authenticated successfully', 'system');
-                            } else {
-                                addMessage(`✗ Authentication failed: ${data.result?.error || 'Unknown error'}`, 'system', true);
-                                state.ws.close();
+                            }
+                            // Chat/agent send acknowledged
+                            else if (data.ok) {
+                                if (data.payload?.content) {
+                                    addMessage(data.payload.content, 'assistant');
+                                }
+                            }
+                            // Error response
+                            else if (data.error) {
+                                addMessage(`✗ ${data.error.code}: ${data.error.message}`, 'system', true);
                             }
                         }
-                        // Handle messages
-                        else if (data.type === 'event' && data.event === 'chat.message') {
-                            const content = data.payload?.content;
-                            if (content) {
+                        // Handle streamed chat / agent events
+                        else if (data.type === 'event' && (data.event === 'chat' || data.event === 'agent' || data.event === 'session.message')) {
+                            const p = data.payload || {};
+                            const content = p.content || p.text || p.message?.content || p.delta;
+                            if (content && typeof content === 'string') {
                                 addMessage(content, 'assistant');
-                                state.conversationHistory.push({ role: 'assistant', content });
                             }
                         }
-                        // Display other events
-                        else if (data.type === 'event') {
-                            addMessage(`[${data.event}] ${JSON.stringify(data.payload)}`, 'system');
+                        // Ignore noisy events (tick, heartbeat, presence, health)
+                        else if (data.type === 'event' && !['tick', 'heartbeat', 'presence', 'health'].includes(data.event)) {
+                            // Uncomment to debug other events:
+                            // addMessage(`[${data.event}] ${JSON.stringify(data.payload)}`, 'system');
                         }
                     } catch (e) {
                         addMessage(`Error parsing message: ${e.message}`, 'system', true);
@@ -679,16 +690,13 @@
             state.conversationHistory.push({ role: 'user', content });
             elements.messageInput.value = '';
 
-            // Send message via OpenClaw protocol
+            // Send message via OpenClaw chat.send method
             const message = {
                 type: 'req',
                 id: `req_${Date.now()}`,
-                method: 'agent.execute',
+                method: 'chat.send',
                 params: {
-                    model: elements.model.value,
-                    messages: state.conversationHistory,
-                    temperature: 0.7,
-                    maxTokens: 2048
+                    text: content
                 }
             };
 
