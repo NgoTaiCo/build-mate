@@ -2,14 +2,14 @@
   const translations = {
     vi: {
       // Panel header
-      panelTitle: "Trợ lý build PC",
+      panelTitle: "PhongVu BuildMate",
       clearChat: "Xoá chat",
       closePanel: "Đóng BuildMate",
-      openAssistant: "Trợ lý AI",
+      openAssistant: "BuildMate",
 
       // Status bar
       statusOffline: "Gateway chưa kết nối",
-      statusOnline: "Đã kết nối OpenClaw",
+      statusOnline: "Live",
 
       // Welcome
       welcome: "Chatbot đang theo dõi Build PC read-only. Chọn mục tiêu mẫu hoặc nhập yêu cầu của bạn dưới đây.",
@@ -30,7 +30,7 @@
       actionSuccess: "Đã chọn VGA demo vào Build PC.",
       actionUnverified: "Đã click chọn nhưng chưa xác minh được build.",
       actionCancelled: "Đã huỷ demo action.",
-      
+
       // Action status maps
       action_locating_category: "Đang tìm category VGA…",
       action_opening_modal: "Đang mở danh sách VGA…",
@@ -90,7 +90,7 @@
       // Product recommendations
       peripheralReply: "Tôi tìm thấy sản phẩm này rất phù hợp với nhu cầu của bạn:",
       fullBuildReply: "Dựa trên yêu cầu của bạn, tôi đề xuất cấu hình tối ưu sau:",
-      
+
       // Goals
       goals: {
         'gaming-25m': { title: 'Gaming 2K mượt mà', budget: 'Khoảng 25 triệu' },
@@ -101,14 +101,14 @@
 
     en: {
       // Panel header
-      panelTitle: "PC Build Assistant",
+      panelTitle: "PhongVu BuildMate",
       clearChat: "Clear chat",
       closePanel: "Close BuildMate",
-      openAssistant: "AI Assistant",
+      openAssistant: "BuildMate",
 
       // Status bar
       statusOffline: "Gateway not connected",
-      statusOnline: "OpenClaw connected",
+      statusOnline: "Live",
 
       // Welcome
       welcome: "BuildMate is monitoring your Build PC (read-only). Pick a goal below or type your requirements.",
@@ -129,7 +129,7 @@
       actionSuccess: "VGA demo added to Build PC.",
       actionUnverified: "Clicked but could not verify the build update.",
       actionCancelled: "Demo action cancelled.",
-      
+
       // Action status maps
       action_locating_category: "Locating VGA category…",
       action_opening_modal: "Opening VGA list…",
@@ -189,7 +189,7 @@
       // Product recommendations
       peripheralReply: "I found a product that fits your needs perfectly:",
       fullBuildReply: "Based on your requirements, here's the optimal build I recommend:",
-      
+
       // Goals
       goals: {
         'gaming-25m': { title: 'Smooth 2K Gaming', budget: 'Around 25M VND' },

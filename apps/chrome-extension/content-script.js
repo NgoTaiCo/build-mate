@@ -1,4 +1,5 @@
 (function () {
+  const DEFAULT_CHAT_URL = "https://madrid-award-brunswick-manually.trycloudflare.com/chat";
   if (!globalThis.BuildMateEligibility.isExactBuildPcUrl(location.href)) return;
   const panel = globalThis.BuildMatePanel.ensureMounted();
   const trackerStop = globalThis.BuildMateTracker.startBuildTracker({ doc: document, onSnapshot: (snapshot) => panel.setSnapshot(snapshot) });
@@ -12,6 +13,7 @@
   
   const bridge = globalThis.BuildMateBridgeAdapter.createBridgeAdapter({ onCommand: (command) => panel.applyBridgeCommand(command) });
   let actionInFlight = false;
+  let chatAbortController = null;
 
   async function executeAdd(component) {
     if (actionInFlight) return { ok: false, error: "ACTION_IN_PROGRESS" };
@@ -95,25 +97,33 @@
         payload: { message: isVi ? "OpenClaw mock: hãy xác nhận trước khi thêm VGA demo." : "OpenClaw mock: please confirm before adding VGA demo.", category: "VGA" }
       });
     },
-    onChatMessage: async (text, snapshot) => {
-      return new Promise((resolve, reject) => {
-        chrome.runtime.sendMessage({
-          type: "BUILDMATE_CHAT_MESSAGE",
-          text: text,
-          sessionId: contextId,
-          snapshot: snapshot
-        }, (response) => {
-          if (chrome.runtime.lastError) {
-            reject(new Error(chrome.runtime.lastError.message));
-          } else if (!response?.ok) {
-            reject(new Error(response?.error ?? "BACKEND_NOT_CONNECTED"));
-          } else {
-            resolve(response.reply);
-          }
+    onChatMessage: async (text, snapshot, onProgress) => {
+      chatAbortController?.abort();
+      const controller = new AbortController();
+      chatAbortController = controller;
+      const data = await chrome.storage.local.get("chatUrl");
+      const chatUrl = typeof data.chatUrl === "string" && data.chatUrl.trim() ? data.chatUrl.trim() : DEFAULT_CHAT_URL;
+      const snapshotStr = snapshot ? JSON.stringify(snapshot) : "None";
+      const payloadMessage = `${text}\n\n[System: User is on BuildPC page. Your context_id for MCP tools is "${contextId}". Current build state: ${snapshotStr}]`;
+      try {
+        const response = await fetch(chatUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "text/event-stream, application/x-ndjson, application/json",
+          },
+          body: JSON.stringify({ message: payloadMessage, sessionId: contextId, currentBuild: snapshot }),
+          signal: controller.signal,
         });
-      });
+        return await globalThis.BuildMateChatStream.readChatStream(response, (event) => {
+          if (event.kind === "delta") onProgress?.(event.text);
+        });
+      } finally {
+        if (chatAbortController === controller) chatAbortController = null;
+      }
     },
     onClearChat: () => {
+      chatAbortController?.abort();
       contextId = crypto.randomUUID();
       try { localStorage.setItem("buildmate_session_id", contextId); } catch(e) {}
       clearInterval(heartbeatTimer);

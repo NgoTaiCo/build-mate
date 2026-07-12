@@ -46,6 +46,7 @@ test("add_to_build forwards the exact Catalog identity without selectors", async
     vendor_product_id: "PV-12345",
     name: "Demo GPU",
     category: "gpu" as const,
+    quantity: 2,
     filter_labels: ["GeForce RTX 50 series"],
     replace_existing: true,
     product_url: "https://phongvu.vn/demo-gpu",
@@ -59,6 +60,18 @@ test("add_to_build forwards the exact Catalog identity without selectors", async
   assert.equal(JSON.parse(textOf(result)).added.vendor_product_id, "PV-12345");
   assert.deepEqual(commands[0].component.filter_labels, ["GeForce RTX 50 series"]);
   assert.equal(commands[0].component.replace_existing, true);
+  assert.equal(commands[0].component.quantity, 2);
+});
+
+test("add_to_build rejects an invalid desired quantity before contacting the bridge", async () => {
+  const { client, commands } = fakeBridge({ command_id: "unused", ok: true });
+  const result = await addToBuildHandler({
+    context_id: "tab-demo",
+    component: { sku: "GPU-001", vendor_product_id: "PV-12345", name: "Demo GPU", category: "gpu", quantity: 0 },
+  } as never, client);
+
+  assert.equal(result.isError, true);
+  assert.equal(commands.length, 0);
 });
 
 test("DOM tool rejects malformed component input before contacting the bridge", async () => {

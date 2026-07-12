@@ -5,6 +5,23 @@ Extension này là **DOM executor**: nhận lệnh semantic (`read_build`, `add_
 hoặc trang mock). Nó **không** chứa Catalog, Compiler, OpenClaw credential, và **không**
 nhận selector/JavaScript do server gửi xuống — selector chỉ nằm trong `dom-adapter.js`.
 
+## Chat streaming
+
+Chat panel đọc stream trực tiếp trong content script của tab thay vì chờ service
+worker trả một JSON cuối cùng. Nó gửi `Accept: text/event-stream,
+application/x-ndjson, application/json` đến `/chat`, cập nhật bubble theo từng
+`delta`, và vẫn tương thích với backend cũ chỉ trả `{ reply }`.
+
+- SSE contract hiện tại: `event: chunk` + `data: {"text":"..."}`, sau đó
+  `event: done` + `data: {"sessionId":"...","reply":"...","runId":"..."}`.
+  `event: error` trả `{ "error", "message" }` và đóng stream.
+- NDJSON và JSON `{ reply }` cũ vẫn được parser hỗ trợ để tương thích.
+- User chỉ gửi tối đa một turn tại một thời điểm. Bấm **Xoá Chat** sẽ abort
+  request đang chờ để một câu trả lời cũ không xuất hiện trong session mới.
+
+BE cần flush SSE/NDJSON chunks và kết thúc bằng `final`; extension không polling
+và không tự đặt timeout cho một turn đang chạy tool.
+
 ## Luồng đúng (WebSocket)
 
 ```

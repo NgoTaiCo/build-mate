@@ -201,6 +201,50 @@ test('partial/delta chat events are ignored (no premature resolve)', async () =>
   await assert.rejects(p, (err: GatewayError) => err.code === 'timeout');
 });
 
+test('onChunk fires for partial/delta events, then resolve carries the final reply', async () => {
+  const { client, socket } = connectReady();
+  const chunks: { text: string; state: 'partial' | 'delta' }[] = [];
+  const p = client.sendChat({
+    sessionKey: 'agent:main:demo-1',
+    agentId: 'main',
+    message: 'hi',
+    onChunk: (chunk) => chunks.push(chunk),
+  });
+  const chatReq = socket.lastReq('chat.send');
+  socket.deliver({
+    type: 'res',
+    id: chatReq.id,
+    ok: true,
+    payload: { runId: 'run-1' },
+  });
+  socket.deliver({
+    type: 'event',
+    event: 'chat',
+    payload: { runId: 'run-1', state: 'partial', message: { content: 'yo' } },
+  });
+  socket.deliver({
+    type: 'event',
+    event: 'chat',
+    payload: { runId: 'run-1', state: 'delta', message: { content: ' there' } },
+  });
+  socket.deliver({
+    type: 'event',
+    event: 'chat',
+    payload: {
+      runId: 'run-1',
+      state: 'final',
+      message: { content: 'yo there' },
+    },
+  });
+
+  const result = await p;
+  assert.deepEqual(chunks, [
+    { text: 'yo', state: 'partial' },
+    { text: ' there', state: 'delta' },
+  ]);
+  assert.equal(result.reply, 'yo there');
+});
+
 test('chat error event rejects with gateway_error and safe message', async () => {
   const { client, socket } = connectReady();
   const p = client.sendChat({

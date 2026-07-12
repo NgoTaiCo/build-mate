@@ -3,7 +3,7 @@
     "sku": "210700718",
     "name": "Ổ cứng di động HDD Seagate Expansion Portable 1TB 2.5\" USB 3.0 (STKM1000400) (Đen)",
     "price": 2690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "23% discount",
     "type": "storage",
     "tdp": 6
@@ -12,7 +12,7 @@
     "sku": "1303806",
     "name": "Ổ cứng di động HDD WD Elements Portable 2TB 2.5\" USB 3.0 (WDBU6Y0020BBK-WESN) (Đen)",
     "price": 3690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "26% discount",
     "type": "storage",
     "tdp": 6
@@ -30,7 +30,7 @@
     "sku": "191101275",
     "name": "Ổ cứng di động HDD WD My Passport 1TB 2.5\" USB 3.2 (WDBYVG0010BBK-WESN) (Đen)",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "26% discount",
     "type": "storage",
     "tdp": 6
@@ -39,7 +39,7 @@
     "sku": "19030055",
     "name": "Ổ cứng di động HDD WD My Passport Ultra 1TB 2.5\",USB 3.0 (WDBC3C0010BSL-WESN) (Bạc)",
     "price": 3390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "3% discount",
     "type": "storage",
     "tdp": 6
@@ -48,7 +48,7 @@
     "sku": "230803477",
     "name": "Ổ cứng gắn trong/ HDD WD 4TB Blue (5400RPM | 256MB Cache | 3.5\" | SATA3) (WD40EZAX)",
     "price": 5990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "9% discount",
     "type": "storage",
     "tdp": 6
@@ -57,7 +57,7 @@
     "sku": "210700722",
     "name": "Ổ cứng di động HDD Seagate One Touch 1TB 2.5\" USB 3.0 (STKY1000400) (Đen)",
     "price": 2749000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "39% discount",
     "type": "storage",
     "tdp": 6
@@ -66,7 +66,7 @@
     "sku": "250206244",
     "name": "Ổ cứng di động HDD WD My Passport 2TB 2.5\", USB 3.2 (WDBWML0020BGY-WESN) (Xám)",
     "price": 4190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "30% discount",
     "type": "storage",
     "tdp": 6
@@ -75,7 +75,7 @@
     "sku": "1404017",
     "name": "Ổ cứng di động HDD Transcend's StoreJet 25H3 Portable 1TB 2.5\", USB 3.0 (TS1TSJ25H3B) (Xanh)",
     "price": 3190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "storage",
     "tdp": 6
@@ -93,7 +93,7 @@
     "sku": "1806226",
     "name": "Ổ cứng di động HDD Transcend Slim StoreJet M3S 2TB 2.5\" USB 3.0 (TS2TSJ25M3S) (Đen)",
     "price": 3390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "32% discount",
     "type": "storage",
     "tdp": 6
@@ -102,7 +102,7 @@
     "sku": "240302554",
     "name": "Ổ cứng gắn trong SEAGATE HDD SkyHawk 4TB, 5400 RPM, Cache 256MB (ST4000VX016)",
     "price": 5790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "3% discount",
     "type": "storage",
     "tdp": 6
@@ -156,7 +156,7 @@
     "sku": "230502044",
     "name": "Ổ Cứng Di Động HDD LaCie Mobile Drive 2022 4TB USB-C 3.2 gen 1 (Bạc) - STLP4000400",
     "price": 7390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "storage",
     "tdp": 6
@@ -165,7 +165,7 @@
     "sku": "230803708",
     "name": "Ổ cứng HDD WD 2TB Purple (3.5 inch, 5400RPM, SATA, 64MB cache) (WD23PURZ)",
     "price": 3390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "11% discount",
     "type": "storage",
     "tdp": 6
@@ -534,7 +534,7 @@
     "sku": "240901735",
     "name": "Ổ cứng SSD Kingston NV3 M.2 2280 PCIe Gen 4.0 NVMe 1TB (SNV3S/1000G)",
     "price": 4890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "36% discount",
     "type": "storage",
     "tdp": 5
@@ -543,7 +543,7 @@
     "sku": "221003866",
     "name": "Ổ cứng gắn trong/ SSD ADATA SU650 512GB SATA (ASU650SS-512GT-R)",
     "price": 2690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "storage",
     "tdp": 5
@@ -552,7 +552,7 @@
     "sku": "1704463",
     "name": "Ổ cứng SSD Kingston A400 480GB Sata 3 (SA400S37/480G)",
     "price": 3590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "10% discount",
     "type": "storage",
     "tdp": 5
@@ -561,7 +561,7 @@
     "sku": "210300262",
     "name": "Ổ cứng gắn trong/ SSD Samsung 870 EVO 1TB SATA III 2.5 inch (MZ-77E1T0BW)",
     "price": 7990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "storage",
     "tdp": 5
@@ -570,7 +570,7 @@
     "sku": "241002562",
     "name": "Ổ cứng gắn trong/ SSD TeamGroup CX2 512GB 2.5 Inch Sata III (T253X6512G0C101)",
     "price": 1890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "43% discount",
     "type": "storage",
     "tdp": 5
@@ -579,7 +579,7 @@
     "sku": "240703616",
     "name": "Ổ cứng SSD TeamGroup MP33 512GB M.2 PCIe Gen3x4 (TM8FP6512G0C101)",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "storage",
     "tdp": 5
@@ -588,7 +588,7 @@
     "sku": "250516527",
     "name": "Ổ cứng gắn trong/ SSD NVMe 500GB KIOXIA EXCERIA G2 Gen3x4 wDRAM (LRC20Z500GG8)",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "22% discount",
     "type": "storage",
     "tdp": 5
@@ -597,7 +597,7 @@
     "sku": "201000772",
     "name": "Ổ cứng di động SSD SanDisk Extreme Portable V2 E61 1TB 1050MB/s, Type-C (SDSSDE61-1T00-G25) (Đen)",
     "price": 5990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "33% discount",
     "type": "storage",
     "tdp": 5
@@ -606,7 +606,7 @@
     "sku": "241002409",
     "name": "Ổ cứng SSD WD Blue SN5000 500GB NVMe PCIe Gen4 x4 (WDS500G4B0E)",
     "price": 3390000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "28% discount",
     "type": "storage",
     "tdp": 5
@@ -615,7 +615,7 @@
     "sku": "250203223",
     "name": "Ổ cứng gắn trong/ SSD ADATA LEGEND 860 PCIe Gen4 x4 M.2 2280 1TB (SLEG-860-1000GCS)",
     "price": 5790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -624,7 +624,7 @@
     "sku": "250516529",
     "name": "Ổ cứng gắn trong/ SSD SATA 480GB KIOXIA EXCERIA (LTC10Z480GG8)",
     "price": 2590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -633,7 +633,7 @@
     "sku": "230901149",
     "name": "Ổ cứng di động SSD Transcend ESD310C 512GB 1050MB/s, Type-C & USB A (TS512GESD310C) (Đen)",
     "price": 2990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "33% discount",
     "type": "storage",
     "tdp": 5
@@ -642,7 +642,7 @@
     "sku": "230500634",
     "name": "Ổ cứng gắn trong SSD Samsung 990 Pro 1TB M2 PCIe 4.0 (MZ-V9P1T0BW)",
     "price": 8290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "12% discount",
     "type": "storage",
     "tdp": 5
@@ -651,7 +651,7 @@
     "sku": "250115742",
     "name": "Ổ Cứng gắn trong SSD Samsung 990 EVO Plus 1TB M.2 2280 PCIe 4.0 x4 NVMe 2.0 (MZ-V9S1T0BW)",
     "price": 7190000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "18% discount",
     "type": "storage",
     "tdp": 5
@@ -660,7 +660,7 @@
     "sku": "250516528",
     "name": "Ổ cứng gắn trong/ SSD NVMe 1TB KIOXIA EXCERIA PLUS G3 Gen4x4, HMB (LSD10Z001TG8)",
     "price": 5790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -669,7 +669,7 @@
     "sku": "250640762",
     "name": "Ổ cứng di động SSD Kingston XS1000 1TB 1050MB/s, USB 3.2 Gen 2 (SXS1000/1000GA) (Đen)",
     "price": 4590000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "34% discount",
     "type": "storage",
     "tdp": 5
@@ -678,7 +678,7 @@
     "sku": "240503456",
     "name": "Ổ cứng di động SSD Transcend ESD360C 1TB 2000MB/s, Type-C (TS1TESD360C) (Xám)",
     "price": 4790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "20% discount",
     "type": "storage",
     "tdp": 5
@@ -687,7 +687,7 @@
     "sku": "250307013",
     "name": "Ổ cứng gắn trong/ SSD WD BLACK SN7100 NVMe - 500GB (WDS500G4X0E)",
     "price": 4290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "10% discount",
     "type": "storage",
     "tdp": 5
@@ -696,7 +696,7 @@
     "sku": "250521429",
     "name": "Ổ cứng di động SSD SanDisk Creator Pro Portable E81C 1TB 2000MB/s, Type-C (SDSSDE81C-1T00-G25)",
     "price": 6690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "16% discount",
     "type": "storage",
     "tdp": 5
@@ -705,7 +705,7 @@
     "sku": "200801521",
     "name": "Ổ cứng di động SSD Samsung T7 Portable 1TB 1050MB/s (MU-PC1T0T/WW) (Xám)",
     "price": 6790000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "15% discount",
     "type": "storage",
     "tdp": 5
@@ -714,7 +714,7 @@
     "sku": "240303046",
     "name": "Ổ cứng di động SSD Samsung Portable T9 1TB (MU-PG1T0B/WW) (Đen)",
     "price": 7490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "storage",
     "tdp": 5
@@ -723,7 +723,7 @@
     "sku": "201000347",
     "name": "Ổ cứng di động SSD WD My Passport 1TB USB 3.2 Gen2 (WDBAGF0010BGY-WESN) (Xám)",
     "price": 6290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "13% discount",
     "type": "storage",
     "tdp": 5
@@ -732,7 +732,7 @@
     "sku": "250302129",
     "name": "Ổ cứng di động SSD Seagate Ultra Compact 1TB Type-C (STMX1000400) (Xám)",
     "price": 5490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -759,7 +759,7 @@
     "sku": "250521408",
     "name": "Ổ cứng di động SSD SanDisk Fortnite Portable Peely Edtion 2TB Global 800MB/s, Type-C (SDSSDE30-2T00-G25F)",
     "price": 7990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "27% discount",
     "type": "storage",
     "tdp": 5
@@ -777,7 +777,7 @@
     "sku": "250521422",
     "name": "Ổ cứng di động SSD SanDisk Creator Phone 2TB 1000MB/s, Type-C, MagSafe (SDSSDE62C-2T00-G25)",
     "price": 7990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "27% discount",
     "type": "storage",
     "tdp": 5
@@ -795,7 +795,7 @@
     "sku": "250803119",
     "name": "Ổ cứng di động SSD SanDisk Creator Desk Drive 4TB 1000MB/s, Type-C, USB 3.2 ( SDSSDT40C-4T00-A25)",
     "price": 15490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "33% discount",
     "type": "storage",
     "tdp": 5
@@ -822,7 +822,7 @@
     "sku": "240802736",
     "name": "Ổ cứng SSD TeamGroup MP33 PRO 512GB M.2 PCIe Gen3x4",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "15% discount",
     "type": "storage",
     "tdp": 5
@@ -831,7 +831,7 @@
     "sku": "251107200",
     "name": "Ổ cứng gắn trong/ SSD WD SN3000 1TB NVMe Gen4x4 - Green (WDS100T5G0E)",
     "price": 5990000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -840,7 +840,7 @@
     "sku": "251107253",
     "name": "Ổ cứng di động SSD SanDisk Snoopy Portable Limited Edition E61 1TB 1000/1050MB/s (SDSSDE61-1T00-AP)",
     "price": 5290000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "24% discount",
     "type": "storage",
     "tdp": 5
@@ -849,7 +849,7 @@
     "sku": "251111502",
     "name": "Ổ cứng gắn trong/ PATRIOT SSD P300 256GB NVMe M.2 PCIe P300P256GM28",
     "price": 1690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "23% discount",
     "type": "storage",
     "tdp": 5
@@ -858,7 +858,7 @@
     "sku": "251111504",
     "name": "Ổ cứng gắn trong/ SSD PATRIOT P210 256GB 2.5'' SATA3 P210S256G25",
     "price": 890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "53% discount",
     "type": "storage",
     "tdp": 5
@@ -867,7 +867,7 @@
     "sku": "251111509",
     "name": "Ổ cứng gắn trong/ PATRIOT SSD P400 1TB V4 M.2 2280 PCIe Gen4 x4 P400VP1TBM28H",
     "price": 5690000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "21% discount",
     "type": "storage",
     "tdp": 5
@@ -876,7 +876,7 @@
     "sku": "260102057",
     "name": "Ổ cứng gắn trong/ SSD PATRIOT P320 512GB NVMe M.2 PCIe P320P512GM28",
     "price": 2890000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "17% discount",
     "type": "storage",
     "tdp": 5
@@ -894,7 +894,7 @@
     "sku": "260202533",
     "name": "Ổ cứng gắn trong/ SSD LEXAR M.2 2230 1TB LNMPLAY001T-RNNNG",
     "price": 4490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": null,
     "type": "storage",
     "tdp": 5
@@ -903,7 +903,7 @@
     "sku": "260303853",
     "name": "Ổ cứng di động SSD SanDisk FIFA World Cup 2026 Edition 1TB, 800MB/s, USB 3.2 gen 2 (SDSSDE30F-1T00-G25)",
     "price": 5490000,
-    "stock_status": "out_of_stock",
+    "stock_status": "in_stock",
     "promo": "31% discount",
     "type": "storage",
     "tdp": 5

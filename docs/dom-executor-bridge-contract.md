@@ -80,6 +80,7 @@ compiler validation hoàn tất.
     "vendor_product_id": "250509159",
     "name": "Card man hinh Asus Dual GeForce RTX 5060 8GB GDDR7 OC Edition",
     "category": "gpu",
+    "quantity": 1,
     "filter_labels": ["GeForce RTX 50 series"],
     "replace_existing": false,
     "product_url": "https://phongvu.vn/...--s250509159"
@@ -94,6 +95,12 @@ từ snapshot ngay sau lần add để tránh xóa nhầm thay đổi mới củ
 `filter_labels` là optional exact text của facet đã biết từ Catalog/storefront,
 chỉ để thu hẹp danh sách trước khi tìm exact SKU. Đây không phải CSS selector;
 extension vẫn phải tìm đúng `vendor_product_id` và verify sau khi click.
+
+`quantity` là số lượng **cuối cùng mong muốn** của đúng SKU trong BuildPC slot,
+mặc định là `1` và nhận giá trị từ `1` đến `16`. Gọi lại cùng SKU/cùng quantity
+là idempotent; extension chỉ click tăng/giảm trong row đã xác minh exact SKU và
+trả `QUANTITY_CONTROL_NOT_FOUND` hoặc `QUANTITY_VERIFY_TIMEOUT` nếu storefront
+không thể đáp ứng an toàn.
 
 ### BE push command xuống extension
 

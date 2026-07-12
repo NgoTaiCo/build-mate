@@ -40,7 +40,7 @@ export function extractSharedFields(product: PhongVuProduct): ExtractedFields {
     name: product.name,
     price,
     stock_status:
-      product.totalAvailable == null || product.totalAvailable === 0
+      product.totalAvailable === 0
         ? ("out_of_stock" as const)
         : ("in_stock" as const),
     promo:
