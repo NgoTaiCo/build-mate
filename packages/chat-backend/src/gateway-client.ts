@@ -57,6 +57,7 @@ interface PendingRequest {
   resolve: (value: { reply: string; runId: string }) => void;
   reject: (err: GatewayError) => void;
   timer: ReturnType<typeof setTimeout>;
+  onChunk?: (chunk: { text: string; state: 'partial' | 'delta' }) => void;
 }
 
 const RECONNECT_DELAY_MS = 1000;
@@ -346,12 +347,18 @@ export class GatewayClient {
 
   private onChatEvent(payload: Record<string, unknown>): void {
     const state = payload.state as string | undefined;
-    if (state === 'partial' || state === 'delta') return; // streaming noise
-
     const runId = payload.runId as string | undefined;
     const sessionKey = payload.sessionKey as string | undefined;
     const pending = this.findPending(runId, sessionKey);
     if (!pending) return; // unrelated to any in-flight request
+
+    if (state === 'partial' || state === 'delta') {
+      // Forwarded verbatim as received; the gateway's cumulative-vs-delta
+      // framing is opaque to us, so callers get exactly what it sent.
+      const text = extractChatText(payload.message);
+      if (text) pending.onChunk?.({ text, state });
+      return;
+    }
 
     if (state === 'error') {
       const text = extractChatText(payload.message);
@@ -396,6 +403,7 @@ export class GatewayClient {
     sessionKey: string;
     agentId: string;
     message: string;
+    onChunk?: (chunk: { text: string; state: 'partial' | 'delta' }) => void;
   }): Promise<{ reply: string; runId: string }> {
     if (this._state === 'pairing_required') {
       return Promise.reject(
@@ -435,6 +443,7 @@ export class GatewayClient {
         resolve,
         reject,
         timer,
+        onChunk: args.onChunk,
       };
       this.pendingByReqId.set(reqId, pending);
 

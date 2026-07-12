@@ -27,6 +27,13 @@ const CORS_HEADERS: Record<string, string> = {
   'Access-Control-Max-Age': '86400',
 };
 
+const SSE_HEADERS: Record<string, string> = {
+  'Content-Type': 'text/event-stream; charset=utf-8',
+  'Cache-Control': 'no-cache, no-transform',
+  Connection: 'keep-alive',
+  'X-Accel-Buffering': 'no',
+};
+
 const MAX_BODY_BYTES = 1_000_000; // 1 MB guard against oversized bodies
 
 export function createHttpServer(
@@ -112,22 +119,65 @@ function handleChat(
     const agentId = result.data.agentId ?? defaultAgentId;
     const sessionKey = sessionKeyFor(sessionId, agentId);
 
+    let streamStarted = false;
+    let clientGone = false;
+    res.on('close', () => {
+      clientGone = true;
+    });
+
+    const ensureStreamStarted = (): void => {
+      if (streamStarted) return;
+      streamStarted = true;
+      res.writeHead(200, SSE_HEADERS);
+    };
+
     gateway
-      .sendChat({ sessionKey, agentId, message })
+      .sendChat({
+        sessionKey,
+        agentId,
+        message,
+        onChunk: (chunk) => {
+          if (clientGone) return;
+          ensureStreamStarted();
+          sendSseEvent(res, 'chunk', { text: chunk.text });
+        },
+      })
       .then((reply) => {
-        sendJson(res, 200, { sessionId, reply: reply.reply, runId: reply.runId });
+        if (clientGone) return;
+        ensureStreamStarted();
+        sendSseEvent(res, 'done', { sessionId, reply: reply.reply, runId: reply.runId });
+        res.end();
       })
       .catch((err: unknown) => {
+        if (clientGone) return;
+        const { code, message: errMessage } =
+          err instanceof GatewayError
+            ? { code: err.code, message: err.message }
+            : { code: 'gateway_error' as ErrorCode, message: 'Lỗi không xác định khi relay tin nhắn.' };
+
         if (err instanceof GatewayError) {
           console.error('[http] gateway error while relaying chat:', err.code, err.message);
-          sendError(res, err.code, err.message);
         } else {
           // Never surface internal detail to the client (FR-012), but still log it.
           console.error('[http] unexpected error while relaying chat:', err);
-          sendError(res, 'gateway_error', 'Lỗi không xác định khi relay tin nhắn.');
+        }
+
+        if (streamStarted) {
+          sendSseEvent(res, 'error', { error: code, message: errMessage });
+          res.end();
+        } else {
+          sendError(res, code, errMessage);
         }
       });
   });
+}
+
+function sendSseEvent(
+  res: import('node:http').ServerResponse,
+  event: string,
+  data: unknown,
+): void {
+  res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
 }
 
 function sendJson(
