@@ -29,7 +29,7 @@ export function registerAddToBuildTool(server: McpServer, domBridgeClient: DomBr
     "add_to_build",
     {
       description:
-        "Ask the BuildPC extension in context_id to add one exact Catalog component. Use only after the proposed build has passed compile_build; this tool never accepts selectors or JavaScript.",
+        "Ask the BuildPC extension in context_id to add one exact Catalog component. component.quantity is the desired final count of that exact SKU in its BuildPC slot (default 1). Use only after the proposed build has passed compile_build; this tool never accepts selectors or JavaScript.",
       inputSchema: {
         context_id: AddToBuildInputSchema.shape.context_id,
         component: AddToBuildInputSchema.shape.component,

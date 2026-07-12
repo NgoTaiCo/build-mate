@@ -14,6 +14,8 @@ export interface DomComponent {
   name: string;
   category: DomCategory;
   buildpc_slot?: "hdd" | "ssd";
+  /** Desired total count of this exact component in its BuildPC slot. */
+  quantity?: number;
   filter_labels?: string[];
   replace_existing?: boolean;
   product_url?: string;

@@ -58,6 +58,34 @@
       [...(row?.querySelectorAll("button") ?? [])].find((button) => /^(Xóa|Remove)$/i.test(text(button))) || null;
   }
 
+  function quantityInput(row) {
+    return row?.querySelector('[data-build-action="quantity-input"]') ||
+      [...(row?.querySelectorAll('input[type="number"], input[inputmode="numeric"]') ?? [])]
+        .find((input) => input.getClientRects().length > 0) || null;
+  }
+
+  function quantityFromRow(row) {
+    const fromData = Number(row?.dataset.quantity);
+    if (Number.isInteger(fromData) && fromData > 0) return fromData;
+    const input = quantityInput(row);
+    const fromInput = Number(input?.value);
+    return Number.isInteger(fromInput) && fromInput > 0 ? fromInput : 1;
+  }
+
+  function quantityAction(row, direction) {
+    const action = direction === "increase" ? "increase-quantity" : "decrease-quantity";
+    const labels = direction === "increase"
+      ? /(^|\s)(\+|tăng|increase|plus|add)(\s|$)/i
+      : /(^|\s)(−|-|giảm|decrease|minus)(\s|$)/i;
+    return row?.querySelector(`[data-build-action="${action}"]`) ||
+      [...(row?.querySelectorAll("button") ?? [])].find((button) => {
+        const label = [button.getAttribute("aria-label"), button.getAttribute("title"), text(button)]
+          .filter(Boolean)
+          .join(" ");
+        return labels.test(label.trim());
+      }) || null;
+  }
+
   function categoryRow(slot) {
     // Priority 1: Mock page với data-attributes
     const mock = document.querySelector(`[data-build-category="${slot}"]`);
@@ -112,6 +140,7 @@
         vendor_product_id: vendorProductId,
         name: row.dataset.selectedName ?? text(row),
         category,
+        quantity: quantityFromRow(row),
       };
     }
 
@@ -132,6 +161,7 @@
       vendor_product_id: sku,
       name,
       category,
+      quantity: quantityFromRow(row),
       ...(category === "storage" ? { buildpc_slot: slot } : {}),
       product_url: link.href,
     };
@@ -152,7 +182,7 @@
       status: "ready",
       components,
       total,
-      revision: JSON.stringify(components.map(c => c.vendor_product_id))
+      revision: JSON.stringify(components.map(c => `${c.vendor_product_id}:${c.quantity ?? 1}`))
     };
   }
 
@@ -424,13 +454,40 @@
     return { ok: false, error, modal_closed: await closeModal(modal) };
   }
 
+  async function setQuantity(row, target) {
+    const current = quantityFromRow(row);
+    if (current === target) return { ok: true };
+    const direction = target > current ? "increase" : "decrease";
+    const control = quantityAction(row, direction);
+    if (!control) return { ok: false, error: "QUANTITY_CONTROL_NOT_FOUND" };
+
+    for (let expected = current + (direction === "increase" ? 1 : -1);
+      direction === "increase" ? expected <= target : expected >= target;
+      expected += direction === "increase" ? 1 : -1) {
+      click(control);
+      const updated = await waitFor(() => quantityFromRow(row) === expected, 2000);
+      if (!updated) return { ok: false, error: "QUANTITY_VERIFY_TIMEOUT" };
+    }
+    return { ok: true };
+  }
+
   async function addComponent(component) {
     if (!component || !SLOT_CATEGORY[component.category] && component.category !== "storage" || !component.vendor_product_id) {
       return { ok: false, error: "INVALID_COMPONENT" };
     }
+    const quantity = component.quantity ?? 1;
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > 16) {
+      return { ok: false, error: "INVALID_QUANTITY" };
+    }
     const slot = component.category === "storage" ? component.buildpc_slot : component.category;
     if (!SLOT_CATEGORY[slot]) return { ok: false, error: "STORAGE_SLOT_REQUIRED" };
-    const current = componentFromRow(categoryRow(slot), slot);
+    const row = categoryRow(slot);
+    const current = componentFromRow(row, slot);
+    if (current && current.vendor_product_id === component.vendor_product_id) {
+      const quantityResult = await setQuantity(row, quantity);
+      if (!quantityResult.ok) return { ...quantityResult, current };
+      return { ok: true, added: { ...component, quantity }, snapshot: readBuild() };
+    }
     if (current && !component.replace_existing) {
       return { ok: false, error: "COMPONENT_ALREADY_SELECTED", current };
     }
@@ -478,7 +535,9 @@
     }, 4000);
 
     if (!verified) return { ok: false, error: "VERIFY_TIMEOUT" };
-    return { ok: true, added: component, snapshot: readBuild() };
+    const quantityResult = await setQuantity(categoryRow(slot), quantity);
+    if (!quantityResult.ok) return quantityResult;
+    return { ok: true, added: { ...component, quantity }, snapshot: readBuild() };
   }
 
   async function removeComponent(component, expectedRevision) {
