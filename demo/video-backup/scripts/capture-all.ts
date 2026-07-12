@@ -29,7 +29,28 @@ import { WEBCHAT_CAPTURE_STEPS } from "../src/capture-steps";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const WEBCHAT_URL = process.env["WEBCHAT_URL"] ?? "http://127.0.0.1:18789/";
+function getWebChatUrl(): string {
+  if (process.env["WEBCHAT_URL"]) {
+    return process.env["WEBCHAT_URL"];
+  }
+  try {
+    const bgPath = path.resolve(__dirname, "../../../apps/chrome-extension/background.js");
+    if (fs.existsSync(bgPath)) {
+      const content = fs.readFileSync(bgPath, "utf8");
+      const match = content.match(/const DEFAULT_BRIDGE_URL\s*=\s*["']([^"']+)["']/);
+      if (match && match[1]) {
+        return match[1]
+          .replace(/^wss?:\/\//i, (m) => (m.toLowerCase().startsWith("wss") ? "https://" : "http://"))
+          .replace(/\/dom-bridge\/?$/i, "");
+      }
+    }
+  } catch (err) {
+    console.warn("[capture-all] Warning: Could not parse WebChat URL from extension config:", err);
+  }
+  return "http://127.0.0.1:18789/";
+}
+
+const WEBCHAT_URL = getWebChatUrl();
 const SCENES_DIR = path.resolve(__dirname, "../public/scenes");
 const FPS = 10; // screenshots per second — enough for a smooth demo video
 const SKIP = new Set(
@@ -136,8 +157,10 @@ async function captureAll(): Promise<void> {
   console.log(`[capture-all] WebChat URL: ${WEBCHAT_URL}`);
   console.log(`[capture-all] FPS: ${FPS}, output: ${SCENES_DIR}\n`);
 
+  const channel = process.env["BROWSER_CHANNEL"] === "" ? undefined : (process.env["BROWSER_CHANNEL"] ?? "chrome");
   const browser = await chromium.launch({
-    headless: false, // show browser so you can verify what's being captured
+    headless: process.env["HEADLESS"] === "true", // show browser by default so you can verify what's being captured
+    channel,
     args: ["--start-maximized"],
   });
 
@@ -147,10 +170,63 @@ async function captureAll(): Promise<void> {
 
   const page = await context.newPage();
 
-  console.log(`[capture-all] Navigating to ${WEBCHAT_URL}...`);
-  await page.goto(WEBCHAT_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
+  const chatUrl = WEBCHAT_URL.includes("/chat") ? WEBCHAT_URL : new URL("/chat?session=main", WEBCHAT_URL).toString();
+  console.log(`[capture-all] Navigating to ${chatUrl}...`);
+  await page.goto(chatUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
   await page.waitForTimeout(3000);
   console.log("[capture-all] Page loaded.\n");
+
+  const connectBtn = page.locator('button:has-text("Connect")').first();
+  const inputSelector = [
+    'textarea',
+    'input[type="text"]',
+    '[contenteditable="true"]',
+    '[role="textbox"]',
+  ].join(", ");
+  const chatInput = page.locator(inputSelector).first();
+
+  console.log("[capture-all] Checking page state (login required vs already authenticated)...");
+  const state = await Promise.race([
+    connectBtn.waitFor({ state: "visible", timeout: 8000 }).then(() => "login"),
+    chatInput.waitFor({ state: "visible", timeout: 8000 }).then(() => "chat"),
+  ]).catch(() => "unknown");
+
+  if (state === "login") {
+    console.log("[capture-all] Gateway Dashboard login page detected. Authenticating...");
+    
+    // Fill the token
+    const tokenInput = page.locator('input#token, input[placeholder*="token" i], input[type="password"]').first();
+    const gatewayToken = process.env["OPENCLAW_GATEWAY_TOKEN"] ?? "4129e3440d35bbd04d3e72b9144cc96fda776f7919c2df60";
+    await tokenInput.fill(gatewayToken);
+    
+    // Optionally fill the WebSocket URL if it's empty
+    const wsInput = page.locator('input[placeholder*="ws://" i], input[type="text"]').first();
+    if (await wsInput.isVisible()) {
+      const currentWs = await wsInput.inputValue();
+      if (!currentWs) {
+        const wsProtocol = page.url().startsWith("https") ? "wss" : "ws";
+        const wsHost = new URL(page.url()).host;
+        await wsInput.fill(`${wsProtocol}://${wsHost}`);
+      }
+    }
+    
+    // Click connect and wait
+    await connectBtn.click();
+    console.log("[capture-all] Clicked Connect. Waiting for redirect...");
+    await page.waitForTimeout(5000);
+  } else if (state === "chat") {
+    console.log("[capture-all] Already logged in. Proceeding directly to chat...");
+  } else {
+    console.warn("[capture-all] Warning: Neither login form nor chat input was found. Attempting to proceed anyway...");
+  }
+
+  // Double check that we are actually on the chat page URL
+  if (!page.url().includes("/chat")) {
+    const chatTarget = new URL("/chat?session=main", page.url()).toString();
+    console.log(`[capture-all] Redirecting to chat page: ${chatTarget}`);
+    await page.goto(chatTarget, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(3000);
+  }
 
   for (const step of steps) {
     const outputMp4 = path.join(SCENES_DIR, `${step.sceneId}.mp4`);
@@ -169,8 +245,8 @@ async function captureAll(): Promise<void> {
           '[role="textbox"]',
         ].join(", ");
 
-        await page.waitForSelector(inputSelector, { timeout: 15000 });
         const input = page.locator(inputSelector).first();
+        await input.waitFor({ state: "visible", timeout: 15000 });
         await input.click();
         await input.fill(step.chatMessage);
         await page.keyboard.press("Enter");
