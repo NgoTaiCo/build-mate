@@ -24,6 +24,13 @@
         return { ...state, open: true, activeView: "chat", selectedGoalId: null, messages: initialPanelState.messages };
       case "ADD_MESSAGE":
         return { ...state, messages: [...state.messages, event.message] };
+      case "UPDATE_MESSAGE":
+        return {
+          ...state,
+          messages: state.messages.map((message) =>
+            message.id === event.id ? { ...message, ...event.patch } : message,
+          ),
+        };
       case "CLEAR_CHAT":
         return { ...state, messages: initialPanelState.messages };
       default:

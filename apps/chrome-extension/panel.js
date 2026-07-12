@@ -212,7 +212,7 @@
       }
 
       const isLimitReached = state.messages.length >= 30;
-      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd || isLimitReached;
+      const busy = globalThis.BuildMateActionState.activeStatuses.has(actionState.status) || pendingAdd || isTyping || isLimitReached;
       
       if (busy) {
         input.disabled = true;
@@ -246,12 +246,77 @@
       if (wasOpen && !state.open) launcher.focus(); 
       return state; 
     }
+
+    let chatGeneration = 0;
+    function sendChatMessage(text) {
+      const generation = chatGeneration;
+      let streamedMessageId = null;
+      let partialReply = "";
+      let animationFrame = null;
+
+      transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: "user", type: "text", content: text } });
+      isTyping = true;
+      render();
+
+      const flushPartialReply = () => {
+        animationFrame = null;
+        if (generation !== chatGeneration || !partialReply) return;
+        isTyping = false;
+        if (!streamedMessageId) {
+          streamedMessageId = `msg-${Date.now()}-stream`;
+          transition({ type: "ADD_MESSAGE", message: { id: streamedMessageId, role: "assistant", type: "text", content: partialReply } });
+          return;
+        }
+        transition({ type: "UPDATE_MESSAGE", id: streamedMessageId, patch: { content: partialReply } });
+      };
+
+      const receiveDelta = (delta) => {
+        if (generation !== chatGeneration || !delta) return;
+        partialReply = globalThis.BuildMateChatStream.mergeStreamText(partialReply, delta);
+        if (animationFrame === null) animationFrame = requestAnimationFrame(flushPartialReply);
+      };
+
+      if (!handlers.onChatMessage) {
+        setTimeout(() => {
+          if (generation !== chatGeneration) return;
+          isTyping = false;
+          render();
+        }, 500);
+        return;
+      }
+
+      handlers.onChatMessage(text, snapshot, receiveDelta).then((result) => {
+        if (generation !== chatGeneration) return;
+        if (animationFrame !== null) {
+          cancelAnimationFrame(animationFrame);
+          flushPartialReply();
+        }
+        isTyping = false;
+        const reply = typeof result === "string" ? result : result?.reply;
+        if (reply) {
+          if (streamedMessageId) {
+            transition({ type: "UPDATE_MESSAGE", id: streamedMessageId, patch: { content: reply } });
+          } else {
+            transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}-reply`, role: "assistant", type: "text", content: reply } });
+          }
+        } else {
+          render();
+        }
+      }).catch((error) => {
+        if (generation !== chatGeneration) return;
+        if (animationFrame !== null) cancelAnimationFrame(animationFrame);
+        isTyping = false;
+        const prefix = globalThis.BuildMateI18n.getLang() === "vi" ? "Lỗi kết nối server:" : "Server connection error:";
+        transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}-error`, role: "assistant", type: "text", content: `${prefix} ${error.message}` } });
+      });
+    }
     
     launcher.addEventListener("click", () => transition({ type: "TOGGLE" }));
     shadow.querySelector(".bm-close").addEventListener("click", () => transition({ type: "CLOSE" }));
     shadow.querySelector('#bm-lang-toggle').addEventListener('click', () => {
       const next = globalThis.BuildMateI18n.getLang() === 'vi' ? 'en' : 'vi';
       globalThis.BuildMateI18n.setLang(next);
+      chatGeneration += 1;
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
       try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
@@ -261,6 +326,7 @@
       render();
     });
     shadow.querySelector('#bm-clear-btn').addEventListener('click', () => {
+      chatGeneration += 1;
       isTyping = false;
       state = globalThis.BuildMatePanelState.reducePanelState(state, { type: "CLEAR_CHAT" });
       try { localStorage.setItem("buildmate_messages", JSON.stringify(state.messages)); } catch (e) {}
@@ -274,28 +340,7 @@
         if (goal) {
           const tTitle = globalThis.BuildMateI18n.t('goals')[goal.id].title;
           const userMsg = globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn build máy: ${tTitle}` : `I want to build: ${tTitle}`;
-          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: userMsg } });
-          isTyping = true; render();
-          
-          if (handlers.onChatMessage) {
-            handlers.onChatMessage(userMsg, snapshot).then((replyText) => {
-              isTyping = false;
-              if (replyText) {
-                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
-              } else {
-                render();
-              }
-            }).catch(err => {
-              isTyping = false;
-              const errPrefix = globalThis.BuildMateI18n.getLang() === 'vi' ? 'Lỗi kết nối server:' : 'Server connection error:';
-              transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `${errPrefix} ${err.message}` } });
-            });
-          } else {
-            setTimeout(() => {
-              isTyping = false;
-              render();
-            }, 500);
-          }
+          sendChatMessage(userMsg);
         }
       }
       if (button.dataset.action === "prepare-add") { pendingAdd = true; render(); } 
@@ -317,29 +362,7 @@
         if (input.value.trim()) { 
           const val = input.value.trim();
           input.value = "";
-          transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()}`, role: 'user', type: 'text', content: val } });
-          // Show typing indicator
-          isTyping = true;
-          render();
-          if (handlers.onChatMessage) {
-            handlers.onChatMessage(val, snapshot).then((replyText) => {
-              isTyping = false;
-              if (replyText) {
-                transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: replyText } });
-              } else {
-                render();
-              }
-            }).catch(err => {
-              isTyping = false;
-              transition({ type: "ADD_MESSAGE", message: { id: `msg-${Date.now()+1}`, role: 'assistant', type: 'text', content: `Lỗi kết nối server: ${err.message}` } });
-            });
-          } else {
-            setTimeout(() => {
-              isTyping = false;
-              render();
-            }, 500);
-          }
-
+          sendChatMessage(val);
         } 
       } 
     });

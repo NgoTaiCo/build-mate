@@ -34,6 +34,7 @@
         "shared/panel-state.js",
         "shared/action-state.js",
         "shared/command-policy.js",
+        "shared/chat-stream.js",
         "shared/snapshot.js",
         "dom-adapter.js",
         "dom-probe.js",
