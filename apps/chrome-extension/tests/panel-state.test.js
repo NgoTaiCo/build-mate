@@ -7,8 +7,9 @@ const { isExactBuildPcUrl } = require("../shared/eligibility.js");
 const { initialPanelState, reducePanelState } = require("../shared/panel-state.js");
 const { initialActionState, reduceActionState } = require("../shared/action-state.js");
 const { validateCommand } = require("../shared/command-policy.js");
-const { snapshotKey } = require("../shared/snapshot.js");
+const { formatVnd, normalizeSnapshot, snapshotKey } = require("../shared/snapshot.js");
 const { createSseDecoder, mergeStreamText, readChatStream } = require("../shared/chat-stream.js");
+const { goals } = require("../shared/demo-data.js");
 
 test("only recognises the exact canonical Phong Vu Build PC URL", () => {
   assert.equal(isExactBuildPcUrl("https://phongvu.vn/buildpc"), true);
@@ -40,6 +41,12 @@ test("normalizes snapshots before deciding they changed", () => {
   assert.equal(first, second);
 });
 
+test("normalizes and formats current-build totals as Vietnamese dong", () => {
+  assert.equal(normalizeSnapshot({ status: "ready", components: [], total: " 10.000.000 đ " }).total, 10000000);
+  assert.equal(normalizeSnapshot({ status: "ready", components: [], total: 0 }).total, 0);
+  assert.equal(formatVnd("10,500,000 VND"), "10.500.000 ₫");
+});
+
 test("opens and closes the panel without persistent state", () => {
   const opened = reducePanelState(initialPanelState, { type: "OPEN" });
   assert.equal(opened.open, true);
@@ -54,6 +61,18 @@ test("selects a local goal and enters review", () => {
   assert.equal(goal.activeView, "chat");
   assert.equal(goal.selectedGoalId, "gaming-25m");
   assert.equal(reducePanelState(goal, { type: "OPEN_REVIEW" }).activeView, "review");
+});
+
+test("demo goals send concise, workload-specific prompts in both languages", () => {
+  assert.equal(goals.length, 3);
+  for (const goal of goals) {
+    assert.ok(goal.prompt.vi.length > 60);
+    assert.ok(goal.prompt.en.length > 60);
+    assert.notEqual(goal.prompt.en, goal.title);
+  }
+  assert.match(goals.find((goal) => goal.id === "gaming-25m").prompt.en, /1440p/);
+  assert.match(goals.find((goal) => goal.id === "creator-30m").prompt.en, /4K/);
+  assert.match(goals.find((goal) => goal.id === "study-15m").prompt.en, /programming/);
 });
 
 test("updates a streamed assistant message without changing its position", () => {

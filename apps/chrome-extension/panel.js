@@ -68,13 +68,8 @@
       const names = snapshot.components.map((c) => `<li><span>${escapeHtml(c.category)}</span><strong>${escapeHtml(c.name)}</strong></li>`).join("");
       let totalHtml = "";
       if (snapshot.total != null) {
-        let amountStr = "";
-        if (typeof snapshot.total === 'number') {
-          amountStr = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(snapshot.total);
-        } else {
-          amountStr = String(snapshot.total);
-        }
-        totalHtml = `<div class="bm-tracker-total"><span>${globalThis.BuildMateI18n.t('totalCost')}</span><strong>${escapeHtml(amountStr)}</strong></div>`;
+        const amount = globalThis.BuildMateSnapshot.formatVnd(snapshot.total);
+        if (amount) totalHtml = `<div class="bm-tracker-total"><span>${globalThis.BuildMateI18n.t('totalCost')}</span><strong>${escapeHtml(amount)}</strong></div>`;
       }
       return `<section class="bm-tracker"><div class="bm-tracker-title"><span>${globalThis.BuildMateI18n.t('cartTitle')}</span>${count > 0 ? `<span class="bm-tracker-count">${count}</span>` : ""}</div><ul>${names}</ul>${totalHtml}</section>`;
     }
@@ -338,8 +333,8 @@
       if (button.dataset.goalId) {
         const goal = globalThis.BuildMateDemoData.goals.find(g => g.id === button.dataset.goalId);
         if (goal) {
-          const tTitle = globalThis.BuildMateI18n.t('goals')[goal.id].title;
-          const userMsg = globalThis.BuildMateI18n.getLang() === 'vi' ? `Tôi muốn build máy: ${tTitle}` : `I want to build: ${tTitle}`;
+          const language = globalThis.BuildMateI18n.getLang();
+          const userMsg = goal.prompt?.[language] ?? goal.prompt?.vi ?? goal.summary;
           sendChatMessage(userMsg);
         }
       }
