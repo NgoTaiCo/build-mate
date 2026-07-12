@@ -18,6 +18,7 @@ SESSION_IDLE_MINUTES=${SESSION_IDLE_MINUTES:-60}
 MEMORY_BACKEND=${MEMORY_BACKEND:-qmd}
 GATEWAY_TOKEN=${GATEWAY_TOKEN:-$(openssl rand -hex 24 2>/dev/null || echo "7480b2368b88d458de8fa9d00aa359bb5db5a12fa24fe21e")}
 GATEWAY_PORT=${OPENCLAW_PORT:-18789}
+NOTION_API_KEY=${NOTION_API_KEY:-}
 
 if [ -z "$API_KEY" ]; then
   echo "⚠️  API_KEY not set in .env. Using placeholder."
@@ -26,8 +27,24 @@ fi
 # Extract provider from MODEL_PROVIDER (e.g., "xiaomi/mimo-v2-pro" -> "xiaomi")
 PROVIDER=$(echo "$MODEL_PROVIDER" | cut -d'/' -f1)
 
+# Optional Notion MCP server, only added when NOTION_API_KEY is set
+if [ -n "$NOTION_API_KEY" ]; then
+  MCP_SERVERS_EXTRA=',
+      "notion": {
+        "command": "npx",
+        "args": ["-y", "@notionhq/notion-mcp-server", "--api-key", "'"$NOTION_API_KEY"'"]
+      }'
+else
+  MCP_SERVERS_EXTRA=""
+fi
+
 # Generate full config JSON
-cat > openclaw.json << 'CONFIGEOF'
+# Written into state/ (bind-mounted whole dir into the container) rather than
+# bind-mounting this single file — a single-file bind mount nested under
+# another mount point makes openclaw's atomic save (write temp + rename) fail
+# with EBUSY, since the kernel refuses rename() onto an active mount point.
+mkdir -p state
+cat > state/openclaw.json << CONFIGEOF
 {
   "agents": {
     "defaults": {
@@ -94,7 +111,7 @@ cat > openclaw.json << 'CONFIGEOF'
       "buildmate": {
         "url": "http://mcp-server:8791/mcp",
         "transport": "streamable-http"
-      }
+      }$MCP_SERVERS_EXTRA
     }
   },
   "memory": {
@@ -202,11 +219,11 @@ sed -i.bak \
   -e "s|GATEWAY_PORT_PLACEHOLDER|$GATEWAY_PORT|g" \
   -e "s|SESSION_IDLE_MINUTES_PLACEHOLDER|$SESSION_IDLE_MINUTES|g" \
   -e "s|MEMORY_BACKEND_PLACEHOLDER|$MEMORY_BACKEND|g" \
-  openclaw.json
+  state/openclaw.json
 
-rm -f openclaw.json.bak
+rm -f state/openclaw.json.bak
 
-echo "✓ openclaw.json generated"
+echo "✓ state/openclaw.json generated"
 echo "  Model: $MODEL_PROVIDER"
 echo "  Gateway token: ${GATEWAY_TOKEN:0:16}..."
 echo "  Session idle: ${SESSION_IDLE_MINUTES}m"

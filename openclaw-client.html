@@ -668,11 +668,13 @@
                             // addMessage(`[${data.event}] ${JSON.stringify(data.payload)}`, 'system');
                         }
                     } catch (e) {
+                        console.error('[openclaw-client] failed to parse ws message', e, 'raw data:', event.data);
                         addMessage(`Error parsing message: ${e.message}`, 'system', true);
                     }
                 };
 
                 state.ws.onerror = (error) => {
+                    console.error('[openclaw-client] websocket error', error);
                     updateStatus(false);
                     addMessage(`✗ WebSocket error`, 'system', true);
                 };
@@ -682,6 +684,7 @@
                     addMessage('✗ Disconnected from OpenClaw', 'system');
                 };
             } catch (error) {
+                console.error('[openclaw-client] failed to connect', error);
                 updateStatus(false);
                 addMessage(`✗ Failed to connect: ${error.message}`, 'system', true);
             }

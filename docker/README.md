@@ -112,13 +112,10 @@ bash generate-config.sh
 make restart
 ```
 
-Hoặc SSH vào container:
+Hoặc sửa trực tiếp file trên host (được bind-mount thẳng vào container, không cần SSH):
 
 ```bash
-make shell
-cd /root/.openclaw
-vi openclaw.json
-exit
+vi state/openclaw.json
 make restart
 ```
 
@@ -126,14 +123,14 @@ make restart
 
 ## Data & Volumes
 
-Docker volumes (persistent across restarts):
-- `buildmate_openclaw_config` → Config + state
-- `buildmate_openclaw_workspace` → Agent workspace
+- `./state/` (bind-mount, host directory) → Config (`openclaw.json`) + OpenClaw state, persistent across restarts. Mounted whole as `/root/.openclaw` — không bind-mount `openclaw.json` riêng lẻ, vì lồng một file bind-mount bên trong volume khác sẽ làm openclaw ghi config bị lỗi `EBUSY` (không rename() được đè lên mount point).
+- `buildmate_openclaw_workspace` (named volume) → Agent workspace
 
 Xóa dữ liệu:
 
 ```bash
-docker volume rm buildmate_openclaw_config buildmate_openclaw_workspace
+rm -rf state/
+docker volume rm buildmate_openclaw_workspace
 ```
 
 ---
@@ -147,13 +144,15 @@ make logs
 
 **Health check failing:**
 - Check `.env`: `MODEL_PROVIDER` + `API_KEY` valid?
-- Check `openclaw.json` syntax: `jq . openclaw.json`
+- Check `openclaw.json` syntax: `jq . state/openclaw.json`
 - Restart: `make restart`
 
 **Logs không xuất hiện:**
 ```bash
 docker compose logs openclaw-gateway
 ```
+
+**OpenClaw tự sửa `openclaw.json` bị lỗi `EBUSY`:** OpenClaw lưu config bằng cách ghi file tạm rồi `rename()` đè lên `openclaw.json`. Nếu file này bị bind-mount riêng lẻ *bên trong* một volume/thư mục khác đang mount (mount lồng mount), kernel sẽ từ chối `rename()` đè lên mount point đó → `EBUSY`. Cách sửa: mount cả thư mục `state/` (chứa `openclaw.json`) như một khối duy nhất vào `/root/.openclaw`, không mount riêng file `openclaw.json` — xem cấu hình `volumes` hiện tại trong `docker-compose.yml`.
 
 ---
 
